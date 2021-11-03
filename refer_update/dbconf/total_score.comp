@@ -1,0 +1,9 @@
+#calculate samples total score index
+#use index value calculate score in population total score indexes distribution
+#get sample's final total score
+#term	score	weight
+diversity	diversity_score	1
+Benificial bacteria	benificial_score	1
+Harmful bacteria	100 - hramful_score	1
+pathogen_num	50 - pathogen_num_score/2	1
+pathogen_badN	50 - pathogen_badN_score/2	1
