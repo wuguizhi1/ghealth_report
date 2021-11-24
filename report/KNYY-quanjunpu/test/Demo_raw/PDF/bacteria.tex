@@ -1,0 +1,135 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{black100}
+
+\vspace*{3mm}
+
+\noindent{\fontsize{15pt}{11pt}\selectfont{ 三、主要有益菌检测结果}}
+
+%\vspace*{-4.25mm}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{4.8cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{4.9cm}<{\centering}|}
+%\begin{longtable}{|m{4cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{4.9cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering\bf {检测内容} \vskip10pt} & \bf{检测结果} & \bf{检测值} & \bf{参考范围} & \bf{功能}\\
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering 罗斯拜瑞氏菌属(Roseburia) \vskip10pt} &
+正常 &
+8.37
+& ≥ 2.32
+& 产生丁酸等有益物质，抑制肠道炎症，有利于肠道及人体健康 \\
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering 柔嫩梭菌属(Faecalibacterium) \vskip10pt} &
+正常 &
+166.68
+& ≥ 10.94
+& 发酵纤维素产生丁酸等有益物质，抑制肠道炎症，促进肠道健康 \\
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering 双歧杆菌属(Bifidobacterium) \vskip10pt} &
+正常 &
+0.06
+& ≥ 0.01
+& 有益菌，降解人体不能消化的多糖，产乳酸，调节免疫及肠道环境 \\
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering 乳酸杆菌属(Lactobacillus) \vskip10pt} &
+异常 &
+0.00
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+& ≥ 0.01
+& 肠道益生菌，能够生成乳酸，抑制有害菌及炎症，调节肠道环境 \\
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering 阿克曼氏菌属(Akkermansia) \vskip10pt} &
+异常 &
+0.00
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+& ≥ 0.01
+& 降解粘蛋白、调节免疫，有利于肠黏膜完整性，保持正常体重 \\
+\hline
+\end{longtable}
+
+\vspace*{0mm}
+
+\begin{spacing}{1.25}
+\noindent\fontsize{9pt}{11pt}\selectfont {综合您的肠道主要有益菌检测结果，乳酸杆菌属、阿克曼氏菌属的含量异常，
+不利于抑制肠道炎症、调节肠道环境、调节免疫等，
+需引起注意。} \\
+
+\end{spacing}
+
+\vspace*{8mm}
+
+\noindent{\fontsize{15pt}{11pt}\selectfont{ 四、主要有害菌检测结果}}
+
+%\vspace*{-4.25mm}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{4.8cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{4.9cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering\bf {检测内容} \vskip10pt} & \bf{检测结果} & \bf{检测值} & \bf{参考范围} & \bf{功能}\\
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering 脱硫弧菌属(Desulfovibrio) \vskip10pt} &
+正常 &
+2.79
+& ≤ 4.13
+& 产生硫化氢，刺激肠道产生炎症反应，不利于肠道健康 \\
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering 多尔氏菌属(Dorea) \vskip10pt} &
+正常 &
+1.23
+& ≤ 10.09
+& 肠道的主要产气菌之一，与肠易激综合征等疾病相关 \\
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering 弯曲杆菌属(Campylobacter) \vskip10pt} &
+正常 &
+0.00
+& ≤ 0.20
+& 多数菌种为致病菌，可引起弯曲菌病，表现为严重腹泻或痢疾综合征 \\
+\hline
+\end{longtable}
+
+\begin{spacing}{1.25}
+\noindent\fontsize{9pt}{11pt}\selectfont {综合您的肠道主要有害菌检测结果，各有害菌含量均处于正常范围，有害物质产生少、
+肠道炎症风险低，整体状况良好。请您保持良好的饮食及生活习惯，促进肠道菌群平衡。} \\
+
+\end{spacing}
+
+\end{document}

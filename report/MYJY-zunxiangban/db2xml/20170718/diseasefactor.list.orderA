@@ -1,0 +1,10 @@
+###相关疾病风险
+##2型糖尿病
+zxerxingtangniaobingbaohuyinzi	T2D_protect	2型糖尿病保护因子
+zxerxingtangniaobingweixianyinzi	T2D_risk	2型糖尿病危险因子
+##结直肠癌
+zxjiezhichangaibaohuyinzi	CRC_protect	结直肠癌保护因子
+zxjiezhichangaiweixianyinzi	CRC_risk	结直肠癌危险因子
+##炎症性肠病
+zxchangyanbaohuyinzi	IBD_protect	炎症性肠病保护因子
+zxchangyanweixianyinzi	IBD_risk	炎症性肠病危险因子

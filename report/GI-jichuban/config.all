@@ -1,0 +1,19 @@
+#前两列固定，tables contexts缺省值		样式的设置												
+#pdf名字	页数	样式名	是否需要样式	是否版心	是否计数页码	是否展示页码	页码数字类型	是否展示logo	是否展示title	是否展示条码	是否重置页码为1	类别名称	标题	是否居右（Y：居右，N：居左，随意就留空）
+pdf	cnt	style	needStyle	isCore	isPageNo	displayPageNo	pageNoMode	displayLogo	isTitle	displayBarcode	isFirstCounter	subclass	title	isRight
+fengmian.pdf	1	fengmian	N	N	Y	N	arabic	N	N	N	Y			Y
+blank.pdf	1	blank	N	N	Y	N	arabic	N	N	N	Y			Y
+front.pdf	1	front	Y	N	Y	N	arabic	N	N	N				
+qianyan.pdf	1	qianyan	Y	Y	Y	N	arabic	Y	N	N				
+mulu.pdf	1	mulu	Y	Y	Y	N	arabic	Y	N	N				
+changdaokang_dingsiye.pdf	1	changdaokang_dingsiye	Y	Y	Y	Y	arabic	Y	N	N	Y			
+contexts1			Y	Y	Y	Y	arabic	Y	N	N				
+fulu.pdf	1	fulu	Y	Y	N	N	arabic	Y	N	N				
+fulu_part1.pdf	2	fulu_part1	Y	Y	Y	Y	arabic	Y	N	N				
+fulu_part2.pdf	8	fulu_part2	Y	Y	Y	Y	arabic	Y	N	N				
+fulu_part3.pdf	4	fulu_part3	Y	Y	Y	Y	arabic	Y	N	N				
+fulu_part4.pdf	3	fulu_part4	Y	Y	Y	Y	arabic	Y	N	N				
+fulu_part5.pdf	2	fulu_part5	Y	Y	Y	Y	arabic	Y	N	N				
+fulu_part6.pdf	3	fulu_part6	Y	Y	Y	Y	arabic	Y	N	N				
+blank.pdf	1	blank	N	N	Y	N	arabic	N	N	N	Y			Y
+fengdi.pdf	1	fengdi	N	N	Y	N	arabic	N	N	N				

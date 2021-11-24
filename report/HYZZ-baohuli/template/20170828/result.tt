@@ -1,0 +1,113 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage[nodisplayskipstretch]{setspace}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+
+\color{gray2}
+\begin{center}
+\noindent\fontsize{12pt}{13pt}\selectfont{\color{gray2}\bf 主要有益菌检测结果}
+\end{center}
+
+\vspace*{-1cm}
+
+[% FOREACH item = changdaojunqun.fenbu.item -%]
+\vspace*{2cm}
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+\fontsize{9pt}{11pt}\selectfont
+
+\begin{Bacteriabox}{\bf {[% item.cnname %]（\emph {[% item.enname %]}）}}
+\begin{spacing}{1.5}
+\fontsize{8.5pt}{11pt}\selectfont\noindent {[% item.descfull %]}
+\end{spacing}
+\end{Bacteriabox}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{11pt}{11pt}\selectfont {检测结果}}
+\end{spacing}
+
+\lantxh
+\begin{tctabularx}{tabularx={m{2.7cm}<{\centering}m{2.7cm}<{\centering}m{2.7cm}<{\centering}m{6cm}<{\centering}}}
+&&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 主要有益菌属} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 本次检测值} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 参考范围} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 功能}
+\end{tctabularx}
+
+\vspace*{-0.8mm}
+\noindent\begin{tabular}{|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{6cm}|}
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering [% item.cnname %] \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering [% IF item.value == 0 -%] 未检出 [% ELSE -%] [% item.value %] [% END -%] [% IF item.risk == "有害" -%] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}} [% END -%] \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering [% item.threshold %] \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering [% item.desc %] \vskip7pt} \\
+\hline
+\end{tabular}\\
+
+\hfill {结果说明：\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}} \ 检测值相比参考人群偏低}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{11pt}{11pt}\selectfont {结果分析}}
+
+\noindent\fontsize{8.5pt}{11pt}\selectfont {您本次检测结果显示，您肠道内的[% item.cnname %]含量
+[% IF item.value == 0 -%]
+低于检测下限，未检出。[% item.source %]\\
+[% ELSIF item.level == "l1" or item.level == "l2" -%]
+较低。[% item.source %]\\
+[% ELSE -%]
+正常。
+[% END -%]
+}
+
+\vspace*{3mm}
+\noindent{\fontsize{11pt}{11pt}\selectfont {健康建议}}
+
+\noindent\fontsize{8.5pt}{11pt}\selectfont {[% item.note %]}
+\end{spacing}
+
+\clearpage
+
+[% END -%]
+
+\end{document}

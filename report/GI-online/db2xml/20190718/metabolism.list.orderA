@@ -1,0 +1,21 @@
+###菌群代谢
+##
+tjsjcweishengsuB1	Thiamine metabolism	维生素B1
+tjsjcweishengsuB2	Riboflavin metabolism	维生素B2
+tjsjcweishengsuB3	Nicotinate and nicotinamide metabolism	维生素B3
+tjsjcweishengsuB5	Pantothenate and CoA biosynthesis	维生素B5
+tjsjcweishengsuB6	Vitamin B6 metabolism	维生素B6
+tjsjcweishengsuB7	Biotin metabolism	维生素B7
+tjsjcweishengsuB9	Folate biosynthesis	维生素B9
+tjsjcseansuan	AA_Tryptophan	色氨酸
+tjsjclaiansuan	AA_Lysine	赖氨酸
+tjsjcxieansuan	AA_Valine	缬氨酸
+tjsjcliangansuan	AA_Leucine	亮氨酸
+tjsjcyiliangansuan	AA_Isoleucine	异亮氨酸
+tjsjcbenbingansuan	AA_Phenylalanine	苯丙氨酸
+tjsjcjialiuansuan	AA_Methionine	甲硫氨酸
+tjsjcsuansuan	AA_Threonine	苏氨酸
+tjsjczhiduotang	Lipopolysaccharide biosynthesis proteins	脂多糖（LPS）生物合成
+tjsjcdanbaijiangjiechanwu	Amino acid metabolism	蛋白降解产物
+tjsjczhifangjiangjiechanwu	Lipid metabolism	脂肪降解产物
+tjsjctanshuihuahewujiangjiechanwu	Carbohydrate metabolism	碳水化合物降解产物

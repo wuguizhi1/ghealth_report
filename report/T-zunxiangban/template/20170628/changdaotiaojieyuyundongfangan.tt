@@ -1,0 +1,59 @@
+\input format.tex
+
+%\usepackage{arydshln}
+
+\begin{document}
+
+%%%
+\setlength{\arrayrulewidth}{0.5pt}
+\color{gray2}
+\vspace*{0mm}
+\fontsize{9.3pt}{9.8pt}\selectfont
+\begin{tctabularx}{tabularx={p{15.4cm}<{\centering}p{0pt}}}
+\\[-6.769pt]
+\cellcolor{kelly} \raisebox{1pt}{\color{black70}\xiaosihao\lantxh\bf 肠道调节方案} \\
+\end{tctabularx}
+
+{
+\lantxh
+\vspace*{-4.25mm}
+\noindent
+\begin{longtable}{|@{~~~}p{15.35cm}|}
+[% FOREACH item = fangan.regulate.desc.item -%]
+[% IF item.desc != '-' -%]
+\hline
+\parbox[c]{\hsize}{\vskip7pt\xiaowuhao {\lantxh\bf [% item.name %]}\\[% item.desc %]
+[% IF item.spotnum != 0 -%]
+\begin{compactenum}[\textbullet]
+[% FOREACH spot = item.spot -%]
+\item[\color{black70}\textbullet][% spot %]
+[% END -%]
+\end{compactenum}
+[% ELSE -%]
+[% END -%]
+\vskip7pt}\\
+[% END -%]
+[% END -%]
+\hline
+\end{longtable}
+}
+
+
+\fontsize{9.3pt}{9.8pt}\selectfont
+\begin{tctabularx}{tabularx={p{15.4cm}<{\centering}p{0pt}}}
+\\[-6.769pt]
+\cellcolor{kelly} \raisebox{1pt}{\color{black70}\xiaosihao\lantxh\bf 运动方案} \\
+\end{tctabularx}
+
+{
+\lantxh
+\vspace*{-4.25mm}
+\noindent
+\begin{longtable}{|p{1.25cm}@{}p{2cm}|p{11.732cm}|}
+\hline
+\parbox[c]{\hsize}{\vskip7pt\raisebox{-1.5ex}{\includegraphics[width=.9cm]{[% fangan.sport.pic %]}}\vskip7pt} & \parbox[c]{\hsize}{\centering\xiaowuhao\vskip7pt{[% fangan.sport.name %]}\vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\xiaowuhao {[% fangan.sport.desc %]}\vskip7pt}\\
+\hline
+\end{longtable}
+}
+\end{document}

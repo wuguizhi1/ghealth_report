@@ -1,0 +1,128 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+\newcommand{\mytoprule}{\specialrule{0.1em}{0em}{0em}}
+\newcommand{\mybottomrule}{\specialrule{0.1em}{0em}{0em}} 
+
+\usepackage[nodisplayskipstretch]{setspace}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\NewEnviron{RCtable}[1]
+  {%
+    \begin{tcolorbox}[#1]\BODY\end{tcolorbox}%
+  }
+
+\usepackage{colortbl}
+
+\begin{document}
+
+\vspace*{14mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+\begin{tctabularx}{tabularx={m{15.4cm}<{\centering}}}
+\\[-6pt]
+\cellcolor{topcolor}\raisebox{2.614pt}{\color{black70}\fontsize{11pt}{11pt}\selectfont\bf 主要有益菌检测结果}
+\end{tctabularx}
+
+\sepline
+
+\noindent
+\fontsize{8.8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{tabular}{p{9.5cm}p{5.5cm}}
+\parbox[l]{\hsize}{
+\vspace*{5mm}
+{
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+\fontsize{10pt}{11pt}\selectfont\bf {乳杆菌属（Lactobacillus）}
+}} & \\
+\hspace*{1.5mm}
+\begin{minipage}[t]{.6\textwidth}{
+\vspace*{2mm}
+\noindent
+\begin{spacing}{1.5}
+\fontsize{8pt}{11pt}\selectfont {乳杆菌，又叫乳酸菌，大家一定不陌生。很早以前，它就被人用来发酵生产酸奶和奶酪等食物，让食物既美味又营养。可不能小瞧了乳杆菌，增强免疫力、抵抗病菌、延缓衰老、促进营养吸收等都有它的功劳。当肠道内乳杆菌含量较高时，产生乳酸，调节肠道微环境，阻止致病菌侵入肠道；调节免疫，抑制肠道炎症的发生；促进营养物质吸收，从而有利于肠道健康。当肠道内乳杆菌含量较低时，肠道环境差，易发生肠道炎症、肠道问题甚至可能影响全身。这时记得适量补充酸奶或乳杆菌制剂哦，也可以搭配服用能促进乳杆菌生长的益生元。}
+\end{spacing}
+\vspace{3pt}
+}
+\end{minipage}
+ & 
+\hspace*{8mm}
+\begin{minipage}[t]{.3\textwidth}{
+\vspace*{2mm}
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont\bf 健康状态提示 \vspace{3pt}\\}
+{\includegraphics[scale=1.0]{crywithorange.pdf} \vspace*{10mm}} \\
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont{\bf 菌属检测指数 \quad 25.35}（偏低） \vspace{3pt}\\}
+{\fontsize{8pt}{11pt}\selectfont ~~~~不利于抑制肠道炎症及调节肠道环境}
+}
+\end{minipage} \\
+\mytoprule
+\parbox[l]{\hsize}{
+\vspace*{5mm}
+{
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+\fontsize{10pt}{11pt}\selectfont\bf {双歧杆菌属（Bifidobacterium）}
+}} & \\
+\hspace*{1.5mm}
+\begin{minipage}[t]{.6\textwidth}{
+\vspace*{2mm}
+\noindent
+\begin{spacing}{1.5}
+\fontsize{8pt}{11pt}\selectfont {双歧杆菌是乳杆菌的好朋友，作用不比乳杆菌小：它既是肠道内的“清道夫”，也是调节肠道生态平衡的重要细菌。肠道内双歧杆菌含量较高时，表明肠道较为健康：它不仅能帮助增强肠道屏障，调节肠道环境；还能调节肠道免疫功能，有效抑制有害菌的胡作非为。此外，双歧杆菌还能够促进营养物质吸收，保持健康的身体状态。当肠道内双歧杆菌含量较低时，肠道可能进入不健康状态：肠道环境差、免疫调节能力低。这时需要补充双歧杆菌制剂或者益生元，增加双歧杆菌含量，优化肠道菌群组成。}
+\end{spacing}
+\vspace{3pt}
+}
+\end{minipage}
+ & 
+\hspace*{8mm}
+\begin{minipage}[t]{.3\textwidth}{
+\vspace*{2mm}
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont\bf 健康状态提示 \vspace{3pt}\\}
+{\includegraphics[scale=1.0]{crywithorange.pdf} \vspace*{10mm}} \\
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont{\bf 菌属检测指数 \quad 19.01}（偏低） \vspace{3pt}\\}
+{\fontsize{8pt}{11pt}\selectfont ~~~~不利于调节免疫及肠道环境}
+}
+\end{minipage} \\
+\mytoprule
+\end{tabular}
+
+\vspace*{3mm}
+\noindent
+~~~~\tikz\draw[green2,fill=green2](0,0) circle[radius=4pt]; \bf 绿色表示健康 \tikz\draw[orange2,fill=orange2](0,0) circle[radius=4pt]; \bf 橙色表示需要关注 \tikz\draw[red2,fill=red2](0,0) circle[radius=4pt]; \bf 红色表示为有风险
+
+\end{document}

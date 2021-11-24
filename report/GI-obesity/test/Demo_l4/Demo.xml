@@ -1,0 +1,657 @@
+<opt>
+  <BMI>19.92</BMI>
+  <age>26</age>
+  <barcode>GIOB0001</barcode>
+  <batch>1</batch>
+  <changdaojunqun>
+    <ename>MICROBIOTA</ename>
+    <name>肠道菌群</name>
+    <pangjun>
+      <abnormalN>6</abnormalN>
+      <bad>布劳特氏菌属、弯曲杆菌属、脱硫弧菌属</bad>
+      <badDesc>不利于产生有益物质及肠道健康；可能增加腹泻或痢疾风险；可能增加肠道炎症风险</badDesc>
+      <badDisease>腹泻、痢疾、肠道炎症</badDisease>
+      <badEffect>产生有益物质、肠道健康</badEffect>
+      <badN>3</badN>
+      <badSource>-</badSource>
+      <biotics_bad>脱硫弧菌属、弯曲杆菌属、布劳特氏菌属</biotics_bad>
+      <biotics_good>志贺氏菌属、沙门氏菌属、肠杆菌属</biotics_good>
+      <food_sup>-</food_sup>
+      <good>肠杆菌属、沙门氏菌属、志贺氏菌属</good>
+      <goodDesc>-</goodDesc>
+      <goodDisease>-</goodDisease>
+      <goodEffect>-</goodEffect>
+      <goodN>3</goodN>
+      <goodSource>-</goodSource>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.06</Val70>
+        <cnt1>6</cnt1>
+        <cnt2>3</cnt2>
+        <cnt3>4</cnt3>
+        <desc></desc>
+        <descfull></descfull>
+        <level>l2</level>
+        <name>肠杆菌属</name>
+        <per>0.6442</per>
+        <per100>64</per100>
+        <range>0\textasciitilde 1.73</range>
+        <risk>有益</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>0</value>
+      </item>
+      <item>
+        <Val30>0.11</Val30>
+        <Val70>1.03</Val70>
+        <cnt1>1</cnt1>
+        <cnt2>8</cnt2>
+        <cnt3>1</cnt3>
+        <desc>多数为致病菌，可能引起腹泻、肠炎等疾病</desc>
+        <descfull>多数为致病菌，可能引起腹泻、肠炎等疾病
+
+</descfull>
+        <level>l2</level>
+        <name>梭菌属</name>
+        <per>0.1154</per>
+        <per100>11</per100>
+        <range>0\textasciitilde 0.75</range>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>0.02</value>
+      </item>
+      <item>
+        <Val30>2.59</Val30>
+        <Val70>9.28</Val70>
+        <cnt1>1</cnt1>
+        <cnt2>8</cnt2>
+        <cnt3>6</cnt3>
+        <desc>发酵多种植物多糖产生乙酸盐，促进肠道健康</desc>
+        <descfull>发酵多种植物多糖产生乙酸盐，促进肠道健康
+
+</descfull>
+        <level>l2</level>
+        <name>布劳特氏菌属</name>
+        <per>0.1635</per>
+        <per100>16</per100>
+        <range>0\textasciitilde 7.43</range>
+        <risk>有害</risk>
+        <riskdesc>不利于产生有益物质及肠道健康</riskdesc>
+        <source></source>
+        <value>1.65</value>
+      </item>
+      <item>
+        <Val30>0.78</Val30>
+        <Val70>3.77</Val70>
+        <cnt1>2</cnt1>
+        <cnt2>7</cnt2>
+        <cnt3>5</cnt3>
+        <desc>肠道的主要产气菌之一，与肠易激综合征等疾病相关</desc>
+        <descfull>肠道的主要产气菌之一，与肠易激综合征等疾病相关
+
+</descfull>
+        <level>l2</level>
+        <name>多尔氏菌属</name>
+        <per>0.2500</per>
+        <per100>25</per100>
+        <range>0\textasciitilde 1.61</range>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>0.52</value>
+      </item>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.01</Val70>
+        <cnt1>9</cnt1>
+        <cnt2>0</cnt2>
+        <cnt3>9</cnt3>
+        <desc></desc>
+        <descfull></descfull>
+        <level>l2</level>
+        <name>沙门氏菌属</name>
+        <per>0.9904</per>
+        <per100>99</per100>
+        <range>0\textasciitilde 0.00</range>
+        <risk>有益</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>0</value>
+      </item>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.01</Val70>
+        <cnt1>8</cnt1>
+        <cnt2>1</cnt2>
+        <cnt3>4</cnt3>
+        <desc>多数菌种为致病菌，可引起弯曲菌病，表现为严重腹泻或痢疾综合征</desc>
+        <descfull>多数菌种为致病菌，可引起弯曲菌病，表现为严重腹泻或痢疾综合征
+
+</descfull>
+        <level>l4</level>
+        <name>弯曲杆菌属</name>
+        <per>0.8462</per>
+        <per100>84</per100>
+        <range>0\textasciitilde 0.04</range>
+        <risk>有害</risk>
+        <riskdesc>可能增加腹泻或痢疾风险</riskdesc>
+        <source></source>
+        <value>0.05</value>
+      </item>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.01</Val70>
+        <cnt1>9</cnt1>
+        <cnt2>0</cnt2>
+        <cnt3>3</cnt3>
+        <desc></desc>
+        <descfull></descfull>
+        <level>l2</level>
+        <name>志贺氏菌属</name>
+        <per>0.9327</per>
+        <per100>93</per100>
+        <range>0\textasciitilde 0.01</range>
+        <risk>有益</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>0</value>
+      </item>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>1.33</Val70>
+        <cnt1>4</cnt1>
+        <cnt2>5</cnt2>
+        <cnt3>9</cnt3>
+        <desc>多为致病菌，可能导致肺炎、尿路感染、软组织感染、菌血症等</desc>
+        <descfull>多为致病菌，可能导致肺炎、尿路感染、软组织感染、菌血症等
+
+</descfull>
+        <level>l2</level>
+        <name>克雷伯氏菌属</name>
+        <per>0.4904</per>
+        <per100>49</per100>
+        <range>0\textasciitilde 5.41</range>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>0</value>
+      </item>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.58</Val70>
+        <cnt1>8</cnt1>
+        <cnt2>1</cnt2>
+        <cnt3>3</cnt3>
+        <desc>产生硫化氢，刺激肠道产生炎症反应，不利于肠道健康</desc>
+        <descfull>产生硫化氢，刺激肠道产生炎症反应，不利于肠道健康
+
+</descfull>
+        <level>l4</level>
+        <name>脱硫弧菌属</name>
+        <per>0.8365</per>
+        <per100>83</per100>
+        <range>0\textasciitilde 0.69</range>
+        <risk>有害</risk>
+        <riskdesc>可能增加肠道炎症风险</riskdesc>
+        <source></source>
+        <value>2.68</value>
+      </item>
+      <item>
+        <Val30>0.56</Val30>
+        <Val70>2.28</Val70>
+        <cnt1>5</cnt1>
+        <cnt2>4</cnt2>
+        <cnt3>5</cnt3>
+        <desc>共生菌，可能与长期高脂高蛋白饮食有关</desc>
+        <descfull>共生菌，可能与长期高脂高蛋白饮食有关
+
+</descfull>
+        <level>l3</level>
+        <name>嗜胆菌属</name>
+        <per>0.5577</per>
+        <per100>55</per100>
+        <range>0\textasciitilde 1.15</range>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>1.44</value>
+      </item>
+      <prebiotics_sup>-</prebiotics_sup>
+      <probiotics_sup>-</probiotics_sup>
+    </pangjun>
+    <pathogen>
+      <abnormalN>1</abnormalN>
+      <bad>小韦荣氏球菌</bad>
+      <badDesc>可能增加脑膜炎、骨髓炎、牙周病、龋齿等的风险</badDesc>
+      <badDisease>-</badDisease>
+      <badEffect>-</badEffect>
+      <badN>1</badN>
+      <ename>PATHOGEN</ename>
+      <good>-</good>
+      <goodDesc>-</goodDesc>
+      <goodDisease>-</goodDisease>
+      <goodEffect>-</goodEffect>
+      <goodN>0</goodN>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.01</Val70>
+        <desc>与脑膜炎、骨髓炎、牙周病、龋齿等疾病相关</desc>
+        <descfull>与脑膜炎、骨髓炎、牙周病、龋齿等疾病相关
+
+</descfull>
+        <level>l4</level>
+        <name>小韦荣氏球菌</name>
+        <per>0.8269</per>
+        <per100>82</per100>
+        <range>0\textasciitilde 0.73</range>
+        <risk>有害</risk>
+        <riskdesc>可能增加脑膜炎、骨髓炎、牙周病、龋齿等的风险</riskdesc>
+        <source></source>
+        <value>0.15</value>
+      </item>
+      <name>致病菌</name>
+      <nameDesc>小韦荣氏球菌</nameDesc>
+      <num>1</num>
+    </pathogen>
+    <shoujun>
+      <abnormalN>6</abnormalN>
+      <bad>双歧杆菌属、乳酸杆菌属、柔嫩梭菌属、毛杆菌属</bad>
+      <badDesc>不利于调节免疫及肠道环境；不利于抑制肠道炎症及调节肠道环境；不利于产生有益物质及抑制肠道炎症；不利于肠道菌群平衡</badDesc>
+      <badDisease>-</badDisease>
+      <badEffect>调节免疫、肠道环境、抑制肠道炎症等</badEffect>
+      <badN>4</badN>
+      <badSource>-</badSource>
+      <biotics_bad>毛杆菌属、柔嫩梭菌属、乳酸杆菌属、双歧杆菌属</biotics_bad>
+      <biotics_good>毛螺菌属</biotics_good>
+      <food_sup>-</food_sup>
+      <good>毛螺菌属</good>
+      <goodDesc>有利于产生有益物质及抑制肠道炎症</goodDesc>
+      <goodDisease>-</goodDisease>
+      <goodEffect>产生有益物质、抑制肠道炎症</goodEffect>
+      <goodN>1</goodN>
+      <goodSource>-</goodSource>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.18</Val70>
+        <cnt1>4</cnt1>
+        <cnt2>5</cnt2>
+        <cnt3>2</cnt3>
+        <desc>降解粘蛋白、调节免疫，有利于肠黏膜完整性，保持正常体重</desc>
+        <descfull>降解粘蛋白、调节免疫，有利于肠黏膜完整性，保持正常体重
+
+
+
+</descfull>
+        <level>l3</level>
+        <name>阿克曼氏菌属</name>
+        <per>0.4231</per>
+        <per100>42</per100>
+        <range>0\textasciitilde 0.81</range>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>0.02</value>
+      </item>
+      <item>
+        <Val30>0.16</Val30>
+        <Val70>1.45</Val70>
+        <cnt1>1</cnt1>
+        <cnt2>8</cnt2>
+        <cnt3>4</cnt3>
+        <desc>有益菌，降解人体不能消化的多糖，产乳酸，调节免疫及肠道环境</desc>
+        <descfull>有益菌，降解人体不能消化的多糖，产乳酸，调节免疫及肠道环境
+
+</descfull>
+        <level>l2</level>
+        <name>双歧杆菌属</name>
+        <per>0.1442</per>
+        <per100>14</per100>
+        <range>0\textasciitilde 9.10</range>
+        <risk>有害</risk>
+        <riskdesc>不利于调节免疫及肠道环境</riskdesc>
+        <source></source>
+        <value>0</value>
+      </item>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.07</Val70>
+        <cnt1>5</cnt1>
+        <cnt2>4</cnt2>
+        <cnt3>5</cnt3>
+        <desc>肠道益生菌，能够生成乳酸，抑制有害菌及炎症，调节肠道环境</desc>
+        <descfull>肠道益生菌，能够生成乳酸，抑制有害菌及炎症，调节肠道环境
+
+</descfull>
+        <level>l2</level>
+        <name>乳酸杆菌属</name>
+        <per>0.5577</per>
+        <per100>55</per100>
+        <range>0\textasciitilde 0.16</range>
+        <risk>有害</risk>
+        <riskdesc>不利于抑制肠道炎症及调节肠道环境</riskdesc>
+        <source></source>
+        <value>0</value>
+      </item>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.01</Val70>
+        <cnt1>8</cnt1>
+        <cnt2>2</cnt2>
+        <cnt3>0</cnt3>
+        <desc></desc>
+        <descfull></descfull>
+        <level>l2</level>
+        <name>克里斯滕森菌属</name>
+        <per>0.8077</per>
+        <per100>80</per100>
+        <range>0\textasciitilde 0.02</range>
+        <risk></risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>0</value>
+      </item>
+      <item>
+        <Val30>32.39</Val30>
+        <Val70>87.89</Val70>
+        <cnt1>0</cnt1>
+        <cnt2>9</cnt2>
+        <cnt3>1</cnt3>
+        <desc>发酵纤维素产生丁酸等有益物质，抑制肠道炎症，促进肠道健康</desc>
+        <descfull>发酵纤维素产生丁酸等有益物质，抑制肠道炎症，促进肠道健康
+
+</descfull>
+        <level>l2</level>
+        <name>柔嫩梭菌属</name>
+        <per>0.0000</per>
+        <per100>1</per100>
+        <range>0\textasciitilde 18.30</range>
+        <risk>有害</risk>
+        <riskdesc>不利于产生有益物质及抑制肠道炎症</riskdesc>
+        <source></source>
+        <value>0.02</value>
+      </item>
+      <item>
+        <Val30>3.33</Val30>
+        <Val70>15.85</Val70>
+        <cnt1>3</cnt1>
+        <cnt2>6</cnt2>
+        <cnt3>8</cnt3>
+        <desc>帮助抗性淀粉和脂肪消化，保持正常体重，抑制肠道炎症</desc>
+        <descfull>帮助抗性淀粉和脂肪消化，保持正常体重，抑制肠道炎症
+
+
+
+</descfull>
+        <level>l3</level>
+        <name>颤螺菌属</name>
+        <per>0.3846</per>
+        <per100>38</per100>
+        <range>0\textasciitilde 4.78</range>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>4.6</value>
+      </item>
+      <item>
+        <Val30>9.56</Val30>
+        <Val70>37.61</Val70>
+        <cnt1>8</cnt1>
+        <cnt2>1</cnt2>
+        <cnt3>8</cnt3>
+        <desc>发酵多种糖类产生乙酸、甲酸等物质，能保护肠黏膜，抑制肠道炎症</desc>
+        <descfull>发酵多种糖类产生乙酸、甲酸等物质，能保护肠黏膜，抑制肠道炎症
+
+</descfull>
+        <level>l4</level>
+        <name>毛螺菌属</name>
+        <per>0.8846</per>
+        <per100>88</per100>
+        <range>0\textasciitilde 12.34</range>
+        <risk>有益</risk>
+        <riskdesc>有利于产生有益物质及抑制肠道炎症</riskdesc>
+        <source></source>
+        <value>66.35</value>
+      </item>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.01</Val70>
+        <cnt1>8</cnt1>
+        <cnt2>1</cnt2>
+        <cnt3>8</cnt3>
+        <desc>肠道共生菌，发酵葡萄糖产生乳酸及少量乙酸和丁酸</desc>
+        <descfull>肠道共生菌，发酵葡萄糖产生乳酸及少量乙酸和丁酸
+
+</descfull>
+        <level>l2</level>
+        <name>毛杆菌属</name>
+        <per>0.8846</per>
+        <per100>88</per100>
+        <range>0\textasciitilde 0.73</range>
+        <risk>有害</risk>
+        <riskdesc>不利于肠道菌群平衡</riskdesc>
+        <source></source>
+        <value>0</value>
+      </item>
+      <prebiotics_sup>-</prebiotics_sup>
+      <probiotics_sup>-</probiotics_sup>
+    </shoujun>
+  </changdaojunqun>
+  <diseaserisk>
+    <desc>
+      <abnormalN>3</abnormalN>
+      <bad>高血压</bad>
+      <badN>1</badN>
+      <good>2型糖尿病、动脉粥样硬化</good>
+      <goodN>2</goodN>
+      <item>
+        <Val30>39.53</Val30>
+        <Val70>81.9</Val70>
+        <desc></desc>
+        <descfull>Type II Diabetes</descfull>
+        <level>l2</level>
+        <name>2型糖尿病</name>
+        <per>0.0962</per>
+        <per100>9</per100>
+        <range>0\textasciitilde 19.16</range>
+        <risk>有益</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>20.36</value>
+      </item>
+      <item>
+        <Val30>34.53</Val30>
+        <Val70>64.03</Val70>
+        <desc></desc>
+        <descfull></descfull>
+        <level>l2</level>
+        <name>动脉粥样硬化</name>
+        <per>0.0577</per>
+        <per100>5</per100>
+        <range>0\textasciitilde 18.51</range>
+        <risk>有益</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>17.25</value>
+      </item>
+      <item>
+        <Val30>4.74</Val30>
+        <Val70>27.12</Val70>
+        <desc></desc>
+        <descfull>Hypertension</descfull>
+        <level>l4</level>
+        <name>高血压</name>
+        <per>0.9615</per>
+        <per100>96</per100>
+        <range>0\textasciitilde 35.83</range>
+        <risk>有害</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>470.96</value>
+      </item>
+      <item>
+        <Val30>211.49</Val30>
+        <Val70>346.73</Val70>
+        <desc></desc>
+        <descfull>Non-alcoholic fatty liver disease</descfull>
+        <level>l3</level>
+        <name>非酒精性脂肪肝</name>
+        <per>0.3269</per>
+        <per100>32</per100>
+        <range>4.16\textasciitilde 55.48</range>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>222.35</value>
+      </item>
+    </desc>
+    <ename>DISEASERISK</ename>
+    <name>潜在疾病风险</name>
+  </diseaserisk>
+  <fangan>
+    <food>
+      <desc>dizhonghaiyinshi.pdf</desc>
+    </food>
+    <regulate>
+      <desc>每天服用左旋肉碱低聚糖类复合益生元，1天1次，1次10g，午餐或晚餐前十分钟服用效果更佳</desc>
+      <name>调节方案</name>
+      <note>4个月</note>
+    </regulate>
+    <sport>
+      <desc>ranzhiyundongfangan.pdf</desc>
+    </sport>
+  </fangan>
+  <gaikuang>
+    <desc>
+      <abnormalN>3</abnormalN>
+      <bad>肠道菌群多样性、有益菌</bad>
+      <badN>2</badN>
+      <duoyangxing>
+        <Val30>3.00</Val30>
+        <Val70>3.50</Val70>
+        <desc>用于衡量肠道菌群物种丰富度及稳定性的指标</desc>
+        <descfull>用于衡量肠道菌群物种丰富度及稳定性的指标</descfull>
+        <level>l2</level>
+        <mean>3.16</mean>
+        <name>肠道菌群多样性</name>
+        <per>0.2115</per>
+        <per100>21</per100>
+        <range>1.92\textasciitilde 4.41</range>
+        <risk>有害</risk>
+        <riskdesc>肠道菌群组成较为单一，菌群失调风险较高。</riskdesc>
+        <riskdescfull>您的肠道菌群多样性偏低，说明您的肠道菌群组成较为单一，菌群失调风险较高。您的肠道菌群较易受到外界因素的干扰（如不良作息、刺激性食物、药物滥用），可能会导致菌群失调，引起胃肠道炎症、免疫力低下、胰岛素抵抗等多种健康问题。</riskdescfull>
+        <source></source>
+        <value>2.80</value>
+      </duoyangxing>
+      <good>有害菌</good>
+      <goodN>1</goodN>
+      <youhaijun>
+        <Val30>10.52</Val30>
+        <Val70>46.94</Val70>
+        <desc>产生多种毒素，危害肠道健康</desc>
+        <descfull>产生多种毒素，危害肠道健康</descfull>
+        <level>l2</level>
+        <name>有害菌</name>
+        <per>0.0000</per>
+        <per100>1</per100>
+        <range>0\textasciitilde 23.24</range>
+        <risk>有益</risk>
+        <riskdesc>有害菌含量偏低，有益于肠道健康</riskdesc>
+        <source></source>
+        <value>0.21</value>
+      </youhaijun>
+      <youyijun>
+        <Val30>69.79</Val30>
+        <Val70>142.02</Val70>
+        <desc>产生有益物质，抑制病原菌的生长，帮助预防疾病</desc>
+        <descfull>1、降低胆固醇和血脂有益菌能降低抑制胆固醇的合成，阻止人体对胆固醇的吸收、利用等。
+
+2、合成维生素我们从膳食中摄入的维生素量远远不能满足人体所需，因此，部分维生素是由有益菌群在肠道中合成的，尤其是维生素K，在食物中含量非常少，有益菌群的减少，将会导致维生素K缺乏症，产生腹泻和凝血障碍性疾病等。
+
+3、促进钙、铁、维生素D的吸收乳酸杆菌在代谢过程中会产生大量的酸，酸会提高钙的可溶性，并直接刺激胃肠道最大限度地吸收钙、铁、锌等。实验结果显示，在普通情况下，我们仅能吸收消化钙的1{/}3，通过摄入活性益生菌，钙的吸收能提高到摄入量的2{/}3。因此，有益菌的繁殖有利于减缓老年人骨质疏松的过程，促进婴儿的发育。
+
+4、提高免疫力肠道里面存在有益菌和有害菌，如果有益菌占据了肠道的表面，有害菌就没有了生存的位置，这叫“站位性保护”，位置就那么多，有益菌占得多了，有害菌在营养竞争上就处于失败状态，生长发育受到抑制。因此，当双歧杆菌、乳酸杆菌等有益菌在肠道内生长、繁殖，将阻止外面的病原体入侵肠道，构筑成一个生物屏障。而且肠道是人体最大的一个免疫器官，有益菌可以分泌一些抗原物质，激活并强化肠道的免疫系统。
+
+5、抗癌益生菌能降解亚硝胺，消除亚硝胺的致癌性，而且促进肠道蠕动，像老年人经常便秘，一些有毒、有害物质就滞留在肠道并威胁肠道表面，诱发肠道肿瘤，引起癌变。蠕动加快后，这些有害菌就随着粪便排出人体。</descfull>
+        <level>l2</level>
+        <name>有益菌</name>
+        <per>0.0000</per>
+        <per100>1</per100>
+        <range>0\textasciitilde 26.89</range>
+        <risk>有害</risk>
+        <riskdesc>有益物质产出不足，不利于肠道健康</riskdesc>
+        <source></source>
+        <value>0.05</value>
+      </youyijun>
+    </desc>
+    <ename>OVERVIEW</ename>
+    <name>肠道菌群概况</name>
+  </gaikuang>
+  <height>160</height>
+  <metasummary>
+    <desc>
+      <abnormalN>3</abnormalN>
+      <bad>瘦菌</bad>
+      <badActrule>增加瘦菌含量</badActrule>
+      <badDesc>-</badDesc>
+      <badN>1</badN>
+      <difficulty>difficulty-l4.pdf</difficulty>
+      <good>微生态平衡能力、胖菌</good>
+      <goodActrule>-</goodActrule>
+      <goodDesc>-</goodDesc>
+      <goodN>2</goodN>
+      <normalitem>-</normalitem>
+      <pangjun>
+        <Val30>13.24</Val30>
+        <Val70>33.07</Val70>
+        <desc></desc>
+        <descfull></descfull>
+        <level>l2</level>
+        <name>胖菌</name>
+        <per>0.0577</per>
+        <per100>5</per100>
+        <range>0\textasciitilde 10.61</range>
+        <risk>有益</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>6.39</value>
+      </pangjun>
+      <pinghengnengli>
+        <desc></desc>
+        <descfull></descfull>
+        <level>l4</level>
+        <name>微生态平衡能力</name>
+        <per>0.4038</per>
+        <per100>40</per100>
+        <risk>有益</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+      </pinghengnengli>
+      <regulatetime>regulatetime-l3.pdf</regulatetime>
+      <shoujun>
+        <Val30>86.81</Val30>
+        <Val70>190.53</Val70>
+        <desc></desc>
+        <descfull></descfull>
+        <level>l2</level>
+        <name>瘦菌</name>
+        <per>0.2788</per>
+        <per100>27</per100>
+        <range>0\textasciitilde 33.94</range>
+        <risk>有害</risk>
+        <riskdesc>-</riskdesc>
+        <source></source>
+        <value>84.06</value>
+      </shoujun>
+      <weightstatus>正常</weightstatus>
+    </desc>
+    <ename>METASUMMARY</ename>
+    <name>肠道菌群总览</name>
+  </metasummary>
+  <name>Brook</name>
+  <receivedate>2017-10-17</receivedate>
+  <sex>F</sex>
+  <source>人和未来</source>
+  <version>1</version>
+  <weight>51.0</weight>
+</opt>

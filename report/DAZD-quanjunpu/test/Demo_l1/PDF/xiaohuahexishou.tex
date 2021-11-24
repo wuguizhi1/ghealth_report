@@ -1,0 +1,123 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\NewEnviron{RCtable}[1]
+  {%
+    \begin{tcolorbox}[#1]\BODY\end{tcolorbox}%
+  }
+
+
+
+\begin{document}
+
+\vspace*{5mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+{\noindent\bf\sanhao 二、代谢分析及免疫}
+
+\vspace*{4mm}
+
+\begin{spacing}{1.5}
+\begin{LRaside}[.8]{2.1 消化和吸收总评}
+\noindent
+\includegraphics[width=\linewidth]{hanliang.pdf}
+\asidebreak %
+蛋白质、脂类、碳水化合物是维持生命及健康的重要营养物质。蛋白质是生命的物质基础，构成人体各个组织器官，实现各种生理功能；脂类是人体主要储能物质；碳水化合物是机体最重要的直接供能物质。肠道菌群在蛋白质、脂类、碳水化合物的消化、代谢过程中起着重要的作用。
+\end{LRaside}
+\end{spacing}
+
+%\vspace*{4mm}
+%\noindent
+%2.1 您的常见肠道菌含量
+%\vspace*{1.5mm}
+
+%\begin{RCtable}{
+%  rtab=1,
+%  tabularx*={\arrayrulecolor{gray2}}%
+%    {M{0.3\linewidth} M{0.31\linewidth}M{0.34\linewidth}}
+%}
+%\fuentecabecera{测试项目} & \fuentecabecera{健康状态提示} & \fuentecabecera{检测结果评价} \\[3pt]
+%\bf{测试项目} & \bf{健康状态提示} & \bf{检测结果评价} \\[3pt]
+%\end{RCtable}
+
+\begin{tctabularx}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.55cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测结果评价}
+\end{tctabularx}
+
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 蛋白降解产物\\肠道菌群氨基酸代谢能力} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 低{\\ \bahao 不利于人体获得必需氨基酸}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 低{\\ \bahao 不利于人体获得必需氨基酸}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 低 \\ \bahao 不利于人体获得必需氨基酸} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 脂肪降解产物\\肠道菌群脂肪类相关代谢能力} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 低{\\ \bahao 不利于人体获得必需脂肪酸}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 低{\\ \bahao 不利于人体获得必需脂肪酸}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 低 \\ \bahao 不利于人体获得必需脂肪酸} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 碳水化合物降解产物\\肠道菌群纤维素等碳水化合物代谢能力} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 低{\\ \bahao 不利于维持肠道稳态和菌群平衡}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 低{\\ \bahao 不利于维持肠道稳态和菌群平衡}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 低 \\ \bahao 不利于维持肠道稳态和菌群平衡} }\end{center} \end{minipage} \\
+\hline
+\multicolumn{3}{l}{}\\
+\multicolumn{3}{l}{\includegraphics[scale=1]{greencircle.pdf} {\fontsize{9.3pt}{11pt}\selectfont\bf 绿色表示健康}   \includegraphics[scale=1]{orangecircle.pdf}  {\fontsize{9.3pt}{11pt}\selectfont\bf 橙色表示需要关注}  \includegraphics[scale=1]{redcircle.pdf} {\fontsize{9.3pt}{11pt}\selectfont\bf 红色表示有风险}}
+\end{longtable}
+
+\vspace*{6mm}
+\begin{spacing}{1.5}
+\begin{LRaside}[.8]{结果分析}
+\noindent
+\includegraphics[width=\linewidth]{result_fenbu.pdf}
+\asidebreak %
+综合您的检测结果，
+您肠道内的蛋白降解产物、脂肪降解产物、碳水化合物降解产物指标异常，不利于获得必需氨基酸、获得必需脂肪酸、肠道稳态等。可以补充对应的优质营养物质（优质蛋白、橄榄油、膳食纤维等），改善菌群的营养代谢。
+\end{LRaside}
+\end{spacing}
+
+\end{document}
+

@@ -1,0 +1,714 @@
+<opt>
+  <BMI>27.47</BMI>
+  <FB_ratio>
+    <ename>FBR</ename>
+    <name>厚壁菌门/拟杆菌门</name>
+    <risk>正常</risk>
+    <threshold>≤ 4.93</threshold>
+    <value>0.81</value>
+  </FB_ratio>
+  <abundance>
+    <cnt>7</cnt>
+    <item>
+      <ename>Bacteroidetes</ename>
+      <end>
+        <control>0.4638738</control>
+        <sample>0.4578569</sample>
+      </end>
+      <index>0</index>
+      <name>拟杆菌门</name>
+      <per>
+        <control>4.638738e-01</control>
+        <sample>4.578569e-01</sample>
+      </per>
+      <risk>正常</risk>
+      <start>
+        <control>0</control>
+        <sample>0</sample>
+      </start>
+      <threshold>≤ 63.44</threshold>
+      <value>45.79</value>
+    </item>
+    <item>
+      <ename>Firmicutes</ename>
+      <end>
+        <control>0.8910607</control>
+        <sample>0.8296425</sample>
+      </end>
+      <index>1</index>
+      <name>厚壁菌门</name>
+      <per>
+        <control>4.271869e-01</control>
+        <sample>3.717856e-01</sample>
+      </per>
+      <risk>正常</risk>
+      <start>
+        <control>0.4638738</control>
+        <sample>0.4578569</sample>
+      </start>
+      <threshold>≤ 58.43</threshold>
+      <value>37.18</value>
+    </item>
+    <item>
+      <ename>Proteobacteria</ename>
+      <end>
+        <control>0.96469122</control>
+        <sample>0.9375802</sample>
+      </end>
+      <index>2</index>
+      <name>变形菌门</name>
+      <per>
+        <control>7.363052e-02</control>
+        <sample>1.079377e-01</sample>
+      </per>
+      <risk>正常</risk>
+      <start>
+        <control>0.8910607</control>
+        <sample>0.8296425</sample>
+      </start>
+      <threshold>≤ 13.45</threshold>
+      <value>10.79</value>
+    </item>
+    <item>
+      <ename>Cyanobacteria</ename>
+      <end>
+        <control>0.965709753</control>
+        <sample>0.96853909</sample>
+      </end>
+      <index>3</index>
+      <name>蓝藻门</name>
+      <per>
+        <control>1.018533e-03</control>
+        <sample>3.095889e-02</sample>
+      </per>
+      <risk>异常</risk>
+      <start>
+        <control>0.96469122</control>
+        <sample>0.9375802</sample>
+      </start>
+      <threshold>≤ 0.60</threshold>
+      <value>3.10</value>
+    </item>
+    <item>
+      <ename>Elusimicrobia</ename>
+      <end>
+        <control>0.965709753</control>
+        <sample>0.970268325</sample>
+      </end>
+      <index>4</index>
+      <name>迷踪菌门</name>
+      <per>
+        <control>0</control>
+        <sample>1.729235e-03</sample>
+      </per>
+      <risk>异常</risk>
+      <start>
+        <control>0.965709753</control>
+        <sample>0.96853909</sample>
+      </start>
+      <threshold>≤ 0.00</threshold>
+      <value>0.17</value>
+    </item>
+    <item>
+      <ename>Tenericutes</ename>
+      <end>
+        <control>0.966783548</control>
+        <sample>0.97032410678</sample>
+      </end>
+      <index>5</index>
+      <name>柔膜菌门</name>
+      <per>
+        <control>1.073795e-03</control>
+        <sample>5.578178e-05</sample>
+      </per>
+      <risk>正常</risk>
+      <start>
+        <control>0.965709753</control>
+        <sample>0.970268325</sample>
+      </start>
+      <threshold>≤ 0.57</threshold>
+      <value>0.01</value>
+    </item>
+    <item>
+      <ename>Actinobacteria</ename>
+      <end>
+        <control>0.978958438</control>
+        <sample>0.97037988856</sample>
+      </end>
+      <index>6</index>
+      <name>放线菌门</name>
+      <per>
+        <control>1.217489e-02</control>
+        <sample>5.578178e-05</sample>
+      </per>
+      <risk>正常</risk>
+      <start>
+        <control>0.966783548</control>
+        <sample>0.97032410678</sample>
+      </start>
+      <threshold>≤ 5.58</threshold>
+      <value>0.01</value>
+    </item>
+    <pearson_cor>0.99</pearson_cor>
+  </abundance>
+  <age>29</age>
+  <agestr>29</agestr>
+  <barcode>Demo</barcode>
+  <batch>1</batch>
+  <changdaojunqun>
+    <benificial>
+      <abnormalN>2</abnormalN>
+      <abnormalitem>
+        <desc>肠道益生菌，能够生成乳酸，抑制有害菌及炎症，调节肠道环境</desc>
+        <latin>Lactobacillus</latin>
+        <level>l2</level>
+        <minusSD>0.01</minusSD>
+        <name>乳酸杆菌属</name>
+        <per>0.3700</per>
+        <plusSD>0.92</plusSD>
+        <range>0\textasciitilde 0.16</range>
+        <result>异常</result>
+        <risk>有害</risk>
+        <riskdesc>不利于抑制肠道炎症及调节肠道环境</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>0.00</value>
+      </abnormalitem>
+      <abnormalitem>
+        <desc>降解粘蛋白、调节免疫，有利于肠黏膜完整性，保持正常体重</desc>
+        <latin>Akkermansia</latin>
+        <level>l2</level>
+        <minusSD>0.01</minusSD>
+        <name>阿克曼氏菌属</name>
+        <per>0.3716</per>
+        <plusSD>4.61</plusSD>
+        <range>0\textasciitilde 0.81</range>
+        <result>异常</result>
+        <risk>有害</risk>
+        <riskdesc>不利于调节免疫及保持正常体重</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>0.00</value>
+      </abnormalitem>
+      <bad>乳酸杆菌属、阿克曼氏菌属</bad>
+      <badDesc>不利于抑制肠道炎症及调节肠道环境；不利于调节免疫及保持正常体重</badDesc>
+      <badDisease>-</badDisease>
+      <badEffect>抑制肠道炎症、调节肠道环境、调节免疫等</badEffect>
+      <badN>2</badN>
+      <good>-</good>
+      <goodDesc>-</goodDesc>
+      <goodDisease>-</goodDisease>
+      <goodEffect>-</goodEffect>
+      <goodN>0</goodN>
+      <item>
+        <desc>产生丁酸等有益物质，抑制肠道炎症，有利于肠道及人体健康</desc>
+        <latin>Roseburia</latin>
+        <level>l3</level>
+        <minusSD>2.32</minusSD>
+        <name>罗斯拜瑞氏菌属</name>
+        <per>0.2063</per>
+        <plusSD>69.23</plusSD>
+        <range>0\textasciitilde 10.27</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≥ 2.32</threshold>
+        <value>8.37</value>
+      </item>
+      <item>
+        <desc>发酵纤维素产生丁酸等有益物质，抑制肠道炎症，促进肠道健康</desc>
+        <latin>Faecalibacterium</latin>
+        <level>l3</level>
+        <minusSD>10.94</minusSD>
+        <name>柔嫩梭菌属</name>
+        <per>0.9568</per>
+        <plusSD>125.67</plusSD>
+        <range>0\textasciitilde 18.30</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≥ 10.94</threshold>
+        <value>166.68</value>
+      </item>
+      <item>
+        <desc>有益菌，降解人体不能消化的多糖，产乳酸，调节免疫及肠道环境</desc>
+        <latin>Bifidobacterium</latin>
+        <level>l3</level>
+        <minusSD>0.01</minusSD>
+        <name>双歧杆菌属</name>
+        <per>0.4050</per>
+        <plusSD>50.39</plusSD>
+        <range>0\textasciitilde 9.10</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>0.06</value>
+      </item>
+      <item>
+        <desc>肠道益生菌，能够生成乳酸，抑制有害菌及炎症，调节肠道环境</desc>
+        <latin>Lactobacillus</latin>
+        <level>l2</level>
+        <minusSD>0.01</minusSD>
+        <name>乳酸杆菌属</name>
+        <per>0.3700</per>
+        <plusSD>0.92</plusSD>
+        <range>0\textasciitilde 0.16</range>
+        <result>异常</result>
+        <risk>有害</risk>
+        <riskdesc>不利于抑制肠道炎症及调节肠道环境</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>0.00</value>
+      </item>
+      <item>
+        <desc>降解粘蛋白、调节免疫，有利于肠黏膜完整性，保持正常体重</desc>
+        <latin>Akkermansia</latin>
+        <level>l2</level>
+        <minusSD>0.01</minusSD>
+        <name>阿克曼氏菌属</name>
+        <per>0.3716</per>
+        <plusSD>4.61</plusSD>
+        <range>0\textasciitilde 0.81</range>
+        <result>异常</result>
+        <risk>有害</risk>
+        <riskdesc>不利于调节免疫及保持正常体重</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>0.00</value>
+      </item>
+    </benificial>
+    <ename>MICROBIOTA</ename>
+    <explain>
+      <majorgenus>普雷沃氏菌属</majorgenus>
+    </explain>
+    <fenbu>
+      <abnormalN>2</abnormalN>
+      <abnormalitem>
+        <desc>常见肠道菌，多数与人体互利共生，少数菌种可能会导致菌血症等</desc>
+        <latin>Bacteroides</latin>
+        <level>l2</level>
+        <minusSD>145.41</minusSD>
+        <name>拟杆菌属</name>
+        <per>0.0470</per>
+        <plusSD>503.74</plusSD>
+        <range>0\textasciitilde 68.29</range>
+        <result>异常</result>
+        <risk>有害</risk>
+        <riskdesc>不利于肠道菌群平衡</riskdesc>
+        <threshold>≤ 503.74</threshold>
+        <value>24.49</value>
+      </abnormalitem>
+      <abnormalitem>
+        <desc>多数为共生菌，少数在免疫力弱时可能引起化脓性炎症、肺炎等</desc>
+        <latin>Streptococcus</latin>
+        <level>l2</level>
+        <minusSD>0.01</minusSD>
+        <name>链球菌属</name>
+        <per>0.3913</per>
+        <plusSD>22.96</plusSD>
+        <range>0\textasciitilde 4.10</range>
+        <result>异常</result>
+        <risk>有害</risk>
+        <riskdesc>不利于肠道菌群平衡</riskdesc>
+        <threshold>≤ 22.96</threshold>
+        <value>0.00</value>
+      </abnormalitem>
+      <bad>拟杆菌属、链球菌属</bad>
+      <badDesc>不利于肠道菌群平衡</badDesc>
+      <badDisease>-</badDisease>
+      <badEffect>肠道菌群平衡</badEffect>
+      <badN>2</badN>
+      <good>-</good>
+      <goodDesc>-</goodDesc>
+      <goodDisease>-</goodDisease>
+      <goodEffect>-</goodEffect>
+      <goodN>0</goodN>
+      <item>
+        <desc>常见肠道菌，多数与人体互利共生，少数菌种可能会导致菌血症等</desc>
+        <latin>Bacteroides</latin>
+        <level>l2</level>
+        <minusSD>145.41</minusSD>
+        <name>拟杆菌属</name>
+        <per>0.0470</per>
+        <plusSD>503.74</plusSD>
+        <range>0\textasciitilde 68.29</range>
+        <result>异常</result>
+        <risk>有害</risk>
+        <riskdesc>不利于肠道菌群平衡</riskdesc>
+        <threshold>≤ 503.74</threshold>
+        <value>24.49</value>
+      </item>
+      <item>
+        <desc>发酵多种植物多糖产生乙酸盐，促进肠道健康</desc>
+        <latin>Blautia</latin>
+        <level>l3</level>
+        <minusSD>0.01</minusSD>
+        <name>布劳特氏菌属</name>
+        <per>0.3409</per>
+        <plusSD>43.52</plusSD>
+        <range>0\textasciitilde 7.43</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>0.11</value>
+      </item>
+      <item>
+        <desc>发酵多糖，能够产生丁酸、乙酸等有益物质，调节肠道环境</desc>
+        <latin>Coprococcus</latin>
+        <level>l3</level>
+        <minusSD>0.01</minusSD>
+        <name>粪球菌属</name>
+        <per>0.4546</per>
+        <plusSD>27.27</plusSD>
+        <range>0\textasciitilde 4.37</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>8.98</value>
+      </item>
+      <item>
+        <desc>帮助降解纤维素等人体不能消化的多糖，在肠道中广泛分布</desc>
+        <latin>Ruminococcus</latin>
+        <level>l3</level>
+        <minusSD>0.01</minusSD>
+        <name>瘤胃球菌属</name>
+        <per>0.3177</per>
+        <plusSD>59.72</plusSD>
+        <range>0\textasciitilde 9.85</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>2.57</value>
+      </item>
+      <item>
+        <desc>帮助抗性淀粉和脂肪消化，保持正常体重，抑制肠道炎症</desc>
+        <latin>Oscillospira</latin>
+        <level>l3</level>
+        <minusSD>0.01</minusSD>
+        <name>颤螺菌属</name>
+        <per>0.5061</per>
+        <plusSD>31.05</plusSD>
+        <range>0\textasciitilde 4.78</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>14.56</value>
+      </item>
+      <item>
+        <desc>帮助消化纤维素、抗性淀粉，保护肠道，抑制肠道炎症</desc>
+        <latin>Parabacteroides</latin>
+        <level>l3</level>
+        <minusSD>0.01</minusSD>
+        <name>副拟杆菌属</name>
+        <per>0.1842</per>
+        <plusSD>30.06</plusSD>
+        <range>0\textasciitilde 4.57</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>0.33</value>
+      </item>
+      <item>
+        <desc>发酵多种糖类产生乙酸、甲酸等物质，能保护肠黏膜，抑制肠道炎症</desc>
+        <latin>Lachnospira</latin>
+        <level>l3</level>
+        <minusSD>0.01</minusSD>
+        <name>毛螺菌属</name>
+        <per>0.5028</per>
+        <plusSD>78.85</plusSD>
+        <range>0\textasciitilde 12.34</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≥ 0.01</threshold>
+        <value>34.64</value>
+      </item>
+      <item>
+        <desc>多数为共生菌，少数在免疫力弱时可能引起化脓性炎症、肺炎等</desc>
+        <latin>Streptococcus</latin>
+        <level>l2</level>
+        <minusSD>0.01</minusSD>
+        <name>链球菌属</name>
+        <per>0.3913</per>
+        <plusSD>22.96</plusSD>
+        <range>0\textasciitilde 4.10</range>
+        <result>异常</result>
+        <risk>有害</risk>
+        <riskdesc>不利于肠道菌群平衡</riskdesc>
+        <threshold>≤ 22.96</threshold>
+        <value>0.00</value>
+      </item>
+      <item>
+        <desc>肠道共生菌，偏素食人群中含量高，少数菌种与感染、牙周疾病有关</desc>
+        <latin>Prevotella</latin>
+        <level>l3</level>
+        <minusSD>0.01</minusSD>
+        <name>普雷沃氏菌属</name>
+        <per>0.9957</per>
+        <plusSD>197.70</plusSD>
+        <range>0\textasciitilde 33.58</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 197.70</threshold>
+        <value>422.77</value>
+      </item>
+      <item>
+        <desc>可能与胃肠道感染相关</desc>
+        <latin>Sutterella</latin>
+        <level>l3</level>
+        <minusSD>3.62</minusSD>
+        <name>萨特氏菌属</name>
+        <per>0.5813</per>
+        <plusSD>34.09</plusSD>
+        <range>0\textasciitilde 4.93</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 34.09</threshold>
+        <value>21.98</value>
+      </item>
+      <item>
+        <desc>多数为致病菌，可能引起腹泻、肠炎等疾病</desc>
+        <latin>Clostridium</latin>
+        <level>l3</level>
+        <minusSD>0</minusSD>
+        <name>梭菌属</name>
+        <per>0.4413</per>
+        <plusSD>4.54</plusSD>
+        <range>0\textasciitilde 0.75</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 4.54</threshold>
+        <value>1.12</value>
+      </item>
+      <item>
+        <desc>分布广泛，部分菌种为条件致病菌，引起医院内获得性感染</desc>
+        <latin>Pseudomonas</latin>
+        <level>l3</level>
+        <minusSD>0</minusSD>
+        <name>假单胞菌属</name>
+        <per>0.4189</per>
+        <plusSD>0.10</plusSD>
+        <range>0\textasciitilde 0.02</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 0.10</threshold>
+        <value>0.00</value>
+      </item>
+      <item>
+        <desc>多数为共生菌，产生维生素K，少数与腹泻、尿道感染、败血症等相关</desc>
+        <latin>Escherichia</latin>
+        <level>l3</level>
+        <minusSD>0.01</minusSD>
+        <name>埃希氏菌属</name>
+        <per>0.2784</per>
+        <plusSD>83.21</plusSD>
+        <range>0\textasciitilde 13.55</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 83.21</threshold>
+        <value>0.17</value>
+      </item>
+    </fenbu>
+    <harmful>
+      <abnormalN>0</abnormalN>
+      <bad>-</bad>
+      <badDesc>-</badDesc>
+      <badDisease>-</badDisease>
+      <badEffect>-</badEffect>
+      <badN>0</badN>
+      <good>-</good>
+      <goodDesc>-</goodDesc>
+      <goodDisease>-</goodDisease>
+      <goodEffect>-</goodEffect>
+      <goodN>0</goodN>
+      <item>
+        <desc>产生硫化氢，刺激肠道产生炎症反应，不利于肠道健康</desc>
+        <latin>Desulfovibrio</latin>
+        <level>l3</level>
+        <minusSD>0</minusSD>
+        <name>脱硫弧菌属</name>
+        <per>0.6964</per>
+        <plusSD>4.13</plusSD>
+        <range>0\textasciitilde 0.69</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 4.13</threshold>
+        <value>2.79</value>
+      </item>
+      <item>
+        <desc>肠道的主要产气菌之一，与肠易激综合征等疾病相关</desc>
+        <latin>Dorea</latin>
+        <level>l3</level>
+        <minusSD>0</minusSD>
+        <name>多尔氏菌属</name>
+        <per>0.3161</per>
+        <plusSD>10.09</plusSD>
+        <range>0\textasciitilde 1.61</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 10.09</threshold>
+        <value>1.23</value>
+      </item>
+      <item>
+        <desc>多数菌种为致病菌，可引起弯曲菌病，表现为严重腹泻或痢疾综合征</desc>
+        <latin>Campylobacter</latin>
+        <level>l3</level>
+        <minusSD>0</minusSD>
+        <name>弯曲杆菌属</name>
+        <per>0.3944</per>
+        <plusSD>0.20</plusSD>
+        <range>0\textasciitilde 0.04</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 0.20</threshold>
+        <value>0.00</value>
+      </item>
+    </harmful>
+    <name>肠道菌群</name>
+    <pathogen>
+      <abnormalN>0</abnormalN>
+      <bad>-</bad>
+      <badDesc>-</badDesc>
+      <badDisease>-</badDisease>
+      <badEffect>-</badEffect>
+      <badN>0</badN>
+      <ename>PATHOGEN</ename>
+      <good>-</good>
+      <goodDesc>-</goodDesc>
+      <goodDisease>-</goodDisease>
+      <goodEffect>-</goodEffect>
+      <goodN>0</goodN>
+      <item>
+        <desc>可能导致菌血症、腹内感染、腹膜炎</desc>
+        <latin>Bacteroides fragilis</latin>
+        <level>l3</level>
+        <minusSD>0</minusSD>
+        <name>脆弱拟杆菌</name>
+        <per>0.3768</per>
+        <plusSD>55.89</plusSD>
+        <range>0\textasciitilde 9.83</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 55.89</threshold>
+        <value>0.11</value>
+      </item>
+      <item>
+        <desc>可能导致肠胃炎、尿路感染、新生儿脑膜炎、腹膜炎等</desc>
+        <latin>Escherichia coli</latin>
+        <level>l3</level>
+        <minusSD>0</minusSD>
+        <name>病原性大肠埃希氏菌</name>
+        <per>0.2784</per>
+        <plusSD>83.21</plusSD>
+        <range>0\textasciitilde 13.55</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 83.21</threshold>
+        <value>0.17</value>
+      </item>
+      <name>致病菌</name>
+      <nameDesc>脆弱拟杆菌、病原性大肠埃希氏菌</nameDesc>
+      <num>2</num>
+    </pathogen>
+  </changdaojunqun>
+  <enterotype>
+    <typename>普氏菌型</typename>
+    <typenum>2</typenum>
+    <typepic>enterotype_2.pdf</typepic>
+  </enterotype>
+  <gaikuang>
+    <curpic>sun_green.pdf</curpic>
+    <desc>
+      <Firmicutes_Bacteroidetes_ratio>0.81201266159798</Firmicutes_Bacteroidetes_ratio>
+      <abnormalN>0</abnormalN>
+      <bad>-</bad>
+      <badN>0</badN>
+      <classified>298</classified>
+      <duoyangxing>
+        <desc>用于衡量肠道菌群物种丰富度及稳定性的指标</desc>
+        <latin>diversity</latin>
+        <level>l3</level>
+        <mean>3.16</mean>
+        <minusSD>2.54</minusSD>
+        <name>肠道菌群多样性</name>
+        <per>0.5247</per>
+        <per100>52.47</per100>
+        <plusSD>3.78</plusSD>
+        <range>1.92\textasciitilde 4.41</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>您的肠道菌群组成较为丰富，菌群失调风险较低。</riskdesc>
+        <riskdescfull>您的肠道菌群多样性正常，说明您的肠道菌群组成较为丰富，菌群失调风险较低。您的肠道菌群不易受到外界因素的干扰，但仍需避免不良作息、刺激性食物、药物滥用等的影响，这样有助于保持较好的肠道菌群多样性，增强机体新陈代谢和免疫能力。</riskdescfull>
+        <threshold>≥ 2.54</threshold>
+        <value>3.20</value>
+        <valuelocation>5.44</valuelocation>
+      </duoyangxing>
+      <good>-</good>
+      <goodN>0</goodN>
+      <summary>您的肠道菌群组成较为丰富，菌群失调风险较低。您肠道内的有益菌与有害菌的含量均处于正常范围。二者处于动态平衡的状态，共同维持肠道生态系统的稳定。但是，在您免疫力低下时，有害菌可能会引起感染、腹泻、肠炎、便秘等。有害菌数量过高还可能影响您的心情和食欲，扰乱内分泌，降低机体免疫力，增加疾病风险。良好的饮食及生活习惯有助于提高有益菌的含量，抑制有害菌的增殖，建议您规律作息，注意饮食健康。</summary>
+      <total>301</total>
+      <unclassified>3</unclassified>
+      <youhaijun>
+        <cnt1>2</cnt1>
+        <cnt2>7</cnt2>
+        <cnt3>7</cnt3>
+        <desc>产生多种毒素，危害肠道健康</desc>
+        <latin>Harmful bacteria</latin>
+        <level>l3</level>
+        <mean>5.57</mean>
+        <minusSD>0</minusSD>
+        <name>有害菌</name>
+        <per>0.2656</per>
+        <per100>26.56</per100>
+        <plusSD>144.04</plusSD>
+        <range>0\textasciitilde 23.24</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≤ 144.04</threshold>
+        <value>0.39</value>
+      </youhaijun>
+      <youyijun>
+        <cnt1>7</cnt1>
+        <cnt2>2</cnt2>
+        <cnt3>8</cnt3>
+        <desc>产生有益物质，抑制病原菌的生长，帮助预防疾病</desc>
+        <latin>Benificial bacteria</latin>
+        <level>l3</level>
+        <mean>11.62</mean>
+        <minusSD>39.81</minusSD>
+        <name>有益菌</name>
+        <per>0.7798</per>
+        <per100>77.98</per100>
+        <plusSD>192.54</plusSD>
+        <range>0\textasciitilde 26.89</range>
+        <result>正常</result>
+        <risk>正常</risk>
+        <riskdesc>-</riskdesc>
+        <threshold>≥ 39.81</threshold>
+        <value>175.10</value>
+      </youyijun>
+    </desc>
+    <ename>OVERVIEW</ename>
+    <name>肠道菌群概况</name>
+    <pic>gaikuang_green.pdf</pic>
+  </gaikuang>
+  <name>Tom</name>
+  <receivedate>2017-03-01</receivedate>
+  <reportdate>2019-10-17</reportdate>
+  <sex>M</sex>
+  <source>浙江大学附属第一医院</source>
+  <version>t-2</version>
+</opt>

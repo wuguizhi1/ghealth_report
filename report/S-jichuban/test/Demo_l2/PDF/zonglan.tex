@@ -1,0 +1,71 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\begin{document}
+
+%\vspace*{8mm}
+\parindent0pt
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+{\bf\sanhao 检测结果总览}
+
+\vspace*{2mm}
+
+\begin{LRaside}{肠道菌群概况}
+\noindent\centering
+\includegraphics[width=\linewidth]{gaikuang_red.pdf}
+\jiuhao
+\noindent\begin{tabular}{@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}}
+\includegraphics[width=.41cm]{sun_red.pdf} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; \\[-4pt]
+\color{gray2}当次 & \color{gray2} & \color{gray2} & \color{gray2}
+\\
+\end{tabular}
+\asidebreak % 分栏
+1、您本次肠道菌群共检测出细菌种类169种，肠道菌群多样性
+偏低，说明您的肠道菌群组成较为单一，菌群失调风险较高。\par\bigskip
+2、您肠道中的有益菌含量
+偏低，仅高于93.75{\%}的参考人群。\par\bigskip
+3、您肠道内的有害菌含量
+相比参考人群偏低。
+\end{LRaside}
+
+\begin{LRaside}{肠道菌群含量}
+\noindent
+\includegraphics[width=\linewidth]{fenbu_red.pdf}
+
+\jiuhao
+\noindent\begin{tabular}{@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}}
+\includegraphics[width=.41cm]{sun_red.pdf} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; \\[-4pt]
+\color{gray2}当次 & \color{gray2} & \color{gray2} & \color{gray2}
+\\
+\end{tabular}
+\asidebreak % 分栏
+1、您肠道内的
+拟杆菌属、布劳特氏菌属、栖粪杆菌属、粪球菌属、瘤胃球菌属等26项指标异常，不利于肠道健康，需引起注意，建议持续监测肠道健康。\par\bigskip
+2、您的肠道内
+检测出7种致病菌，含量均未超标，但在您免疫力低下时仍可能会损害您的肠道健康。
+\end{LRaside}
+
+
+\begin{LRaside}{肠道菌群营养功能分析}
+\noindent
+\includegraphics[width=\linewidth]{gongneng_red.pdf}
+
+\jiuhao
+\noindent\begin{tabular}{@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}}
+\includegraphics[width=.41cm]{sun_red.pdf} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; \\[-4pt]
+\color{gray2}当次 & \color{gray2} & \color{gray2} & \color{gray2}
+\\
+\end{tabular}
+\asidebreak %分栏
+您肠道内参与维生素B1、维生素B2、维生素B3、维生素B5、维生素B6等10种营养物质代谢的菌群含量异常，不利于人体健康，需引起注意，建议持续监测肠道健康。
+\end{LRaside}
+
+颜色指示 \includegraphics[scale=1]{greencircle.pdf} {\bf 绿色表示健康}   \includegraphics[scale=1]{orangecircle.pdf}  {\bf 橙色表示需要关注}  \includegraphics[scale=1]{redcircle.pdf} {\bf 红色表示有风险}
+
+\end{document}

@@ -1,0 +1,126 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage[nodisplayskipstretch]{setspace}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+
+\begin{document}
+
+\vspace*{5mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+\begin{tctabularx}{tabularx={m{15.4cm}<{\centering}}}
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\fontsize{11pt}{11pt}\selectfont\bf 综合健康建议}
+\end{tctabularx}
+
+\sepline
+
+\vspace*{1mm}
+\begin{spacing}{1.5}
+\noindent
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont\bf {综合您本次检测结果，肠道有益菌总得分为47分，
+处于正常范围，
+建议您：}}
+\end{spacing}
+
+\vspace*{-3mm}
+\noindent
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+\begin{center}
+\begin{tabular}{|K{2.92cm}K{12.0cm}|}
+\hline
+
+\parbox[c][4.7cm]{.95\hsize}{
+\noindent
+\includegraphics[scale=1.0]{baohulifoodwithvline.pdf}
+}
+ &
+\hspace*{4mm}
+\parbox{.95\hsize}{
+\vspace*{3mm}
+\begin{spacing}{1.5}
+{\fontsize{9pt}{10pt}\selectfont\bf 膳食\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 建议保持定时定量进餐的好习惯，早餐不可忽略。食物种类新鲜多样，交替食用。主食搭配适量粗粮，多食用各种新鲜的蔬菜水果，深绿色蔬菜至少占蔬菜总摄入量的一半。\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 控制油炸类、西式快餐、含糖饮料等高脂高糖高热量食物。忌暴饮暴食。减少外出就餐。戒烟限酒。\\}
+\end{spacing}
+} \\
+\hline
+
+\parbox[c][4.7cm]{.95\hsize}{
+\noindent
+\includegraphics[scale=1.0]{baohuliprobioticswithvline.pdf}
+}
+ &
+\hspace*{4mm}
+\parbox{.95\hsize}{
+\vspace*{3mm}
+\begin{spacing}{1.5}
+{\fontsize{9pt}{10pt}\selectfont\bf 益生菌\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 您平时可适量多喝酸奶。酸奶营养丰富易吸收，含有大量活性益生菌的酸奶（如保加利亚乳杆菌、BB-12），能帮助调节肠道酸碱值，抑制有害菌的生长，增强人体免疫力。\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 选酸奶有窍门，2型糖尿病、动脉粥样硬化、胆囊炎、胰腺炎等患者，宜选用无糖酸奶。\\}
+\end{spacing}
+} \\
+\hline
+
+\parbox[c][4.7cm]{.95\hsize}{
+\noindent
+\includegraphics[scale=1.0]{baohuliprebioticswithvline.pdf}
+}
+ &
+\hspace*{4mm}
+\parbox{.95\hsize}{
+\vspace*{3mm}
+\begin{spacing}{1.5}
+{\fontsize{9pt}{10pt}\selectfont\bf 益生元\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 您可选择性补充益生元，如低聚果糖、低聚半乳糖、菊粉等，能帮助益生菌在肠道内增殖，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 如患炎症性肠病、腹泻，避免菊粉和膳食纤维制剂的摄入。\\}
+\end{spacing}
+} \\
+\hline
+
+\end{tabular}
+\end{center}
+
+{\noindent\qihao *温馨提示：以上健康建议仅供参考，您的实际膳食、运动及营养补充需根据您的自身具体情况进行调整。}
+\vspace*{1cm}
+
+\end{document}

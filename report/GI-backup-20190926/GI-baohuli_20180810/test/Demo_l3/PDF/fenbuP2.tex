@@ -1,0 +1,128 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+\newcommand{\mytoprule}{\specialrule{0.1em}{0em}{0em}}
+\newcommand{\mybottomrule}{\specialrule{0.1em}{0em}{0em}} 
+
+\usepackage[nodisplayskipstretch]{setspace}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\NewEnviron{RCtable}[1]
+  {%
+    \begin{tcolorbox}[#1]\BODY\end{tcolorbox}%
+  }
+
+\usepackage{colortbl}
+
+\begin{document}
+
+\vspace*{14mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+\begin{tctabularx}{tabularx={m{15.4cm}<{\centering}}}
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{black70}\fontsize{11pt}{11pt}\selectfont\bf 主要有益菌检测结果}
+\end{tctabularx}
+
+\sepline
+
+\noindent
+\fontsize{8.8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{tabular}{p{9.5cm}p{5.5cm}}
+\parbox[l]{\hsize}{
+\vspace*{5mm}
+{
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+\fontsize{10pt}{11pt}\selectfont\bf {阿克曼氏菌属（Akkermansia）}
+}} & \\
+\hspace*{1.5mm}
+\begin{minipage}[t]{.6\textwidth}{
+\vspace*{2mm}
+\noindent
+\begin{spacing}{1.5}
+\fontsize{8pt}{11pt}\selectfont {阿克曼氏菌是能够帮助控制体重的“瘦菌”，能促进脂肪代谢，消耗多余能量，维持代谢平衡，有助于控制体重。同时阿克曼氏菌帮助维持肠壁粘膜健康完整，完整的肠壁屏障能够防止有害菌穿过肠壁进入血液和组织，调节免疫力，对抑制炎症、预防糖尿病、肥胖大有帮助。除此之外，阿克曼氏菌也和其它某些疾病存在一定的关联：研究发现在肠易激综合征、阑尾炎等患者体内，阿克曼氏菌通常含量很低。当肠道内阿克曼氏菌含量较高时，有利于保持正常体重，维持正常免疫，抵御有害菌，维持身体健康。当肠道内阿克曼氏菌含量较低时，可能喝水也长胖，免疫发生紊乱或患胃肠道疾病哦。}
+\end{spacing}
+\vspace{3pt}
+}
+\end{minipage}
+ & 
+\hspace*{8mm}
+\begin{minipage}[t]{.3\textwidth}{
+\vspace*{2mm}
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont\bf 健康状态提示 \vspace{3pt}\\}
+{\includegraphics[scale=1.0]{laughwithgreen.pdf} \vspace*{10mm}} \\
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont{\bf 菌数检测指数 \quad 10.11}（正常） \vspace{3pt}\\}
+{\fontsize{8pt}{11pt}\selectfont ~~~~调节免疫及保持正常体重}
+}
+\end{minipage} \\
+\mytoprule
+\parbox[l]{\hsize}{
+\vspace*{5mm}
+{
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+\fontsize{10pt}{11pt}\selectfont\bf {栖粪杆菌属（Faecalibacterium）}
+}} & \\
+\hspace*{1.5mm}
+\begin{minipage}[t]{.6\textwidth}{
+\vspace*{2mm}
+\noindent
+\begin{spacing}{1.5}
+\fontsize{8pt}{11pt}\selectfont {栖粪杆菌是健康人肠道中含量比较高的常见细菌，它能产生大量丁酸。丁酸是一种对人体非常有益的物质，它能够调节人体免疫系统、抑制炎症、调节肠道激素分泌、调节人体的代谢平衡。丁酸主要靠肠道内有益菌发酵产生，其中最重要的产丁酸有益菌就是栖粪杆菌了。当肠道内栖粪杆菌含量较高时，能产生丁酸，保护肠道黏膜，帮助维持人体代谢平衡，调节免疫，抑制肠道炎症的发生。当肠道内栖粪杆菌含量较低时，不利于丁酸的产生，易发生肠道炎症，甚至影响机体功能。此外，栖粪杆菌含量低还可能和某些疾病密切相关：如克罗恩病、糖尿病等。}
+\end{spacing}
+\vspace{3pt}
+}
+\end{minipage}
+ & 
+\hspace*{8mm}
+\begin{minipage}[t]{.3\textwidth}{
+\vspace*{2mm}
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont\bf 健康状态提示 \vspace{3pt}\\}
+{\includegraphics[scale=1.0]{laughwithgreen.pdf} \vspace*{10mm}} \\
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont{\bf 菌数检测指数 \quad 2.11}（正常） \vspace{3pt}\\}
+{\fontsize{8pt}{11pt}\selectfont ~~~~产生有益物质及抑制肠道炎症}
+}
+\end{minipage} \\
+\mytoprule
+\end{tabular}
+
+\vspace*{3mm}
+\noindent
+~~~~\tikz\draw[green2,fill=green2](0,0) circle[radius=4pt]; \bf 绿色表示健康 \tikz\draw[orange2,fill=orange2](0,0) circle[radius=4pt]; \bf 橙色表示需要关注 \tikz\draw[red2,fill=red2](0,0) circle[radius=4pt]; \bf 红色表示为有风险
+
+\end{document}

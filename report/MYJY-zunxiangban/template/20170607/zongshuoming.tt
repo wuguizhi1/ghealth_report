@@ -1,0 +1,192 @@
+\input format.tex
+
+%\usepackage{arydshln}
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\begin{document}
+\color{gray2}
+
+\vspace*{0mm}
+\fontsize{9.3pt}{9.8pt}\selectfont
+\begin{center}
+{\bf\sanhao 健康建议}
+\end{center}
+
+\begin{tctabularx}{tabularx={m{15.4cm}}}
+\\[-6.769pt]
+\cellcolor{kelly} \raisebox{1pt}{\color{black00}\xiaosihao\lantxh\bf 肠道健康总说明} \\
+\end{tctabularx}
+
+{
+\lantxh
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+\begin{longtable}{|@{~~~}m{4cm}<{\centering}|m{10.96cm}|}
+\hline
+\parbox[c]{\hsize}{\vskip6pt\raisebox{-4ex}{\includegraphics[width=1.8cm]{[% xiaohuahexishou.pic %]}}~~\xiaowuhao \color{gray2} [% xiaohuahexishou.name %]\vskip6pt} &
+\parbox[c]{\hsize}{\vskip6pt\xiaowuhao\color{gray2} {
+[% IF xiaohuahexishou.zongping.explain.abnormalN == 0 AND xiaohuahexishou.explain.AbsorbabnormalN == 0 -%]
+通过菌群测得您的蛋白质消化吸收能力、脂类消化吸收能力、碳水化合物消化吸收能力及15种主要代谢物均正常。
+[% ELSIF xiaohuahexishou.zongping.explain.abnormalN == 0 AND xiaohuahexishou.explain.AbsorbabnormalN != 0 -%]
+通过菌群测得您的蛋白质消化吸收能力、脂类消化吸收能力、碳水化合物消化吸收能力均正常。15种主要代谢物中
+[% IF xiaohuahexishou.explain.Absorbgood == '-' AND xiaohuahexishou.explain.Absorbbad == '-' -%]
+[% ELSIF xiaohuahexishou.explain.Absorbgood == '-' -%]
+[% xiaohuahexishou.explain.Absorbbad %]指标存在异常。
+[% ELSIF xiaohuahexishou.explain.Absorbbad == '-' -%]
+[% xiaohuahexishou.explain.Absorbgood %]指标优于参考人群。
+[% ELSE -%]
+[% xiaohuahexishou.explain.Absorbgood %]指标优于参考人群；[% xiaohuahexishou.explain.Absorbbad %]指标存在异常。
+[% END -%]
+[% ELSIF xiaohuahexishou.zongping.explain.abnormalN != 0 AND xiaohuahexishou.explain.AbsorbabnormalN == 0 -%]
+通过菌群测得您的
+[% FOREACH item=xiaohuahexishou.zongping.items.item -%]
+[% item.key %]消化吸收能力[% IF item.level == 'l1' -%]低[% ELSIF item.level == 'l2' -%]偏低[% ELSIF item.level == 'l3' -%]正常[% ELSIF item.level == 'l4' -%]偏高[% ELSIF item.level == 'l5' -%]高[% END -%]
+[% IF item.key == '碳水化合物' -%][% ELSE -%]、[% END -%]
+[% END -%]
+；15种主要代谢物均正常。
+[% ELSIF xiaohuahexishou.zongping.explain.abnormalN != 0 AND xiaohuahexishou.explain.AbsorbabnormalN != 0 -%]
+通过菌群测得您的
+[% FOREACH item=xiaohuahexishou.zongping.items.item -%]
+[% item.key %]消化吸收能力[% IF item.level == 'l1' -%]低[% ELSIF item.level == 'l2' -%]偏低[% ELSIF item.level == 'l3' -%]正常[% ELSIF item.level == 'l4' -%]偏高[% ELSIF item.level == 'l5' -%]高[% END -%]
+[% IF item.key == '碳水化合物' -%][% ELSE -%]、[% END -%]
+[% END -%]
+；15种主要代谢物中
+[% IF xiaohuahexishou.explain.Absorbgood == '-' AND xiaohuahexishou.explain.Absorbbad == '-' -%]
+[% ELSIF xiaohuahexishou.explain.Absorbgood == '-' -%]
+[% xiaohuahexishou.explain.Absorbbad %]指标存在异常。
+[% ELSIF xiaohuahexishou.explain.Absorbbad == '-' -%]
+[% xiaohuahexishou.explain.Absorbgood %]指标优于参考人群。
+[% ELSE -%]
+[% xiaohuahexishou.explain.Absorbgood %]指标优于参考人群；[% xiaohuahexishou.explain.Absorbbad %]指标存在异常。
+[% END -%]
+[% END -%]
+}\vskip4pt}\\
+\hline
+\parbox[c]{\hsize}{\vskip6pt\raisebox{-4ex}{\includegraphics[width=1.8cm]{[% yanzhenghemianyi.pic %]}}~~\xiaowuhao\color{gray2} [% yanzhenghemianyi.name %]\vskip6pt} &
+\parbox[c]{\hsize}{\vskip6pt\xiaowuhao\color{gray2} {
+[% IF yanzhenghemianyi.giimmune.explain.abnormalN == 0 -%]
+您的肠道屏障功能、维持肠道屏障功能的能力、机体免疫力均正常。
+[% ELSIF yanzhenghemianyi.giimmune.explain.goodN == yanzhenghemianyi.giimmune.explain.totalN -%]
+您的肠道屏障功能、维持肠道屏障功能的能力、机体免疫力均较好。
+[% ELSIF yanzhenghemianyi.giimmune.explain.badN == yanzhenghemianyi.giimmune.explain.totalN -%]
+您的肠道屏障功能、维持肠道屏障功能的能力、机体免疫力均较差。
+[% ELSE -%]
+您的
+[% FOREACH item=yanzhenghemianyi.giimmune.items.item -%]
+[% item.desc %][% IF item.level == 'l1' OR item.level == 'l2' -%]较差[% ELSIF item.level == 'l3' -%]正常[% ELSE -%]较好[% END -%]
+[% IF item.name == '免疫指数' -%]。[% ELSE -%]；[% END -%]
+[% END -%]
+[% END -%]
+}\vskip4pt}\\
+\hline
+\parbox[c]{\hsize}{\vskip6pt\raisebox{-4ex}{\includegraphics[width=1.8cm]{[% changdaojunqun.pic %]}}~~\xiaowuhao\color{gray2} [% changdaojunqun.name %]\vskip6pt} &
+\parbox[c]{\hsize}{\vskip6pt\xiaowuhao\color{gray2} {
+您的肠道菌群以[% changdaojunqun.explain.majorgenus %]为主。肠道菌群多样性水平
+[% IF changdaojunqun.gaikuang.divlevel == 'l1' OR changdaojunqun.gaikuang.divlevel == 'l2' -%]
+较差，菌群失调的风险较高。
+[% ELSIF changdaojunqun.gaikuang.divlevel == 'l3' -%]
+正常，菌群失调的风险较低。
+[% ELSE -%]
+较高，菌群失调的风险低。
+[% END -%]
+[% IF changdaojunqun.fenbu.badN != 0 -%]
+有[% changdaojunqun.fenbu.badN %]类细菌指标与参考人群相比存在异常。
+[% ELSE %]
+细菌指标与参考人群相比均正常。
+[% END -%]
+}\vskip4pt}\\
+\hline
+\parbox[c]{\hsize}{\vskip6pt\raisebox{-4ex}{\includegraphics[width=1.8cm]{[% changdaojunqun.pathogens.pic %]}}~~\xiaowuhao\color{gray2} [% changdaojunqun.pathogens.name %]\vskip6pt} &
+\parbox[c]{\hsize}{\vskip6pt\xiaowuhao\color{gray2} {
+[% IF changdaojunqun.pathogens.num == 0 -%]
+您的肠道中未检测到可能导致疾病的致病菌,这是个好消息。
+[% ELSIF changdaojunqun.pathogens.badN == 0 -%]
+%您的肠道中检测到[% changdaojunqun.pathogens.num %]种可能导致疾病的致病菌，其中[% changdaojunqun.pathogens.foodborne %]种食源性致病菌，[% changdaojunqun.pathogens.opportunistic %]种机会致病菌，含量未超标，但在您免疫能力低下时仍可能会损害您的肠道健康。
+您的肠道中检测到[% changdaojunqun.pathogens.num %]种可能导致疾病的致病菌，含量未超标，但在您免疫能力低下时仍可能会损害您的肠道健康。
+[% ELSE -%]
+%您的肠道中检测到[% changdaojunqun.pathogens.num %]种可能导致疾病的致病菌，其中[% changdaojunqun.pathogens.foodborne %]种食源性致病菌，[% changdaojunqun.pathogens.opportunistic %]种机会致病菌，值得注意的是，[% changdaojunqun.pathogens.items.bad %]含量偏高，可能会损害您的肠道健康。
+您的肠道中检测到[% changdaojunqun.pathogens.num %]种可能导致疾病的致病菌，值得注意的是，[% changdaojunqun.pathogens.bad %]含量偏高，可能会损害您的肠道健康。
+[% END -%]
+}\vskip4pt}\\
+\hline
+\parbox[c]{\hsize}{\vskip6pt\raisebox{-4ex}{\includegraphics[width=1.8cm]{[% xiaohuahexishou.metabolism.pic %]}}~~\xiaowuhao\color{gray2} [% xiaohuahexishou.metabolism.name %]\vskip6pt} &
+\parbox[c]{\hsize}{\vskip6pt\xiaowuhao\color{gray2} {
+[% IF xiaohuahexishou.metabolism.explain.abnormalN == 0 OR xiaohuahexishou.metabolism.explain.badN == 0 -%]
+您的代谢平衡良好，11种重要有机小分子代谢均正常。
+[% ELSIF xiaohuahexishou.metabolism.explain.badN <= 3 -%]
+您的代谢基本平衡，11种重要有机小分子代谢中[% xiaohuahexishou.metabolism.explain.bad %]代谢异常。
+[% ELSE -%]
+您的代谢失衡风险高，11种重要有机小分子代谢中[% xiaohuahexishou.metabolism.explain.bad %]代谢异常。
+[% END -%]
+}\vskip4pt}\\
+\hline
+\end{longtable}
+}
+
+\fontsize{9.3pt}{9.8pt}\selectfont
+\begin{tctabularx}{tabularx={m{15.4cm}}}
+\\[-6.769pt]
+\cellcolor{kelly} \raisebox{1pt}{\color{black00}\xiaosihao\lantxh\bf GIhealth 提示您} \\
+\end{tctabularx}
+
+{
+\lantxh
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+\begin{longtable}{|m{15.45cm}|}
+\hline
+\parbox[c]{\hsize}{\vskip11pt\begin{compactenum}[\mbox{1、}]
+{\xiaowuhao\color{gray2}\item[1、]
+您的肠道菌群多样性
+[% IF changdaojunqun.gaikuang.divlevel == 'l1' OR changdaojunqun.gaikuang.divlevel == 'l2' -%]较差，仅[% ELSIF changdaojunqun.gaikuang.divlevel == 'l3' -%]正常，[% ELSE -%]较好，[% END -%]
+高于[% changdaojunqun.gaikuang.diversity %]{\%}的参考人群。肠道有益菌含量
+[% IF changdaojunqun.gaikuang.benifilevel == 'l1' OR changdaojunqun.gaikuang.benifilevel == 'l2' -%]较低，仅[% ELSIF changdaojunqun.gaikuang.benifilevel == 'l3' -%]正常，[% ELSE -%]较高，[% END -%]
+高于[% changdaojunqun.gaikuang.benifitper %]{\%}的参考人群，有害菌含量
+[% IF changdaojunqun.gaikuang.harmlevel == 'l1' OR changdaojunqun.gaikuang.harmlevel == 'l2' -%]较低，[% ELSIF changdaojunqun.gaikuang.harmlevel == 'l3' -%]正常，[% ELSE -%]较高，[% END -%]
+高于[% changdaojunqun.gaikuang.harmper %]{\%}的参考人群。
+[% IF changdaojunqun.pathogens.num == 0 -%]
+未检出致病菌。
+[% ELSIF changdaojunqun.pathogens.badN == 0 -%]
+检出[% changdaojunqun.pathogens.num %]种致病菌，含量在正常范围内。
+[% ELSE -%]
+检出[% changdaojunqun.pathogens.num %]种致病菌，[% changdaojunqun.pathogens.badN %]种含量超标，需引起注意。
+[% END -%]
+}
+{\xiaowuhao\color{gray2}\item[2、]
+[% IF changdaojunqun.diseaseNormalN == 3 -%]
+通过对您的肠道菌群分析，您患[% changdaojunqun.diseaseName %]的风险与参考人群一致。
+[% ELSIF changdaojunqun.diseaseLowN == 3 -%]
+通过对您的肠道菌群分析，您患[% changdaojunqun.diseaseName %]的风险比参考人群偏低。
+[% ELSIF changdaojunqun.diseaseHighN == 0 and changdaojunqun.diseaseLowN != 0 -%]
+通过对您的肠道菌群分析，您患[% changdaojunqun.diseaseLow %]的风险低于参考人群，患[% changdaojunqun.diseaseNormal %]的风险与参考人群一致。
+[% ELSE -%]
+%通过对您的肠道菌群分析，您患[% changdaojunqun.diseaseHigh %]的风险[% IF changdaojunqun.diseaseNum == changdaojunqun.diseaseHighN -%]均[% END -%]偏高。
+通过对您的肠道菌群分析，您的肠道菌群可能增加患[% changdaojunqun.diseaseHigh %]的风险。
+[% END -%]
+}
+{\xiaowuhao\color{gray2}\item[3、]
+[% IF xiaohuahexishou.metabolism.explain.badN == 0 -%]
+您的肠道菌群相关重要有机小分子代谢均在正常范围内，代谢平衡良好。
+[% ELSIF xiaohuahexishou.metabolism.explain.badN <= 3 -%]
+您肠道内参与[% xiaohuahexishou.metabolism.explain.bad %]代谢的菌群指标与参考人群相比存在异常。代谢基本平衡，请关注您的异常指标，定期监测肠道健康。
+[% ELSE -%]
+您肠道内参与[% xiaohuahexishou.metabolism.explain.bad %]代谢的菌群指标与参考人群相比存在异常。代谢失衡风险较高，需引起注意，建议您持续监测肠道健康。
+[% END -%]
+}
+{\xiaowuhao\color{gray2}\item[4、]
+[% IF xiaohuahexishou.explain.AbsorbabnormalN == 0 OR xiaohuahexishou.explain.AbsorbbadN == 0 -%]
+您肠道菌群与消化吸收相关的指标均在正常范围内，对各类主要物质的消化吸收功能良好。
+[% ELSIF xiaohuahexishou.explain.AbsorbbadN <= 3 -%]
+您肠道内参与[% xiaohuahexishou.explain.Absorbbad %]的菌群指标与参考人群相比存在异常，请关注您的异常指标，定期监测肠道健康。
+[% ELSE -%]
+您肠道内参与[% xiaohuahexishou.explain.Absorbbad %]的菌群指标与参考人群相比存在异常，需引起注意，建议您持续监测肠道健康。
+[% END -%]
+}
+{\xiaowuhao\color{gray2}\item[5、]}
+\end{compactenum}\vskip2pt}\\
+\hline
+\end{longtable}
+}
+
+\end{document}

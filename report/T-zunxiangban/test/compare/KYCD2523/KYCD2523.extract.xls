@@ -1,0 +1,88 @@
+#termid	KYCD2523
+Actinomyces	0
+Adlercreutzia	0
+Akkermansia	0
+Alistipes	1.115636e-04
+Amino Acid Metabolism	9.332543e-02
+Amino acid metabolism	1.870053e-03
+Arachidonic acid metabolism	8.108927e-04
+Bacillus	0
+Bacteria sensitivity	0.00050203598
+Bacteroides	2.448820e-02
+Benificial bacteria	0.17509904878
+Bifidobacterium	5.578178e-05
+Bilophila	1.840799e-03
+Biotin metabolism	1.467701e-03
+Blautia	1.115636e-04
+Butyrivibrio	0
+CRC_protect	0.17509904878
+CRC_risk	0.0001115636
+Campylobacter	0
+Carbohydrate Metabolism	9.660291e-02
+Carbohydrate metabolism	1.149631e-03
+Cellulose metabolism	0.66581134156
+Choline metabolism	0.1652256419
+Clostridium	1.115636e-03
+Collinsella	0
+Coprococcus	8.980867e-03
+Desulfovibrio	2.789089e-03
+Dorea	1.227199e-03
+Eggerthella	0
+Enterococcus	0
+Escherichia	1.673453e-04
+Eubacterium	1.115636e-04
+Faecalibacterium	1.666760e-01
+Fatty acid metabolism	2.198643e-03
+Firmicutes_Bacteroidetes_ratio	0.81201266159798
+Folate biosynthesis	4.543945e-03
+Fructose and mannose metabolism	8.649275e-03
+Galactose metabolism	6.468453e-03
+Glutathione metabolism	2.333420e-03
+Glycerolipid metabolism	2.793570e-03
+Glycerophospholipid metabolism	5.158921e-03
+Gut barrier	5.578178e-05
+Haemophilus	0
+Harmful bacteria	0.0003904725
+IBD_protect	0.16673178178
+IBD_risk	0.0006135996
+Immune index	0.21258439178
+Klebsiella	1.115636e-04
+Lachnobacterium	2.175489e-03
+Lachnospira	3.464049e-02
+Lactobacillus	0
+Lactococcus	0
+Linoleic acid metabolism	3.944315e-04
+Lipid Metabolism	2.619671e-02
+Lipid metabolism	1.337379e-03
+Nicotinate and nicotinamide metabolism	4.827361e-03
+Oscillospira	1.455905e-02
+Oxidation resistance	5.578178e-05
+Pantothenate and CoA biosynthesis	6.317092e-03
+Parabacteroides	3.346907e-04
+Peptoniphilus	0
+Prevotella	4.227701e-01
+Primary bile acid biosynthesis	1.210398e-04
+Pseudomonas	0
+Riboflavin metabolism	3.306071e-03
+Roseburia	8.367267e-03
+Ruminococcus	2.565962e-03
+Secondary bile acid biosynthesis	1.159656e-04
+Serratia	0
+Sphingolipid metabolism	2.027232e-03
+Staphylococcus	0
+Starch and sucrose metabolism	9.152246e-03
+Steroid hormone biosynthesis	2.752481e-04
+Streptococcus	0
+Sulfate reducing	0.004741451
+Sutterella	2.197802e-02
+T2D_protect	0.52691468178
+T2D_risk	0.0229263153
+Taurine and hypotaurine metabolism	1.083913e-03
+Thiamine metabolism	4.988871e-03
+Toxin degradation	5.578178e-05
+Ubiquinone and other terpenoid-quinone biosynthesis	2.683050e-03
+Veillonella	0
+Vitamin B6 metabolism	2.406564e-03
+diversity	3.2
+Bacteroides fragilis	1.115636e-04
+Escherichia coli	1.673453e-04

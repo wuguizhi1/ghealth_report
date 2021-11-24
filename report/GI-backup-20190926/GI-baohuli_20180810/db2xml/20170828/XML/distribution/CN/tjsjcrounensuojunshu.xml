@@ -1,0 +1,89 @@
+<opt>
+  <CN>
+    <bacteria>
+      <desc>柔嫩梭菌属|Faecalibacterium|Genus;</desc>
+      <descfull></descfull>
+    </bacteria>
+    <etitle>Faecalibacterium</etitle>
+    <order>4</order>
+    <pubmed>
+      <desc></desc>
+    </pubmed>
+    <section1>
+      <name>菌群分布</name>
+      <order>1</order>
+    </section1>
+    <suggestion>
+      <healthy>
+        <l1>
+          <actiondesc>益生元（0\textasciitilde 12）：0.8g {/} 100mL的低聚半乳糖；0.2g {/} 100mL的低聚果糖；儿童合生元
+
+益生元（13+）：菊粉；低聚果糖
+
+食物：芹菜；南瓜；秋葵；海带；橘子</actiondesc>
+          <actionrule>补充益生元和益生菌</actionrule>
+          <aiddisease>炎症性肠病；腹痛腹泻</aiddisease>
+          <effect>有害</effect>
+          <effectdesc>肠道炎症风险</effectdesc>
+          <mechanism>不利于产生有益物质及抑制肠道炎症</mechanism>
+          <mechanismfull>不利于产生有益物质及抑制肠道炎症</mechanismfull>
+          <note></note>
+        </l1>
+        <l2>
+          <actiondesc>益生元（0\textasciitilde 12）：0.8g {/} 100mL的低聚半乳糖；0.2g {/} 100mL的低聚果糖；儿童合生元
+
+益生元（13+）：菊粉；低聚果糖
+
+食物：芹菜；南瓜；秋葵；海带；橘子</actiondesc>
+          <actionrule>补充益生元和益生菌</actionrule>
+          <aiddisease>炎症性肠病；腹痛腹泻</aiddisease>
+          <effect>有害</effect>
+          <effectdesc>肠道炎症风险</effectdesc>
+          <mechanism>不利于产生有益物质及抑制肠道炎症</mechanism>
+          <mechanismfull>不利于产生有益物质及抑制肠道炎症</mechanismfull>
+          <note></note>
+        </l2>
+        <l3>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc></effectdesc>
+          <mechanism>产生有益物质及抑制肠道炎症</mechanism>
+          <mechanismfull>产生有益物质及抑制肠道炎症</mechanismfull>
+          <note></note>
+        </l3>
+        <l4>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>产生有益物质；抑制肠道炎症</effectdesc>
+          <mechanism>有利于产生有益物质及抑制肠道炎症</mechanism>
+          <mechanismfull>有利于产生有益物质及抑制肠道炎症</mechanismfull>
+          <note></note>
+        </l4>
+        <l5>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>产生有益物质；抑制肠道炎症</effectdesc>
+          <mechanism>有利于产生有益物质及抑制肠道炎症</mechanism>
+          <mechanismfull>有利于产生有益物质及抑制肠道炎症</mechanismfull>
+          <note></note>
+        </l5>
+      </healthy>
+    </suggestion>
+    <summary>
+      <desc>发酵纤维素产生丁酸等有益物质，抑制肠道炎症，促进肠道健康</desc>
+      <descfull>柔嫩梭菌是健康人肠道中含量比较高的常见细菌，它能产生大量丁酸。丁酸是一种对人体非常有益的物质，它能够调节人体免疫系统、抑制炎症、调节肠道激素分泌、调节人体的代谢平衡。丁酸主要靠肠道内有益菌发酵产生，其中最重要的产丁酸有益菌就是柔嫩梭菌了。当肠道内柔嫩梭菌含量较高时，能产生丁酸，保护肠道黏膜，帮助维持人体代谢平衡，调节免疫，抑制肠道炎症的发生。当肠道内柔嫩梭菌含量较低时，不利于丁酸的产生，易发生肠道炎症，甚至影响机体功能。此外，柔嫩梭菌含量低还可能和某些疾病密切相关：如克罗恩病、糖尿病等。</descfull>
+      <source>柔嫩梭菌是健康成人肠道中含量较高的常见有益菌，它能产生大量有益物质丁酸，帮助保护肠道、抑制炎症。</source>
+    </summary>
+    <title>柔嫩梭菌属（Faecalibacterium）</title>
+  </CN>
+  <categoey>distribution</categoey>
+  <id>changdaokang_danxiangxi_changdaobaohuli_tjsjcrounensuojunshu</id>
+  <oriid>tjsjcrounensuojunshu</oriid>
+  <orititle>柔嫩梭菌属（Faecalibacterium）</orititle>
+</opt>

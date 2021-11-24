@@ -1,0 +1,52 @@
+\input format.tex
+
+\setmainfont{Microsoft YaHei}   % 设置中文/粗体/斜体/主要字体
+
+\begin{document}
+\thispagestyle{empty}
+
+\color{gray2}
+
+\vspace*{0mm}
+
+\heiti
+{
+\begin{center}
+%{\fontsize{16.3pt}{17pt}\selectfont 报~告~目~录}
+{\bf\sanhao 报~告~目~录}
+\end{center}
+
+\bigskip
+
+\fontsize{9.3pt}{17pt}\selectfont
+
+\tabcolsep=2pt
+\begin{longtable}{m{1.4cm}m{14cm}}
+第一部分 & {前言 \dotfill [% qianyan %]}\\
+第二部分 & {检测结果 \dotfill [% zongjie %]}\\
+ & \hspace*{2em}{肠道菌群 \dotfill [% changdaojunqun_dingsiye %]}\\
+ & \hspace*{4em}{分布 \dotfill [% changdaojunqun %]}\\
+ & \hspace*{4em}{致病菌 \dotfill [% zhibingjun_dingsiye %]}\\
+ & \hspace*{2em}{消化和吸收 \dotfill [% xiaohuahexishou_dingsiye %]}\\
+ & \hspace*{4em}{消化和吸收总评 \dotfill [% xiaohuahexishou %]}\\
+ & \hspace*{4em}{物质代谢 \dotfill [% xiaohuahexishouP2 %]}\\
+ & \hspace*{4em}{菌群代谢 \dotfill [% xiaohuahexishouP3 %]}\\
+ & \hspace*{2em}{炎症和免疫 \dotfill [% yanzhenghemianyi_dingsiye %]}\\
+ & \hspace*{2em}{相关疾病风险分析 \dotfill [% changdaojunqunP3 %]}\\
+ & \hspace*{2em}{粪便状态 \dotfill [% fenbianzhuangtai %]}\\
+第三部分 & {健康建议 \dotfill [% zongshuoming %]}\\
+ & \hspace*{2em}{膳食方案 \dotfill [% shanshifangan %]}\\
+ & \hspace*{2em}{肠道调节方案 \dotfill [% changdaotiaojieyuyundongfangan %]}\\
+ & \hspace*{2em}{运动方案 \dotfill [% changdaotiaojieyuyundongfangan %]}\\
+第四部分 & {附录 \dotfill [% fulu %]}\\
+ & \hspace*{2em}{\RNum{1}观大便~识健康 \dotfill [% fulu_part1 %]}\\
+ & \hspace*{2em}{\RNum{2}肠道菌群知多少 \dotfill [% fulu_part2 %]}\\
+ & \hspace*{2em}{\RNum{3}肠道菌群与健康风险 \dotfill [% fulu_part3 %]}\\
+ & \hspace*{2em}{\RNum{4}肠道菌群与肠道调养 \dotfill [% fulu_part4 %]}\\
+ & \hspace*{2em}{\RNum{5}膳食指南 \dotfill [% fulu_part5 %]}\\
+ & \hspace*{2em}{\RNum{6}参考列表 \dotfill [% fulu_part6 %]}\\
+\end{longtable}
+
+}
+
+\end{document}

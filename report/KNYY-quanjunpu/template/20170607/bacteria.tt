@@ -1,0 +1,128 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{black100}
+
+\vspace*{3mm}
+
+\noindent{\fontsize{15pt}{11pt}\selectfont{ 三、主要有益菌检测结果}}
+
+%\vspace*{-4.25mm}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{4.8cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{4.9cm}<{\centering}|}
+%\begin{longtable}{|m{4cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{4.9cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering\bf {检测内容} \vskip10pt} & \bf{检测结果} & \bf{检测值} & \bf{参考范围} & \bf{功能}\\
+[% FOREACH item = changdaojunqun.benificial.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering [% item.name %]([% item.latin %]) \vskip10pt} &
+[% item.result %] &
+[% item.value %]
+[% IF item.value < item.judge -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+[% END -%]
+& [% item.threshold %]
+& [% item.desc %] \\
+[% END -%]
+\hline
+\end{longtable}
+
+\vspace*{0mm}
+
+\begin{spacing}{1.25}
+[% IF changdaojunqun.benificial.badN == 0 -%]
+\noindent\fontsize{9pt}{11pt}\selectfont {综合您的肠道主要有益菌检测结果，各有益菌含量均处于正常范围，帮助维持肠道健康，
+有利于产生有益物质、抑制肠道炎症等。肠道菌群含量维持动态平衡，请您保持良好饮食及生活习惯，有助于维持现有的菌群状态。} \\
+[% ELSIF changdaojunqun.benificial.badN < 6 -%]
+\noindent\fontsize{9pt}{11pt}\selectfont {综合您的肠道主要有益菌检测结果，[% changdaojunqun.benificial.bad %]的含量异常，
+[% IF changdaojunqun.benificial.badEffect != "-" -%]
+不利于[% changdaojunqun.benificial.badEffect %]，
+[% END -%]
+[% IF changdaojunqun.benificial.badDisease != "-" -%]
+甚至增加[% changdaojunqun.benificial.badDisease %]的风险，
+[% END -%]
+需引起注意。} \\
+[% END -%]
+
+\end{spacing}
+
+\vspace*{8mm}
+
+\noindent{\fontsize{15pt}{11pt}\selectfont{ 四、主要有害菌检测结果}}
+
+%\vspace*{-4.25mm}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{4.8cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{4.9cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering\bf {检测内容} \vskip10pt} & \bf{检测结果} & \bf{检测值} & \bf{参考范围} & \bf{功能}\\
+[% FOREACH item = changdaojunqun.harmful.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering [% item.name %]([% item.latin %]) \vskip10pt} &
+[% item.result %] &
+[% item.value %]
+[% IF item.value > item.judge -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+[% END -%]
+& [% item.threshold %]
+& [% item.desc %] \\
+[% END -%]
+\hline
+\end{longtable}
+
+\begin{spacing}{1.25}
+[% IF changdaojunqun.harmful.badN == 0 -%]
+\noindent\fontsize{9pt}{11pt}\selectfont {综合您的肠道主要有害菌检测结果，各有害菌含量均处于正常范围，有害物质产生少、
+肠道炎症风险低，整体状况良好。请您保持良好的饮食及生活习惯，促进肠道菌群平衡。} \\
+[% ELSIF changdaojunqun.harmful.badN < 6 -%]
+\noindent\fontsize{9pt}{11pt}\selectfont {综合您的肠道主要有害菌检测结果，[% changdaojunqun.harmful.bad %]的含量异常，
+[% IF changdaojunqun.harmful.badEffect != "-" -%]
+不利于[% changdaojunqun.harmful.badEffect %]，
+[% END -%]
+[% IF changdaojunqun.harmful.badDisease != "-" -%]
+甚至增加[% changdaojunqun.harmful.badDisease %]的风险，
+[% END -%]
+需引起注意。} \\
+[% END -%]
+
+\end{spacing}
+
+\end{document}

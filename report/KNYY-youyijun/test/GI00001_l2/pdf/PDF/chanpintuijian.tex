@@ -1,0 +1,209 @@
+%% encoding: UTF-8
+%% 首先读取模板的配置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置版面控制%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 12pt, notitlepage, oneside , twoside ]{article}
+\usepackage[colorlinks, linkcolor=red, anchorcolor=blue, citecolor=green, bookmarks]{hyperref}
+\hypersetup{xetex}
+% 设置版面，纸张空距
+\usepackage[papersize={210mm,285mm},headheight=2cm,top=2.05cm,headsep=0cm,bottom=0.82cm,footskip=.2cm,
+left=0cm,right=2.06cm
+]{geometry}
+\usepackage{marvosym}
+\usepackage{makecell,multirow}
+\usepackage{wrapfig}
+\usepackage{setspace}
+
+% 添加首行缩进，两个字符
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置字体%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[no-math]{fontspec} %提供字体选择命令
+\usepackage{xunicode,xltxtra}
+\usepackage[CJKchecksingle, CJKnumber]{xeCJK}         % 用于字体
+\usepackage{CJK}
+\setCJKfamilyfont{kai}[BoldFont=Adobe Heiti Std]{Adobe Kaiti Std}
+\setCJKfamilyfont{song}[BoldFont=Adobe Heiti Std]{Adobe Song Std}
+\setCJKfamilyfont{hei}[BoldFont=Adobe Heiti Std]{Adobe Heiti Std}
+\setCJKmainfont[BoldFont={FZLanTingHei-DB-GBK}]{FZLanTingHei-L-GBK}
+\setmainfont{FZLanTingHei-L-GBK}  % 设置中文/粗体/斜体/主要字体
+\punctstyle{hangmobanjiao}        % 设置行末半角
+\newfontfamily\times{Times New Roman}
+\newCJKfontfamily\kaishu{Adobe Kaiti Std}
+\setCJKfamilyfont{zhyh}{Microsoft YaHei}
+\newcommand*{\heiti}{\CJKfamily{zhyh}}
+\setCJKfamilyfont{zhltxh}{FZLanTingHei-L-GBK}
+\newcommand*{\lantxh}{\CJKfamily{zhltxh}}
+\newfontfamily\arial{Arial}
+\newcommand{\barial}{\bf\arial}
+%\setmainfont[Mapping=tex-text]{Times New Roman}         % 设置衬线英文字体
+\setsansfont[Mapping=tex-text]{FZLanTingHei-L-GBK}         % 设置无衬线英文字体
+%\setmonofont{Courier New}                % 设置等款英文字体
+\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{19pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14.01pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{11pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.04pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9.03pt}{15pt}\selectfont}
+\newcommand{\liuhao}{\fontsize{8.53pt}{\baselineskip}\selectfont}
+\newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\newcommand{\rnum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
+
+\usepackage{textgreek}
+\usepackage{pdflscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置图像%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[usenames,dvipsnames,svgnames,table,cmyk]{xcolor}
+\usepackage{graphicx}          % 用于图像编号
+\graphicspath{{_drugRisk/}{_logo/}{_phenoDegree/}{disease_pic/}{drug_pic/}{pheno_pic/}{_barcode/}{PDF/}{cores/}}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{animate}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{wallpaper}%%%%%%%%%%%%%%%%背景%%%%%%%%%%%%%%%%%%
+\usepackage{color}
+\definecolor{gray2}{cmyk}{0.00,0.00,0.00,0.70}
+\definecolor{blackdesc}{cmyk}{0, 0, 0, 1}	%黑色字体
+\definecolor{titleblue}{cmyk}{1, 0.3, 0, 0}	%标题蓝色，线条
+\definecolor{titledarkgreen}{cmyk}{0.8, 0, 0.65, 0}	%标题深绿，线条
+\definecolor{titlegrassgreen}{cmyk}{0.5, 0, 1, 0}	%标题草绿，线条
+\definecolor{tablegreen}{cmyk}{0.9, 0, 0.9, 0}  %table head color
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%mdframed%%%%%%%%%%%%%%%%%%%%
+\usepackage[framemethod=tikz]{mdframed}
+\usetikzlibrary{patterns}
+\mdfdefinestyle{titlesty}{%
+linecolor=platinum,
+middlelinewidth=1.5pt,
+frametitlerule=false,%
+apptotikzsetting={\tikzset{
+    mdfbackground/.append style ={
+    top color=white,
+    bottom color=white
+    },
+    mdfframetitlebackground/.append style={
+    shade,
+    top color=white ,
+    bottom color=white
+    }
+}
+},
+frametitlerulewidth=0pt,
+innertopmargin=\topskip,
+topline=false,
+leftline=false,
+rightline=false,
+bottomline=false,
+frametitlealignment=\raggedright,
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%%%%%%%%%%%%%产品推荐框格式%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{paralist}
+\usepackage{float,longtable,hhline}
+\usepackage{ulem}
+
+\definecolor{topcolor}{cmyk}{0.28,0,1,0}
+\definecolor{edgecolor}{cmyk}{0.5,0,1,0}
+\definecolor{markcolor}{cmyk}{0,1,1,0.2}
+
+\definecolor{black100}{cmyk}{0.00,0.00,0.00,1.00}
+\definecolor{black70}{cmyk}{0.00,0.00,0.00,0.70}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{skins}
+
+\newtcolorbox{mybox}[1]{hbox boxed title,
+  enhanced,frame hidden,colback=white,title=Sharp corners,
+  attach boxed title to top left={yshift=-3mm,xshift=5mm},
+  boxed title style={colframe=edgecolor,colback=edgecolor,size=small},
+  borderline={0.5mm}{0mm}{edgecolor,dotted},
+  title={#1}
+}
+
+%%%%%%%%%%%%%%%页码修改[RO]居右[CO]居中[LO]居左%%%%%%%%%%%
+\begin{document}
+
+\hspace*{12.5mm}\includegraphics[scale=1]{logo3.pdf}
+
+\vspace*{11mm}
+
+\begin{center}
+{\bf\xiaoerhao\color{black70} \qquad\qquad 未来优态肠道调理建议}
+\end{center}
+
+\hspace*{12mm}
+\begin{minipage}[b]{.89\hsize}
+\vspace*{3mm}
+
+\begin{spacing}{1.5}
+\color{black70}{\fontsize{13pt}{13pt}\selectfont 检测编号：GI00001 \qquad 报告日期：2019-09-25 \\}
+\color{black70}{\fontsize{13pt}{17pt}\selectfont 尊敬的\uline{\qquad 荔湾 \qquad} 
+男士：
+}
+\end{spacing}
+
+\begin{spacing}{1.5}
+\setlength{\parindent}{2em}\color{black70}\fontsize{9.5pt}{12pt}\selectfont {
+{\fontsize{13pt}{13pt}\selectfont 您好！}
+
+感谢您选择常道康{\textsuperscript{\qihao{TM}}}肠道微生态检测套餐服务，我们将为您提供最科学的肠道微生态调理方案。
+
+肠道微生态与我们的健康息息相关。工作压力、饮食不规律、食品安全、雾霾、滥用抗生素等都会导致肠道微生态失调，而80{\%}的健康问题与肠道微生态紊乱有关。
+
+微生态制剂是调理肠道微生态达到肠道健康最直接有效的方式。微生态制剂包括益生元、益生菌等，可以促进益生菌的生长，抑制有害菌的生长，改善肠道微生态平衡，可以双向调节便秘腹泻、改善肥胖、增强机体免疫力等。
+
+未来优态肠道调理产品根据肠道微生态基因检测结果，量身定制调理产品、剂量、周期等进行精准调理。调理周期结束后建议进行常道康{\textsuperscript{\qihao{TM}}}复查，准确评估干预效果及干预方案的调整，形成精准健康管理闭环。
+}
+
+\vspace*{3mm}
+\end{spacing}
+
+\begin{spacing}{1.5}
+\begin{mybox}{根据您本次肠道微生态检测结果，建议您采用以下肠道调理方案}
+\color{black70}\fontsize{9.5pt}{12pt}\selectfont
+\begin{tabular}{m{5cm}<{\centering}m{8cm}<{\centering}}
+  \parbox[c][0.6cm]{\hsize}{\color{black70}\bf 肠道调理产品：} &
+  \parbox[c][0.6cm]{\hsize}{\color{black70}\bf 推荐用量：} \\
+            \parbox[c][0.6cm]{\hsize}{\color{black70} 产品 ：\uline{\qquad 未来优态UA \qquad}，} &
+      \parbox[c][0.6cm]{\hsize}{\color{black70} 用法：1天\uline{\quad 2 \quad}次，1次\uline{\quad 1 \quad}袋，餐\uline{\quad 后 \quad}服用} \\
+      \end{tabular}
+
+\vspace*{2mm}
+  {~~ 建议调理}
+      {3 个月以上。}
+  {（第一个月干预产品预计使用量：}
+      {2 盒 UA }
+  {）}\\
+\fontsize{8.5pt}{12pt}\selectfont {~~{\raisebox{1pt}{\color{edgecolor}$\bullet$}}\! 本方案为推荐使用方案，具体服用量和调理周期可根据自身实际情况和服用效果进行调整。若有问题请咨询健康顾问。}
+\end{mybox}
+\end{spacing}
+\vspace*{-3mm}
+\begin{spacing}{1.5}
+            \noindent\color{black70}\fontsize{8.5pt}{12pt}\selectfont {{\raisebox{1pt}{\color{markcolor}$\divideontimes$}}\! 温馨提示 ：益生菌固体饮料为活菌制剂，建议用37℃以下温水冲调并及时服用，以免有益菌失活而影响干预效果}\\
+      \end{spacing}
+
+\vspace*{2mm}
+\hspace*{12cm}\includegraphics[scale=0.6]{erweima.pdf}
+
+\vspace*{2mm}
+\hfill\color{black70}\fontsize{13pt}{13pt}\selectfont 了解肠道健康资讯，请关注“常道康”
+\end{minipage}
+
+\fancyfoot[L]{\includegraphics{footer.pdf}}
+
+\end{document}

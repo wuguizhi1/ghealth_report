@@ -1,0 +1,116 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{gray2}
+
+\vspace*{3mm}
+
+\noindent{\fontsize{9pt}{11pt}\selectfont\bf{ 五、致病菌检测结果}}
+
+%\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{3.2cm}<{\centering}|m{1.8cm}<{\centering}|m{1.8cm}<{\centering}|m{2cm}<{\centering}|m{4.9cm}<{\centering}|}
+\hline
+\begin{minipage}{3.2cm}\begin{center}{\vspace*{2mm} {\lantxh\bf 检测内容} \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{1.7cm}\begin{center}{\lantxh\bf 检测结果}\end{center} \end{minipage} &
+\begin{minipage}{1.7cm}\begin{center}{\lantxh\bf 检测值}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh\bf 参考范围}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh\bf 功能}\end{center} \end{minipage} \\
+[% FOREACH item = changdaojunqun.pathogen.item -%]
+\hline
+\begin{minipage}{3.2cm}\begin{center}{\vspace*{2mm} \lantxh [% item.name %] \\
+ ([% item.latin %]) \vspace*{2mm}}
+\end{center} \end{minipage} &
+\begin{minipage}{1.7cm}\begin{center}{\lantxh [% item.risk %]}\end{center} \end{minipage} &
+\begin{minipage}{1.7cm}\begin{center}{\lantxh [% item.value %]}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh [% item.threshold %]}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh [% item.desc %]}\end{center} \end{minipage} \\
+[% END -%]
+\hline
+\end{longtable}
+
+\vspace*{0mm}
+
+\begin{spacing}{1.25}
+[% IF changdaojunqun.pathogen.num == 0 -%]
+\noindent\fontsize{9pt}{11pt}\selectfont {您的肠道内本次未检测到可能导致疾病的致病菌，这是个好消息。当您的免疫力较强时，可
+持续抑制致病菌的生长。但请注意，当您的免疫力较弱时，肠道致病菌可能会增加，可能引起腹泻、腹痛、感染等病症。} \\
+[% ELSIF changdaojunqun.pathogen.badN == 0 -%]
+\noindent\fontsize{9pt}{11pt}\selectfont {您的肠道内本次检测出[% changdaojunqun.pathogen.num %]种潜在致病菌，含量均在正常范围，
+尽管这些致病菌含量未超标，当身体免疫力较强时可能不会出现不适感。但请注意，当您的免疫力较弱时，可能引起腹泻、腹痛、感染等病症。
+建议您持续监测肠道健康，一旦检测出较高含量的致病菌，建议咨询专科医生，酌情做进一步检查。} \\
+[% ELSE -%]
+\noindent\fontsize{9pt}{11pt}\selectfont {您的肠道内本次检测出[% changdaojunqun.pathogen.num %]种潜在致病菌，其中[% changdaojunqun.pathogen.bad %]
+的含量异常，当身体免疫力较强时可能不会出现不适感。但请注意，当您的免疫力较弱时，初期可能引起腹泻、腹痛、感染等病症，长期可能导致上表中所述疾病。建
+议您持续监测，必要时请到正规医院咨询专科医生，遵从医生的建议做进一步检查。} \\
+[% END -%]
+
+\end{spacing}
+
+\vspace*{8mm}
+
+\noindent{\fontsize{9pt}{11pt}\selectfont\bf{ 六、其他常见菌检测结果}}
+
+%\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{5.5cm}<{\centering}|m{4cm}<{\centering}|m{5cm}<{\centering}|}
+\hline
+\begin{minipage}{5.5cm}\begin{center}{\vspace*{1mm} {\lantxh\bf 检测内容} \vspace*{1mm}}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh\bf 检测结果}\end{center} \end{minipage} &
+\begin{minipage}{5cm}\begin{center}{\lantxh\bf 参考值}\end{center} \end{minipage} \\
+[% FOREACH item = changdaojunqun.fenbu.item -%]
+\hline
+\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh [% item.name %] ~ ([% item.latin %]) \vspace*{1mm}}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh [% item.value %]}\end{center} \end{minipage} &
+\begin{minipage}{5cm}\begin{center}{\lantxh [% item.threshold %]}\end{center} \end{minipage} \\
+[% END -%]
+\hline
+\end{longtable}
+
+\begin{spacing}{1.25}
+\noindent\fontsize{8pt}{11pt}\selectfont {\ding{101} 本报告为科研报告，内容仅供参考，不作为临床诊断使用，无法代替医学诊断，也无法作为用药参考，实际情况请咨询拥有相应资质的临床医生或执业药师；} \\
+\noindent\fontsize{8pt}{11pt}\selectfont {\ding{101} 本项检测是基于当前微生物学的研究成果和国际公认的检测方法，但由于科学研究及检测方法的不断更新，本检测仍存在一定的局限性；} \\
+\noindent\fontsize{8pt}{11pt}\selectfont {\ding{101} 检测结果仅对本次所送样负责。} \\
+
+\end{spacing}
+
+\end{document}

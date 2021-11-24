@@ -1,0 +1,156 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{gray2}
+
+\vspace*{3mm}
+
+\noindent{\fontsize{9pt}{11pt}\selectfont\bf{ 三、主要有益菌检测结果}}
+
+%\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{2.8cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|m{4.9cm}<{\centering}|}
+\hline
+\begin{minipage}{2.7cm}\begin{center}{\vspace*{2mm} {\lantxh\bf 检测内容} \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh\bf 检测结果}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh\bf 检测值}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh\bf 参考范围}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh\bf 功能}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{2.7cm}\begin{center}{\vspace*{2mm} \lantxh 罗斯拜瑞氏菌属 \\
+ (Roseburia) \vspace*{2mm}}
+\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 有害}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 8.37}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh ≥ 2.32}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh 产生丁酸等有益物质，抑制肠道炎症，有利于肠道及人体健康}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{2.7cm}\begin{center}{\vspace*{2mm} \lantxh 柔嫩梭菌属 \\
+ (Faecalibacterium) \vspace*{2mm}}
+\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 有害}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 166.68}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh ≥ 10.94}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh 发酵纤维素产生丁酸等有益物质，抑制肠道炎症，促进肠道健康}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{2.7cm}\begin{center}{\vspace*{2mm} \lantxh 双歧杆菌属 \\
+ (Bifidobacterium) \vspace*{2mm}}
+\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 有害}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 0.06}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh ≥ 0.01}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh 有益菌，降解人体不能消化的多糖，产乳酸，调节免疫及肠道环境}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{2.7cm}\begin{center}{\vspace*{2mm} \lantxh 乳酸杆菌属 \\
+ (Lactobacillus) \vspace*{2mm}}
+\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 有害}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 0.00}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh ≥ 0.01}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh 肠道益生菌，能够生成乳酸，抑制有害菌及炎症，调节肠道环境}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{2.7cm}\begin{center}{\vspace*{2mm} \lantxh 阿克曼氏菌属 \\
+ (Akkermansia) \vspace*{2mm}}
+\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 有害}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 0.00}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh ≥ 0.01}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh 降解粘蛋白、调节免疫，有利于肠黏膜完整性，保持正常体重}\end{center} \end{minipage} \\
+\hline
+\end{longtable}
+
+\vspace*{0mm}
+
+\begin{spacing}{1.25}
+\noindent\fontsize{9pt}{11pt}\selectfont {综合您的肠道主要有益菌检测结果，罗斯拜瑞氏菌属、柔嫩梭菌属、双歧杆菌属、乳酸杆菌属、阿克曼氏菌属的含量异常，
+不利于产生有益物质、抑制肠道炎症、调节免疫等，
+需引起注意。} \\
+
+\end{spacing}
+
+\vspace*{8mm}
+
+\noindent{\fontsize{9pt}{11pt}\selectfont\bf{ 四、主要有害菌检测结果}}
+
+%\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{2.8cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|m{4.9cm}<{\centering}|}
+\hline
+\begin{minipage}{2.7cm}\begin{center}{\vspace*{2mm} {\lantxh\bf 检测内容} \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh\bf 检测结果}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh\bf 检测值}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh\bf 参考范围}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh\bf 功能}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{2.7cm}\begin{center}{\vspace*{2mm} \lantxh 脱硫弧菌属 \\
+ (Desulfovibrio) \vspace*{2mm}}
+\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 正常}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 2.79}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh ≤ 4.13}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh 产生硫化氢，刺激肠道产生炎症反应，不利于肠道健康}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{2.7cm}\begin{center}{\vspace*{2mm} \lantxh 多尔氏菌属 \\
+ (Dorea) \vspace*{2mm}}
+\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 正常}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 1.23}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh ≤ 10.09}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh 肠道的主要产气菌之一，与肠易激综合征等疾病相关}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{2.7cm}\begin{center}{\vspace*{2mm} \lantxh 弯曲杆菌属 \\
+ (Campylobacter) \vspace*{2mm}}
+\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 正常}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh 0.00}\end{center} \end{minipage} &
+\begin{minipage}{2cm}\begin{center}{\lantxh ≤ 0.20}\end{center} \end{minipage} &
+\begin{minipage}{4.8cm}\begin{center}{\lantxh 多数菌种为致病菌，可引起弯曲菌病，表现为严重腹泻或痢疾综合征}\end{center} \end{minipage} \\
+\hline
+\end{longtable}
+
+\begin{spacing}{1.25}
+\noindent\fontsize{9pt}{11pt}\selectfont {综合您的肠道主要有害菌检测结果，各有害菌含量均处于正常范围，有害物质产生少、
+肠道炎症风险低，整体状况良好。肠道菌群含量维持动态平衡，请您保持良好饮食及生活习惯，有助于维持现有的菌群状态。} \\
+
+\end{spacing}
+
+\end{document}

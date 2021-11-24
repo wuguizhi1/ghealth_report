@@ -1,0 +1,260 @@
+<opt>
+  <BMI>20.03</BMI>
+  <age>55</age>
+  <agestr>55</agestr>
+  <barcode>tptest001</barcode>
+  <batch>3</batch>
+  <changdaojunqun>
+    <ename>MICROBIOTA</ename>
+    <fenbu>
+      <abnormalN>2</abnormalN>
+      <abnormalitem>
+        <Val30>0.04</Val30>
+        <Val70>0.18</Val70>
+        <cnname>乳酸杆菌属</cnname>
+        <desc>抑制有害菌的生长，增强人体免疫力</desc>
+        <descfull>乳酸杆菌通过产生乳酸，从而发酵制作酸奶和奶酪等食物，让食物既美味又营养。此外，近年来的研究发现，乳酸杆菌跟身体健康也密切相关。当肠道内乳酸杆菌含量较高时：\\
+1）产生乳酸，合成氨基酸和维生素等，调节肠道微环境，抑制致病菌生长；\\
+2）增强免疫力，抑制肠道炎症的发生，阻止致病菌入侵肠道；\\
+3）延缓衰老，促进肠道蠕动，促进营养物质吸收，有利于肠道健康。</descfull>
+        <enname>Lactobacillus spp.</enname>
+        <level>l2</level>
+        <name>乳酸杆菌属（Lactobacillus spp.）</name>
+        <note>1、建议适量摄入全麦、糙米、山药、红薯、芦笋，这类食物能帮助乳酸杆菌的增殖，有利于提高肠道保护力。 \\
+2、建议您适量补充菊粉、低聚果糖、低聚半乳糖等益生元，能帮助乳酸杆菌在肠道内增殖，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。 \\
+3、建议您适量补充含保加利亚乳杆菌的酸奶、含干酪乳杆菌的活菌饮料，以增加您肠道内有益菌的含量，并能抑制有害菌的异常增殖，调节肠道菌群平衡。 \\
+</note>
+        <per>0.0845</per>
+        <per100>8</per100>
+        <range>0\textasciitilde 1.73</range>
+        <risk>有害</risk>
+        <riskdesc>不利于抑制肠道炎症及调节肠道环境</riskdesc>
+        <source>乳酸杆菌是调节肠道微生态平衡的重要细菌，其含量降低可能会导致肠道环境变差，不利于消化；免疫力降低，抵抗致病菌能力降低，易感染疾病。</source>
+        <threshold>≥ 0.04</threshold>
+        <value>0.01</value>
+      </abnormalitem>
+      <abnormalitem>
+        <Val30>0.01</Val30>
+        <Val70>0.01</Val70>
+        <cnname>阿克曼氏菌属</cnname>
+        <desc>促进脂肪代谢，预防肥胖</desc>
+        <descfull>阿克曼氏菌是能够帮助控制体重的“瘦菌”，有以下几点功效：\\
+1）促进脂肪代谢，消耗多余能量，维持代谢平衡；\\
+2）调节免疫力，帮助维持肠壁粘膜健康完整，完整的肠壁屏障能够防止有害菌穿过肠壁进入血液和组织；\\
+3）对抑制炎症，预防糖尿病、肥胖，癌症治疗等大有帮助。</descfull>
+        <enname>Akkermansia spp.</enname>
+        <level>l2</level>
+        <name>阿克曼氏菌属（Akkermansia spp.）</name>
+        <note>1、建议适量摄入四季豆、燕麦、蔓越莓、草莓、葡萄，这类食物能帮助阿克曼氏菌的增殖，有利于提高肠道保护力。 \\
+2、建议您适量补充富含多酚的蔓越莓提取物、豆类食物等益生元，能帮助阿克曼氏菌在肠道内增殖，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。 \\
+3、建议您适量补充酸奶、含益生菌活菌饮料，以增加您肠道内有益菌的含量，抑制有害菌的异常增殖，调节肠道菌群平衡。 \\
+</note>
+        <per>0.1088</per>
+        <per100>10</per100>
+        <range>0\textasciitilde 0.45</range>
+        <risk>有害</risk>
+        <riskdesc>不利于调节免疫及保持正常体重</riskdesc>
+        <source>阿克曼氏菌作为肠道有益菌，当其含量较低时，易发生免疫紊乱或胃肠道疾病。</source>
+        <threshold>≥ 0.01</threshold>
+        <value>0</value>
+      </abnormalitem>
+      <bad>乳酸杆菌属（Lactobacillus spp.）、阿克曼氏菌属（Akkermansia spp.）</bad>
+      <badDesc>不利于抑制肠道炎症及调节肠道环境；不利于调节免疫及保持正常体重</badDesc>
+      <badDisease>胃肠道疾病</badDisease>
+      <badEffect>免疫调节力下降、肠道环境差、抵抗病原菌能力降低等</badEffect>
+      <badN>2</badN>
+      <badSource>乳酸杆菌是调节肠道微生态平衡的重要细菌，其含量降低可能会导致肠道环境变差，不利于消化；免疫力降低，抵抗致病菌能力降低，易感染疾病。阿克曼氏菌作为肠道有益菌，当其含量较低时，易发生免疫紊乱或胃肠道疾病。</badSource>
+      <biotics_bad>阿克曼氏菌属、乳酸杆菌属</biotics_bad>
+      <biotics_good>-</biotics_good>
+      <food_sup>山药、红薯、糙米、草莓、燕麦</food_sup>
+      <good>-</good>
+      <goodDesc>-</goodDesc>
+      <goodDisease>-</goodDisease>
+      <goodEffect>-</goodEffect>
+      <goodN>0</goodN>
+      <goodSource>-</goodSource>
+      <item>
+        <Val30>0.04</Val30>
+        <Val70>0.18</Val70>
+        <cnname>乳酸杆菌属</cnname>
+        <desc>抑制有害菌的生长，增强人体免疫力</desc>
+        <descfull>乳酸杆菌通过产生乳酸，从而发酵制作酸奶和奶酪等食物，让食物既美味又营养。此外，近年来的研究发现，乳酸杆菌跟身体健康也密切相关。当肠道内乳酸杆菌含量较高时：\\
+1）产生乳酸，合成氨基酸和维生素等，调节肠道微环境，抑制致病菌生长；\\
+2）增强免疫力，抑制肠道炎症的发生，阻止致病菌入侵肠道；\\
+3）延缓衰老，促进肠道蠕动，促进营养物质吸收，有利于肠道健康。</descfull>
+        <enname>Lactobacillus spp.</enname>
+        <level>l2</level>
+        <name>乳酸杆菌属（Lactobacillus spp.）</name>
+        <note>1、建议适量摄入全麦、糙米、山药、红薯、芦笋，这类食物能帮助乳酸杆菌的增殖，有利于提高肠道保护力。 \\
+2、建议您适量补充菊粉、低聚果糖、低聚半乳糖等益生元，能帮助乳酸杆菌在肠道内增殖，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。 \\
+3、建议您适量补充含保加利亚乳杆菌的酸奶、含干酪乳杆菌的活菌饮料，以增加您肠道内有益菌的含量，并能抑制有害菌的异常增殖，调节肠道菌群平衡。 \\
+</note>
+        <per>0.0845</per>
+        <per100>8</per100>
+        <range>0\textasciitilde 1.73</range>
+        <risk>有害</risk>
+        <riskdesc>不利于抑制肠道炎症及调节肠道环境</riskdesc>
+        <source>乳酸杆菌是调节肠道微生态平衡的重要细菌，其含量降低可能会导致肠道环境变差，不利于消化；免疫力降低，抵抗致病菌能力降低，易感染疾病。</source>
+        <threshold>≥ 0.04</threshold>
+        <value>0.01</value>
+      </item>
+      <item>
+        <Val30>0.21</Val30>
+        <Val70>3.99</Val70>
+        <cnname>双歧杆菌属</cnname>
+        <desc>抵抗有害菌入侵，促进微量元素吸收</desc>
+        <descfull>双歧杆菌作为肠道内的“清道夫”，是调节肠道生态平衡的重要有益菌。当肠道内双歧杆菌含量较高时：\\
+1）增强肠道屏障，产生乙酸、L(+)-乳酸等，调节肠道环境；\\
+2）调节肠道免疫功能，有效阻止致病菌对肠道的入侵和定植；\\
+3）促进肠道蠕动，促进营养物质吸收，预防和抑制肿瘤发生，保持健康的身体状态。</descfull>
+        <enname>Bifidobacterium spp.</enname>
+        <level>l3</level>
+        <name>双歧杆菌属（Bifidobacterium spp.）</name>
+        <note>结合您本次检测结果，建议您平衡膳食，日常生活中可适当增加酸奶的摄入量；按时作息，根据自身情况进行适当运动；尽量避免广谱抗生素的使用，以防破坏肠道内微生态平衡，让致病菌有机可乘。 \\
+</note>
+        <per>0.7958</per>
+        <per100>79</per100>
+        <range>0\textasciitilde 9.95</range>
+        <risk>正常</risk>
+        <riskdesc>调节免疫及肠道环境</riskdesc>
+        <source>双歧杆菌作为肠道内主要的有益菌，对肠道健康有着重要促进作用。当肠道内双歧杆菌含量较低时，肠道可能进入不健康状态：免疫调节能力低，不利于肠道蠕动、营养物质吸收等。</source>
+        <threshold>≥ 0.21</threshold>
+        <value>5.8</value>
+      </item>
+      <item>
+        <Val30>0.01</Val30>
+        <Val70>0.01</Val70>
+        <cnname>阿克曼氏菌属</cnname>
+        <desc>促进脂肪代谢，预防肥胖</desc>
+        <descfull>阿克曼氏菌是能够帮助控制体重的“瘦菌”，有以下几点功效：\\
+1）促进脂肪代谢，消耗多余能量，维持代谢平衡；\\
+2）调节免疫力，帮助维持肠壁粘膜健康完整，完整的肠壁屏障能够防止有害菌穿过肠壁进入血液和组织；\\
+3）对抑制炎症，预防糖尿病、肥胖，癌症治疗等大有帮助。</descfull>
+        <enname>Akkermansia spp.</enname>
+        <level>l2</level>
+        <name>阿克曼氏菌属（Akkermansia spp.）</name>
+        <note>1、建议适量摄入四季豆、燕麦、蔓越莓、草莓、葡萄，这类食物能帮助阿克曼氏菌的增殖，有利于提高肠道保护力。 \\
+2、建议您适量补充富含多酚的蔓越莓提取物、豆类食物等益生元，能帮助阿克曼氏菌在肠道内增殖，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。 \\
+3、建议您适量补充酸奶、含益生菌活菌饮料，以增加您肠道内有益菌的含量，抑制有害菌的异常增殖，调节肠道菌群平衡。 \\
+</note>
+        <per>0.1088</per>
+        <per100>10</per100>
+        <range>0\textasciitilde 0.45</range>
+        <risk>有害</risk>
+        <riskdesc>不利于调节免疫及保持正常体重</riskdesc>
+        <source>阿克曼氏菌作为肠道有益菌，当其含量较低时，易发生免疫紊乱或胃肠道疾病。</source>
+        <threshold>≥ 0.01</threshold>
+        <value>0</value>
+      </item>
+      <item>
+        <Val30>27.24</Val30>
+        <Val70>78.62</Val70>
+        <cnname>柔嫩梭菌属</cnname>
+        <desc>产丁酸，抑制肠道炎症</desc>
+        <descfull>柔嫩梭菌是健康人肠道中含量较高的常驻有益菌，是肠道内主要产生丁酸的菌株（丁酸是一种对人体非常有益的物质，它能够调节人体免疫系统、抑制炎症、调节肠道激素分泌、调节人体的代谢平衡等）。当肠道内柔嫩梭菌含量较高时：\\
+1）能产生丁酸，保护肠道黏膜，帮助维持人体代谢平衡；\\
+2）调节免疫，抑制肠道炎症的发生。</descfull>
+        <enname>Faecalibacterium spp.</enname>
+        <level>l3</level>
+        <name>柔嫩梭菌属（Faecalibacterium spp.）</name>
+        <note>结合您本次检测结果，建议您平衡膳食，日常生活中可适当增加酸奶的摄入量；按时作息，根据自身情况进行适当运动；尽量避免广谱抗生素的使用，以防破坏肠道内微生态平衡，让致病菌有机可乘。 \\
+</note>
+        <per>0.8873</per>
+        <per100>88</per100>
+        <range>0\textasciitilde 28.93</range>
+        <risk>正常</risk>
+        <riskdesc>产生有益物质及抑制肠道炎症</riskdesc>
+        <source>柔嫩梭菌作为肠道有益菌，当其含量较低时，不利于丁酸的产生，易发生肠道炎症，甚至影响机体功能。此外，柔嫩梭菌含量低还可能和某些疾病密切相关：如克罗恩病、糖尿病等。</source>
+        <threshold>≥ 27.24</threshold>
+        <value>204.63</value>
+      </item>
+      <prebiotics_sup>富含多酚的蔓越莓提取物、豆类制品、低聚果糖、低聚半乳糖、菊粉</prebiotics_sup>
+      <probiotics_sup>含保加利亚乳杆菌的酸奶、含干酪乳杆菌的活菌饮料</probiotics_sup>
+    </fenbu>
+    <name>肠道菌群</name>
+  </changdaojunqun>
+  <examcode>-</examcode>
+  <fangan>
+    <food>
+      <desc>
+        <item>
+          <desc>建议您在日常饮食中选择补充山药、红薯、糙米、草莓、燕麦等食物或者相关的加工提取食品，为肠道菌群提供更多营养，促进有益共生菌的生长，增加肠道菌群的丰富度及多样性。</desc>
+          <num>1</num>
+        </item>
+        <item>
+          <desc>控制油炸类、西式快餐、含糖饮料等高脂高糖高热量食物。忌暴饮暴食。减少外出就餐。戒烟限酒。</desc>
+          <num>2</num>
+        </item>
+      </desc>
+      <name>膳食</name>
+      <suggest1>建议您在日常饮食中选择补充山药、红薯、糙米、草莓、燕麦等食物或者相关的加工提取食品，为肠道菌群提供更多营养，促进有益共生菌的生长，增加肠道菌群的丰富度及多样性。</suggest1>
+      <suggest2>控制油炸类、西式快餐、含糖饮料等高脂高糖高热量食物。忌暴饮暴食。减少外出就餐。戒烟限酒。</suggest2>
+    </food>
+    <prebiotics>
+      <desc>
+        <item>
+          <desc>建议您选择补充富含多酚的蔓越莓提取物、豆类制品、低聚果糖、低聚半乳糖、菊粉等益生元，能帮助阿克曼氏菌属、乳酸杆菌属在肠道内增殖，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。</desc>
+          <num>1</num>
+        </item>
+        <item>
+          <desc>如患炎症性肠病、腹泻，避免菊粉和膳食纤维制剂的摄入。</desc>
+          <num>2</num>
+        </item>
+      </desc>
+      <name>益生元</name>
+      <suggest1>建议您选择补充富含多酚的蔓越莓提取物、豆类制品、低聚果糖、低聚半乳糖、菊粉等益生元，能帮助阿克曼氏菌属、乳酸杆菌属在肠道内增殖，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。</suggest1>
+      <suggest2>如患炎症性肠病、腹泻，避免菊粉和膳食纤维制剂的摄入。</suggest2>
+    </prebiotics>
+    <probiotics>
+      <desc>
+        <item>
+          <desc>建议您选择补充含保加利亚乳杆菌的酸奶、含干酪乳杆菌的活菌饮料等益生菌产品，以增加您肠道内益生菌的含量，并能抑制有害菌的异常增殖，调节肠道菌群平衡。</desc>
+          <num>1</num>
+        </item>
+        <item>
+          <desc>选酸奶有窍门，2型糖尿病、动脉粥样硬化、胆囊炎、胰腺炎等患者，宜选用无糖酸奶。</desc>
+          <num>2</num>
+        </item>
+      </desc>
+      <name>益生菌</name>
+      <suggest1>建议您选择补充含保加利亚乳杆菌的酸奶、含干酪乳杆菌的活菌饮料等益生菌产品，以增加您肠道内益生菌的含量，并能抑制有害菌的异常增殖，调节肠道菌群平衡。</suggest1>
+      <suggest2>选酸奶有窍门，2型糖尿病、动脉粥样硬化、胆囊炎、胰腺炎等患者，宜选用无糖酸奶。</suggest2>
+    </probiotics>
+  </fangan>
+  <gaikuang>
+    <desc>
+      <abnormalN>0</abnormalN>
+      <bad>-</bad>
+      <badN>0</badN>
+      <good>-</good>
+      <goodN>0</goodN>
+      <youyijun>
+        <actionrule>您可以通过补充益生元、益生菌等进一步改善肠道菌群情况。</actionrule>
+        <cnt1>4</cnt1>
+        <cnt2>5</cnt2>
+        <cnt3>5</cnt3>
+        <desc>产生有益物质，抑制病原菌的生长，帮助预防疾病</desc>
+        <descfull>肠道健康保护力评估总分是通过综合评估您肠道内的多种有益菌的含量而得出的一个总的评估指标。有益菌是人类的好朋友，是肠道健康的守护神，能够产生维生素、短链脂肪酸等许多对人体有益的物质，还能抑制有害菌的生长，减少疾病的发生。因此，肠道内有益菌的含量越高，肠道健康保护力评估总分分值也就越高，说明您的肠道健康保护力越强，这将有利于肠道微生态平衡、增强免疫力、促进营养吸收等，从而保证人体健康。</descfull>
+        <dropcoordinate>6.66307692307692</dropcoordinate>
+        <droppic>drop_l3.pdf</droppic>
+        <level>l3</level>
+        <name>有益菌</name>
+        <per>0.4538</per>
+        <per100>45</per100>
+        <risk>正常</risk>
+        <riskdesc>肠道健康保护力正常，有利于肠道微生态平衡</riskdesc>
+        <source>肠道菌群伴影响人体对营养物质的消化吸收、机体免疫力等，肠道菌群失调可引发便秘、腹泻、腹胀、腹痛、消化不良、食欲不振等病症。肠道健康是人体健康的重要指征，通过检测肠道有益菌的含量，可直观反映肠道菌群对肠道健康的保护能力，可以知晓人体肠道健康状况，为健康保驾护航。</source>
+        <strawpic>straw_l3.pdf</strawpic>
+        <value>210.44</value>
+      </youyijun>
+    </desc>
+    <ename>OVERVIEW</ename>
+    <name>肠道菌群概况</name>
+  </gaikuang>
+  <name>Demo</name>
+  <receivedate>2017-04-10</receivedate>
+  <reportdate>2020-05-06</reportdate>
+  <sex>M</sex>
+  <source>美亚健康管理中心</source>
+  <version>t-1</version>
+</opt>

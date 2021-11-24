@@ -1,0 +1,185 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\begin{document}
+
+%\vspace*{14mm}
+\vspace*{6mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+\begin{LRaside}[.8]{1.2有益菌与有害菌}
+\noindent
+\includegraphics[width=\linewidth]{youyiyouhaijun.pdf}
+\asidebreak %
+有益菌，指对人类有益的细菌。它们是肠道里的“正义卫士”，不仅能够产生维生素等有益物质，还能抵御致病菌的入侵，减少炎症。有害菌，是肠道里的“捣蛋鬼”，产生毒素等有害物质。有害菌在肠道内数量较少，一般情况下不会对人体健康产生大的影响，但一旦肠道菌群平衡失调，有害菌异常大量增殖，就可能引发多种健康问题。
+\end{LRaside}
+
+\vspace*{8mm}
+
+\begin{minipage}[t]{.47\textwidth}
+{\bf 有益菌}
+\vspace{8pt}
+
+\includegraphics[width=1.3cm]{youyijun_1.pdf}~~
+\includegraphics[width=1.3cm]{youyijun_2.pdf}~~
+\includegraphics[width=1.3cm]{youyijun_3.pdf}
+
+\smallskip
+
+\fontsize{8}{13}\selectfont
+\begin{tikzpicture}[scale=1.8,x=1.0cm,y=1.0cm, declare function={
+filltop1=11.62;
+filltop2=23.34;
+fillper=0.9375;}]
+
+\pgfmathparse{{filltop1}}\let\pgfmathresultfilltopa\pgfmathresult
+\pgfmathparse{{filltop2}}\let\pgfmathresultfilltopb\pgfmathresult
+\pgfmathparse{{fillper}}\let\pgfmathresultfillper\pgfmathresult
+
+\def\filltopa{\pgfmathresultfilltopa}
+\def\filltopb{\pgfmathresultfilltopb}
+\def\fillpercent{\pgfmathresultfillper}
+
+\pgfmathsetmacro{\filltopaa}{15};
+
+% 直接根据分布求得百分比计算检测值长条覆盖的比例
+\pgfmathsetmacro{\filltopbb}{\fillpercent*30};
+
+% 根据均值与检测的比例检测值长条覆盖的比例
+%\pgfmathparse{\filltopb/\filltopa}\let\pgfmathswitch\pgfmathresult
+
+%\pgfmathtruncatemacro\one{\pgfmathswitch}
+%\pgfmathtruncatemacro\two{2}
+%\ifnum\one>\two
+%\pgfmathsetmacro{\filltopbb}{30};
+%\fi
+%\ifnum\one=\two
+%\pgfmathsetmacro{\filltopbb}{30};
+%\fi
+%\ifnum\one<\two
+%\pgfmathsetmacro{\filltopbb}{\pgfmathswitch*15};
+%\fi
+
+\begin{scope}
+
+\draw[fill=gray1,color=gray1,very thick] (0,0) -- (30mm,0) -- (30mm,2.8mm) -- (0,2.8mm);
+\path (0,1.4mm) node [yshift=1.5mm,left=0mm] {平均};
+\path (0,1.4mm) node [yshift=-1.5mm,left=0mm] {指数};
+
+
+\draw[fill=topcolor,color=topcolor,very thick] (0,0) -- (\filltopaa*1mm,0) -- (\filltopaa*1mm,2.8mm) -- (0,2.8mm);
+\path (30mm,1.4mm) node [right=0mm] {\filltopa};
+\end{scope}
+
+
+\begin{scope}[yshift=-5mm]
+\draw[fill=gray1,color=gray1,very thick] (0,0) -- (30mm,0) -- (30mm,2.8mm) -- (0,2.8mm);
+\path (0,1.4mm) node [yshift=1.5mm,left=0mm] {您的};
+\path (0,1.4mm) node [yshift=-1.5mm,left=0mm] {指数};
+
+
+\draw[fill=topcolor,color=topcolor,very thick] (0,0) -- (\filltopbb*1mm,0) -- (\filltopbb*1mm,2.8mm) -- (0,2.8mm);
+\path (30mm,1.4mm) node [right=0mm] {\filltopb};
+\end{scope}
+
+\end{tikzpicture}
+\begin{center}
+\pdfchatuoliver{xiaoren0}{9}\includegraphics[width=.35cm]{xiaoren04.pdf}
+
+\textbf{\small 您的有益菌含量高于93.75{\%}的参考人群 }
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.47\textwidth}
+{\bf 有害菌}
+\vspace{8pt}
+
+\includegraphics[width=1.3cm]{youhaijun_1.pdf}~~
+\includegraphics[width=1.3cm]{youhaijun_2.pdf}~~
+\includegraphics[width=1.3cm]{youhaijun_3.pdf}
+
+\smallskip
+
+\fontsize{8}{13}\selectfont
+\begin{tikzpicture}[scale=1.8,x=1.0cm,y=1.0cm, declare function={
+filltop1=5.57;
+filltop2=2.40;
+fillper=0.3597;}]
+
+\pgfmathparse{{filltop1}}\let\pgfmathresultfilltopa\pgfmathresult
+\pgfmathparse{{filltop2}}\let\pgfmathresultfilltopb\pgfmathresult
+\pgfmathparse{{fillper}}\let\pgfmathresultfillper\pgfmathresult
+
+\def\filltopa{\pgfmathresultfilltopa}
+\def\filltopb{\pgfmathresultfilltopb}
+\def\fillpercent{\pgfmathresultfillper}
+
+\pgfmathsetmacro{\filltopaa}{15};
+
+% 直接根据分布求得百分比计算检测值长条覆盖的比例
+\pgfmathsetmacro{\filltopbb}{\fillpercent*30};
+
+% 根据均值与检测的比例检测值长条覆盖的比例
+%\pgfmathparse{\filltopb/\filltopa}\let\pgfmathswitch\pgfmathresult
+
+%\pgfmathtruncatemacro\one{\pgfmathswitch}
+%\pgfmathtruncatemacro\two{2}
+%\ifnum\one>\two
+%\pgfmathsetmacro{\filltopbb}{30};
+%\fi
+%\ifnum\one=\two
+%\pgfmathsetmacro{\filltopbb}{30};
+%\fi
+%\ifnum\one<\two
+%\pgfmathsetmacro{\filltopbb}{\pgfmathswitch*15};
+%\fi
+
+\begin{scope}
+
+\draw[fill=gray1,color=gray1,very thick] (0,0) -- (30mm,0) -- (30mm,2.8mm) -- (0,2.8mm);
+\path (0,1.4mm) node [yshift=1.5mm,left=0mm] {平均};
+\path (0,1.4mm) node [yshift=-1.5mm,left=0mm] {指数};
+
+
+\draw[fill=yellow2,color=yellow2,very thick] (0,0) -- (\filltopaa*1mm,0) -- (\filltopaa*1mm,2.8mm) -- (0,2.8mm);
+\path (30mm,1.4mm) node [right=0mm] {\filltopa};
+\end{scope}
+
+
+\begin{scope}[yshift=-5mm]
+\draw[fill=gray1,color=gray1,very thick] (0,0) -- (30mm,0) -- (30mm,2.8mm) -- (0,2.8mm);
+\path (0,1.4mm) node [yshift=1.5mm,left=0mm] {您的};
+\path (0,1.4mm) node [yshift=-1.5mm,left=0mm] {指数};
+
+
+\draw[fill=yellow2,color=yellow2,very thick] (0,0) -- (\filltopbb*1mm,0) -- (\filltopbb*1mm,2.8mm) -- (0,2.8mm);
+\path (30mm,1.4mm) node [right=0mm] {\filltopb};
+\end{scope}
+
+\end{tikzpicture}
+
+\begin{center}
+\pdfchatuorange{xiaoren1}{3}\includegraphics[width=.35cm]{xiaoren16.pdf}
+\pdfchatu{xiaoren1}{6}
+
+\textbf{\small 您的有害菌含量高于35.97{\%}的参考人群}
+\end{center}
+\end{minipage}
+
+
+\vspace*{8mm}
+
+
+\begin{LRaside}[.8]{结果分析}
+\noindent
+\includegraphics[width=\linewidth]{result.pdf}
+\asidebreak %
+您肠道内的有益菌与有害菌的含量均处于正常范围。二者处于动态平衡的状态，共同维持肠道生态系统的稳定。但是，在您免疫力低下时，有害菌可能会引起感染、腹泻、肠炎、便秘等。有害菌数量过高还可能影响您的心情和食欲，扰乱内分泌，降低机体免疫力，增加疾病风险。良好的饮食及生活习惯有助于提高有益菌的含量，抑制有害菌的增殖，建议您规律作息，注意饮食健康。
+\end{LRaside}
+
+\end{document}

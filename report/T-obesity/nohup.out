@@ -1,0 +1,90 @@
+------------------
+front.pdf
+------------------
+zonglan.pdf
+------------------
+jiexi.pdf
+------------------
+fenbu.pdf
+------------------
+jibingfengxian.pdf
+------------------
+tiaojiefangan.pdf
+perl /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/report.pl -conf /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/config.all -template /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/pages.tt -outdir /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_raw -id Demo  -tables /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_raw -contexts /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_raw -mulu /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/mulu.tt
+-----new part latex
+-----new part latex
+------------------
+front.pdf
+------------------
+zonglan.pdf
+------------------
+jiexi.pdf
+------------------
+fenbu.pdf
+------------------
+jibingfengxian.pdf
+------------------
+tiaojiefangan.pdf
+perl /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/report.pl -conf /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/config.all -template /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/pages.tt -outdir /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l1 -id Demo  -tables /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l1 -contexts /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l1 -mulu /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/mulu.tt
+-----new part latex
+-----new part latex
+------------------
+front.pdf
+------------------
+zonglan.pdf
+------------------
+jiexi.pdf
+------------------
+fenbu.pdf
+------------------
+jibingfengxian.pdf
+------------------
+tiaojiefangan.pdf
+perl /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/report.pl -conf /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/config.all -template /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/pages.tt -outdir /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l2 -id Demo  -tables /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l2 -contexts /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l2 -mulu /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/mulu.tt
+-----new part latex
+-----new part latex
+------------------
+front.pdf
+------------------
+zonglan.pdf
+------------------
+jiexi.pdf
+------------------
+fenbu.pdf
+------------------
+jibingfengxian.pdf
+------------------
+tiaojiefangan.pdf
+perl /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/report.pl -conf /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/config.all -template /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/pages.tt -outdir /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l3 -id Demo  -tables /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l3 -contexts /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l3 -mulu /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/mulu.tt
+-----new part latex
+-----new part latex
+------------------
+front.pdf
+------------------
+zonglan.pdf
+------------------
+jiexi.pdf
+------------------
+fenbu.pdf
+------------------
+jibingfengxian.pdf
+------------------
+tiaojiefangan.pdf
+perl /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/report.pl -conf /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/config.all -template /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/pages.tt -outdir /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l4 -id Demo  -tables /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l4 -contexts /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l4 -mulu /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/mulu.tt
+-----new part latex
+-----new part latex
+------------------
+front.pdf
+------------------
+zonglan.pdf
+------------------
+jiexi.pdf
+------------------
+fenbu.pdf
+------------------
+jibingfengxian.pdf
+------------------
+tiaojiefangan.pdf
+perl /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/report.pl -conf /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/config.all -template /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/pages.tt -outdir /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l5 -id Demo  -tables /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l5 -contexts /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/test/Demo_l5 -mulu /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/T-obesity/template/20171201/mulu.tt
+-----new part latex
+-----new part latex

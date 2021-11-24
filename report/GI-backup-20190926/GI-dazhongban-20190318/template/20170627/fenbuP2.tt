@@ -1,0 +1,103 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\NewEnviron{RCtable}[1]
+  {%
+    \begin{tcolorbox}[#1]\BODY\end{tcolorbox}%
+  }
+
+
+\begin{document}
+
+\vspace*{5mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.03pt}{11pt}\selectfont
+\color{gray2}
+
+\noindent
+{\fontsize{12pt}{11pt}\selectfont 1.4 您的致病菌含量}
+\vspace*{3mm}
+
+\begin{tctabularx}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.52cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测结果评价}
+\end{tctabularx}
+
+\vspace*{-4.35mm}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray4}
+\setlength\arrayrulewidth{0.25pt}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+[% FOREACH item = changdaojunqun.pathogen.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh [% item.name %]\\[% item.desc %]} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+[% IF item.risk == "有益" OR item.risk == "正常" -%]
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+[% ELSIF item.level == "l1" OR item.level == "l5" -%]
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+[% ELSE -%]
+\hspace*{-3.17cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+[% END -%]
+ & \begin{minipage}{4.60cm}\begin{center}{[% IF item.level == 'l0' -%]{\lantxh 未检出}[% ELSIF item.level == 'l1' -%]{\lantxh 含量未超标{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l2' -%]{\lantxh 含量未超标{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l3' -%]{\lantxh 含量未超标{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l4' -%]{[% IF item.risk == "有害" -%]\color{orange}[% END -%]\lantxh 偏高{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSE -%]{[% IF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 高{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc -%][% END -%]}}[% END -%] }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{[% IF item.level == 'l0' -%]{\lantxh 未检出}[% ELSIF item.level == 'l1' -%]{[% IF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 含量未超标{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l2' -%]{\lantxh 含量未超标{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l3' -%]{\lantxh 含量未超标{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l4' -%]{\lantxh 偏高{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSE -%]{[% IF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 高{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc -%][% END -%]}}[% END -%] }\end{center} \end{minipage} \\
+[% END -%]
+\hline
+\multicolumn{3}{l}{}\\
+\multicolumn{3}{l}{\hspace*{2mm}\includegraphics[scale=1]{greencircle.pdf} {\fontsize{9.03pt}{11pt}\selectfont \bf 绿色表示健康}\hspace*{2mm}\includegraphics[scale=1]{orangecircle.pdf}  {\fontsize{9.03pt}{11pt}\selectfont \bf 橙色表示需要关注}\hspace*{2mm}\includegraphics[scale=1]{redcircle.pdf} {\fontsize{9.03pt}{11pt}\selectfont \bf 红色表示有风险}}
+\end{longtable}
+
+%\vspace*{8mm}
+\vspace*{6mm}
+\fontsize{9.03pt}{11pt}\selectfont
+\begin{spacing}{1.1}
+\begin{LRaside}[.8]{结果分析}
+\noindent
+\includegraphics[scale=1]{result_fenbu.pdf}
+\asidebreak %
+您的肠道内
+[% IF changdaojunqun.pathogen.num == 0 -%]
+未检测到可能导致疾病的致病菌，这是个好消息。当您的免疫力较强时，可持续抑制致病菌的生长。但请注意，当您的免疫力较弱时，肠道致病菌可能会增加，可能引起腹泻、腹痛、感染等病症。
+[% ELSIF changdaojunqun.pathogen.badN == 0 -%]
+检测出含量较低的致病菌：[% changdaojunqun.pathogen.nameDesc -%]，尽管这些致病菌含量未超标，当身体免疫力较强时可能不会出现不适感。但请注意，当您的免疫力较弱时，可能引起腹泻、腹痛、感染等病症。建议您持续监测肠道健康，一旦检测出较高含量的致病菌，建议咨询专科医生，酌情做进一步检查。
+[% ELSE -%]
+检测出[% changdaojunqun.pathogen.num %]种致病菌，其中[% changdaojunqun.pathogen.bad %]含量高于参考人群，当身体免疫力较强时可能不会出现不适感。但请注意，当您的免疫力较弱时，初期可能引起腹泻、腹痛、感染等病症，长期可能导致上表中所述疾病。建议您持续监测，必要时请到正规医院咨询专科医生，遵从医生的建议做进一步检查。
+[% END -%]
+
+\end{LRaside}
+\end{spacing}
+
+\end{document}

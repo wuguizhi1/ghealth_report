@@ -1,0 +1,86 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{gray2}
+
+\begin{center}
+{\noindent\bf\sanhao 检测结果}
+\end{center}
+
+\vspace*{3mm}
+
+\noindent{\fontsize{9pt}{11pt}\selectfont\bf{ 一、肠道菌群概况}}
+
+%\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{4cm}<{\centering}|m{3cm}<{\centering}|m{3cm}<{\centering}|m{4cm}<{\centering}|}
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} {\lantxh\bf 检测内容} \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh\bf 检测结果}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh\bf 检测值}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh\bf 参考范围}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 肠道菌群多样性(diversity) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 异常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 3.20}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≥ 2.54}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 有益菌(Benificial bacteria) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 异常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 175.10}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≥ 39.81}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 有害菌(Harmful bacteria) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 正常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 0.39}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≤ 144.04}\end{center} \end{minipage} \\
+\hline
+\end{longtable}
+
+\vspace*{0mm}
+
+\begin{spacing}{1.25}
+\noindent\fontsize{9pt}{11pt}\selectfont {您的肠道菌群组成较为单一，菌群失调风险较高。您肠道内的有益菌含量较低，抑制有害菌增殖的能力较低。尽管您的有害菌含量也较低，但一旦有害菌异常大量增殖，可能引起感染、腹泻、肠炎、便秘等。有害菌数量过高还可能影响您的心情和食欲，扰乱内分泌，降低机体免疫力，增加疾病风险。请您改善饮食结构、规律作息，可适当补充益生菌，并持续监测肠道健康。}
+
+\end{spacing}
+
+\end{document}
+

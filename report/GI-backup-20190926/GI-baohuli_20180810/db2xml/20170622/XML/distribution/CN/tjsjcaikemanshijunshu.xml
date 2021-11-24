@@ -1,0 +1,91 @@
+<opt>
+  <CN>
+    <bacteria>
+      <desc></desc>
+      <descfull></descfull>
+    </bacteria>
+    <etitle>Akkermansia</etitle>
+    <order>3</order>
+    <pubmed>
+      <desc></desc>
+    </pubmed>
+    <section1>
+      <name>菌群分布</name>
+      <order>1</order>
+    </section1>
+    <suggestion>
+      <healthy>
+        <l1>
+          <actiondesc>益生元（0\textasciitilde 12）：0.8g {/} 100mL的低聚半乳糖；0.2g {/} 100mL的低聚果糖；儿童合生元
+
+益生元（13+）：富含多酚的蔓越莓提取物；豆类制品
+
+食物：四季豆；燕麦；苹果
+
+</actiondesc>
+          <actionrule>补充益生元和益生菌</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>调节免疫；保持正常体重</effectdesc>
+          <mechanism>不利于调节免疫及保持正常体重</mechanism>
+          <mechanismfull>不利于调节免疫及保持正常体重</mechanismfull>
+          <note></note>
+        </l1>
+        <l2>
+          <actiondesc>益生元（0\textasciitilde 12）：0.8g {/} 100mL的低聚半乳糖；0.2g {/} 100mL的低聚果糖；儿童合生元
+
+益生元（13+）：富含多酚的蔓越莓提取物；豆类制品
+
+食物：四季豆；燕麦；苹果</actiondesc>
+          <actionrule>补充益生元和益生菌</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>调节免疫；保持正常体重</effectdesc>
+          <mechanism>不利于调节免疫及保持正常体重</mechanism>
+          <mechanismfull>不利于调节免疫及保持正常体重</mechanismfull>
+          <note></note>
+        </l2>
+        <l3>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc></effectdesc>
+          <mechanism>调节免疫及保持正常体重</mechanism>
+          <mechanismfull>调节免疫及保持正常体重</mechanismfull>
+          <note></note>
+        </l3>
+        <l4>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>调节免疫；保持正常体重</effectdesc>
+          <mechanism>有利于调节免疫及保持正常体重</mechanism>
+          <mechanismfull>有利于调节免疫及保持正常体重</mechanismfull>
+          <note></note>
+        </l4>
+        <l5>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>调节免疫；保持正常体重</effectdesc>
+          <mechanism>有利于调节免疫及保持正常体重</mechanism>
+          <mechanismfull>有利于调节免疫及保持正常体重</mechanismfull>
+          <note></note>
+        </l5>
+      </healthy>
+    </suggestion>
+    <summary>
+      <desc>降解粘蛋白、调节免疫，有利于肠黏膜完整性，保持正常体重</desc>
+      <descfull>阿克曼氏菌是能够帮助控制体重的“瘦菌”，能促进脂肪代谢，消耗多余能量，维持代谢平衡，有助于控制体重。同时阿克曼氏菌帮助维持肠壁粘膜健康完整，完整的肠壁屏障能够防止有害菌穿过肠壁进入血液和组织，调节免疫力，对抑制炎症、预防糖尿病、肥胖大有帮助。除此之外，阿克曼氏菌也和其它某些疾病存在一定的关联：研究发现在肠易激综合征、阑尾炎等患者体内，阿克曼氏菌通常含量很低。当肠道内阿克曼氏菌含量较高时，有利于保持正常体重，维持正常免疫，抵御有害菌，维持身体健康。当肠道内阿克曼氏菌含量较低时，可能喝水也长胖，免疫发生紊乱或患胃肠道疾病哦。</descfull>
+      <source></source>
+    </summary>
+    <title>阿克曼氏菌属（Akkermansia）</title>
+  </CN>
+  <categoey>distribution</categoey>
+  <id>changdaokang_danxiangxi_changdaobaohuli_tjsjcaikemanshijunshu</id>
+  <oriid>tjsjcaikemanshijunshu</oriid>
+  <orititle>阿克曼氏菌属（Akkermansia）</orititle>
+</opt>

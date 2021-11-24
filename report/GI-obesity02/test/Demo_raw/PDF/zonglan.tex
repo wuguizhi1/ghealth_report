@@ -1,0 +1,249 @@
+\input format.tex
+\usepackage{mdframed}
+\usepackage{lipsum}
+
+% all 4 borders
+\newmdenv[linecolor=black70]{allfour}
+% just top and bottom
+\newmdenv[leftline=false,rightline=false]{topbot}
+% just left and bottom
+\newmdenv[topline=false,rightline=false]{leftbot}
+
+\begin{document}
+
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{17pt}\selectfont
+\color{gray2}
+
+\vspace*{3mm}
+\begin{center}
+\fontsize{16pt}{\baselineskip}\selectfont\color{black70}\bf {一、肠道菌群基因检测结果}
+\end{center}
+
+\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {肠道菌群总体状况}}
+
+\vspace*{3mm}
+\noindent
+\begin{minipage}[b]{.32\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\begin{tctabularx}{tabularx={p{4.6cm}}}
+\parbox[c]{.9\hsize}{\centering\vskip4pt{\color{white}\bf 菌群多样性：
+健康
+} \vskip4pt}
+\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\
+\\\\\\\\
+\parbox[c]{\hsize}{
+\hspace*{1cm}{
+\begin{picture}(1, 1)
+\begin{tikzpicture}[bar interval width=0.8, bar width=0.70cm]
+	\begin{scope}
+	\clip[] (0cm, 0cm) rectangle (1.5cm, 5.7cm);
+	\draw[fill=solomon0, solomon0] (0cm, 0 * 5.7cm) rectangle (1.5cm, 0.05 * 5.7cm) node {};
+	\draw[fill=solomon1, solomon1] (0cm, 0.05 * 5.7cm) rectangle (1.5cm, 0.15cm * 5.7cm) node {};
+	\draw[fill=solomon2, solomon2] (0cm, 0.15 * 5.7cm) rectangle (1.5cm, 0.3 * 5.7cm) node {};
+	\draw[fill=solomon3, solomon3] (0cm, 0.3 * 5.7cm) rectangle (1.5cm, 1 * 5.7cm) node {};
+	\end{scope}
+	\draw (-0.35cm, 0cm) node[left, anchor = west, yshift=0mm] {\bahao\color{gray2} {0}};
+	\draw (0.4cm, 0.025 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {脆弱}};
+	\draw (-0.35cm, 0.05 * 5.7cm) node[left, anchor = west, yshift=0mm] {\bahao\color{gray2} {5}};
+	\draw (0.4cm, 0.1 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {单一}};
+	\draw (-0.35cm, 0.15 * 5.7cm) node[left, anchor = west, xshift=-1.5mm, yshift=0mm] {\bahao\color{gray2} {15}};
+	\draw (0.4cm, 0.225 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {较低}};
+	\draw (-0.35cm, 0.3 * 5.7cm) node[left, anchor = west, xshift=-1.5mm, yshift=0mm] {\bahao\color{gray2} {30}};
+	\draw (0.4cm, 0.65 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {稳定}};
+\end{tikzpicture}
+\put(-2.5, 0){\raisebox{124.355 pt}{
+\includegraphics[scale=2]{drop-l4.pdf}
+}}
+\put(11.5, 3.5){\raisebox{124.355 pt}{\qihao\color{gray2} {77}}}
+\end{picture}}
+}
+\end{tctabularx}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[b]{.32\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\begin{tctabularx}{tabularx={p{4.6cm}}}
+\parbox[c]{\hsize}{\centering\vskip4pt{\color{white}\bf 有益菌：
+偏少 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+} \vskip4pt}
+\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\
+\\\\\\\\
+\parbox[c]{\hsize}{
+\hspace*{1cm}{
+\begin{picture}(1, 1)
+\begin{tikzpicture}[bar interval width=0.8, bar width=0.70cm]
+	\begin{scope}
+	\clip[] (0cm, 0cm) rectangle (1.5cm, 5.7cm);
+	\draw[fill=solomon0, solomon0] (0cm, 0 * 5.7cm) rectangle (1.5cm, 0.05 * 5.7cm) node {};
+	\draw[fill=solomon1, solomon1] (0cm, 0.05 * 5.7cm) rectangle (1.5cm, 0.2cm * 5.7cm) node {};
+	\draw[fill=solomon3, solomon3] (0cm, 0.2 * 5.7cm) rectangle (1.5cm, 1 * 5.7cm) node {};
+	\end{scope}
+	\draw (-0.35cm, 0cm) node[left, anchor = west, yshift=0mm] {\bahao\color{gray2} {0}};
+	\draw (0.4cm, 0.025 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {缺乏}};
+	\draw (-0.35cm, 0.05 * 5.7cm) node[left, anchor = west, yshift=0mm] {\bahao\color{gray2} {5}};
+	\draw (0.4cm, 0.125 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {偏少}};
+	\draw (-0.35cm, 0.2 * 5.7cm) node[left, anchor = west, xshift=-1.5mm, yshift=0mm] {\bahao\color{gray2} {20}};
+	\draw (0.4cm, 0.6 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {健康}};
+\end{tikzpicture}
+\put(-2.5, 0){\raisebox{12.92 pt}{
+\includegraphics[scale=2]{drop-l2.pdf}
+}}
+\put(13.5, 3.5){\raisebox{12.92 pt}{\qihao\color{gray2} {8}}}
+\end{picture}}
+}
+\end{tctabularx}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[b][6cm]{.32\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\begin{tctabularx}{tabularx={p{4.6cm}}}
+\parbox[c]{\hsize}{\centering\vskip4pt{\color{white}\bf 有害菌：
+健康
+} \vskip4pt}
+\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\
+\\\\\\\\
+\parbox[c]{\hsize}{
+\hspace*{1cm}{
+\begin{picture}(1, 1)
+\begin{tikzpicture}[bar interval width=0.8, bar width=0.70cm]
+	\begin{scope}
+	\clip[] (0cm, 0cm) rectangle (1.5cm, 5.7cm);
+	\draw[fill=solomon3, solomon3] (0cm, 0 * 5.7cm) rectangle (1.5cm, 0.8 * 5.7cm) node {};
+	\draw[fill=solomon1, solomon1] (0cm, 0.8 * 5.7cm) rectangle (1.5cm, 0.95cm * 5.7cm) node {};
+	\draw[fill=solomon0, solomon0] (0cm, 0.95 * 5.7cm) rectangle (1.5cm, 1 * 5.7cm) node {};
+	\end{scope}
+	\draw (-0.35cm, 0cm) node[left, anchor = west, yshift=0mm] {\bahao\color{gray2} {0}};
+	%\draw (1.45cm, 0cm ) node[left, anchor = west, yshift=0mm] {\includegraphics[scale=2]{drop-l1.pdf}};
+	\draw (0.4cm, 0.4 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {健康}};
+	\draw (-0.35cm, 0.8 * 5.7cm) node[left, anchor = west, xshift=-1.5mm, yshift=0mm] {\bahao\color{gray2} {80}};
+	\draw (0.4cm, 0.875 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {偏高}};
+	\draw (-0.35cm, 0.95 * 5.7cm) node[left, anchor = west, xshift=-1.5mm, yshift=0mm] {\bahao\color{gray2} {95}};
+	\draw (0.5cm, 0.975 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {高}};
+\end{tikzpicture}
+\put(-2.5, 0){\raisebox{1.615 pt}{
+\includegraphics[scale=2]{drop-l4.pdf}
+}}
+\put(13.5, 3.5){\raisebox{1.615 pt}{\qihao\color{gray2} {1}}}
+\end{picture}}
+}
+\end{tctabularx}
+\end{minipage}
+
+\vspace*{-0.5mm}
+\hspace*{13cm}
+\raisebox{-0.4ex}{\includegraphics{drop_mark.pdf}}
+\fontsize{8.5pt}{11pt}\selectfont {本次检测结果}
+
+%\vspace*{1mm}
+%\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {本次检测异常结果}}
+
+\vspace*{1.5mm}
+\lantxh
+\begin{tctabularxnew}{tabularx={m{4.84cm}<{\centering}m{4.84cm}<{\centering}m{4.84cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 胖菌} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 瘦菌} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 致病菌}
+\end{tctabularxnew}
+
+\vspace*{-3.5mm}
+\begin{spacing}{1.5}
+\noindent\begin{tabular}{p{4.84cm}p{4.84cm}p{4.84cm}}
+\hspace*{-2mm}\parbox[c]{1.08\hsize}{
+\begin{allfour}
+\fontsize{9pt}{11pt}\selectfont\color{black70}\centering {
+
+梭菌属 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+\ifthenelse{\isodd{1}}{\\}
+{{、}
+}
+布劳特氏菌属 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+\ifthenelse{\isodd{2}}{\\}
+{{、}
+}
+多尔氏菌属 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+\ifthenelse{\isodd{3}}{\\}
+{{、}
+}
+脱硫弧菌属 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+\ifthenelse{\isodd{4}}{\\}
+{}
+
+}
+\end{allfour}
+} &
+\hspace*{-1.5mm}\parbox[c]{1.08\hsize}{
+\begin{allfour}
+\fontsize{9pt}{11pt}\selectfont\color{black70}\centering {
+
+阿克曼氏菌属 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+\ifthenelse{\isodd{1}}{\\}
+{{、}
+}
+双歧杆菌属 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+\ifthenelse{\isodd{2}}{\\}
+{{、}
+}
+柔嫩梭菌属 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+\ifthenelse{\isodd{3}}{\\}
+{{、}
+}
+毛杆菌属 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+\ifthenelse{\isodd{4}}{\\}
+{}
+
+}
+\end{allfour}
+} &
+\hspace*{-1mm}\parbox[c]{1.08\hsize}{
+\begin{allfour}
+\fontsize{9pt}{11pt}\selectfont\color{black70}\centering {
+
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+未检出异常 \raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+
+}
+\end{allfour}
+}
+\end{tabular}
+\end{spacing}
+
+\vspace*{-3mm}
+\begin{spacing}{1.5}
+\noindent\fontsize{8.5pt}{11pt}\selectfont {注：上表仅列出本次检测异常菌属。\raisebox{-0.3ex}{\includegraphics{black_up.pdf}}表示与参考人群比含量偏高/高；
+\raisebox{-0.3ex}{\includegraphics{black_down.pdf}}表示与参考人群比含量偏低/低；致病菌仅列菌名表示检出但含量未超标。}
+\end{spacing}
+
+\vspace*{3mm}
+\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {结果分析}}
+
+\vspace*{0.5mm}
+\begin{spacing}{1.5}
+\noindent\color{black70}\fontsize{9pt}{12pt}\selectfont {{\raisebox{1pt}{\color{black70}$\bullet$}}\, 本次检测提示菌群多样性
+正常、
+有益菌
+偏低、
+有害菌
+正常，
+有益菌含量指标异常，
+可能导致肠道环境变差，减重难度增大。建议先调理肠道菌群，恢复肠道微生态平衡，健康的肠道菌群状态有助于减重。
+}\\
+\noindent\color{black70}\fontsize{9pt}{12pt}\selectfont {{\raisebox{1pt}{\color{black70}$\bullet$}}\,
+梭菌属、布劳特氏菌属、多尔氏菌属、脱硫弧菌属等胖菌指标偏高，
+阿克曼氏菌属、双歧杆菌属、柔嫩梭菌属、毛杆菌属等瘦菌指标偏低，
+长期胖菌/瘦菌结果异常，可引起肥胖等健康问题，不利于控制体重。
+}\\
+\noindent\color{black70}\fontsize{9pt}{12pt}\selectfont {{\raisebox{1pt}{\color{black70}$\bullet$}}\,
+本次未检测出致病菌。这是个好消息。
+}
+\end{spacing}
+\end{document}
+

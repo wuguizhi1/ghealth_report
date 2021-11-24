@@ -1,0 +1,7 @@
+------------------
+zongfen.pdf
+------------------
+result.pdf
+------------------
+jianyi.pdf
+perl /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/GI-baohuli/report.pl -conf /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/GI-baohuli/config.all -template /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/GI-baohuli/template/20170828/pages.tt -outdir /data/bioit/biodata/sunmm/Project/16S/waibao_20171204/report/report/5/25IE3JBLUNIA/pdf -id 25IE3JBLUNIA  -tables /data/bioit/biodata/sunmm/Project/16S/waibao_20171204/report/report/5/25IE3JBLUNIA/pdf -contexts /data/bioit/biodata/sunmm/Project/16S/waibao_20171204/report/report/5/25IE3JBLUNIA/pdf 

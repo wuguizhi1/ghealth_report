@@ -1,0 +1,85 @@
+<opt>
+  <CN>
+    <bacteria>
+      <desc></desc>
+      <descfull></descfull>
+    </bacteria>
+    <etitle>Plesiomonas shigelloides</etitle>
+    <order>60</order>
+    <pubmed>
+      <desc></desc>
+    </pubmed>
+    <section1>
+      <name>致病菌</name>
+      <order>1</order>
+    </section1>
+    <suggestion>
+      <healthy>
+        <l1>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc></effectdesc>
+          <mechanism></mechanism>
+          <mechanismfull></mechanismfull>
+          <note></note>
+        </l1>
+        <l2>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc></effectdesc>
+          <mechanism></mechanism>
+          <mechanismfull></mechanismfull>
+          <note></note>
+        </l2>
+        <l3>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc></effectdesc>
+          <mechanism></mechanism>
+          <mechanismfull></mechanismfull>
+          <note></note>
+        </l3>
+        <l4>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc></effectdesc>
+          <mechanism>可能增加肠胃炎的风险，导致腹泻</mechanism>
+          <mechanismfull></mechanismfull>
+          <note></note>
+        </l4>
+        <l5>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc></effectdesc>
+          <mechanism>可能增加肠胃炎的风险，导致腹泻</mechanism>
+          <mechanismfull></mechanismfull>
+          <note></note>
+        </l5>
+      </healthy>
+    </suggestion>
+    <summary>
+      <desc>可能导致肠胃炎和腹泻</desc>
+      <descfull>&quot;类志贺邻单胞菌在水、鱼类、多种哺乳动物及人类肠道中发现，能引起人的腹泻，是一种重要的肠道致病菌，此菌可引起食物中毒。
+
+患者症状以腹痛、腹泻为主，大多数腹泻病人为水样便，部分病人发热达37.2～38.5℃。
+
+治疗：经抗生素治疗后2～3小时痊愈。&quot;</descfull>
+      <source></source>
+    </summary>
+    <title>类志贺邻单胞菌</title>
+  </CN>
+  <categoey>pathogens</categoey>
+  <id>tkehu_danxiangxi_tizhongguanli_tjsjcleizhihelindanbaojun</id>
+  <oriid>tjsjcleizhihelindanbaojun</oriid>
+  <orititle>类志贺邻单胞菌</orititle>
+</opt>

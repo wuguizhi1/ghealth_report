@@ -1,0 +1,111 @@
+\input format.tex
+
+%\usepackage{arydshln}
+
+\begin{document}
+
+%%%
+\setlength{\arrayrulewidth}{0.5pt}
+\fontsize{9.3pt}{17pt}\selectfont
+\color{gray2}
+
+\vspace*{0mm}
+
+\bigskip
+\noindent
+基于本次您的检测结果，建议您从以下几个方面进行干预：
+\begin{compactenum}[\mbox{1、}]
+\xiaowuhao \color{gray2} \lantxh {\item[1、]
+[% IF changdaojunqun.gaikuang.divlevel == 'l1' OR changdaojunqun.gaikuang.divlevel == 'l2' -%]
+[% IF changdaojunqun.pathogens.num == 0 -%]
+鉴于您的肠道菌群多样性低，建议多补充益生元和益生菌，帮助调节肠道菌群平衡。
+[% ELSIF changdaojunqun.pathogens.badN == 0 -%]
+鉴于您的肠道菌群多样性低，建议多补充益生元和益生菌，帮助调节肠道菌群平衡；您体内未超标的致病菌在您免疫能力低下时，可能诱发相关疾病，建议您持续监测肠道健康，必要时到正规医院进行相关检查。
+[% ELSE -%]
+鉴于您的肠道菌群多样性低，建议多补充益生元和益生菌，帮助调节肠道菌群平衡；您体内较高含量的致病菌可能诱发相关肠道疾病，建议您持续监测肠道健康，并到正规医院咨询专科医生，遵从医生建议做进一步检查。
+[% END -%]
+[% ELSIF changdaojunqun.gaikuang.divlevel == 'l3' -%]
+[% IF changdaojunqun.pathogens.num == 0 -%]
+鉴于您的肠道菌群多样性和致病菌处于正常范围，请继续保持良好的饮食及生活习惯，不滥用抗生素，可适当多喝酸奶，帮助维持肠道菌群平衡。
+[% ELSIF changdaojunqun.pathogens.badN == 0 -%]
+鉴于您的肠道菌群多样性处于正常范围，请继续保持良好的饮食及生活习惯，不滥用抗生素，可适当多喝酸奶，帮助维持肠道菌群平衡；您体内未超标的致病菌在您免疫能力低下时，可能诱发相关疾病，建议您持续监测肠道健康，必要时到正规医院进行相关检查。
+[% ELSE -%]
+鉴于您的肠道菌群多样性处于正常范围，请继续保持良好的饮食及生活习惯，不滥用抗生素，可适当多喝酸奶，帮助维持肠道菌群平衡；您体内较高含量的致病菌可能诱发相关肠道疾病，建议您持续监测肠道健康，并到正规医院咨询专科医生，遵从医生建议做进一步检查。
+[% END -%]
+[% ELSE -%]
+[% IF changdaojunqun.pathogens.num == 0 -%]
+您的肠道菌群情况良好，请继续保持良好的饮食及生活习惯，不滥用抗生素。
+[% ELSIF changdaojunqun.pathogens.badN == 0 -%]
+您体内未超标的致病菌在您免疫能力低下时，可能诱发相关疾病，建议您持续监测肠道健康，必要时到正规医院进行相关检查。
+[% ELSE -%]
+您体内较高含量的致病菌可能诱发相关肠道疾病，建议您持续监测肠道健康，并到正规医院咨询专科医生，遵从医生建议做进一步检查。
+[% END -%]
+[% END -%]
+}
+\xiaowuhao \color{gray2} \lantxh {\item[2、]
+[% IF changdaojunqun.diseaseNormalN == changdaojunqun.diseaseNum -%]
+您的肠道菌群不会增加您患[% changdaojunqun.diseaseNormal %]的风险，请您继续保持良好的饮食及生活习惯，维护肠道健康。
+[% ELSIF changdaojunqun.diseaseLowN == changdaojunqun.diseaseNum -%]
+您的肠道菌群可能降低您患[% changdaojunqun.diseaseLow %]的风险，请您继续保持良好的饮食及生活习惯，维护肠道健康。
+[% ELSIF changdaojunqun.diseaseHighN != 0 -%]
+%您的肠道菌群可能增加您患[% changdaojunqun.diseaseHigh %]的风险，建议您[% changdaojunqun.diseaseHighRule %]饮食，少吃[% changdaojunqun.diseaseHighLess %]的食物，补充益生菌，定期监测肠道健康，积极预防。
+您的肠道菌群可能增加您患[% changdaojunqun.diseaseHigh %]的风险，建议您[% changdaojunqun.diseaseHighActRule %]，定期监测肠道健康，积极预防。
+[% ELSE -%]
+您的肠道菌群不会增加您患[% changdaojunqun.diseaseNormal %]的风险，可能降低[% changdaojunqun.diseaseLow %]的风险，请您继续保持良好的饮食及生活习惯，维护肠道健康。
+[% END -%]
+}
+\xiaowuhao \color{gray2} \lantxh {\item[3、]
+[% IF xiaohuahexishou.explain.TotalbadN > 3 -%]
+您肠道内参与[% xiaohuahexishou.explain.Totalbad %]的菌群指标异常，
+[% IF xiaohuahexishou.explain.TotalbadDisease == '-' AND xiaohuahexishou.explain.TotalbadActRule == '-' -%]
+建议您定期监测肠道健康。
+[% ELSIF xiaohuahexishou.explain.TotalbadActRule == '-' -%]
+可能导致[% xiaohuahexishou.explain.TotalbadDisease %]疾病，建议您定期监测肠道健康。
+[% ELSIF xiaohuahexishou.explain.TotalbadDisease == '-' -%]
+建议您[% xiaohuahexishou.explain.TotalbadActRule %]，定期监测肠道健康。
+[% ELSE -%]
+可能导致[% xiaohuahexishou.explain.TotalbadDisease %]疾病，建议您[% xiaohuahexishou.explain.TotalbadActRule %]，定期监测肠道健康。
+[% END -%]
+[% ELSIF xiaohuahexishou.explain.TotalbadN > 0 -%]
+您肠道内参与[% xiaohuahexishou.explain.Totalbad %]的菌群指标异常，
+[% IF xiaohuahexishou.explain.TotalbadDisease == '-' AND xiaohuahexishou.explain.TotalbadActRule == '-' -%]
+建议您定期监测肠道健康。
+[% ELSIF xiaohuahexishou.explain.TotalbadActRule == '-' -%]
+可能导致[% xiaohuahexishou.explain.TotalbadDisease %]疾病，建议您定期监测肠道健康。
+[% ELSIF xiaohuahexishou.explain.TotalbadDisease == '-' -%]
+建议您[% xiaohuahexishou.explain.TotalbadActRule %]，定期监测肠道健康。
+[% ELSE -%]
+可能导致[% xiaohuahexishou.explain.TotalbadDisease %]疾病，建议您[% xiaohuahexishou.explain.TotalbadActRule %]，定期监测肠道健康。
+[% END -%]
+[% ELSE -%]
+您的肠道菌群检测结果显示您的消化吸收及相关代谢情况良好，请您继续保持，避免滥用抗生素等导致肠道菌群失调。
+[% END -%]
+}
+\end{compactenum}
+
+\bigskip
+\tabcolsep=6pt
+\fontsize{9.3pt}{9.8pt}\selectfont
+\begin{tctabularx}{tabularx={p{15.4cm}<{\centering}}}
+\\[-6.769pt]
+\cellcolor{kelly} \raisebox{1pt}{\color{black00}\xiaosihao\lantxh\bf 膳食方案} \\
+\end{tctabularx}
+
+{
+\lantxh
+\vspace*{-4.25mm}
+\noindent
+\begin{longtable}{|p{1.25cm}@{}p{2cm}|p{11.732cm}|}
+[% FOREACH item = fangan.food.items.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip7pt\raisebox{-1.5ex}{\includegraphics[width=.9cm]{[% item.pic %]}}\vskip7pt} & \parbox[c]{\hsize}{\centering\xiaowuhao \color{gray2}\vskip7pt[% item.name %]\vskip7pt} & \parbox[c]{\hsize}{\xiaowuhao \color{gray2}\vskip7pt[% item.desc %]\vskip7pt}\\
+[% END -%]
+\hline
+\end{longtable}
+\vspace*{-6mm}
+\begin{longtable}{p{0.1cm}p{15.1cm}}
+\includegraphics{xiaofangkuai.pdf} & {\qihao [% fangan.food.remark %]} \\
+\end{longtable}
+
+}
+\end{document}

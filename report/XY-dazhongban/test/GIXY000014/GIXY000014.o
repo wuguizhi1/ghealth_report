@@ -1,0 +1,21 @@
+------------------
+front.pdf
+------------------
+zonglan.pdf
+------------------
+gaikuangP1.pdf
+------------------
+youyijun.pdf
+------------------
+youhaijun.pdf
+------------------
+zhibingjun.pdf
+------------------
+shanshifangan.pdf
+------------------
+tiaojiefangan.pdf
+------------------
+yingyanggongneng.pdf
+------------------
+jibingfengxian.pdf
+perl /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/XY-dazhongban/report.pl -conf /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/XY-dazhongban/config.all -template /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/XY-dazhongban/template/20171201/pages.tt -outdir /data/bioit/biodata/sunmm/Project/16S/run_20180627/report/report/1/GIXY000014/pdf -id GIXY000014  -tables /data/bioit/biodata/sunmm/Project/16S/run_20180627/report/report/1/GIXY000014/pdf -contexts /data/bioit/biodata/sunmm/Project/16S/run_20180627/report/report/1/GIXY000014/pdf -mulu /data/bioit/biodata/mengf/pipline/16sRNA/amplicon-pip/report/XY-dazhongban/template/20171201/mulu.tt

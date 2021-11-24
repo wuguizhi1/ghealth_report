@@ -1,0 +1,42 @@
+\input format.tex
+
+\setmainfont{Microsoft YaHei}   % 设置中文/粗体/斜体/主要字体
+
+\begin{document}
+\thispagestyle{empty}
+
+\color{gray2}
+
+\vspace*{0mm}
+
+\heiti
+{
+\begin{center}
+%{\fontsize{16.3pt}{17pt}\selectfont 报~告~目~录}
+{\bf\sanhao 报~告~目~录}
+\end{center}
+
+\bigskip
+
+\fontsize{9.3pt}{17pt}\selectfont
+
+\tabcolsep=2pt
+\begin{longtable}{m{1.4cm}m{14cm}}
+第一部分 & {肠道菌群检测内容 \dotfill [% changdaokang_dingsiye %]}\\
+ & \hspace*{2em}{检测结果总览 \dotfill [% zonglan %]}\\
+ & \hspace*{2em}{肠道菌群概况 \dotfill [% gaikuangP1 %]}\\
+ & \hspace*{2em}{肠道菌群营养功能分析 \dotfill [% yingyanggongneng %]}\\
+ & \hspace*{2em}{相关疾病风险分析 \dotfill [% jibingfengxian %]}\\
+第二部分 & {附录 \dotfill [% fulu %]}\\
+ & \hspace*{2em}{\RNum{1}观大便~识健康 \dotfill [% fulu_part1 %]}\\
+ & \hspace*{2em}{\RNum{2}肠道菌群知多少 \dotfill [% fulu_part2 %]}\\
+ & \hspace*{2em}{\RNum{3}肠道菌群与健康风险 \dotfill [% fulu_part3 %]}\\
+ & \hspace*{2em}{\RNum{4}肠道菌群与肠道调养 \dotfill [% fulu_part4 %]}\\
+ & \hspace*{2em}{\RNum{5}膳食指南 \dotfill [% fulu_part5 %]}\\
+ & \hspace*{2em}{\RNum{6}参考列表 \dotfill [% fulu_part6 %]}\\
+
+\end{longtable}
+
+}
+
+\end{document}

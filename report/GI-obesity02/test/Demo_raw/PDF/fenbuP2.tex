@@ -1,0 +1,82 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\NewEnviron{RCtable}[1]
+  {%
+    \begin{tcolorbox}[#1]\BODY\end{tcolorbox}%
+  }
+
+
+\begin{document}
+
+\vspace*{10mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{gray2}
+
+\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {致病菌检测结果}}
+
+\begin{tctabularxnew}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.52cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 检测结果评价}
+\end{tctabularxnew}
+
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 脆弱拟杆菌\\可能导致菌血症、腹内感染、腹膜炎} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 未检出} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 艰难梭菌\\可引起艰难梭菌感染，导致腹痛腹泻等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 未检出} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 肠道沙门氏菌\\可能引发肠炎，导致腹泻、发烧或腹部痉挛} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 未检出} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 空肠弯曲杆菌\\可导致肠胃炎等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 未检出} }\end{center} \end{minipage} \\
+\hline
+\end{longtable}
+{\tikz\draw[green2,fill=green2](0,0) circle[radius=3.5pt]; \! 绿色表示健康 \tikz\draw[yellow,fill=yellow](0,0) circle[radius=3.5pt]; \! 橙色表示需要关注 \tikz\draw[red,fill=red](0,0) circle[radius=3.5pt]; \! 红色表示有风险}
+
+\end{document}

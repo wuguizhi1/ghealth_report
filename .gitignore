@@ -1,9 +1,15 @@
 # ignore utils directory
 # ignore bcl2fastq binary file
+
 /utils/*
 /database/*
-/report/*
-!/report/*.pl
-!/report/GI-zunxiangban/*.pl
-!/report/GI_baohuli/*.pl
+
+/report/GI-quanjunpu-XY/*
+/report/CDDY-youyijun/*
+#!/report/*.pl
+#!/report/GI-zunxiangban/*.pl
+#!/report/GI_baohuli/*.pl
+#!/report/GI_youyijun/*.pl
+#!/report/GI_quanjunpu/*.pl
+
 /reference_data/*

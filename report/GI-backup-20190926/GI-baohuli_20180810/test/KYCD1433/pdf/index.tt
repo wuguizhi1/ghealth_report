@@ -1,0 +1,188 @@
+%% encoding: UTF-8
+%% 首先读取模板的配置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置版面控制%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 12pt, notitlepage, oneside , twoside ]{article}
+\usepackage[colorlinks, linkcolor=red, anchorcolor=blue, citecolor=green, bookmarks]{hyperref}
+\hypersetup{xetex}
+%\setlength{\parindent}{0em}
+
+\usepackage{paralist}
+\usepackage[papersize={200mm,255mm},text={150mm,201mm},centering]{geometry}                 % 设置版面，纸张空距
+\usepackage{marvosym,array}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置字体%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[no-math]{fontspec} %提供字体选择命令
+\usepackage{xunicode,xltxtra,multirow,makecell}
+\usepackage[CJKchecksingle, CJKnumber]{xeCJK}                 % 用于字体
+\setCJKmainfont[BoldFont={FZLanTingHei-DB-GBK}]{FZLanTingHei-L-GBK}
+\setmainfont{FZLanTingHei-L-GBK-M}   % 设置中文/粗体/斜体/主要字体
+\newfontfamily\times{Times New Roman}
+\punctstyle{hangmobanjiao}               % 设置行末半角
+%\setmainfont[Mapping=tex-text]{Times New Roman}         % 设置衬线英文字体
+%\setsansfont[Mapping=tex-text]{Tahoma}                  % 设置无衬线英文字体
+%\setmonofont{Courier New}                               % 设置等款英文字体
+\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{24pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}
+\newcommand{\liuhao}{\fontsize{7pt}{\baselineskip}\selectfont}
+\newcommand{\qihao}{\fontsize{6pt}{\baselineskip}\selectfont}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\usepackage{textgreek}
+\usepackage{pdflscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置图像%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}                    % 用于图像编号
+\graphicspath{{_drugRisk/}{_logo/}{_phenoDegree/}{disease_pic/}{drug_pic/}{pheno_pic/}{cores/}}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{circuits.logic.US,circuits.logic.IEC,circuits.ee.IEC}
+\usepackage{verbatim}
+\usepackage{animate}
+\usepackage{subfig}
+%\usepackage{mathpazo}
+\usepackage{wrapfig}
+\usepackage{pgfplots,longtable}
+\pgfplotsset{compat=newest}% <-- moves axis labels near ticklabels (respects tick label widths)
+\usepackage{wallpaper}%%%%%%%%%%%%%%%%背景%%%%%%%%%%%%%%%%%%
+\usepackage{color}
+\definecolor{gray}{cmyk}{0,0,0,.7}
+\definecolor{green}{RGB}{196,224,177}
+\definecolor{yellow}{RGB}{238,196,133}
+\definecolor{red}{RGB}{225,135,117}
+
+\definecolor{titlec}{cmyk}{0.60, 0.05, 0.05, 0}
+\definecolor{blue}{RGB}{0,64,152}
+\definecolor{red2}{RGB}{230,0,18}
+\definecolor{green2}{RGB}{0,153,68}
+\definecolor{blue2}{RGB}{103,196,230}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%mdframed%%%%%%%%%%%%%%%%%%%%
+\usepackage[framemethod=tikz]{mdframed}
+\usetikzlibrary{patterns}
+\mdfdefinestyle{titlesty}{%
+linecolor=platinum,
+middlelinewidth=1.5pt,
+frametitlerule=false,%
+apptotikzsetting={\tikzset{
+mdfbackground/.append style ={
+top color=white,
+bottom color=white
+},
+mdfframetitlebackground/.append style={
+shade,
+top color=white ,
+bottom color=white
+}
+}
+},
+frametitlerulewidth=0pt,
+innertopmargin=\topskip,
+topline=false,
+leftline=false,
+rightline=false,
+bottomline=false,
+frametitlealignment=\raggedright,
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%%%%%%%%%%%%%%页码修改[RO]居右[CO]居中[LO]居左%%%%%%%%%%%
+%\cfoot{\thepage}
+\usepackage{xhfill}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{float}
+\def\one{\includegraphics[scale=0.75]{01}}
+\def\two{\includegraphics[scale=0.75]{02}}
+\def\three{\includegraphics[scale=0.75]{03}}
+\def\four{\includegraphics[scale=0.75]{04}}
+\def\five{\includegraphics[scale=0.75]{05}}
+\def\sect#1{\noindent{\color{blue2}\rule[-3pt]{3.5pt}{20pt}}\  \textbf{#1}}
+\def\sectsmall#1{\noindent{\color{blue2}\rule[-3pt]{3pt}{16pt}}\  \textbf{#1}}
+\def\naC{{\color{blue}C}}
+\def\A{{\color{green2}A}}
+\def\T{{\color{red2}T}}
+\begin{document}
+\renewcommand{\arraystretch}{1.3}
+\pagestyle{fancy}
+%% 各章节
+\color{gray}
+
+\smallskip
+
+\fontsize{10pt}{23pt}\selectfont
+%\noindent\includegraphics{logoGeneTalksIndex.pdf}
+\noindent\includegraphics[width=4.15cm, height=0.66cm]{logo.pdf}
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\begin{flushleft} 
+%\color{cyan}\bf\Large  基因检测报告-遗传风险评估与精准健康指导
+{\color{titlec}\bf\fontsize{21pt}{23pt}\selectfont 基因检测报告-遗传风险评估与精准健康指导}
+\end{flushleft}
+
+\medskip
+
+\bigskip
+
+\noindent{\large 尊敬的~~[% name %]~~[% IF SEX == 'F' -%]女士[% ELSIF SEX == 'M' -%]先生[% END -%]：}
+
+\noindent 样本编码：[% sampleID %]  \qquad  送检机构：[% hospital %]
+
+\bigskip
+
+\bigskip
+
+您好！
+
+
+感谢您选择人和未来生物科技（北京）有限公司的“基因说”基因检测服务，我们将为您提供
+最权威的“基因检测报告——遗传风险评估与精准健康指导”。
+
+
+21世纪是一个崇尚健康的时代，拥有健康的身体、高质量的生活是每个人的愿望。但是随着
+人们生活水平的提高、生活方式的改变以及环境的恶化，越来越多的疾病严重威胁着人类生命健
+康。
+
+
+研究发现，不同个体之间的基因差异导致不同个体患病风险程度各不相同，也就是说，在相同
+环境下更容易患病的人拥有相同类型的基因，即携带易感基因。基因检测技术利用高准确度的基
+因检测技术平台对疾病或个体表型相关的基因进行检测，通过生物信息分析手段使我们了解自身
+的基因信息，预知身体患病的风险，通过改善自己的生活环境和生活习惯等，做到早预防、早发
+现、早治疗，从而避免或延缓相关疾病的发生发展，达到健康长寿的目的。
+
+
+预知生命，预见未来，给自己一个健康的体魄，为自己为所爱的人创造一个美好的未来！
+
+
+最后，再次感谢您对我们的信任以及对我们工作的大力支持！
+
+
+\vfill
+
+\hfill 人和未来生物科技（北京）有限公司
+
+
+
+
+
+
+
+
+
+\end{document}

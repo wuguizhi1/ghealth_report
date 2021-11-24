@@ -1,0 +1,110 @@
+%% encoding: UTF-8
+%% 首先读取模板的配置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置版面控制%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 12pt, notitlepage, oneside , twoside ]{article}
+\usepackage[colorlinks, linkcolor=red, anchorcolor=blue, citecolor=green, bookmarks]{hyperref}
+\hypersetup{xetex}
+% 设置版面，纸张空距
+\setlength{\parindent}{0em}
+\usepackage[papersize={210mm,285mm},headheight=2cm,top=3.37cm,headsep=0cm,bottom=2cm,footskip=.2cm,
+left=2.06cm,right=2.06cm
+]{geometry}
+\usepackage{marvosym}
+\usepackage{wrapfig}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置字体%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[no-math]{fontspec} %提供字体选择命令
+\usepackage{xunicode,xltxtra}
+\usepackage[CJKchecksingle, CJKnumber]{xeCJK}         % 用于字体
+\setCJKfamilyfont{kai}[BoldFont=Adobe Heiti Std]{Adobe Kaiti Std}
+\setCJKfamilyfont{song}[BoldFont=Adobe Heiti Std]{Adobe Song Std}
+\setCJKfamilyfont{hei}[BoldFont=Adobe Heiti Std]{Adobe Heiti Std}
+\setCJKmainfont[BoldFont={FZLanTingHei-DB-GBK}]{Microsoft YaHei}
+\setmainfont{Microsoft YaHei}  % 设置中文/粗体/斜体/主要字体
+\punctstyle{hangmobanjiao}        % 设置行末半角
+\setCJKfamilyfont{zhyh}{Microsoft YaHei}
+\newcommand*{\heiti}{\CJKfamily{zhyh}}
+%\setmainfont[Mapping=tex-text]{Times New Roman}     % 设置衬线英文字体
+%\setsansfont[Mapping=tex-text]{Tahoma}         % 设置无衬线英文字体
+%\setmonofont{Courier New}                % 设置等款英文字体
+\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14.01pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{11pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.04pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9.03pt}{\baselineskip}\selectfont}
+\newcommand{\liuhao}{\fontsize{8.53pt}{\baselineskip}\selectfont}
+\newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\newcommand{\rnum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
+
+\usepackage{textgreek}
+\usepackage{pdflscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置图像%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[usenames,dvipsnames,svgnames,table,cmyk]{xcolor}
+\usepackage{graphicx}          % 用于图像编号
+\graphicspath{{_drugRisk/}{_logo/}{_phenoDegree/}{disease_pic/}{drug_pic/}{pheno_pic/}{_barcode/}{PDF/}{cores/}}
+\usepackage{tikz}
+%\usepackage{mathpazo}
+\usepackage{wallpaper}%%%%%%%%%%%%%%%%背景%%%%%%%%%%%%%%%%%%
+\usepackage{color}
+\definecolor{gray2}{cmyk}{0.00,0.00,0.00,0.70}
+\definecolor{blackdesc}{cmyk}{0, 0, 0, 1}	%黑色字体
+\definecolor{titleblue}{cmyk}{1, 0.3, 0, 0}	%标题蓝色，线条
+\definecolor{titledarkgreen}{cmyk}{0.8, 0, 0.65, 0}	%标题深绿，线条
+\definecolor{titlegrassgreen}{cmyk}{0.5, 0, 1, 0}	%标题草绿，线条
+\definecolor{tablegreen}{cmyk}{0.9, 0, 0.9, 0}  %table head color
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%mdframed%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} %清除所有页眉页脚
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%\fancyhead[L]{\raisebox{-1.5ex}{\includegraphics{logo}}\color{gray} ~\bigg|\,~\makecell[l]{胃动力~~肠健康\\
+%\scalebox{0.8}{Better Gut Better Life!}}}
+\fancyhead[L]{\includegraphics{logo.pdf}}
+\fancyfoot[C]{\parbox{1cm}{\centering\heiti\color{gray2} \thepage }}
+
+\fancypagestyle{contexts1-1}{
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+ %版心，版心会配置样式，非版心直接导入做背景
+\fancyhead[L]{\includegraphics{logo.pdf}}
+%
+
+}
+\fancypagestyle{fengdi}{
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+}
+
+\fancypagestyle{empty}{
+\fancyhf{} %清除所有页眉页脚
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+}
+
+\begin{document}
+
+%\setcounter{page}{1}
+
+\setcounter{page}{1}
+\foreach \pagen in {1,...,1}{
+\thispagestyle{contexts1-1}
+{\centering\includegraphics[page=\pagen]{zongfen.pdf}}
+\clearpage
+}
+\setcounter{page}{2}
+\thispagestyle{fengdi}
+\ThisCenterWallPaper{1}{fengdi.pdf}
+\null
+\clearpage
+
+\end{document}

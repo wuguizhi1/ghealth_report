@@ -1,0 +1,89 @@
+<opt>
+  <CN>
+    <bacteria>
+      <desc></desc>
+      <descfull></descfull>
+    </bacteria>
+    <etitle>Benificial bacteria</etitle>
+    <order>2</order>
+    <pubmed>
+      <desc></desc>
+    </pubmed>
+    <section1>
+      <name>菌群概况</name>
+      <order>1</order>
+    </section1>
+    <suggestion>
+      <healthy>
+        <l1>
+          <actiondesc>本次检测有益菌含量低，不利于肠道健康。建议多饮用活菌酸奶或饮料，和服用含双歧杆菌或乳酸杆菌等活菌成分的益生菌制剂，帮助有益菌在肠道内定植，提高肠道内有益菌含量，增强免疫力。</actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>undefined</effectdesc>
+          <mechanism>有益物质产出不足，不利于肠道健康</mechanism>
+          <mechanismfull>有益物质产出不足，不利于肠道健康</mechanismfull>
+          <note></note>
+        </l1>
+        <l2>
+          <actiondesc>本次检测有益菌含量偏低，不利于肠道健康。建议适量增加饮用活菌酸奶或饮料，和服用含双歧杆菌或乳酸杆菌等活菌成分的益生菌制剂，提高肠道内有益菌含量，提高肠道保护力。</actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>undefined</effectdesc>
+          <mechanism>有益物质产出不足，不利于肠道健康</mechanism>
+          <mechanismfull>有益物质产出不足，不利于肠道健康</mechanismfull>
+          <note></note>
+        </l2>
+        <l3>
+          <actiondesc>本次检测肠道有益菌含量正常，建议维持正常饮食，可饮用活菌酸奶或者有益菌制剂，维持有益菌正常水平，增强肠道保护力。</actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc>undefined</effectdesc>
+          <mechanism></mechanism>
+          <mechanismfull></mechanismfull>
+          <note></note>
+        </l3>
+        <l4>
+          <actiondesc>本次检测肠道有益菌含量正常，建议维持正常饮食，可饮用活菌酸奶或者有益菌制剂，维持有益菌正常水平，增强肠道保护力。</actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>undefined</effectdesc>
+          <mechanism>产生较多有益物质，帮助抑制致病菌及肠道炎症，维持肠道健康</mechanism>
+          <mechanismfull>产生较多有益物质，帮助抑制致病菌及肠道炎症，维持肠道健康</mechanismfull>
+          <note></note>
+        </l4>
+        <l5>
+          <actiondesc>本次检测肠道有益菌含量正常，建议维持正常饮食，可饮用活菌酸奶或者有益菌制剂，维持有益菌正常水平，增强肠道保护力。</actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>undefined</effectdesc>
+          <mechanism>产生充足有益物质，帮助抑制致病菌及肠道炎症，维持肠道健康</mechanism>
+          <mechanismfull>产生较多有益物质，帮助抑制致病菌及肠道炎症，维持肠道健康</mechanismfull>
+          <note></note>
+        </l5>
+      </healthy>
+    </suggestion>
+    <summary>
+      <desc>产生有益物质，抑制病原菌的生长，帮助预防疾病</desc>
+      <descfull>1、降低胆固醇和血脂有益菌能降低抑制胆固醇的合成，阻止人体对胆固醇的吸收、利用等。
+
+2、合成维生素我们从膳食中摄入的维生素量远远不能满足人体所需，因此，部分维生素是由有益菌群在肠道中合成的，尤其是维生素K，在食物中含量非常少，有益菌群的减少，将会导致维生素K缺乏症，产生腹泻和凝血障碍性疾病等。
+
+3、促进钙、铁、维生素D的吸收乳酸杆菌在代谢过程中会产生大量的酸，酸会提高钙的可溶性，并直接刺激胃肠道最大限度地吸收钙、铁、锌等。实验结果显示，在普通情况下，我们仅能吸收消化钙的1{/}3，通过摄入活性益生菌，钙的吸收能提高到摄入量的2{/}3。因此，有益菌的繁殖有利于减缓老年人骨质疏松的过程，促进婴儿的发育。
+
+4、提高免疫力肠道里面存在有益菌和有害菌，如果有益菌占据了肠道的表面，有害菌就没有了生存的位置，这叫“站位性保护”，位置就那么多，有益菌占得多了，有害菌在营养竞争上就处于失败状态，生长发育受到抑制。因此，当双歧杆菌、乳酸杆菌等有益菌在肠道内生长、繁殖，将阻止外面的病原体入侵肠道，构筑成一个生物屏障。而且肠道是人体最大的一个免疫器官，有益菌可以分泌一些抗原物质，激活并强化肠道的免疫系统。
+
+5、抗癌益生菌能降解亚硝胺，消除亚硝胺的致癌性，而且促进肠道蠕动，像老年人经常便秘，一些有毒、有害物质就滞留在肠道并威胁肠道表面，诱发肠道肿瘤，引起癌变。蠕动加快后，这些有害菌就随着粪便排出人体。</descfull>
+      <source></source>
+    </summary>
+    <title>有益菌</title>
+  </CN>
+  <categoey>overview</categoey>
+  <id>changdaokang_miaomiaoce_quanjunpu_tjsjcyouyijun</id>
+  <oriid>tjsjcyouyijun</oriid>
+  <orititle>有益菌</orititle>
+</opt>

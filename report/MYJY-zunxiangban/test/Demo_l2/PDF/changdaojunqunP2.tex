@@ -1,0 +1,73 @@
+\input format.tex
+
+%\usepackage{arydshln}
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\begin{document}
+
+%%%
+\setlength{\arrayrulewidth}{0.5pt}
+\fontsize{9.3pt}{17pt}\selectfont
+\color{gray2}
+
+\vspace*{0mm}
+\begin{center}
+%{\bf\sanhao 肠道致病菌}
+{\bf\sanhao 致病菌}
+\end{center}
+
+\medskip
+
+\noindent
+{\bf\xiaosihao Tom先生：}
+
+
+\bigskip
+
+%您的肠道内未检测到可能导致疾病的致病菌，这是个好消息。当您的免疫力较强，可持续抵御致病菌的入侵。但请注意，当您的免疫力较低，肠道致病菌可能会增加，早期可能引起腹泻、腹痛、呕吐、感染等病症。
+%您的肠道中检测出可能导致疾病的致病菌2种，含量尚处于正常范围。但请注意，当免疫功能低下时，它们可能引起相关疾病。建议您持续监测。下面的检测列表可以帮助您快速锁定可能的原因。
+%您的肠道中检测出可能导致疾病的致病菌2种，其中-含量偏高。致病菌可能引起腹泻、腹痛、呕吐、肠炎等相关疾病。建议您持续监测，并到正规医院咨询专科医生，遵从医生建议做进一步检查。
+
+您的肠道内
+检测出含量较低的致病菌：病原性大肠埃希氏菌、脆弱拟杆菌，尽管这些致病菌含量未超标，当身体免疫力较强时可能不会出现不适感。但请注意，当您的免疫力较弱时，可能引起腹泻、腹痛、感染等病症。建议您持续监测肠道健康，一旦检测出较高含量的致病菌，建议咨询专科医生，酌情做进一步检查。
+
+\fontsize{9.3pt}{9.8pt}\selectfont
+\bigskip
+{
+\lantxh
+%\begin{tctabularx}{tabularx={m{3.75cm}m{4.9cm}<{\centering}m{1.22cm}<{\centering}m{1.8cm}<{\centering}m{2cm}<{\centering}}}
+\begin{tctabularx}{tabularx={m{4.8cm}m{5.2cm}<{\centering}m{4.55cm}<{\centering}}}
+%\cellcolor{kelly} &
+%\cellcolor{kelly} &
+%\cellcolor{kelly} &
+%\cellcolor{kelly} &
+%\cellcolor{kelly}
+&&
+\\[-6pt]
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black00}\bf 测试项目} &
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black00}\bf 分布} &
+%\cellcolor{kelly} \raisebox{2.614pt}{\color{black00}\bf 检测值} &
+%\cellcolor{kelly} \raisebox{2.614pt}{\color{black00}\bf 参考范围} &
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black00}\bf 检测结果}
+%{\color{black00}\bf 测试项目} & {\color{black00}\bf 分布} & {\color{black00}\bf 检测值} &{\color{black00}\bf 参考范围} & {\color{black00}\bf 检测结果}
+\end{tctabularx}
+
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+%\begin{longtable}{m{3.75cm}m{5cm}<{\centering}m{0cm}@{}m{1.22cm}<{\centering}m{1.8cm}<{\centering}m{2cm}<{\centering}}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+\hline
+\parbox[c]{\hsize}{\vskip6pt 病原性大肠埃希氏菌\\可能导致肠胃炎、尿路感染、新生儿脑膜炎、腹膜炎等 \vskip6pt} & \parbox[c]{\hsize}{\vskip6pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.3cm]{zxdachangganjun_dis.png}}}\vskip6pt}  &\hspace*{-4.273390214cm}\raisebox{-0.45ex}{\includegraphics{triangle.pdf}} & \begin{minipage}{4.60cm}\begin{center}{含量未超标 }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip6pt 脆弱拟杆菌\\可能导致菌血症、腹内感染、腹膜炎 \vskip6pt} & \parbox[c]{\hsize}{\vskip6pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.3cm]{zxcuiruoniganjun_dis.png}}}\vskip6pt}  &\hspace*{-3.783564884cm}\raisebox{-0.45ex}{\includegraphics{triangle.pdf}} & \begin{minipage}{4.60cm}\begin{center}{含量未超标 }\end{center} \end{minipage} \\
+\hline
+\end{longtable}
+
+\noindent
+\tikz\draw[green2,fill=green2](0,0) circle[radius=4pt]; 区域表示正常人群的一般水平 \tikz\draw[darkblue,fill=darkblue](0,0) circle[radius=4pt]; 区域表示仍在正常水平，但较一般水平偏高或偏低 %\tikz\draw[red,fill=red](0,0) circle[radius=4pt]; 而红色表示为有风险
+}
+
+\bigskip
+{\centering {\includegraphics{jieshi.pdf}}}
+\end{document}

@@ -1,0 +1,23 @@
+###消化和吸收
+##消化和吸收总评
+zxdanbaijiangjiechanwu	Amino acid metabolism	蛋白降解产物
+zxzhifangjiangjiechanwu	Lipid metabolism	脂肪降解产物
+zxtanshuihuahewujiangjiechanwu	Carbohydrate metabolism	碳水化合物降解产物
+##蛋白质的消化和吸收
+zxdanbaizhizongliang	Amino acid metabolism	蛋白质总量
+zxguguanggantaidaixie	Glutathione metabolism	谷胱甘肽代谢
+zxniuhuangsuandaixie	Taurine and hypotaurine metabolism	牛磺酸代谢
+##脂肪的消化和吸收
+zxzhifangzongliang	Lipid metabolism	脂肪总量
+zxzhifangsuandaixie	Fatty acid metabolism	脂肪酸代谢
+zxganyousanzhidaixie	Glycerolipid metabolism	甘油三酯代谢
+zxganyoulinzhidaixie	Glycerophospholipid metabolism	甘油磷脂代谢
+zxqiaozhidaixie	Sphingolipid metabolism	鞘脂代谢
+zxyayousuandaixie	Linoleic acid metabolism	亚油酸代谢
+zxhuashengsixisuandaixie	Arachidonic acid metabolism	花生四烯酸代谢
+##碳水化合物的消化和吸收
+zxtanshuihuahewuzongliang	Carbohydrate metabolism	碳水化合物总量
+zxbanrutangdaixie	Galactose metabolism	半乳糖代谢
+zxguotangheganlutangdaixie	Fructose and mannose metabolism	果糖和甘露糖代谢
+zxzhetanghedianfendaixie	Starch and sucrose metabolism	蔗糖和淀粉代谢
+zxxianweisudaixie	Cellulose metabolism	纤维素代谢

@@ -1,0 +1,25 @@
+###菌群概况
+##菌群平衡
+tjsjcjunqunduoyangxing	diversity	菌群多样性
+tjsjcyouyijun	Benificial bacteria	有益菌
+tjsjcyouhaijun	Harmful bacteria	有害菌
+tjsjcjunqunwenluanzhishu	BEpercent	菌群紊乱指数
+###菌群概况
+##饮食偏好
+tjsjcroushizhishu	meatpercent	肉食指数
+###菌群概况
+##营养代谢
+tjsjcweishengsu	vitamin	维生素
+tjsjcanjisuan	aminoacid	氨基酸
+###菌群概况
+##生活质量
+tjsjcchangdaonianling	undefined	肠道年龄
+tjsjcdunkengpingci	defecatingfreq	蹲坑频次
+tjsjcfangpizhishu	fartpercent	放屁指数
+tjsjcchangdaoyuebazhishu	obesityindex	肠道月巴指数
+tjsjcganchibupangzhishu	slimindex	干吃不胖指数
+###菌群概况
+##情绪管理
+tjsjckangyanengli	stresstoler	抗压能力
+tjsjcjiaolvzhishu	anxietyindex	焦虑指数
+tjsjcqingtianzhishu	sunnyindex	晴天指数

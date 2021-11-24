@@ -1,0 +1,151 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{black100}
+
+\vspace*{3mm}
+
+\noindent{\fontsize{15pt}{11pt}\selectfont{ 五、致病菌检测结果}}
+
+%\vspace*{-4.25mm}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{4.8cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{4.9cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering\bf {检测内容} \vskip10pt} &  \bf{检测结果} &  \bf{检测值} & \bf{参考范围} & \bf{功能}\\
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering 脆弱拟杆菌(Bacteroides fragilis) \vskip10pt} &
+正常 &
+0.11
+& ≤ 55.89
+& 可能导致菌血症、腹内感染、腹膜炎 \\
+\hline
+\parbox[c]{\hsize}{\vskip10pt\centering 病原性大肠埃希氏菌(Escherichia coli) \vskip10pt} &
+正常 &
+0.17
+& ≤ 83.21
+& 可能导致肠胃炎、尿路感染、新生儿脑膜炎、腹膜炎等 \\
+\hline
+\end{longtable}
+
+\vspace*{0mm}
+
+\begin{spacing}{1.25}
+\noindent\fontsize{9pt}{11pt}\selectfont {您的肠道内本次检测出2种潜在致病菌，含量均在正常范围，
+尽管这些致病菌含量未超标，当身体免疫力较强时可能不会出现不适感。但请注意，当您的免疫力较弱时，可能引起腹泻、腹痛、感染等病症。
+请保持良好的饮食习惯，并持续监测肠道健康。如有不适，请咨询专科医生。} \\
+
+\end{spacing}
+
+\end{document}
+%\vspace*{8mm}
+
+%\noindent{\fontsize{9pt}{11pt}\selectfont\bf{ 六、其他常见菌检测结果}}
+
+%\fontsize{8pt}{11pt}\selectfont
+%\arrayrulecolor{gray2}
+%\begin{longtable}{|m{5.5cm}<{\centering}|m{4cm}<{\centering}|m{5cm}<{\centering}|}
+%\hline
+%\begin{minipage}{5.5cm}\begin{center}{\vspace*{1mm} {\lantxh\bf 检测内容} \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh\bf 检测结果}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh\bf 参考值}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 拟杆菌属 ~ (Bacteroides) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 24.49}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≤ 503.74}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 布劳特氏菌属 ~ (Blautia) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 0.11}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≥ 0.01}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 粪球菌属 ~ (Coprococcus) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 8.98}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≥ 0.01}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 瘤胃球菌属 ~ (Ruminococcus) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 2.57}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≥ 0.01}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 颤螺菌属 ~ (Oscillospira) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 14.56}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≥ 0.01}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 副拟杆菌属 ~ (Parabacteroides) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 0.33}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≥ 0.01}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 毛螺菌属 ~ (Lachnospira) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 34.64}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≥ 0.01}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 链球菌属 ~ (Streptococcus) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 0.00}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≤ 22.96}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 普雷沃氏菌属 ~ (Prevotella) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 422.77}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≤ 197.70}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 萨特氏菌属 ~ (Sutterella) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 21.98}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≤ 34.09}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 梭菌属 ~ (Clostridium) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 1.12}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≤ 4.54}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 假单胞菌属 ~ (Pseudomonas) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 0.00}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≤ 0.10}\end{center} \end{minipage} \\
+%%\hline
+%\begin{minipage}{6cm}\begin{center}{\vspace*{1mm} \lantxh 埃希氏菌属 ~ (Escherichia) \vspace*{1mm}}\end{center} \end{minipage} &
+%\begin{minipage}{4cm}\begin{center}{\lantxh 0.17}\end{center} \end{minipage} &
+%\begin{minipage}{5cm}\begin{center}{\lantxh ≤ 83.21}\end{center} \end{minipage} \\
+%%\hline
+%\end{longtable}
+
+%\begin{spacing}{1.25}
+%\noindent\fontsize{8pt}{11pt}\selectfont {\ding{101} 本检测的结果仅供参考，无法代替医学诊断，实际情况请咨询拥有相应资质的临床医生；} \\
+%\noindent\fontsize{8pt}{11pt}\selectfont {\ding{101} 本项检测是基于当前微生物学的研究成果和国际公认的检测方法，但由于科学研究及检测方法的不断更新，本检测仍存在一定的局限性；} \\
+%\noindent\fontsize{8pt}{11pt}\selectfont {\ding{101} 检测结果仅对本次所送样负责。} \\
+
+%\end{spacing}
+
+%\end{document}

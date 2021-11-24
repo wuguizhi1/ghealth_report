@@ -1,0 +1,136 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\begin{document}
+
+\vspace*{6mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+{\noindent\bf 有害菌检测结果\\}
+\begin{minipage}[t]{.37\textwidth}
+\vspace{-1.5cm}
+\hspace{1.5cm}
+\includegraphics[scale=0.8]{youhaijun_logo.pdf}
+\end{minipage}
+\hspace{1mm}
+\begin{minipage}[t]{.47\textwidth}
+\begin{tikzpicture}[scale=1.8,x=1.0cm,y=1.0cm, declare function={
+filltop1=[% gaikuang.desc.youhaijun.mean %];
+filltop2=[% gaikuang.desc.youhaijun.value %];
+fillper=[% gaikuang.desc.youhaijun.per %];}]
+
+\pgfmathparse{{filltop1}}\let\pgfmathresultfilltopa\pgfmathresult
+\pgfmathparse{{filltop2}}\let\pgfmathresultfilltopb\pgfmathresult
+\pgfmathparse{{fillper}}\let\pgfmathresultfillper\pgfmathresult
+
+\fontsize{8pt}{11pt}\selectfont
+
+\def\filltopa{\pgfmathresultfilltopa}
+\def\filltopb{\pgfmathresultfilltopb}
+\def\fillpercent{\pgfmathresultfillper}
+
+\pgfmathsetmacro{\filltopaa}{15};
+
+% 直接根据分布求得百分比计算检测值长条覆盖的比例
+\pgfmathsetmacro{\filltopbb}{\fillpercent*30};
+
+% 根据均值与检测的比例检测值长条覆盖的比例
+%\pgfmathparse{\filltopb/\filltopa}\let\pgfmathswitch\pgfmathresult
+
+%\pgfmathtruncatemacro\one{\pgfmathswitch}
+%\pgfmathtruncatemacro\two{2}
+%\ifnum\one>\two
+%\pgfmathsetmacro{\filltopbb}{30};
+%\fi
+%\ifnum\one=\two
+%\pgfmathsetmacro{\filltopbb}{30};
+%\fi
+%\ifnum\one<\two
+%\pgfmathsetmacro{\filltopbb}{\pgfmathswitch*15};
+%\fi
+
+\begin{scope}
+
+\draw[fill=gray1,color=gray1,very thick] (0,0) -- (30mm,0) -- (30mm,2.8mm) -- (0,2.8mm);
+\path (0,1.4mm) node [yshift=1.5mm,left=0mm] {平均};
+\path (0,1.4mm) node [yshift=-1.5mm,left=0mm] {指数};
+
+
+\draw[fill=yellow2,color=yellow2,very thick] (0,0) -- (\filltopaa*1mm,0) -- (\filltopaa*1mm,2.8mm) -- (0,2.8mm);
+\path (30mm,1.4mm) node [right=0mm] {\filltopa};
+\end{scope}
+
+
+\begin{scope}[yshift=-5mm]
+\draw[fill=gray1,color=gray1,very thick] (0,0) -- (30mm,0) -- (30mm,2.8mm) -- (0,2.8mm);
+\path (0,1.4mm) node [yshift=1.5mm,left=0mm] {您的};
+\path (0,1.4mm) node [yshift=-1.5mm,left=0mm] {指数};
+
+
+\draw[fill=yellow2,color=yellow2,very thick] (0,0) -- (\filltopbb*1mm,0) -- (\filltopbb*1mm,2.8mm) -- (0,2.8mm);
+\path (30mm,1.4mm) node [right=0mm] {\filltopb};
+\end{scope}
+
+\end{tikzpicture}
+
+\begin{center}
+[% IF gaikuang.desc.youhaijun.cnt1 == 10 -%]
+\pdfchatuorange{xiaoren1}{10}
+[% ELSIF gaikuang.desc.youhaijun.cnt2 == 10 -%]
+\pdfchatu{xiaoren1}{10}
+[% ELSIF gaikuang.desc.youhaijun.cnt3 == 0 -%]
+\pdfchatuorange{xiaoren1}{[% gaikuang.desc.youhaijun.cnt1 %]}\pdfchatu{xiaoren1}{[% gaikuang.desc.youhaijun.cnt2 %]}
+[% ELSIF gaikuang.desc.youhaijun.cnt3 != 0  AND gaikuang.desc.youhaijun.cnt2 == 0 -%]
+\pdfchatuorange{xiaoren1}{[% gaikuang.desc.youhaijun.cnt1 %]}\includegraphics[width=.35cm]{xiaoren1[% gaikuang.desc.youhaijun.cnt3 %].pdf}
+[% ELSIF gaikuang.desc.youhaijun.cnt3 != 0  AND gaikuang.desc.youhaijun.cnt1 == 0 -%]
+\includegraphics[width=.35cm]{xiaoren1[% gaikuang.desc.youhaijun.cnt3 %].pdf}
+\pdfchatu{xiaoren1}{[% gaikuang.desc.youhaijun.cnt2 %]}
+[% ELSE -%]
+\pdfchatuorange{xiaoren1}{[% gaikuang.desc.youhaijun.cnt1 %]}\includegraphics[width=.35cm]{xiaoren1[% gaikuang.desc.youhaijun.cnt3 %].pdf}
+\pdfchatu{xiaoren1}{[% gaikuang.desc.youhaijun.cnt2 %]}
+[% END -%]
+
+\textbf{\small 您的有害菌含量高于[% gaikuang.desc.youhaijun.per100 %]{\%}的参考人群}
+\end{center}
+\end{minipage}
+
+
+\vspace*{4mm}
+\noindent
+{\fontsize{9pt}{11pt}\selectfont\bf 主要有害菌结果展示}
+\begin{tctabularx}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.55cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测结果评价}
+\end{tctabularx}
+
+\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+[% FOREACH item = changdaojunqun.youhaijun.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh [% item.name %]\\[% item.desc %]} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+[% IF item.risk == "有益" OR item.risk == "正常" -%]
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+[% ELSIF item.level == "l1" OR item.level == "l5" -%]
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+[% ELSE -%]
+\hspace*{-3.17cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+[% END -%]
+ & \begin{minipage}{4.60cm}\begin{center}{[% IF item.level == 'l1' -%]{[% IF item.risk == "有害" -%]\color{red}[% ELSIF item.risk == "有益" -%]\color{green}[% END -%]\lantxh 低{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l2' -%]{[% IF item.risk == "有害" -%]\color{orange}[% ELSIF item.risk == "有益" -%]\color{green}[% END -%]\lantxh 偏低{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l3' -%]{\lantxh 正常{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l4' -%]{[% IF item.risk == "有害" -%]\color{orange}[% ELSIF item.risk == "有益" -%]\color{green}[% END -%]\lantxh 偏高{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSE -%]{[% IF item.risk == "有害" -%]\color{red}[% ELSIF item.risk == "有益" -%]\color{green}[% END -%]\lantxh 高{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc -%][% END -%]}}[% END -%] }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{[% IF item.level == 'l1' -%]{[% IF item.risk == "有益" -%]\color{green}[% ELSIF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 低 \\ \bahao [% item.riskdesc %]}[% ELSIF item.level == 'l2' -%]{[% IF item.risk == "有益" -%]\color{green}[% ELSIF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 偏低 \\ \bahao [% item.riskdesc %]}[% ELSIF item.level == 'l3' -%]{\lantxh 正常}[% ELSIF item.level == 'l4' -%]{[% IF item.risk == "有益" -%]\color{green}[% ELSIF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 偏高 \\ \bahao [% item.riskdesc %]}[% ELSE -%]{[% IF item.risk == "有益" -%]\color{green}[% ELSIF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 高\\ \bahao [% item.riskdesc -%]}[% END -%] }\end{center} \end{minipage} \\
+[% END -%]
+\hline
+\multicolumn{3}{l}{}\\
+\multicolumn{3}{l}{\includegraphics[scale=1]{greencircle.pdf} {\fontsize{9.3pt}{11pt}\selectfont\bf 绿色表示健康}   \includegraphics[scale=1]{orangecircle.pdf}  {\fontsize{9.3pt}{11pt}\selectfont\bf 橙色表示需要关注}  \includegraphics[scale=1]{redcircle.pdf} {\fontsize{9.3pt}{11pt}\selectfont\bf 红色表示有风险}}
+\end{longtable}
+
+\end{document}

@@ -1,0 +1,172 @@
+%% encoding: UTF-8
+%% 首先读取模板的配置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置版面控制%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 10pt, notitlepage, oneside , twoside ]{article}
+\usepackage[colorlinks, linkcolor=red, anchorcolor=blue, citecolor=green, bookmarks]{hyperref}
+\hypersetup{xetex}
+%\setlength{\parindent}{0em}
+\usepackage[papersize={158.8mm,201.3mm},top=0cm,bottom=0.5cm,left=0cm,right=0cm]{geometry}
+%\usepackage[papersize={200mm,255mm},top=3.37cm,bottom=2cm,left=2.06cm,right=2.06cm]{geometry}
+%\usepackage[papersize={210mm,297mm},top=2.8cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}                 % 设置版面，纸张空距
+\usepackage{marvosym}
+\usepackage{makecell,multirow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置字体%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[no-math]{fontspec} %提供字体选择命令
+\usepackage{xunicode,xltxtra}
+\usepackage[CJKchecksingle, CJKnumber]{xeCJK}                 % 用于字体
+%\setCJKmainfont[BoldFont={FZLanTingHei-DB-GBK}]{Microsoft YaHei}
+\setCJKmainfont[BoldFont={FZLanTingHei-DB-GBK}]{FZLanTingHei-L-GBK}
+%\setmainfont{Microsoft YaHei}   % 设置中文/粗体/斜体/主要字体
+\setmainfont{FZLanTingHei-L-GBK}
+\punctstyle{hangmobanjiao}               % 设置行末半角
+\newfontfamily\times{Times New Roman}
+\newCJKfontfamily\kaishu{Adobe Kaiti Std}
+\setCJKfamilyfont{zhyh}{Microsoft YaHei}
+\newcommand*{\heiti}{\CJKfamily{zhyh}}
+\setCJKfamilyfont{zhltxh}{FZLanTingHei-L-GBK}
+\newcommand*{\lantxh}{\CJKfamily{zhltxh}}
+\newfontfamily\arial{Arial}
+\newcommand{\barial}{\bf\arial}
+%\setmainfont[Mapping=tex-text]{Times New Roman}         % 设置衬线英文字体
+\setsansfont[Mapping=tex-text]{FZLanTingHei-L-GBK}       % 设置无衬线英文字体
+%\setmonofont{Courier New}                               % 设置等款英文字体
+\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9pt}{15pt}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.875pt}{\baselineskip}\selectfont}
+\newcommand{\qihao}{\fontsize{7pt}{\baselineskip}\selectfont}
+\newcommand{\bahao}{\fontsize{6.875pt}{\baselineskip}\selectfont}
+\newcommand{\wudianwu}{\fontsize{5.5pt}{\baselineskip}\selectfont}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\newcommand{\rnum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
+
+\usepackage{textgreek}
+\usepackage{pdflscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置图像%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}                    % 用于图像编号
+\graphicspath{{cores/}}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{circuits.logic.US,circuits.logic.IEC,circuits.ee.IEC}
+\usepackage{verbatim}
+\usepackage{animate}
+\usepackage{subfig}
+%\usepackage{mathpazo}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}% <-- moves axis labels near ticklabels (respects tick label widths)
+\usepackage{wallpaper}%%%%%%%%%%%%%%%%背景%%%%%%%%%%%%%%%%%%
+\usepackage{color}
+%%%%%%%%%%%%%%%%%%%%%%%%%%mdframed%%%%%%%%%%%%%%%%%%%%
+\usepackage[framemethod=tikz]{mdframed}
+\usetikzlibrary{patterns}
+\mdfdefinestyle{titlesty}{%
+linecolor=platinum,
+middlelinewidth=1.5pt,
+frametitlerule=false,%
+apptotikzsetting={\tikzset{
+    mdfbackground/.append style ={
+    top color=white,
+    bottom color=white
+    },
+    mdfframetitlebackground/.append style={
+    shade,
+    top color=white ,
+    bottom color=white
+    }
+}
+},
+frametitlerulewidth=0pt,
+innertopmargin=\topskip,
+topline=false,
+leftline=false,
+rightline=false,
+bottomline=false,
+frametitlealignment=\raggedright,
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%%%%%%%%%%%%%%%页码修改[RO]居右[CO]居中[LO]居左%%%%%%%%%%%
+
+%\cfoot{}
+%\fancyfoot[LO,RE]{}
+%\fancyhead[LO,RE]{\raisebox{-1.5ex}{\includegraphics{logo}}\color{gray} ~\bigg|\,~\makecell[l]{胃动力~~肠健康\\
+%\scalebox{0.8}{Better Gut Better Life!}}}
+
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{float,longtable,hhline}
+
+\definecolor{topcolor}{cmyk}{0.74,0.19,0.50,0}
+
+\definecolor{solomon0}{cmyk}{0.77, 0.53, 0.00, 0.00}
+\definecolor{solomon1}{cmyk}{0.62, 0.00, 0.12, 0.00}
+\definecolor{solomon2}{cmyk}{0.43, 0.67, 0.00, 0.36}
+\definecolor{solomon3}{cmyk}{1.00, 0.18, 0.40, 0.16}
+\definecolor{solomon4}{cmyk}{0.26, 0.00, 0.00, 0.00}
+\definecolor{solomon5}{cmyk}{0.80, 0.30, 0.05, 0.32}
+\definecolor{solomon6}{cmyk}{0.32, 0.24, 0.00, 0.00}
+\definecolor{xxx1}{RGB}{46,157,148}
+\definecolor{green}{cmyk}{0.3,0.03,0.39,0}
+%\definecolor{green2}{RGB}{196,224,177}
+\definecolor{green2}{cmyk}{0.3,0.03,0.39,0}
+\definecolor{yellow}{RGB}{238,196,133}
+\definecolor{yellow1}{RGB}{243,225,0}
+\definecolor{columncolor}{cmyk}{0,0,0,.08}%{RGB}{247,248,248}
+\definecolor{red}{RGB}{225,135,117}
+\definecolor{orange}{RGB}{245,130,31}
+\definecolor{gray1}{RGB}{210,210,210}
+%\definecolor{gray2}{RGB}{144,144,144}
+\definecolor{gray0}{RGB}{244,244,244}
+\definecolor{blue1}{RGB}{65,100,140}
+\definecolor{blue2}{RGB}{50,168,225}
+\definecolor{kelly}{cmyk}{0.74,0.19,0.50,0}
+\definecolor{black70}{cmyk}{0.00,0.00,0.00,0.90}
+\definecolor{darkblue}{cmyk}{0.74,0.02,0.29,0.00}
+\definecolor{gray2}{cmyk}{0.00,0.00,0.00,0.90}
+
+\def\blueC{{\color{blue}C}}
+\def\blueG{{\color{blue}G}}
+\def\redA{{\color{red}A}}
+\def\redT{{\color{red}T}}
+\def\yellowA{{\color{yellow}A}}
+\def\yellowT{{\color{yellow}T}}
+\def\redrule{\raisebox{.5ex}{~~~\hspace*{-3cm}{\color{red}\rule{2.3cm}{1.5pt}}}~}
+
+\def\sun{\tikz\draw[yellow1,fill=yellow1](0,0) circle[radius=4.5pt];
+\hspace*{-0.5cm}\tikz\draw[yellow1,dotted](0,0) circle[radius=5pt];}
+
+
+\def\trianglea{\tikz \draw[scale=0.07,color=yellow1,fill=yellow1] (1,0) -- (-1,0) -- (0,1.732) -- cycle;}
+\def\triangleb{\tikz \draw[scale=0.07,color=yellow1,fill=yellow1] (1,0) -- (-1,0) -- (0,-1.732) -- cycle;}
+\usepackage{tabularx}
+
+\usepackage[many]{tcolorbox}
+%\newtcolorbox{tctabularx}[1]{fonttitle=\bfseries, colback=white, colframe=kelly,#1,sharp corners,rounded corners=northwest,before upper app={\rowcolor{kelly}}}   % 表头和minipage左上角设置为圆角
+\newtcolorbox{tctabularx}[1]{fonttitle=\bfseries, colback=white, colframe=kelly,#1,sharp corners,before upper app={\rowcolor{kelly}}}    % 表头和minipage左上角设置为直角
+
+\makeatletter
+\tcbset
+    {
+tabularx*/.style 2 args={%
+    boxsep=0pt,top=0pt,bottom=0pt,leftupper=0pt,rightupper=0pt,
+    toptitle=1mm,bottomtitle=1mm,boxrule=0.5mm,
+    before upper={\arrayrulecolor{black70}\def\arraystretch{1}#1%
+      \tcb@hack@currenvir\tabularx{\linewidth}{#2}},
+    after upper=\endtabularx\arrayrulecolor{gray}}
+    }
+\makeatother

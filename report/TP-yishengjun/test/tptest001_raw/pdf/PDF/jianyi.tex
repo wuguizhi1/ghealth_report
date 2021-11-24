@@ -1,0 +1,127 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage[nodisplayskipstretch]{setspace}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+
+\begin{document}
+
+\vspace*{5mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+\begin{tctabularx}{tabularx={m{15.4cm}<{\centering}}}
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{black70}\fontsize{11pt}{11pt}\selectfont\bf 健康建议}
+\end{tctabularx}
+
+\sepline
+
+\vspace*{1mm}
+\begin{spacing}{1.5}
+\noindent
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont\bf {综合您本次检测结果，肠道益生菌总得分为44分，
+处于正常范围，
+但其中阿克曼氏菌属、乳酸杆菌属检测指数偏低，可重点调理。
+建议您：}}
+\end{spacing}
+
+\vspace*{-3mm}
+\noindent
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+\begin{center}
+\begin{tabular}{|K{2.92cm}K{12.0cm}|}
+\hline
+
+\parbox[c][4.7cm]{.95\hsize}{
+\noindent
+\includegraphics[scale=1.0]{baohulifoodwithvline.pdf}
+}
+ &
+\hspace*{4mm}
+\parbox{.95\hsize}{
+\vspace*{3mm}
+\begin{spacing}{1.5}
+{\fontsize{9pt}{10pt}\selectfont\bf 膳食\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 建议您在日常饮食中选择补充糙米、山药、四季豆等食物或者相关的加工提取食品，为肠道菌群提供更多营养，促进有益共生菌的生长，增加肠道菌群的丰富度及多样性。\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 控制油炸类、西式快餐、含糖饮料等高脂高糖高热量食物。忌暴饮暴食。减少外出就餐的次数。戒烟限酒。\\}
+\end{spacing}
+} \\
+\hline
+
+\parbox[c][4.7cm]{.95\hsize}{
+\noindent
+\includegraphics[scale=1.0]{baohuliprobioticswithvline.pdf}
+}
+ &
+\hspace*{4mm}
+\parbox{.95\hsize}{
+\vspace*{3mm}
+\begin{spacing}{1.5}
+{\fontsize{9pt}{10pt}\selectfont\bf 益生菌\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 建议您选择补充含保加利亚乳杆菌的酸奶、含干酪乳杆菌的活菌饮料等益生菌产品，以增加您肠道内益生菌的含量，并能抑制有害菌的异常增殖，调节肠道菌群平衡。\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 选酸奶有窍门，2型糖尿病、动脉粥样硬化、胆囊炎、胰腺炎等患者，宜选用无糖酸奶。\\}
+\end{spacing}
+} \\
+\hline
+
+\parbox[c][4.7cm]{.95\hsize}{
+\noindent
+\includegraphics[scale=1.0]{baohuliprebioticswithvline.pdf}
+}
+ &
+\hspace*{4mm}
+\parbox{.95\hsize}{
+\vspace*{3mm}
+\begin{spacing}{1.5}
+{\fontsize{9pt}{10pt}\selectfont\bf 益生元\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 建议您选择补充富含多酚的蔓越莓提取物、豆类制品、低聚果糖等益生元，能帮助阿克曼氏菌属、乳酸杆菌属在肠道内增殖，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。\\}
+{\includegraphics[scale=1.0]{xiaofangkuai.pdf}\fontsize{8pt}{10pt}\selectfont \ 如患炎症性肠病、腹泻，避免菊粉和膳食纤维制剂的摄入。\\}
+\end{spacing}
+} \\
+\hline
+
+\end{tabular}
+\end{center}
+
+{\noindent\qihao *温馨提示：以上健康建议仅供参考，您的实际膳食、运动及营养补充需根据您的自身具体情况进行调整。}
+\vspace*{1cm}
+
+\end{document}

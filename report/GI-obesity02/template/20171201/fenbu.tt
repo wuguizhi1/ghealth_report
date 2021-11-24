@@ -1,0 +1,126 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{5mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{gray2}
+
+\begin{center}
+\fontsize{16pt}{\baselineskip}\selectfont\color{black70}\bf {三、详细检测结果}
+\end{center}
+
+\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {胖菌检测结果}}
+
+\begin{tctabularxnew}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.52cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 检测结果评价}
+\end{tctabularxnew}
+
+\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+[% FOREACH item = changdaojunqun.pangjun.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh [% item.name %]\\[% item.desc %]} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+[% IF item.risk == "有益" OR item.risk == "正常" -%]
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+[% ELSIF item.level == "l1" OR item.level == "l5" -%]
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+[% ELSE -%]
+\hspace*{-3.17cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+[% END -%]
+ & \begin{minipage}{4.60cm}\begin{center}{
+ [% IF item.level == 'l1' -%]{[% IF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 低}
+ [% ELSIF item.level == 'l2' -%]{[% IF item.risk == "有害" -%]\color{orange}[% END -%]\lantxh 偏低}
+ [% ELSIF item.level == 'l3' -%]{\lantxh 正常}
+ [% ELSIF item.level == 'l4' -%]{\color{orange}\lantxh 偏高}
+ [% ELSE -%]{\color{red}\lantxh 高}
+ [% END -%] }\end{center} \end{minipage} \\
+[% END -%]
+\hline
+\end{longtable}
+
+\clearpage
+
+\vspace*{8mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{gray2}
+
+\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {瘦菌检测结果}}
+
+\begin{tctabularxnew}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.52cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 检测结果评价}
+\end{tctabularxnew}
+
+\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+[% FOREACH item = changdaojunqun.shoujun.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh [% item.name %]\\[% item.desc %]} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+[% IF item.risk == "有益" OR item.risk == "正常" -%]
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+[% ELSIF item.level == "l1" OR item.level == "l5" -%]
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+[% ELSE -%]
+\hspace*{-3.17cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+[% END -%]
+ & \begin{minipage}{4.60cm}\begin{center}{
+ [% IF item.level == 'l1' -%]{\color{red}\lantxh 低}
+ [% ELSIF item.level == 'l2' -%]{\color{orange}\lantxh 偏低}
+ [% ELSIF item.level == 'l3' -%]{\lantxh 正常}
+ [% ELSIF item.level == 'l4' -%]{[% IF item.risk == "有害" -%]\color{orange}[% END -%]\lantxh 偏高}
+ [% ELSE -%]{[% IF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 高}
+ [% END -%] }\end{center} \end{minipage} \\
+[% END -%]
+\hline
+\end{longtable}
+
+\end{document}
+

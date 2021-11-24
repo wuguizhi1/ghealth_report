@@ -1,0 +1,118 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\NewEnviron{RCtable}[1]
+  {%
+    \begin{tcolorbox}[#1]\BODY\end{tcolorbox}%
+  }
+
+
+
+\begin{document}
+
+\vspace*{5mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.03pt}{11pt}\selectfont
+\color{gray2}
+
+%{\noindent\bf\biaotia 三、肠道菌群营养功能分析}
+
+%\vspace*{6mm}
+
+\begin{spacing}{1.1}
+\begin{LRaside}[.8]{2.2 肠道菌群代谢}
+\noindent
+\includegraphics[scale=1]{yingyanggongneng.pdf}
+\asidebreak %
+肠道菌群参与人体多种营养物质的合成代谢，如维生素、胆汁酸、胆碱、类固醇等。维生素是维持人体正常生理功能而必须从食物中获得的一类微量有机物质，在人体生长发育及合成代谢过程中发挥重要的作用。人体肠道内的正常微生物，如双歧杆菌、乳酸杆菌等能合成多种人体生长发育所必需的维生素，如维生素B1、B2、B6等。
+\end{LRaside}
+\end{spacing}
+
+\vspace*{4mm}
+%2.1 您的常见肠道菌含量
+%\vspace*{1.5mm}
+
+\begin{tctabularx}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.52cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测结果评价}
+\end{tctabularx}
+
+\vspace*{-4.35mm}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray4}
+\setlength\arrayrulewidth{0.25pt}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+[% FOREACH item = yingyanggongneng.desc.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh [% item.name %]\\[% item.desc %]} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+[% IF item.risk == "有益" OR item.risk == "正常" -%]
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+[% ELSIF item.level == "l1" OR item.level == "l5" -%]
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+[% ELSE -%]
+\hspace*{-3.17cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+[% END -%]
+ & \begin{minipage}{4.60cm}\begin{center}{[% IF item.level == 'l1' -%]{[% IF item.risk == "有害" -%]\color{red}[% ELSIF item.risk == "有益" -%]\color{green}[% END -%]\lantxh 低{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l2' -%]{[% IF item.risk == "有害" -%]\color{orange}[% ELSIF item.risk == "有益" -%]\color{green}[% END -%]\lantxh 偏低{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l3' -%]{\lantxh 正常{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l4' -%]{[% IF item.risk == "有害" -%]\color{orange}[% ELSIF item.risk == "有益" -%]\color{green}[% END -%]\lantxh 偏高{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSE -%]{[% IF item.risk == "有害" -%]\color{red}[% ELSIF item.risk == "有益" -%]\color{green}[% END -%]\lantxh 高{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc -%][% END -%]}}[% END -%] }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{[% IF item.level == 'l1' -%]{[% IF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 低{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l2' -%]{\lantxh 偏低{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l3' -%]{\lantxh 正常{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSIF item.level == 'l4' -%]{\lantxh 偏高{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%]}}[% ELSE -%]{[% IF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 高{[% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc -%][% END -%]}}[% END -%] }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{[% IF item.level == 'l1' -%]{[% IF item.risk == "有益" -%]\color{green}[% ELSIF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 低 \\ \bahao [% item.riskdesc %]}[% ELSIF item.level == 'l2' -%]{[% IF item.risk == "有益" -%]\color{green}[% ELSIF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 偏低 \\ \bahao [% item.riskdesc %]}[% ELSIF item.level == 'l3' -%]{\lantxh 正常}[% ELSIF item.level == 'l4' -%]{[% IF item.risk == "有益" -%]\color{green}[% ELSIF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 偏高 \\ \bahao [% item.riskdesc %]}[% ELSE -%]{[% IF item.risk == "有益" -%]\color{green}[% ELSIF item.risk == "有害" -%]\color{red}[% END -%]\lantxh 高\\ \bahao [% item.riskdesc -%]}[% END -%] }\end{center} \end{minipage} \\
+[% END -%]
+\hline
+\multicolumn{3}{l}{}\\
+\multicolumn{3}{l}{\hspace*{2mm}\includegraphics[scale=1]{greencircle.pdf} {\fontsize{9.03pt}{11pt}\selectfont \bf 绿色表示健康}\hspace*{2mm}\includegraphics[scale=1]{orangecircle.pdf}  {\fontsize{9.03pt}{11pt}\selectfont \bf 橙色表示需要关注}\hspace*{2mm}\includegraphics[scale=1]{redcircle.pdf} {\fontsize{9.03pt}{11pt}\selectfont \bf 红色表示有风险}}
+\end{longtable}
+
+\vspace*{6mm}
+\fontsize{9.03pt}{11pt}\selectfont
+\begin{spacing}{1.1}
+\begin{LRaside}[.8]{结果分析}
+\noindent
+\includegraphics[scale=1]{result_yingyanggongneng.pdf}
+\asidebreak %
+[% IF yingyanggongneng.desc.abnormalN == 0 -%]
+综合您的检测结果，您肠道内参与B族维生素和类固醇等营养物质代谢的菌群含量均处于正常范围，帮助您维持机体正常生理功能，请您保持良好饮食及生活习惯，有助于维持现有的菌群状态。
+[% ELSIF yingyanggongneng.desc.badN > 0 AND yingyanggongneng.desc.goodN > 0 -%]
+综合您的检测结果，您肠道内参与[% yingyanggongneng.desc.good %][% IF yingyanggongneng.desc.goodN > 2 %][% END -%]代谢的菌群含量优于参考人群[% IF yingyanggongneng.desc.goodDisease != '-' -%]，可能降低[% yingyanggongneng.desc.goodDisease %]的风险[% END -%][% IF yingyanggongneng.desc.goodEffect != '-' -%]，有利于[% yingyanggongneng.desc.goodEffect %][% END -%]。参与[% yingyanggongneng.desc.bad %][% IF yingyanggongneng.desc.badN > 2 %][% END -%]代谢的菌群含量异常[% IF yingyanggongneng.desc.badDisease != '-' -%]，可能增加[% yingyanggongneng.desc.badDisease %]的风险[% END -%][% IF yingyanggongneng.desc.badEffect != '-' -%]，不利于[% yingyanggongneng.desc.badEffect %][% END -%]。建议您持续监测肠道健康。
+[% ELSIF yingyanggongneng.desc.badN == 0 -%]
+综合您的检测结果，您肠道内参与[% yingyanggongneng.desc.good %][% IF yingyanggongneng.desc.goodN > 2 %][% END -%]代谢的菌群含量优于参考人群[% IF yingyanggongneng.desc.goodDisease != '-' -%]，可能降低[% yingyanggongneng.desc.goodDisease %]的风险[% END -%][% IF yingyanggongneng.desc.goodEffect != '-' -%]，有利于[% yingyanggongneng.desc.goodEffect %][% END -%]。请您保持良好饮食及生活习惯，有助于维持现有的菌群状态。
+[% ELSIF yingyanggongneng.desc.goodN == 0 -%]
+综合您的检测结果，您肠道内参与[% yingyanggongneng.desc.bad %][% IF yingyanggongneng.desc.badN > 2 %][% END -%]代谢的菌群含量异常[% IF yingyanggongneng.desc.badDisease != '-' -%]，可能增加[% yingyanggongneng.desc.badDisease %]的风险[% END -%][% IF yingyanggongneng.desc.badEffect != '-' -%]，不利于[% yingyanggongneng.desc.badEffect %][% END -%]。建议您持续监测肠道健康。
+[% END -%]
+\end{LRaside}
+\end{spacing}
+
+\end{document}
+

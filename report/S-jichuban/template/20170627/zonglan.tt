@@ -1,0 +1,208 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\begin{document}
+
+%\vspace*{8mm}
+\parindent0pt
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+{\bf\sanhao 检测结果总览}
+
+\vspace*{2mm}
+
+\begin{LRaside}{肠道菌群概况}
+\noindent\centering
+\includegraphics[width=\linewidth]{[% gaikuang.pic %]}
+\jiuhao
+\noindent\begin{tabular}{@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}}
+[% IF batch == 1 -%]\includegraphics[width=.41cm]{[% gaikuang.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; [% END -%]
+[% IF batch == 2 -%]\includegraphics[scale=1]{[% batchlast.gaikuang.pic %]} & \includegraphics[width=.41cm]{[% gaikuang.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; [% END -%]
+[% IF batch == 3 -%]\includegraphics[scale=1]{[% batch1.gaikuang.pic %]} & \includegraphics[scale=1]{[% batchlast.gaikuang.pic %]} & \includegraphics[width=.41cm]{[% gaikuang.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; [% END -%]
+[% IF batch >= 4 -%]\includegraphics[scale=1]{[% batch1.gaikuang.pic %]} & \includegraphics[scale=1]{[% batch2.gaikuang.pic %]} & \includegraphics[scale=1]{[% batchlast.gaikuang.pic %]} & \includegraphics[width=.41cm]{[% gaikuang.curpic %]} [% END -%]
+\\[-4pt]
+[% IF batch == 1 -%]
+\color{gray2}当次 & \color{gray2} & \color{gray2} & \color{gray2}
+[% ELSIF batch == 2 -%]
+\color{gray2}第一次 & \color{gray2}当次 & \color{gray2} & \color{gray2}
+[% ELSIF batch == 3 -%]
+\color{gray2}第一次 & \color{gray2}第二次 & \color{gray2}当次 & \color{gray2}
+[% ELSIF batch == 4 -%]
+\color{gray2}第一次& \color{gray2}第二次 & \color{gray2}第三次 & \color{gray2}当次
+[% END -%]
+\\
+\end{tabular}
+\asidebreak % 分栏
+1、您本次肠道菌群共检测出细菌种类[% gaikuang.desc.total %]种，肠道菌群多样性
+[% IF gaikuang.desc.duoyangxing.level == "l1" -%]
+低，说明您的肠道菌群组成较为单一，菌群失调风险高。\par\bigskip
+[% ELSIF gaikuang.desc.duoyangxing.level == "l2" -%]
+偏低，说明您的肠道菌群组成较为单一，菌群失调风险较高。\par\bigskip
+[% ELSIF gaikuang.desc.duoyangxing.level == "l3" -%]
+正常，说明您的肠道菌群组成较为丰富，菌群失调风险较低。\par\bigskip
+[% ELSIF gaikuang.desc.duoyangxing.level == "l4" -%]
+偏高，说明您的肠道菌群组成十分丰富，菌群失调风险低。\par\bigskip
+[% ELSIF gaikuang.desc.duoyangxing.level == "l5" -%]
+高，说明您的肠道菌群组成十分丰富，菌群失调风险低。\par\bigskip
+[% END -%]
+2、您肠道中的有益菌含量
+[% IF gaikuang.desc.youyijun.level == "l1" -%]
+低，仅高于[% gaikuang.desc.youyijun.per100 %]{\%}的参考人群。\par\bigskip
+[% ELSIF gaikuang.desc.youyijun.level == "l2" -%]
+偏低，仅高于[% gaikuang.desc.youyijun.per100 %]{\%}的参考人群。\par\bigskip
+[% ELSIF gaikuang.desc.youyijun.level == "l3" -%]
+正常，高于[% gaikuang.desc.youyijun.per100 %]{\%}的参考人群。\par\bigskip
+[% ELSIF gaikuang.desc.youyijun.level == "l4" -%]
+偏高，优于[% gaikuang.desc.youyijun.per100 %]{\%}的参考人群。\par\bigskip
+[% ELSIF gaikuang.desc.youyijun.level == "l5" -%]
+高，优于[% gaikuang.desc.youyijun.per100 %]{\%}的参考人群。\par\bigskip
+[% END -%]
+3、您肠道内的有害菌含量
+[% IF gaikuang.desc.youhaijun.level == "l1" -%]
+低于参考人群。
+[% ELSIF gaikuang.desc.youhaijun.level == "l2" -%]
+相比参考人群偏低。
+[% ELSIF gaikuang.desc.youhaijun.level == "l3" -%]
+与参考人群相当。
+[% ELSIF gaikuang.desc.youhaijun.level == "l4" -%]
+相比参考人群偏高，请您注意调理肠道菌群。
+[% ELSIF gaikuang.desc.youhaijun.level == "l5" -%]
+高于参考人群，请您注意调理肠道菌群。
+[% END -%]
+[% IF batch >= 2 -%]
+\par\bigskip
+4、相比上次检测，您的肠道菌群多样性[% comparelast.duoyangxing %]，有益菌含量[% comparelast.youyijun %]，有害菌含量[% comparelast.youhaijun %]。
+[% END -%]
+\end{LRaside}
+
+\begin{LRaside}{肠道菌群含量}
+\noindent
+\includegraphics[width=\linewidth]{[% changdaojunqun.pic %]}
+
+\jiuhao
+\noindent\begin{tabular}{@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}}
+[% IF batch == 1 -%]\includegraphics[width=.41cm]{[% changdaojunqun.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; [% END -%]
+[% IF batch == 2 -%]\includegraphics[scale=1]{[% batchlast.changdaojunqun.pic %]} & \includegraphics[width=.41cm]{[% changdaojunqun.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; [% END -%]
+[% IF batch == 3 -%]\includegraphics[scale=1]{[% batch1.changdaojunqun.pic %]} & \includegraphics[scale=1]{[% batchlast.changdaojunqun.pic %]} & \includegraphics[width=.41cm]{[% changdaojunqun.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; [% END -%]
+[% IF batch >= 4 -%]\includegraphics[scale=1]{[% batch1.changdaojunqun.pic %]} & \includegraphics[scale=1]{[% batch2.changdaojunqun.pic %]} & \includegraphics[scale=1]{[% batchlast.changdaojunqun.pic %]} & \includegraphics[width=.41cm]{[% changdaojunqun.curpic %]} [% END -%]
+\\[-4pt]
+[% IF batch == 1 -%]
+\color{gray2}当次 & \color{gray2} & \color{gray2} & \color{gray2}
+[% ELSIF batch == 2 -%]
+\color{gray2}第一次 & \color{gray2}当次 & \color{gray2} & \color{gray2}
+[% ELSIF batch == 3 -%]
+\color{gray2}第一次 & \color{gray2}第二次 & \color{gray2}当次 & \color{gray2}
+[% ELSIF batch == 4 -%]
+\color{gray2}第一次& \color{gray2}第二次 & \color{gray2}第三次 & \color{gray2}当次
+[% END -%]
+\\
+\end{tabular}
+\asidebreak % 分栏
+1、您肠道内的
+[% IF changdaojunqun.fenbu.abnormalN == 0 -%]
+常见肠道菌含量均处于正常范围，共同维持肠道的正常运转。\par\bigskip
+[% ELSIF changdaojunqun.fenbu.badN > 0 AND changdaojunqun.fenbu.goodN > 0 -%]
+[% IF changdaojunqun.fenbu.badN > 2 AND changdaojunqun.fenbu.goodN > 2 -%]
+[% changdaojunqun.fenbu.good %][% changdaojunqun.fenbu.goodN %]项指标优于参考人群，有益于肠道健康；但[% changdaojunqun.fenbu.bad %][% changdaojunqun.fenbu.badN %]项指标异常，不利于肠道健康，需引起注意，建议持续监测肠道健康。\par\bigskip
+[% ELSIF changdaojunqun.fenbu.badN > 2 -%]
+[% changdaojunqun.fenbu.good %]指标优于参考人群，有益于肠道健康；但[% changdaojunqun.fenbu.bad %][% changdaojunqun.fenbu.badN %]项指标异常，不利于肠道健康，需引起注意，建议持续监测肠道健康。\par\bigskip
+[% ELSIF changdaojunqun.fenbu.goodN > 2 -%]
+[% changdaojunqun.fenbu.good %][% changdaojunqun.fenbu.goodN %]项指标优于参考人群，有益于肠道健康；但[% changdaojunqun.fenbu.bad %]指标异常，不利于肠道健康，需引起注意，建议持续监测肠道健康。\par\bigskip
+[% ELSE -%]
+[% changdaojunqun.fenbu.good %]指标优于参考人群，有益于肠道健康；但[% changdaojunqun.fenbu.bad %]指标异常，不利于肠道健康，需引起注意，建议持续监测肠道健康。\par\bigskip
+[% END -%]
+[% ELSIF changdaojunqun.fenbu.badN > 0 -%]
+[% IF changdaojunqun.fenbu.badN > 2 -%]
+[% changdaojunqun.fenbu.bad %][% changdaojunqun.fenbu.badN %]项指标异常，不利于肠道健康，需引起注意，建议持续监测肠道健康。\par\bigskip
+[% ELSE -%]
+[% changdaojunqun.fenbu.bad %]指标异常，不利于肠道健康，需引起注意，建议持续监测肠道健康。\par\bigskip
+[% END -%]
+[% ELSIF changdaojunqun.fenbu.goodN > 0 -%]
+[% IF changdaojunqun.fenbu.goodN > 2 -%]
+[% changdaojunqun.fenbu.good %][% changdaojunqun.fenbu.goodN %]项指标优于参考人群，有益于肠道健康，请保持良好的饮食及生活习惯。\par\bigskip
+[% ELSE -%]
+[% changdaojunqun.fenbu.good %]指标优于参考人群，有益于肠道健康，请保持良好的饮食及生活习惯。\par\bigskip
+[% END -%]
+[% END -%]
+2、您的肠道内
+[% IF changdaojunqun.pathogen.num == 0 -%]
+未检测出致病菌。这是个好消息。
+[% ELSIF changdaojunqun.pathogen.badN == 0 -%]
+检测出[% changdaojunqun.pathogen.num %]种致病菌，含量均未超标，但在您免疫力低下时仍可能会损害您的肠道健康。
+[% ELSE -%]
+检测出[% changdaojunqun.pathogen.num %]种致病菌，其中[% changdaojunqun.pathogen.bad %]含量高于参考人群，可能会损害您的肠道健康，建议您持续监测肠道健康。
+[% END -%]
+[% IF batch >= 2 -%]
+\par\bigskip
+3、相比上次检测，您肠道菌群的菌属异常指标数目[% IF changdaojunqun.fenbu.badN > batchlast.changdaojunqun.fenbu.badN -%]增加，[% ELSIF changdaojunqun.fenbu.badN == batchlast.changdaojunqun.fenbu.badN -%]保持不变，[% ELSE %]减少，[% END -%]
+含量超标致病菌种类
+[% IF changdaojunqun.pathogen.badN > batchlast.changdaojunqun.pathogen.badN  -%]增加[% ELSIF changdaojunqun.pathogen.badN == batchlast.changdaojunqun.pathogen.badN -%]保持不变[% ELSE %]减少[% END -%]
+。
+[% END -%]
+\end{LRaside}
+
+
+\begin{LRaside}{肠道菌群营养功能分析}
+\noindent
+\includegraphics[width=\linewidth]{[% yingyanggongneng.pic %]}
+
+\jiuhao
+\noindent\begin{tabular}{@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}m{0.68cm}<{\centering}@{}}
+[% IF batch == 1 -%]\includegraphics[width=.41cm]{[% yingyanggongneng.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; [% END -%]
+[% IF batch == 2 -%]\includegraphics[scale=1]{[% batchlast.yingyanggongneng.pic %]} & \includegraphics[width=.41cm]{[% yingyanggongneng.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; [% END -%]
+[% IF batch == 3 -%]\includegraphics[scale=1]{[% batch1.yingyanggongneng.pic %]} & \includegraphics[scale=1]{[% batchlast.yingyanggongneng.pic %]} & \includegraphics[width=.41cm]{[% yingyanggongneng.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.1pt]; [% END -%]
+[% IF batch >= 4 -%]\includegraphics[scale=1]{[% batch1.yingyanggongneng.pic %]} & \includegraphics[scale=1]{[% batch2.yingyanggongneng.pic %]} & \includegraphics[scale=1]{[% batchlast.yingyanggongneng.pic %]} & \includegraphics[width=.41cm]{[% yingyanggongneng.curpic %]} [% END -%]
+\\[-4pt]
+[% IF batch == 1 -%]
+\color{gray2}当次 & \color{gray2} & \color{gray2} & \color{gray2}
+[% ELSIF batch == 2 -%]
+\color{gray2}第一次 & \color{gray2}当次 & \color{gray2} & \color{gray2}
+[% ELSIF batch == 3 -%]
+\color{gray2}第一次 & \color{gray2}第二次 & \color{gray2}当次 & \color{gray2}
+[% ELSIF batch == 4 -%]
+\color{gray2}第一次& \color{gray2}第二次 & \color{gray2}第三次 & \color{gray2}当次
+[% END -%]
+\\
+\end{tabular}
+\asidebreak %分栏
+[% IF batch >= 2 -%]1、[% END -%]
+[% IF yingyanggongneng.desc.abnormalN == 0 -%]
+您肠道内参与合成B族维生素和类固醇等营养物质的菌群含量均处于正常范围，帮助您维持机体正常生理功能。
+[% ELSIF yingyanggongneng.desc.badN > 0 AND yingyanggongneng.desc.goodN > 0 -%]
+[% IF yingyanggongneng.desc.badN > 5 AND yingyanggongneng.desc.goodN > 5 -%]
+您肠道内参与[% yingyanggongneng.desc.good %][% yingyanggongneng.desc.goodN %]种营养物质代谢的菌群含量优于参考人群，有益于人体健康；参与[% yingyanggongneng.desc.bad %][% yingyanggongneng.desc.badN %]种营养物质代谢的菌群含量异常，请关注您的异常指标，持续监测肠道健康。
+[% ELSIF yingyanggongneng.desc.badN > 5 -%]
+您肠道内参与[% yingyanggongneng.desc.good %]代谢的菌群含量优于参考人群，有益于人体健康；参与[% yingyanggongneng.desc.bad %][% yingyanggongneng.desc.badN %]种营养物质代谢的菌群含量异常，请关注您的异常指标，持续监测肠道健康。
+[% ELSIF yingyanggongneng.desc.goodN > 5 -%]
+您肠道内参与[% yingyanggongneng.desc.good %][% yingyanggongneng.desc.goodN %]种营养物质代谢的菌群含量优于参考人群，有益于人体健康；参与[% yingyanggongneng.desc.bad %]代谢的菌群含量异常，请关注您的异常指标，持续监测肠道健康。
+[% ELSE -%]
+您肠道内参与[% yingyanggongneng.desc.good %]代谢的菌群含量优于参考人群，有益于人体健康；参与[% yingyanggongneng.desc.bad %]代谢的菌群含量异常，请关注您的异常指标，持续监测肠道健康。
+[% END -%]
+[% ELSIF yingyanggongneng.desc.badN > 0 -%]
+[% IF yingyanggongneng.desc.badN > 5 -%]
+您肠道内参与[% yingyanggongneng.desc.bad %][% yingyanggongneng.desc.badN %]种营养物质代谢的菌群含量异常，不利于人体健康，需引起注意，建议持续监测肠道健康。
+[% ELSE -%]
+您肠道内参与[% yingyanggongneng.desc.bad %]代谢的菌群含量异常，不利于人体健康，需引起注意，建议持续监测肠道健康。
+[% END -%]
+[% ELSIF yingyanggongneng.desc.goodN > 0 -%] %只有有益
+[% IF yingyanggongneng.desc.goodN > 5 -%]
+您肠道内参与[% yingyanggongneng.desc.good %][% yingyanggongneng.desc.goodN %]种营养物质代谢的菌群含量优于参考人群，有益于人体健康，请保持良好的饮食及生活习惯。
+[% ELSE -%]
+您肠道内参与[% yingyanggongneng.desc.good %]代谢的菌群含量优于参考人群，有益于人体健康，请保持良好的饮食及生活习惯。
+[% END -%]
+[% END -%]
+[% IF batch >= 2 -%]
+\par\bigskip
+2、相比上次检测，您肠道内参与维生素等营养物质代谢的菌群异常指标数量[% IF yingyanggongneng.desc.badN > batchlast.yingyanggongneng.desc.badN -%]增加[% ELSIF yingyanggongneng.desc.badN == batchlast.yingyanggongneng.desc.bad -%]保持不变[% ELSE -%]减少[% END -%]
+。
+[% END -%]
+\end{LRaside}
+
+颜色指示 \includegraphics[scale=1]{greencircle.pdf} {\bf 绿色表示健康}   \includegraphics[scale=1]{orangecircle.pdf}  {\bf 橙色表示需要关注}  \includegraphics[scale=1]{redcircle.pdf} {\bf 红色表示有风险}
+
+\end{document}

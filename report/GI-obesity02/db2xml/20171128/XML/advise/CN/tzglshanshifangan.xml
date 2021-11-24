@@ -1,0 +1,29 @@
+<opt>
+  <CN>
+    <bmisuggestion>
+      <bmi1></bmi1>
+      <bmi2></bmi2>
+      <bmi3></bmi3>
+      <bmi4></bmi4>
+      <bmi5></bmi5>
+    </bmisuggestion>
+    <category></category>
+    <order>1</order>
+    <section1>
+      <name>健康建议</name>
+      <order>1</order>
+    </section1>
+    <section2>
+      <name></name>
+      <order>1</order>
+    </section2>
+    <summary>
+      <desc></desc>
+    </summary>
+    <title>膳食方案</title>
+  </CN>
+  <categoey>advise</categoey>
+  <id>changdaokang_danxiangxi_tizhongguanli_tzglshanshifangan</id>
+  <oriid>tzglshanshifangan</oriid>
+  <orititle>膳食方案</orititle>
+</opt>

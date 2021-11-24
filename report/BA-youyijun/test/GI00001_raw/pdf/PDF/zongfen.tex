@@ -1,0 +1,135 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+\usepackage{setspace}
+\usepackage{colortbl,array,booktabs}
+
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+\vspace*{8mm}
+
+\color{gray2}
+\noindent\fontsize{16pt}{\baselineskip}\selectfont{肠道菌群基因检测结果}
+
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{8pt}{11pt}\selectfont
+
+%\vspace*{8mm}
+%\begin{spacing}{1.2}
+%\noindent{\fontsize{12pt}{11pt}\selectfont {益生菌检测结果}}
+%\end{spacing}
+%\arrayrulecolor{gray2}
+%\setlength{\arrayrulewidth}{.5pt}
+
+\vspace*{8mm}
+\fontsize{9pt}{11pt}\selectfont
+\noindent
+\begin{tabular}{m{3.5cm}<{\centering}m{7.1cm}<{\centering}m{2.5cm}<{\centering}m{2.7cm}<{\centering}}
+  \parbox[c][0.6cm]{\hsize}{\cellcolor{topcolor}\color{white}\centering\bf 菌（属）} &
+  \parbox[c][0.6cm]{\hsize}{\cellcolor{topcolor}\color{white}\centering\bf 益生菌的功能} &
+  \parbox[c][0.6cm]{\hsize}{\cellcolor{topcolor}\color{white}\centering\bf 参考范围} &
+  \parbox[c][0.6cm]{\hsize}{\cellcolor{topcolor}\color{white}\centering\bf 检测结果} \\
+\end{tabular}
+
+\vspace*{-3.5mm}
+\fontsize{8.8pt}{11pt}\selectfont
+\begin{longtable}{|m{3.5cm}<{\centering}|m{7cm}|m{2.5cm}<{\centering}|m{2.6cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip11pt\centering 柔嫩梭菌 \vskip11pt} 
+& 是人体肠道的优势菌群，具有显著的抗炎作用。 & ≥ 27.24 &
+13.87
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+\\
+\hline
+\parbox[c]{\hsize}{\vskip11pt\centering 双歧杆菌 \vskip11pt} 
+& 有调节免疫、提供营养等多种作用，在临床上，双歧杆菌能调整肠道功能紊乱，预防腹泻，减少便秘。 & ≥ 0.21 &
+0.01
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+\\
+\hline
+\parbox[c]{\hsize}{\vskip11pt\centering 阿克曼氏菌 \vskip11pt} 
+& 能增厚肠道黏液层，改善代谢，大量基础和临床试验证明阿克曼氏菌的含量与肥胖和糖尿病呈负相关。 & ≥ 0.01 &
+0
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+\\
+\hline
+\parbox[c]{\hsize}{\vskip11pt\centering 乳酸杆菌 \vskip11pt} 
+& 可产乳酸，帮助维持肠道pH，干扰和抑制肠道中致病菌的生长繁殖。 & ≥ 0.04 &
+0.02
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+\\
+\hline
+\end{longtable}
+
+\vspace*{-2mm}
+\noindent {结果说明：红色 \ \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}} \ ，表示与健康人相比，该益生菌在肠道中的相对含量较低。}
+
+\vspace*{3mm}
+\noindent {结果分析：
+柔嫩梭菌、双歧杆菌、阿克曼氏菌、乳酸杆菌结果均异常；\\\\
+\hspace*{1.5cm}\begin{minipage}{15.8cm}
+\begin{spacing}{1.3}
+{\includegraphics[scale=1.0]{xiaoyuandian.pdf}\fontsize{9pt}{11pt}\selectfont \ {柔嫩梭菌含量偏低，产丁酸减少，不利于抑制肠道炎症和调节免疫功能，长期偏低甚至可能引起克罗恩病、糖尿病等病症。\\}}
+{\includegraphics[scale=1.0]{xiaoyuandian.pdf}\fontsize{9pt}{11pt}\selectfont \ {双歧杆菌含量偏低可能不利于肠道蠕动、营养吸收及免疫调节等；长期偏低还可引起便秘等病症。\\}}
+{\includegraphics[scale=1.0]{xiaoyuandian.pdf}\fontsize{9pt}{11pt}\selectfont \ {阿克曼氏菌含量偏低，不利于维持能量代谢平衡，还可能影响免疫能力和肠道屏障功能。\\}}
+{\includegraphics[scale=1.0]{xiaoyuandian.pdf}\fontsize{9pt}{11pt}\selectfont \ {乳酸杆菌偏低可能导致消化不良、免疫力降低；长期偏低还可引起便秘等病症。\\}}
+\end{spacing}
+\end{minipage}
+}
+
+%\vspace*{-3mm}
+\noindent\fontsize{16pt}{12pt}\selectfont {健康建议} \\
+
+%\vspace*{-2mm}
+\begin{spacing}{1.3}
+\noindent\fontsize{9pt}{11pt}\selectfont
+本次结果提示 {\bf 柔嫩梭菌、双歧杆菌、阿克曼氏菌、乳酸杆菌} 结果异常，建议调节饮食结构、补充益生菌、益生元，促进肠道健康。
+\end{spacing}
+
+\setlength{\arrayrulewidth}{.5pt}
+\vspace*{-2mm}
+\begin{center}
+\begin{tabular}{K{3.1cm}K{13.5cm}}
+\hline
+
+\parbox[c][3cm]{.95\hsize}{
+\noindent
+\includegraphics[scale=0.8]{baohulifoodwithvline.pdf}
+}
+ &
+%\hspace*{1mm}
+\parbox{\hsize}{
+\vspace*{0.5mm}
+\begin{spacing}{1.5}
+\fontsize{10pt}{10pt}\selectfont{\bf {膳食建议 \\}}
+{\includegraphics[scale=1.0]{xiaoyuandian.pdf}\fontsize{9pt}{10pt}\selectfont \ 建议您在日常饮食中多选择秋葵、芹菜、玉米、洋葱、燕麦等食物，促进乳酸杆菌、阿克曼氏菌、双歧杆菌等有益菌的生长，增强肠道健康保护力。}
+\end{spacing}
+} \\
+\hline
+
+\parbox[c][4.5cm]{.95\hsize}{
+\noindent
+\includegraphics[scale=0.8]{baohuliprobioticswithvline.pdf}
+}
+ &
+%\hspace*{1mm}
+\parbox{\hsize}{
+\vspace*{0.5mm}
+\begin{spacing}{1.5}
+\fontsize{10pt}{10pt}\selectfont{\bf {肠道调节建议 \\}}
+{\includegraphics[scale=1.0]{xiaoyuandian.pdf}\fontsize{9pt}{10pt}\selectfont \ {\bf {补充益生菌：}} 建议您补充含BB-12的双歧杆菌活菌制剂或者含双歧杆菌的益生菌酸奶、含嗜酸乳杆菌LA-5的乳酸杆菌活菌制剂或者含乳酸杆菌的酸奶等益生菌产品，促进乳酸杆菌、阿克曼氏菌、双歧杆菌等有益菌的生长，抑制有害菌的异常增殖，调节肠道菌群平衡。 \\}
+{\includegraphics[scale=1.0]{xiaoyuandian.pdf}\fontsize{9pt}{10pt}\selectfont \ {\bf {补充益生元：}} 建议您补充低聚果糖、菊粉、低聚半乳糖、低聚木糖、富含多酚的蔓越莓提取物等益生元，促进乳酸杆菌、阿克曼氏菌、双歧杆菌等有益菌的生长，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。}
+\end{spacing}
+} \\
+\hline
+
+\end{tabular}
+\end{center}
+
+
+\end{document}
+

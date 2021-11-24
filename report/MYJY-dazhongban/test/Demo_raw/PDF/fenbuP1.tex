@@ -1,0 +1,301 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\NewEnviron{RCtable}[1]
+  {%
+    \begin{tcolorbox}[#1]\BODY\end{tcolorbox}%
+  }
+
+
+
+\begin{document}
+
+\vspace*{5mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+%{\noindent\bf\sanhao 二、肠道菌含量}
+
+%\vspace*{2mm}
+
+\begin{spacing}{1.5}
+\begin{LRaside}[.8]{1.3 常见肠道菌含量}
+\noindent
+\includegraphics[width=\linewidth]{hanliang.pdf}
+\asidebreak %
+正常人体肠道内寄居着数量庞大、种类繁多的微生物，其中以细菌为主，包括有益菌和有害菌。一般情况下，这些细菌的种类和数量都是相对固定的，它们在肠道内各司其职，共同维持肠道的正常运转。另外，食物中含有不常驻肠道的外源性致病菌，若不慎摄入，则有可能在肠道内大量繁殖，导致相关疾病。
+\end{LRaside}
+\end{spacing}
+
+\vspace*{4mm}
+%\noindent
+%2.1 您的常见肠道菌含量
+%\vspace*{1.5mm}
+
+%\begin{RCtable}{
+%  rtab=1,
+%  tabularx*={\arrayrulecolor{gray2}}%
+%    {M{0.3\linewidth} M{0.31\linewidth}M{0.34\linewidth}}
+%}
+%\fuentecabecera{测试项目} & \fuentecabecera{健康状态提示} & \fuentecabecera{检测结果评价} \\[3pt]
+%\bf{测试项目} & \bf{健康状态提示} & \bf{检测结果评价} \\[3pt]
+%\end{RCtable}
+
+\begin{tctabularx}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.55cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测结果评价}
+\end{tctabularx}
+
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 拟杆菌属\\常见肠道菌，多数与人体互利共生，少数菌种可能会导致菌血症等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 布劳特氏菌属\\发酵多种植物多糖产生乙酸盐，促进肠道健康} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 柔嫩梭菌属\\发酵纤维素产生丁酸等有益物质，抑制肠道炎症，促进肠道健康} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-3.17cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\color{orange}\lantxh 偏低{\\ \bahao 不利于产生有益物质及抑制肠道炎症}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 偏低 \\ \bahao 不利于产生有益物质及抑制肠道炎症} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 粪球菌属\\发酵多糖，能够产生丁酸、乙酸等有益物质，调节肠道环境} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 瘤胃球菌属\\帮助降解纤维素等人体不能消化的多糖，在肠道中广泛分布} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 颤螺菌属\\帮助抗性淀粉和脂肪消化，保持正常体重，抑制肠道炎症} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 副拟杆菌属\\帮助消化纤维素、抗性淀粉，保护肠道，抑制肠道炎症} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 毛螺菌属\\发酵多种糖类产生乙酸、甲酸等物质，能保护肠黏膜，抑制肠道炎症} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 多尔氏菌属\\肠道的主要产气菌之一，与肠易激综合征等疾病相关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 链球菌属\\多数为共生菌，少数在免疫力弱时可能引起化脓性炎症、肺炎等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 普雷沃氏菌属\\肠道共生菌，偏素食人群中含量高，少数菌种与感染、牙周疾病有关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 罗斯拜瑞氏菌属\\产生丁酸等有益物质，抑制肠道炎症，有利于肠道及人体健康} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-3.17cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\color{orange}\lantxh 偏低{\\ \bahao 不利于产生有益物质及抑制肠道炎症}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 偏低 \\ \bahao 不利于产生有益物质及抑制肠道炎症} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 萨特氏菌属\\可能与胃肠道感染相关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-3.17cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\color{orange}\lantxh 偏高{\\ \bahao 可能增加胃肠道感染风险}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 偏高 \\ \bahao 可能增加胃肠道感染风险} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 双歧杆菌属\\有益菌，降解人体不能消化的多糖，产乳酸，调节免疫及肠道环境} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 阿克曼氏菌属\\降解粘蛋白、调节免疫，有利于肠黏膜完整性，保持正常体重} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 梭菌属\\多数为致病菌，可能引起腹泻、肠炎等疾病} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 嗜血杆菌属\\共生菌，某些菌种在一定条件下可引起化脓性感染、败血症等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 柯林斯氏菌属\\发酵多种糖类产生氢气、乙醇等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 假单胞菌属\\分布广泛，部分菌种为条件致病菌，引起医院内获得性感染} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 韦荣氏球菌属\\分解乳酸为乙酸和丙酸，调节肠道pH，极少数菌种可能引起炎症} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 乳酸杆菌属\\肠道益生菌，能够生成乳酸，抑制有害菌及炎症，调节肠道环境} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 肠球菌属\\多数为共生菌，产生乳酸。少数菌种可能导致多种感染症状} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 嗜胆菌属\\共生菌，可能与长期高脂高蛋白饮食有关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 沙雷氏菌属\\多数为致病菌，导致尿路感染、腹膜炎等多种医院内感染} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 放线菌属\\多数为共生菌，少数在免疫力弱时可引起内源性感染、龋齿等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 毛杆菌属\\肠道共生菌，发酵葡萄糖产生乳酸及少量乙酸和丁酸} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 葡萄球菌属\\多数为共生菌，分解葡萄糖等产酸。少数可引起感染、食物中毒等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 芽孢杆菌属\\多数为共生菌，降解复杂碳水化合物。少数可引起感染、食物中毒等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 阿德勒氏菌属\\帮助分解食物中的异黄酮产生雌马酚，有利于肠道及人体健康} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 嗜蛋白胨菌属\\利用蛋白胨作为主要能源，产生丁酸，与多组织及血液感染有关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 克雷伯氏菌属\\多为致病菌，可能导致肺炎、尿路感染、软组织感染、菌血症等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 脱硫弧菌属\\产生硫化氢，刺激肠道产生炎症反应，不利于肠道健康} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 爱格士氏菌属\\多为致病菌，与溃疡性结肠炎、肛门脓肿、菌血症等疾病有关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 乳球菌属\\发酵葡萄糖产生乳酸，调节肠道pH，抑制有害菌的生长} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 真杆菌属\\产生短链脂肪酸等有益物质，少数可能与炎症、菌血症等相关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 埃希氏菌属\\多数为共生菌，产生维生素K，少数与腹泻、尿道感染、败血症等相关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 别样杆菌属\\共生菌，降解多糖产生琥珀酸和乙酸，可能与长期高脂饮食相关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 丁酸弧菌属\\降解多种碳水化合物，产生丁酸，参与蛋白质和脂类代谢} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常{}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 正常} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 弯曲杆菌属\\多数菌种为致病菌，可引起弯曲菌病，表现为严重腹泻或痢疾综合征} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-3.17cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\color{orange}\lantxh 偏高{\\ \bahao 可能增加腹泻或痢疾风险}} }\end{center} \end{minipage} \\
+% & \begin{minipage}{4.60cm}\begin{center}{{\color{red}\lantxh 偏高 \\ \bahao 可能增加腹泻或痢疾风险} }\end{center} \end{minipage} \\
+\hline
+\multicolumn{3}{l}{}\\
+\multicolumn{3}{l}{\includegraphics[scale=1]{greencircle.pdf} {\fontsize{9.3pt}{11pt}\selectfont\bf 绿色表示健康}   \includegraphics[scale=1]{orangecircle.pdf}  {\fontsize{9.3pt}{11pt}\selectfont\bf 橙色表示需要关注}  \includegraphics[scale=1]{redcircle.pdf} {\fontsize{9.3pt}{11pt}\selectfont\bf 红色表示有风险}}
+\end{longtable}
+
+\vspace*{6mm}
+
+\begin{spacing}{1.5}
+\begin{LRaside}[.8]{结果分析}
+\noindent
+\includegraphics[width=\linewidth]{result_fenbu.pdf}
+\asidebreak %
+综合您的肠道菌群检测结果，
+您肠道内的柔嫩梭菌属、罗斯拜瑞氏菌属、萨特氏菌属、弯曲杆菌属指标异常，可能增加胃肠道感染、腹泻、痢疾的风险，不利于产生有益物质、抑制肠道炎症。肠道菌群含量维持动态平衡，少数菌种数量的改变并非致病的直接原因，整体肠道菌群失衡，才可能引起疾病的发生。
+\end{LRaside}
+\end{spacing}
+
+\end{document}
+

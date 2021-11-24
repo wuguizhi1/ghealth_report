@@ -1,0 +1,48 @@
+\input format.tex
+
+%\usepackage{arydshln}
+
+\begin{document}
+
+\vspace*{3mm}
+%%%
+\setlength{\arrayrulewidth}{0.5pt}
+\fontsize{9.3pt}{17pt}\selectfont
+\color{gray2}
+
+\begin{center}
+{\bf\sanhao 健康建议}
+\end{center}
+
+%\vspace*{1mm}
+\begin{spacing}{1.25}
+\bigskip
+\noindent
+根据您本次检测结果，我们从膳食、益生菌、益生元等方面为您制定了肠道菌群干预方案，建议您遵照干预方案进行调理，以促进肠道菌群平衡。并且建议您调理3个月后复检肠道菌群，以便了解干预效果，调整干预方案，帮助您持续提升肠道健康水平。
+
+\bigskip
+\tabcolsep=6pt
+\fontsize{9.3pt}{9.8pt}\selectfont
+\begin{tctabularx}{tabularx={p{15.4cm}<{\centering}}}
+\\[-6.769pt]
+\cellcolor{topcolor} \raisebox{1pt}{\color{gray0}\xiaosihao\lantxh\bf 膳食方案} \\
+\end{tctabularx}
+
+{
+\lantxh
+\vspace*{-4.25mm}
+\noindent
+\begin{longtable}{|p{1.25cm}@{}p{2cm}|p{11.732cm}|}
+[% FOREACH item = fangan.food.items.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip7pt\raisebox{-1.5ex}{\includegraphics[width=.9cm]{[% item.pic %]}}\vskip7pt} & \parbox[c]{\hsize}{\centering\xiaowuhao \color{gray2}\vskip7pt[% item.name %]\vskip7pt} & \parbox[c]{\hsize}{\color{gray2}\vskip7pt[% item.desc %]\vskip7pt}\\
+[% END -%]
+\hline
+\end{longtable}
+\vspace*{-6mm}
+\begin{longtable}{p{0.1cm}p{15.1cm}}
+\includegraphics{xiaofangkuai.pdf} & {\qihao [% fangan.food.remark %]} \\
+\end{longtable}
+}
+\end{spacing}
+\end{document}

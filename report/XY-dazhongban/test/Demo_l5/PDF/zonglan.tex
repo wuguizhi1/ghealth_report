@@ -1,0 +1,68 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\begin{document}
+
+\vspace*{3mm}
+\parindent0pt
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+{\bf\sanhao 检测结果总览}
+
+\vspace*{2mm}
+
+\begin{LRaside}{肠道菌群概况}
+\noindent\centering
+\includegraphics[width=\linewidth]{gaikuang_red.pdf}
+\asidebreak % 分栏
+\begin{tabular}{p{1.5cm}p{5.2cm}<{\centering}p{0cm}@{}}
+\hspace{-2.5mm}\parbox[c]{\hsize}{\vskip7pt {总结果：} \vskip7pt} &\hspace{-13mm}\parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-2.3cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+\end{tabular}
+\begin{spacing}{1.25}
+1、您本次肠道菌群共检测出细菌种类175种，肠道菌群多样性
+高，说明您的肠道菌群组成十分丰富，菌群失调风险低。
+您肠道中的有益菌含量
+高，优于6.77{\%}的参考人群。
+有害菌含量
+高于参考人群，请您注意调理肠道菌群。\par\bigskip
+2、您的肠道内
+检测出4种致病菌，其中缓慢爱格士氏菌、胶胨罗斯氏菌、副流感嗜血杆菌、咽峡炎链球菌含量高于参考人群，可能会损害您的肠道健康，建议您持续监测肠道健康。
+\end{spacing}
+\end{LRaside}
+
+\begin{LRaside}{代谢分析及免疫}
+\noindent
+\includegraphics[width=\linewidth]{fenbu_orange.pdf}
+\asidebreak % 分栏
+\begin{tabular}{p{1.5cm}p{5.2cm}<{\centering}p{0cm}@{}}
+\hspace{-2.5mm}\parbox[c]{\hsize}{\vskip7pt {总结果：} \vskip7pt} &\hspace{-13mm}\parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-3.86cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+\end{tabular}
+\begin{spacing}{1.25}
+您肠道内参与维生素B1、维生素B2、维生素B3、维生素B5、维生素B6等10种营养物质代谢的菌群含量优于参考人群，有益于人体健康；参与胆碱代谢的菌群含量异常，请关注您的异常指标，持续监测肠道健康。
+\end{spacing}
+\end{LRaside}
+
+
+\begin{LRaside}{相关疾病风险分析}
+\noindent
+\includegraphics[width=\linewidth]{gongneng_red.pdf}
+\asidebreak %分栏
+\begin{tabular}{p{1.5cm}p{5.2cm}<{\centering}p{0cm}@{}}
+\hspace{-2.5mm}\parbox[c]{\hsize}{\vskip7pt {总结果：} \vskip7pt} &\hspace{-13mm}\parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-2.3cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+\end{tabular}
+\begin{spacing}{1.25}
+综合本次肠道菌群检测结果，
+可能会增加2型糖尿病、炎症性肠病、高血压的风险，需尽量避免相关疾病的高危因素，注意调理肠道菌群结构，改善肠道环境，降低疾病风险，还需注意定期检查。
+\end{spacing}
+\end{LRaside}
+颜色指示 \includegraphics[scale=1]{greencircle.pdf} {\bf 绿色表示健康}   \includegraphics[scale=1]{orangecircle.pdf}  {\bf 橙色表示需要关注}  \includegraphics[scale=1]{redcircle.pdf} {\bf 红色表示有风险}
+
+\end{document}

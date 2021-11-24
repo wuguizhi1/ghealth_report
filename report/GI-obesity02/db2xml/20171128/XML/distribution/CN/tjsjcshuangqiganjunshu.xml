@@ -1,0 +1,91 @@
+<opt>
+  <CN>
+    <bacteria>
+      <desc>双歧杆菌属|Bifidobacterium|Genus;</desc>
+      <descfull></descfull>
+    </bacteria>
+    <etitle>Bifidobacterium</etitle>
+    <order>2</order>
+    <pubmed>
+      <desc></desc>
+    </pubmed>
+    <section1>
+      <name>菌群分布</name>
+      <order>2</order>
+    </section1>
+    <suggestion>
+      <healthy>
+        <l1>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>调节免疫；肠道环境</effectdesc>
+          <mechanism>不利于调节免疫及肠道环境</mechanism>
+          <mechanismfull>不利于调节免疫及肠道环境
+
+</mechanismfull>
+          <note></note>
+        </l1>
+        <l2>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>调节免疫；肠道环境</effectdesc>
+          <mechanism>不利于调节免疫及肠道环境</mechanism>
+          <mechanismfull>不利于调节免疫及肠道环境
+
+</mechanismfull>
+          <note></note>
+        </l2>
+        <l3>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc></effectdesc>
+          <mechanism></mechanism>
+          <mechanismfull></mechanismfull>
+          <note></note>
+        </l3>
+        <l4>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>调节免疫；肠道环境</effectdesc>
+          <mechanism>有利于调节免疫及肠道环境</mechanism>
+          <mechanismfull>有利于调节免疫及肠道环境
+
+</mechanismfull>
+          <note></note>
+        </l4>
+        <l5>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>调节免疫；肠道环境</effectdesc>
+          <mechanism>有利于调节免疫及肠道环境</mechanism>
+          <mechanismfull>有利于调节免疫及肠道环境
+
+</mechanismfull>
+          <note></note>
+        </l5>
+      </healthy>
+    </suggestion>
+    <summary>
+      <desc>有益菌，可以调节脂肪组织基因表达，可抑制系统性肥胖</desc>
+      <descfull>有益菌，可以调节脂肪组织基因表达，可抑制系统性肥胖
+
+</descfull>
+      <source></source>
+    </summary>
+    <title>双歧杆菌属</title>
+  </CN>
+  <categoey>distribution</categoey>
+  <id>changdaokang_danxiangxi_tizhongguanli_tjsjcshuangqiganjunshu</id>
+  <oriid>tjsjcshuangqiganjunshu</oriid>
+  <orititle>双歧杆菌属</orititle>
+</opt>

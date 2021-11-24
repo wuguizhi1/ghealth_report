@@ -1,0 +1,78 @@
+\input format.tex
+
+%\usepackage{arydshln}
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\begin{document}
+
+%%% diseases
+[% FOREACH disease = changdaojunqun.disease -%]
+
+%%%
+\setlength{\arrayrulewidth}{0.5pt}
+\fontsize{9.3pt}{17pt}\selectfont
+\color{gray2}
+
+\vspace*{0mm}
+\begin{center}
+{\bf\sanhao 相关疾病风险分析—[% disease.name %]}
+\end{center}
+
+\medskip
+
+\noindent
+{\bf\xiaosihao [% name %][% IF age < 16 -%]小朋友[% ELSIF sex == 'F' -%]女士[% ELSIF sex == 'M' -%]先生[% ELSE -%][% END -%]：}
+
+
+\bigskip
+[% disease.summary.line1 %]
+
+[% disease.summary.line2 %]
+
+[% disease.summary.line3 %]
+
+{
+\lantxh
+\fontsize{9.3pt}{9.8pt}\selectfont
+\bigskip
+%\begin{tctabularx}{tabularx={m{3.75cm}m{4.9cm}<{\centering}m{1.22cm}<{\centering}m{1.8cm}<{\centering}m{2cm}<{\centering}}}
+\begin{tctabularx}{tabularx={m{4.8cm}m{5.2cm}<{\centering}m{4.55cm}<{\centering}}}
+%\cellcolor{kelly} &
+%\cellcolor{kelly} &
+%\cellcolor{kelly} &
+%\cellcolor{kelly} &
+%\cellcolor{kelly}
+&&
+\\[-6pt]
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black70}\bf 测试项目} &
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black70}\bf 分布} &
+%\cellcolor{kelly} \raisebox{2.614pt}{\color{black70}\bf 检测值} &
+%\cellcolor{kelly} \raisebox{2.614pt}{\color{black70}\bf 参考范围} &
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black70}\bf 检测结果}
+%{\color{black70}\bf 测试项目} & {\color{black70}\bf 分布} & {\color{black70}\bf 检测值} &{\color{black70}\bf 参考范围} & {\color{black70}\bf 检测结果}
+\end{tctabularx}
+
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+%\begin{longtable}{m{3.75cm}m{5cm}<{\centering}m{0cm}@{}m{1.22cm}<{\centering}m{1.8cm}<{\centering}m{2cm}<{\centering}}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+[% FOREACH item = disease.items.item -%]
+\hline
+%\parbox[c]{\hsize}{\vskip7pt [% item.name %]\\[% item.desc %] \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.3cm]{[% item.pic %]}}}\vskip7pt}  &\hspace*{[% item.coordinate %]cm}\raisebox{-0.45ex}{\includegraphics{triangle.pdf}}&\liuhao [% item.value %] & \liuhao [% item.range %] & [% item.riskdesc %] \\
+\parbox[c]{\hsize}{\vskip7pt [% item.name %]\\[% item.desc %] \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.3cm]{[% item.pic %]}}}\vskip7pt}  &\hspace*{[% item.coordinate %]cm}\raisebox{-0.45ex}{\includegraphics{triangle.pdf}} & \begin{minipage}{4.60cm}\begin{center}{[% IF item.level == 'l1' -%]低 \\ \bahao [% item.riskdesc %][% ELSIF item.level == 'l2' -%]偏低 \\ \bahao [% item.riskdesc %][% ELSIF item.level == 'l3' -%]正常[% ELSIF item.level == 'l4' -%]偏高 \\ \bahao [% item.riskdesc %][% ELSE -%]高\\ \bahao [% item.riskdesc -%][% END -%] }\end{center} \end{minipage} \\
+[% END -%]
+\hline
+\end{longtable}
+
+\noindent
+\tikz\draw[green2,fill=green2](0,0) circle[radius=4pt]; 区域表示正常人群的一般水平 \tikz\draw[darkblue,fill=darkblue](0,0) circle[radius=4pt]; 区域表示仍在正常水平，但较一般水平偏高或偏低 %\tikz\draw[red,fill=red](0,0) circle[radius=4pt]; 而红色表示为有风险
+
+}
+
+\bigskip
+{\centering {\includegraphics{jieshi.pdf}}}
+\newpage
+[% END -%]
+
+\end{document}

@@ -1,0 +1,118 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage[nodisplayskipstretch]{setspace}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+
+\begin{document}
+
+\vspace*{2mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+\noindent\fontsize{16pt}{18pt}\selectfont{\color{topcolor} 健康管理建议}
+
+\vspace*{1mm}
+\begin{spacing}{1.5}
+\indent{\fontsize{10pt}{11pt}\selectfont {综合您本次肠道有益菌检测，您肠道健康保护力总得分为62分，
+处于正常范围，
+但其中阿克曼氏菌属检测指数偏低，可重点调理。
+建议您：}}
+
+\vspace*{2mm}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+
+\noindent\fcolorbox{topcolor}{topcolor}{
+\parbox[c][7cm]{.18\hsize}{
+\centering {\color{white}\bf 饮食建议}
+}
+}
+\hspace*{.2mm}
+\fcolorbox{black70}{white}{
+\parbox[c][7cm]{.76\hsize}{
+\vspace*{3mm}
+成年人是社会的贡献者、财富的创造者，但成年人在日益繁忙的工作压力和生活压力下，往往无暇顾及自己的健康，加之压力下不健康的饮食模式和缺乏运动，容易在中年之后出现身体健康方面的问题 \\
+{\color{topcolor}\barial 1} \ {\bf 多彩主食} \ 建议米饭、面条、馒头等交替食用，适量搭配糙米、燕麦、紫薯等杂粮杂薯有助于补充B族维生素和营养均衡。\\
+{\color{topcolor}\barial 2} \ {\bf 缤纷蔬果} \ 建议每日摄入5种以上不同的蔬果以满足身体所需的各种维生素。\\
+{\color{topcolor}\barial 3} \ {\bf 优质蛋白} \ 建议选用鸡蛋、鱼虾类、豆腐、鸡肉、猪瘦肉、牛瘦肉等优质蛋白。减少五花肉、猪蹄、牛油、猪皮等含动物性脂肪高的食物。\\
+{\color{topcolor}\barial 4} \ {\bf 健康无忧} \ 1.确保每天蔬菜水果的食用量；2.应减少多油多糖零食的摄入，避免肥胖。酸奶、牛奶、水果、坚果是不错的零食选择；3.避免养成不吃早餐以及吃宵夜的习惯，不缺餐少餐、暴饮暴食；4.建议每天摄入1500-1700毫升的水；5.宜选用菜籽油、葵花籽油等植物油代替猪油的使用；6.保证每日豆制品和奶制品的摄入。\\
+}
+}
+
+\vspace*{2mm}
+\noindent\fcolorbox{topcolor}{topcolor}{
+\parbox[c][3.5cm]{.18\hsize}{
+\centering {\color{white}\bf 健康肠道}
+}
+}
+\hspace*{.2mm}
+\fcolorbox{black70}{white}{
+\parbox[c][3.5cm]{.76\hsize}{
+\vspace*{3mm}
+肠命百岁方可长命百岁！补充适量的益生菌、益生元，助力肠道健康。\\
+{\color{topcolor}\barial 1} \ 您可选择补充富含多酚的蔓越莓提取物、豆类制品等益生元，能帮助阿克曼氏菌属在肠道内增殖，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。
+}
+}
+
+\vspace*{2mm}
+\noindent\fcolorbox{topcolor}{topcolor}{
+\parbox[c][4.5cm]{.18\hsize}{
+\centering {\color{white}\bf 日常点滴}
+}
+}
+\hspace*{.2mm}
+\fcolorbox{black70}{white}{
+\parbox[c][4.5cm]{.76\hsize}{
+\vspace*{3mm}
+成年人应了解自己需要注意哪些健康问题，养成良好的生活习惯能为一生的健康保驾护航 \\
+{\color{topcolor}\barial 1} \ 应戒烟、限酒，不以损害健康为代价去工作、应对客户；\\
+{\color{topcolor}\barial 2} \ 女性需寻找正规的减肥机构，不能通过只吃水果等错误方法盲目减肥；\\
+{\color{topcolor}\barial 3} \ 通过唱歌、旅游、游泳等健康方式调整自己的情绪和压力，注意劳逸结合；\\
+{\color{topcolor}\barial 4} \ 避免长时间玩手机和电脑等，每隔半个小时就起来运动一下；\\
+{\color{topcolor}\barial 5} \ 减少外出就餐的次数，这样的食物往往重油重盐；\\
+{\color{topcolor}\barial 6} \ 定时去正规的机构进行体检，及时了解自己的身体状况。\\
+}
+}
+
+\end{spacing}
+
+\vspace*{2mm}
+{\indent\fontsize{10pt}{11pt}\selectfont\bf 建议您进行更全面的肠道菌群检测并持续监测，获取更具有针对性的膳食方案、微生态制剂推荐及运动指导等健康管理建议，为您的肠道健康保驾护航。}
+
+\end{document}

@@ -1,0 +1,198 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{5mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{gray2}
+
+\begin{center}
+\fontsize{16pt}{\baselineskip}\selectfont\color{black70}\bf {三、详细检测结果}
+\end{center}
+
+\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {胖菌检测结果}}
+
+\begin{tctabularxnew}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.52cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 检测结果评价}
+\end{tctabularxnew}
+
+\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 肠杆菌属\\如阴沟肠杆菌等，产生内毒素引起炎症，导致肥胖} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\color{red}\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 梭菌属\\多数为条件致病菌，如双酶梭菌等或其代谢物 可促进小肠中脂质的吸收} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\color{red}\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 布劳特氏菌属\\肥胖人群中布劳特氏菌属含量明显升高} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\color{red}\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 多尔氏菌属\\肠道里主要产气菌之一，在肥胖人群中易富集} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\color{red}\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 沙门氏菌属\\多数为致病菌，可能增加血液中脂多糖水平，促 进内脏脂肪、皮下脂肪炎症因子表达} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\color{red}\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 弯曲杆菌属\\多数为致病菌，肥胖患者中此类菌属含量增加} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\color{red}\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 志贺氏菌属\\是一类革兰阴性杆菌， 促进机体炎症因子的表达， 增加宿主肥胖风险} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\color{red}\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 克雷伯氏菌属\\多为致病菌，产生肠毒素引起慢性炎症，易引起肥胖} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\color{red}\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 脱硫弧菌属\\产生硫化氢，刺激肠道产生炎症反应，不利于肠道健康} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\color{red}\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 嗜胆菌属\\肥胖人群中此菌含量高，可能与长期高脂高蛋白饮食有关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\color{red}\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\end{longtable}
+
+\clearpage
+
+\vspace*{8mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{gray2}
+
+\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {瘦菌检测结果}}
+
+\begin{tctabularxnew}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.52cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 检测结果评价}
+\end{tctabularxnew}
+
+\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 阿克曼氏菌属\\降解粘蛋白、调节免疫，有利于肠黏膜完整性，保持正常体重} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 双歧杆菌属\\有益菌，可以调节脂肪组织基因表达，可抑制系统性肥胖} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 乳酸杆菌属\\有益菌，有利于降低胆固醇，减少产生内毒素，降低宿主肥胖风险} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 克里斯滕森菌属\\与人体BMI呈负相关} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-1.51cm}\raisebox{-0.45ex}{\includegraphics{cry.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 柔嫩梭菌属\\研究发现肠道中该类细菌的减少，会增加肥胖、炎 症性肠病等患病风险} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 颤螺菌属\\帮助抗性淀粉和脂肪消化，保持正常体重，抑制肠道炎症} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 毛螺菌属\\发酵多种糖类产生短链脂肪酸，保护肠黏膜，抑制炎症，减轻肥胖症状} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 毛杆菌属\\肠道共生菌，发酵葡萄糖产生乳酸及少量乙酸和丁酸} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{
+ {\lantxh 高}
+  }\end{center} \end{minipage} \\
+\hline
+\end{longtable}
+
+\end{document}
+

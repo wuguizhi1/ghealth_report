@@ -1,0 +1,89 @@
+\input format.tex
+
+%\usepackage{arydshln}
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\begin{document}
+
+%%%
+\setlength{\arrayrulewidth}{0.5pt}
+\fontsize{9.3pt}{17pt}\selectfont
+\color{gray2}
+
+%%%% protein
+\vspace*{0mm}
+\begin{center}
+{\bf\sanhao 菌群代谢}
+\end{center}
+
+\medskip
+\noindent
+{\bf\xiaosihao [% name %][% IF sex == 'F' -%]女士[% ELSIF sex == 'M' -%]先生[% ELSE -%][% END -%]：}
+
+\bigskip
+
+人体内存在多种有机小分子，如胆碱、维生素等，是维持人体生命活动必需的有机物质，也是保持人体健康的重要活性物质。这些有机小分子参与机体代谢的调节，对机体的新陈代谢、生长发育及健康有极其重要的作用。肠道菌群能够合成多种人体生长发育所必需的维生素，参与胆碱、胆汁酸等重要有机物质的代谢。
+
+[% IF xiaohuahexishou.metabolism.explain.abnormalN == 0 -%]
+您肠道内参与胆汁酸、类固醇、胆碱等十一项代谢的菌群指标均处于正常水平，请您继续保持良好的饮食及生活习惯。
+[% ELSE -%]
+[% IF xiaohuahexishou.metabolism.explain.good == '-' AND xiaohuahexishou.metabolism.explain.bad == '-' -%]
+[% ELSIF xiaohuahexishou.metabolism.explain.good == '-' -%]
+您肠道内参与[% xiaohuahexishou.metabolism.explain.bad %]代谢的菌群指标存在异常
+[% IF xiaohuahexishou.metabolism.explain.badDisease == '-' AND xiaohuahexishou.metabolism.explain.badEffect == '-' -%]，不利于人体健康[% END -%]
+[% IF xiaohuahexishou.metabolism.explain.badDisease != '-' -%]，可能增加[% xiaohuahexishou.metabolism.explain.badDisease %]的风险[% END -%]
+[% IF xiaohuahexishou.metabolism.explain.badEffect != '-' -%]，不利于[% xiaohuahexishou.metabolism.explain.badEffect %][% END -%]
+，需引起注意，建议持续监测肠道健康。
+[% ELSIF xiaohuahexishou.metabolism.explain.bad == '-' -%]
+您肠道内参与[% xiaohuahexishou.metabolism.explain.good %]代谢的菌群指标优于参考人群
+[% IF xiaohuahexishou.metabolism.explain.goodDisease == '-' AND xiaohuahexishou.metabolism.explain.goodEffect == '-' -%]，有益于人体健康[% END -%]
+[% IF xiaohuahexishou.metabolism.explain.goodDisease != '-' -%]，可能降低[% xiaohuahexishou.metabolism.explain.goodDisease %]的风险[% END -%]
+[% IF xiaohuahexishou.metabolism.explain.goodEffect != '-' -%]，有利于[% xiaohuahexishou.metabolism.explain.goodEffect %][% END -%]
+。
+[% ELSE -%]
+您肠道内参与[% xiaohuahexishou.metabolism.explain.good %]代谢的菌群指标优于参考人群[% IF xiaohuahexishou.metabolism.explain.badDisease == '-' AND xiaohuahexishou.metabolism.explain.badEffect == '-' -%]，有益于人体健康[% END -%][% IF xiaohuahexishou.metabolism.explain.goodDisease != '-' -%]，可能降低[% xiaohuahexishou.metabolism.explain.goodDisease %]的风险[% END -%][% IF xiaohuahexishou.metabolism.explain.goodEffect != '-' -%]，有利于[% xiaohuahexishou.metabolism.explain.goodEffect %][% END -%]；您肠道内参与[% xiaohuahexishou.metabolism.explain.bad %]代谢的菌群指标存在异常[% IF xiaohuahexishou.metabolism.explain.badDisease == '-' AND xiaohuahexishou.metabolism.explain.badEffect == '-' -%]，不利于人体健康[% END -%][% IF xiaohuahexishou.metabolism.explain.badDisease != '-' -%]，可能增加[% xiaohuahexishou.metabolism.explain.badDisease %]的风险[% END -%][% IF xiaohuahexishou.metabolism.explain.badEffect != '-' -%]，不利于[% xiaohuahexishou.metabolism.explain.badEffect %][% END -%]，需引起注意，建议持续监测肠道健康。
+[% END -%]
+[% END -%]
+
+\fontsize{9.3pt}{9.8pt}\selectfont
+\bigskip
+{
+\lantxh
+%\begin{tctabularx}{tabularx={m{3.75cm}m{4.9cm}<{\centering}m{1.22cm}<{\centering}m{1.8cm}<{\centering}m{2cm}<{\centering}}}
+\begin{tctabularx}{tabularx={m{4.8cm}m{5.2cm}<{\centering}m{4.55cm}<{\centering}}}
+%\cellcolor{kelly} &
+%\cellcolor{kelly} &
+%\cellcolor{kelly} &
+%\cellcolor{kelly} &
+%\cellcolor{kelly}
+&&
+\\[-6pt]
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black00}\bf 测试项目} &
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black00}\bf 分布} &
+%\cellcolor{kelly} \raisebox{2.614pt}{\color{black00}\bf 检测值} &
+%\cellcolor{kelly} \raisebox{2.614pt}{\color{black00}\bf 参考范围} &
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black00}\bf 检测结果}
+%{\color{black70}\bf 测试项目} & {\color{black00}\bf 分布} & {\color{black00}\bf 检测值} &{\color{black00}\bf 参考范围} & {\color{black00}\bf 检测结果}
+\end{tctabularx}
+
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+%\begin{longtable}{m{3.75cm}m{5cm}<{\centering}m{0cm}@{}m{1.22cm}<{\centering}m{1.8cm}<{\centering}m{2cm}<{\centering}}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+[% FOREACH item = xiaohuahexishou.metabolism.items.item -%]
+\hline
+%\parbox[c]{\hsize}{\vskip7pt [% item.name %]\\[% item.desc %] \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.3cm]{[% item.pic %]}}}\vskip7pt}  &\hspace*{[% item.coordinate %]cm}\raisebox{-0.45ex}{\includegraphics{triangle.pdf}} & \begin{minipage}{4.60cm}\begin{center}{[% IF item.level == 'l1' -%]低 \\ \bahao [% item.riskdesc %][% ELSIF item.level == 'l2' -%]偏低 \\ \bahao [% item.riskdesc %][% ELSIF item.level == 'l3' -%]正常[% ELSIF item.level == 'l4' -%]偏高 \\ \bahao [% item.riskdesc %][% ELSE -%]高\\ \bahao [% item.riskdesc -%][% END -%] }\end{center} \end{minipage} \\
+\parbox[c]{\hsize}{\vskip7pt [% item.name %][% IF item.desc != '-' -%]\\[% item.desc %][% END -%] \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.3cm]{[% item.pic %]}}}\vskip7pt}  &\hspace*{[% item.coordinate %]cm}\raisebox{-0.45ex}{\includegraphics{triangle.pdf}} & \begin{minipage}{4.60cm}\begin{center}{[% IF item.level == 'l1' -%]低[% ELSIF item.level == 'l2' -%]偏低[% ELSIF item.level == 'l3' -%]正常[% ELSIF item.level == 'l4' -%]偏高[% ELSE -%]高[% END -%][% IF item.riskdesc != '-' -%]\\ \bahao [% item.riskdesc %][% END -%] }\end{center} \end{minipage} \\
+[% END -%]
+\hline
+\end{longtable}
+
+\noindent
+\tikz\draw[green2,fill=green2](0,0) circle[radius=4pt]; 区域表示正常人群的一般水平 \tikz\draw[darkblue,fill=darkblue](0,0) circle[radius=4pt]; 区域表示仍在正常水平，但较一般水平偏高或偏低 %\tikz\draw[red,fill=red](0,0) circle[radius=4pt]; 而红色表示为有风险
+}
+
+\bigskip
+{\centering {\includegraphics{jieshi.pdf}}}
+
+\end{document}

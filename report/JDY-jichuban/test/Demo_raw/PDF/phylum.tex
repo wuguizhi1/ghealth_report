@@ -1,0 +1,134 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{gray2}
+
+\vspace*{3mm}
+
+\noindent{\fontsize{9pt}{11pt}\selectfont\bf{ 二、肠道菌群相对丰度}}
+
+%\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{4cm}<{\centering}|m{3cm}<{\centering}|m{3cm}<{\centering}|m{4cm}<{\centering}|}
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} {\lantxh\bf 检测内容} \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh\bf 检测结果}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh\bf 检测值}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh\bf 参考范围}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 拟杆菌门(Bacteroidetes) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 正常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 45.79 {\%}}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≤ 63.44 {\%}}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 厚壁菌门(Firmicutes) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 正常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 37.18 {\%}}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≤ 58.43 {\%}}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 变形菌门(Proteobacteria) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 正常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 10.79 {\%}}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≤ 13.45 {\%}}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 蓝藻门(Cyanobacteria) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 异常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 3.10 {\%}}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≤ 0.60 {\%}}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 迷踪菌门(Elusimicrobia) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 异常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 0.17 {\%}}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≤ 0.00 {\%}}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 柔膜菌门(Tenericutes) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 正常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 0.01 {\%}}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≤ 0.57 {\%}}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 放线菌门(Actinobacteria) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 正常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 0.01 {\%}}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≤ 5.58 {\%}}\end{center} \end{minipage} \\
+\hline
+\begin{minipage}{4cm}\begin{center}{\vspace*{2mm} \lantxh 厚壁菌门/拟杆菌门(FBR) \vspace*{2mm}}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 正常}\end{center} \end{minipage} &
+\begin{minipage}{3cm}\begin{center}{\lantxh 0.81}\end{center} \end{minipage} &
+\begin{minipage}{4cm}\begin{center}{\lantxh ≤ 4.93}\end{center} \end{minipage} \\
+\hline
+\end{longtable}
+
+\vspace*{0mm}
+
+\begin{spacing}{1.25}
+\noindent\fontsize{9pt}{11pt}\selectfont {人体肠道中超过98{\%}的菌群归属于以下四个菌门，拟杆菌门、厚壁菌门、变形菌门和放线菌门，厚壁菌门/拟杆菌门（FBR）比值根据研究表明与肥胖风险正相关。您的肠道菌群相对丰度性与参考人群趋势一致，说明您的肠道菌群组成结构及稳定性良好，有利于肠道及人体健康。您的肠道菌群不易受到外界不良因素的干扰，但请避免不良作息、刺激性食物、药物滥用等，这样有助于保持良好的肠道菌群相对丰度，维持肠道微生态健康。}
+
+\end{spacing}
+
+\vspace*{8mm}
+
+\noindent{\fontsize{9pt}{11pt}\selectfont\bf{ 肠型分析}}
+
+\vspace*{4mm}
+
+\begin{minipage}[c]{.25\textwidth}
+\begin{center}
+\noindent\includegraphics[scale=0.5]{enterotype_2.pdf}
+\end{center}
+\end{minipage}
+\begin{minipage}[c]{.47\textwidth}
+\noindent\fontsize{9pt}{11pt}\selectfont {经检测，您的肠型为\RNum{2}型，普氏菌型}
+\end{minipage}
+
+\vspace*{3mm}
+\begin{spacing}{1.25}
+\noindent{\ding{84}\ding{84}\ding{84}} \\
+\noindent\fontsize{9pt}{11pt}\selectfont {肠型\RNum{1}，肠道中菌属组成以拟杆菌属为主（Bacteriodes），含有合成核黄素（B2）、泛酸（B5）的菌类，合成维生素B7（生物素）与维生素K的酶较多，
+主要吸收降解人体无法消化的复杂多糖，产生短链脂肪酸等有益于肠道健康的物质，同时，菌属中少数菌种具有一定致病性（脆弱拟杆菌等）。
+研究表明，日常补充较多蛋白质和动物脂肪的人群拟杆菌属含量更高。} \\
+\noindent\fontsize{9pt}{11pt}\selectfont {肠型\RNum{2}，肠道中菌属组成以普氏菌属为主（Prevotella），合成维生素B1（硫胺素）与维生素K的酶较多，帮助降解蛋白及部分碳水化合物，
+研究表明，素食为主特别是高纤维素饮食习惯的人群普氏菌属含量更高。} \\
+\noindent\fontsize{9pt}{11pt}\selectfont {肠型\RNum{3}，肠道中菌属组成以瘤胃球菌属为主（Ruminococcus），瘤胃球菌属主要分解碳水化合物（纤维素），少数也可以分解黏蛋白。
+该肠型的人群较少，一般饮食结构比较极端的情况下才可能会出现该肠型。}
+\end{spacing}
+
+\end{document}
+

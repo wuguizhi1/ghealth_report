@@ -1,0 +1,128 @@
+<opt>
+  <CN>
+    <bacteria>
+      <desc></desc>
+      <descfull></descfull>
+    </bacteria>
+    <etitle>Fatty acid metabolism</etitle>
+    <order>2</order>
+    <pubmed>
+      <desc></desc>
+    </pubmed>
+    <section1>
+      <name>消化和吸收</name>
+      <order>1</order>
+    </section1>
+    <section2>
+      <name>脂肪的消化和吸收</name>
+      <order>3</order>
+    </section2>
+    <suggestion>
+      <healthy>
+        <l1>
+          <actiondesc></actiondesc>
+          <actionless></actionless>
+          <actionmore></actionmore>
+          <actionrule></actionrule>
+          <aiddesc></aiddesc>
+          <aiddisease>动脉硬化</aiddisease>
+          <aiddrug></aiddrug>
+          <aidnutrition></aidnutrition>
+          <dietdesc>低脂；低糖；低热量；适量粗粮
+
+</dietdesc>
+          <dietless>高脂肪；高热量</dietless>
+          <dietmore></dietmore>
+          <effect>有害</effect>
+          <effectdesc>降脂</effectdesc>
+          <mechanism>不利于降脂，可能增加动脉硬化风险</mechanism>
+          <mechanismfull>代谢能力低，导致人体降脂、抗动脉硬化能力低</mechanismfull>
+        </l1>
+        <l2>
+          <actiondesc></actiondesc>
+          <actionless></actionless>
+          <actionmore></actionmore>
+          <actionrule>关注血糖血脂血压；保持心态平和</actionrule>
+          <aiddesc></aiddesc>
+          <aiddisease>动脉硬化</aiddisease>
+          <aiddrug></aiddrug>
+          <aidnutrition></aidnutrition>
+          <dietdesc></dietdesc>
+          <dietless></dietless>
+          <dietmore></dietmore>
+          <effect>有害</effect>
+          <effectdesc>降脂</effectdesc>
+          <mechanism>不利于降脂，可能增加动脉硬化风险</mechanism>
+          <mechanismfull>代谢能力较低，导致人体降脂、抗动脉硬化能力较低</mechanismfull>
+        </l2>
+        <l3>
+          <actiondesc></actiondesc>
+          <actionless></actionless>
+          <actionmore></actionmore>
+          <actionrule></actionrule>
+          <aiddesc></aiddesc>
+          <aiddisease></aiddisease>
+          <aiddrug></aiddrug>
+          <aidnutrition></aidnutrition>
+          <dietdesc></dietdesc>
+          <dietless></dietless>
+          <dietmore></dietmore>
+          <effect>正常</effect>
+          <effectdesc></effectdesc>
+          <mechanism></mechanism>
+          <mechanismfull></mechanismfull>
+        </l3>
+        <l4>
+          <actiondesc></actiondesc>
+          <actionless></actionless>
+          <actionmore></actionmore>
+          <actionrule></actionrule>
+          <aiddesc></aiddesc>
+          <aiddisease></aiddisease>
+          <aiddrug></aiddrug>
+          <aidnutrition></aidnutrition>
+          <dietdesc></dietdesc>
+          <dietless></dietless>
+          <dietmore></dietmore>
+          <effect>有益</effect>
+          <effectdesc>降脂；抗动脉硬化</effectdesc>
+          <mechanism>有利于降脂、抗动脉硬化</mechanism>
+          <mechanismfull>代谢能力较高，有利于降脂、抗动脉硬化</mechanismfull>
+        </l4>
+        <l5>
+          <actiondesc></actiondesc>
+          <actionless></actionless>
+          <actionmore></actionmore>
+          <actionrule></actionrule>
+          <aiddesc></aiddesc>
+          <aiddisease></aiddisease>
+          <aiddrug></aiddrug>
+          <aidnutrition></aidnutrition>
+          <dietdesc>低脂
+
+低糖
+
+低热量
+
+适量粗粮</dietdesc>
+          <dietless>高脂肪 高热量</dietless>
+          <dietmore></dietmore>
+          <effect>有益</effect>
+          <effectdesc>降脂；抗动脉硬化</effectdesc>
+          <mechanism>有利于降脂、抗动脉硬化</mechanism>
+          <mechanismfull>代谢能力高，有利于降脂、抗动脉硬化</mechanismfull>
+        </l5>
+      </healthy>
+    </suggestion>
+    <summary>
+      <desc>降脂、抗动脉硬化</desc>
+      <descfull>必需脂肪酸不仅为营养所必需，而且与儿童生长发育和成长健康有关，更有降血脂、防治冠心病等治疗作用，且与智力发育、记忆等生理功能有一定关系。</descfull>
+      <source></source>
+    </summary>
+    <title>脂肪酸代谢</title>
+  </CN>
+  <categoey>absorption</categoey>
+  <id>tkehu_changdaoweishengtai_zunxiangban_zxzhifangsuandaixie</id>
+  <oriid>zxzhifangsuandaixie</oriid>
+  <orititle>脂肪酸代谢</orititle>
+</opt>

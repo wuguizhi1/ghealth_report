@@ -1,0 +1,67 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+\usepackage{setspace}
+
+\begin{document}
+
+\vspace*{10mm}
+
+\noindent\fcolorbox{topcolor}{topcolor}{
+\parbox[c][1cm]{\textwidth}{
+\begin{center}
+\fontsize{20pt}{\baselineskip}\selectfont\color{white}{\bf {常道康\textsuperscript{\xiaowuhao{TM}}-肠道益生菌检测结果}}
+\end{center}
+}
+}
+
+
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{8pt}{11pt}\selectfont
+\color{black70}
+
+\vspace*{4mm}
+
+\fontsize{11pt}{13pt}\selectfont {样本编码：[% barcode %]  \qquad 年龄：[% agestr %] \qquad 送检机构：[% source %] \\\\}
+\indent\fontsize{15pt}{17pt}\selectfont {致：~~[% name %]~~ [% IF age <= 12 -%]小朋友[% ELSIF sex == 'F' -%]女士[% ELSIF sex == 'M' -%]先生[% END -%] \\\\}
+\indent\fontsize{11pt}{13pt}\selectfont {\qquad 您好！\\}
+\begin{spacing}{1.5}
+\indent\fontsize{9pt}{11pt}\selectfont {感谢您选择常道康\textsuperscript{\jiuhao{TM}}肠道益生菌检测服务，在此我们对您的信任表示衷心感谢！\\
+\indent 现将您[% receivedate %]送检结果呈上，请您详阅：\\}
+\end{spacing}
+
+\begin{spacing}{1.5}
+{\noindent\fontsize{15pt}{17pt}\selectfont\color{topcolor} {肠道益生菌检测结果\\}}
+{\par\fontsize{9pt}{11pt}\selectfont {[% gaikuang.desc.youyijun.source %]}}
+\end{spacing}
+
+\begin{LRaside2}{\bf 您本次肠道益生菌总评分如下}
+\begin{center}
+\setlength{\unitlength}{1cm}
+\begin{picture}(20,2.6)(0,-0.8)
+\put([% gaikuang.desc.youyijun.dropcoordinate %],0.55){\includegraphics[scale=1]{[% gaikuang.desc.youyijun.strawpic %]}}
+\put(0.5,-0.2){\includegraphics[scale=1]{baohulibar03.pdf}}
+\end{picture}
+\indent\fontsize{9pt}{11pt}\selectfont\bf {综合您本次肠道益生菌检测，您本次益生菌检测总评分为
+[% IF gaikuang.desc.youyijun.per100 < 10 -%]{\fontsize{13pt}{14pt}\selectfont\color{level1} [% gaikuang.desc.youyijun.per100 %]分}，有风险
+[% ELSIF gaikuang.desc.youyijun.per100 < 30 -%]{\fontsize{13pt}{14pt}\selectfont\color{level2} [% gaikuang.desc.youyijun.per100 %]分}，需要关注
+[% ELSIF gaikuang.desc.youyijun.per100 < 70 -%]{\fontsize{13pt}{14pt}\selectfont\color{level3} [% gaikuang.desc.youyijun.per100 %]分}，正常
+[% ELSIF gaikuang.desc.youyijun.per100 < 90 -%]{\fontsize{13pt}{14pt}\selectfont\color{level4} [% gaikuang.desc.youyijun.per100 %]分}，优秀
+[% ELSE -%]{\fontsize{13pt}{14pt}\selectfont\color{level5} [% gaikuang.desc.youyijun.per100 %]分}，特别棒。
+[% END -%]
+}
+\includegraphics[scale=1]{underline.pdf}
+\end{center}
+{\par\fontsize{9pt}{11pt}\selectfont\bf {[% gaikuang.desc.youyijun.actionrule %]肠道益生菌评分越高，说明您的肠道越健康；反之，肠
+道益生菌评分越低，则说明您的肠道微生态环境越值得关注。}}
+\end{LRaside2}
+
+\vspace*{-3mm}
+\hspace*{12.5cm}
+\includegraphics{[% gaikuang.desc.youyijun.droppic %]}
+\fontsize{9pt}{11pt}\selectfont {本次检测结果}
+
+\end{document}
+

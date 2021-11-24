@@ -1,0 +1,54 @@
+\input format.tex
+
+%\usepackage{arydshln}
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+\usepackage{makecell}
+\newcommand\mgape[1]{\gape{$\vcenter{\hbox{#1}}$}}
+
+\begin{document}
+
+\setlength{\arrayrulewidth}{0.5pt}
+\fontsize{9.3pt}{17pt}\selectfont
+\color{gray2}
+
+\vspace*{0mm}
+\begin{center}
+{\bf\sanhao 粪便状态}
+\end{center}
+
+\bigskip
+
+粪便状态分析，指的是在临床实践中，有几个和粪便自身状态相关的指标，这些指标被认为有很高的诊断价
+值。我们的检测中包括了临床中常用的二项指标：粪便的质地和粪便的颜色。
+\par
+您本次粪便健康状况依据布里斯托大便分类法检测，由于单次粪便颜色易受到近期食物的影响（红肉火龙果，西瓜等），仅供参考。若您的粪便形态和颜色长期处于不健康状态，建议及时进行专科检查、诊治。
+
+{
+\lantxh
+\fontsize{9.3pt}{9.8pt}\selectfont
+\bigskip
+%\begin{tctabularx}{tabularx={m{3.5cm}<{\centering}m{5.52cm}<{\centering}m{5.52cm}<{\centering}}}
+\begin{tctabularx}{tabularx={m{3cm}<{\centering}m{3cm}<{\centering}m{3cm}<{\centering}m{5.54cm}<{\centering}}}
+&&&
+\\[-6pt]
+\cellcolor{kelly} \raisebox{2.614pt}&
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black70}\bf 正常粪便} &
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black70}\bf 本次结果} &
+\cellcolor{kelly} \raisebox{2.614pt}{\color{black70}\bf 结果分析} \\
+\end{tctabularx}
+
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+%\begin{longtable}{|m{3.5cm}<{\centering}|m{5.52cm}<{\centering}|m{5.52cm}<{\centering}|}
+\begin{longtable}{|m{3cm}<{\centering}|m{3cm}<{\centering}|m{3cm}<{\centering}|m{5.1cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip7pt \centerline{质地} \vskip7pt} & \mgape{\includegraphics[width=.9cm]{texture_normal.pdf}} & \mgape{\includegraphics[width=.9cm]{texture_part4.pdf}} & \parbox[c]{\hsize}{\vskip7pt\centering{理想的便型}\vskip7pt} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt \centerline{颜色} \vskip7pt} & \mgape{\includegraphics[width=.9cm]{color_part1.pdf}} & \mgape{\includegraphics[width=.9cm]{color_part4.pdf}} & \parbox[c]{\hsize}{\vskip7pt\centering{可能与脂肪消化吸收障碍、鞭毛虫感染、肠道过度活跃有关}\vskip7pt} \\
+\hline
+\end{longtable}
+}
+
+\end{document}
+

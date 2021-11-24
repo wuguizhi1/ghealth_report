@@ -1,0 +1,70 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+ 
+\vspace*{4mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{black100}
+
+\vspace*{3mm}
+
+\noindent{\fontsize{15pt}{11pt}\selectfont{ 六、其他常见共生菌检测结果}}
+
+%\vspace*{-4.25mm}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{5.5cm}<{\centering}|m{4cm}<{\centering}|m{5cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip8pt\centering\bf {检测内容} \vskip8pt} &  \bf{检测结果} &  \bf{参考范围} \\
+[% FOREACH item = changdaojunqun.fenbu.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip8pt\centering {[% item.name %] ~ ([% item.latin %])} \vskip8pt} &
+[% item.value %] &
+[% item.threshold %] \\
+[% END -%]
+\hline
+\end{longtable}
+
+
+\begin{spacing}{1.25}
+\noindent\fontsize{9pt}{11pt}\selectfont {\ding{101} 本检测的结果仅供参考，无法代替医学诊断，实际情况请咨询拥有相应资质的临床医生；} \\
+\noindent\fontsize{9pt}{11pt}\selectfont {\ding{101} 本项检测是基于当前微生物学的研究成果和国际公认的检测方法，但由于科学研究及检测方法的不断更新，本检测仍存在一定的局限性；} \\
+\noindent\fontsize{9pt}{11pt}\selectfont {\ding{101} 检测结果仅对本次所送样负责。} \\
+
+\end{spacing}
+
+\end{document}

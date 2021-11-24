@@ -1,0 +1,282 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage[nodisplayskipstretch]{setspace}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+
+\color{gray2}
+\begin{center}
+\noindent\fontsize{12pt}{13pt}\selectfont{\color{gray2}\bf 主要有益菌检测结果}
+\end{center}
+
+\vspace*{-1cm}
+
+\vspace*{2cm}
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+\fontsize{9pt}{11pt}\selectfont
+
+\begin{Bacteriabox}{\bf {乳酸杆菌属（\emph {Lactobacillus spp.}）}}
+\begin{spacing}{1.5}
+\fontsize{8.5pt}{11pt}\selectfont\noindent {乳酸杆菌通过产生乳酸，从而发酵制作酸奶和奶酪等食物，让食物既美味又营养。此外，近年来的研究发现，乳酸杆菌跟身体健康也密切相关。当肠道内乳酸杆菌含量较高时：\\
+1）产生乳酸，合成氨基酸和维生素等，调节肠道微环境，抑制致病菌生长；\\
+2）增强免疫力，抑制肠道炎症的发生，阻止致病菌入侵肠道；\\
+3）延缓衰老，促进肠道蠕动，促进营养物质吸收，有利于肠道健康。}
+\end{spacing}
+\end{Bacteriabox}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{11pt}{11pt}\selectfont {检测结果}}
+\end{spacing}
+
+\lantxh
+\begin{tctabularx}{tabularx={m{2.7cm}<{\centering}m{2.7cm}<{\centering}m{2.7cm}<{\centering}m{6cm}<{\centering}}}
+&&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 主要有益菌属} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 本次检测值} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 参考范围} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 功能}
+\end{tctabularx}
+
+\vspace*{-0.8mm}
+\noindent\begin{tabular}{|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{6cm}|}
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 乳酸杆菌属 \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering  0.01   \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering ≥ 0.01 \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering 抑制有害菌的生长，增强人体免疫力 \vskip7pt} \\
+\hline
+\end{tabular}\\
+
+\hfill {结果说明：\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}} \ 检测值相比参考人群偏低}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{11pt}{11pt}\selectfont {结果分析}}
+
+\noindent\fontsize{8.5pt}{11pt}\selectfont {您本次检测结果显示，您肠道内的乳酸杆菌属含量
+正常。
+}
+
+\vspace*{3mm}
+\noindent{\fontsize{11pt}{11pt}\selectfont {健康建议}}
+
+\noindent\fontsize{8.5pt}{11pt}\selectfont {结合您本次检测结果，建议您平衡膳食，日常生活中可适当增加酸奶的摄入量；按时作息，根据自身情况进行适当运动；尽量避免广谱抗生素的使用，以防破坏肠道内微生态平衡，让致病菌有机可乘。 \\
+}
+\end{spacing}
+
+\clearpage
+
+\vspace*{2cm}
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+\fontsize{9pt}{11pt}\selectfont
+
+\begin{Bacteriabox}{\bf {双歧杆菌属（\emph {Bifidobacterium spp.}）}}
+\begin{spacing}{1.5}
+\fontsize{8.5pt}{11pt}\selectfont\noindent {双歧杆菌作为肠道内的“清道夫”，是调节肠道生态平衡的重要有益菌。当肠道内双歧杆菌含量较高时：\\
+1）增强肠道屏障，产生乙酸、L(+)-乳酸等，调节肠道环境；\\
+2）调节肠道免疫功能，有效阻止致病菌对肠道的入侵和定植；\\
+3）促进肠道蠕动，促进营养物质吸收，预防和抑制肿瘤发生，保持健康的身体状态。}
+\end{spacing}
+\end{Bacteriabox}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{11pt}{11pt}\selectfont {检测结果}}
+\end{spacing}
+
+\lantxh
+\begin{tctabularx}{tabularx={m{2.7cm}<{\centering}m{2.7cm}<{\centering}m{2.7cm}<{\centering}m{6cm}<{\centering}}}
+&&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 主要有益菌属} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 本次检测值} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 参考范围} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 功能}
+\end{tctabularx}
+
+\vspace*{-0.8mm}
+\noindent\begin{tabular}{|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{6cm}|}
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 双歧杆菌属 \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering  5.8   \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering ≥ 0.19 \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering 抵抗有害菌入侵，促进微量元素吸收 \vskip7pt} \\
+\hline
+\end{tabular}\\
+
+\hfill {结果说明：\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}} \ 检测值相比参考人群偏低}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{11pt}{11pt}\selectfont {结果分析}}
+
+\noindent\fontsize{8.5pt}{11pt}\selectfont {您本次检测结果显示，您肠道内的双歧杆菌属含量
+正常。
+}
+
+\vspace*{3mm}
+\noindent{\fontsize{11pt}{11pt}\selectfont {健康建议}}
+
+\noindent\fontsize{8.5pt}{11pt}\selectfont {结合您本次检测结果，建议您平衡膳食，日常生活中可适当增加酸奶的摄入量；按时作息，根据自身情况进行适当运动；尽量避免广谱抗生素的使用，以防破坏肠道内微生态平衡，让致病菌有机可乘。 \\
+}
+\end{spacing}
+
+\clearpage
+
+\vspace*{2cm}
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+\fontsize{9pt}{11pt}\selectfont
+
+\begin{Bacteriabox}{\bf {阿克曼氏菌属（\emph {Akkermansia spp.}）}}
+\begin{spacing}{1.5}
+\fontsize{8.5pt}{11pt}\selectfont\noindent {阿克曼氏菌是能够帮助控制体重的“瘦菌”，有以下几点功效：\\
+1）促进脂肪代谢，消耗多余能量，维持代谢平衡；\\
+2）调节免疫力，帮助维持肠壁粘膜健康完整，完整的肠壁屏障能够防止有害菌穿过肠壁进入血液和组织；\\
+3）对抑制炎症，预防糖尿病、肥胖，癌症治疗等大有帮助。}
+\end{spacing}
+\end{Bacteriabox}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{11pt}{11pt}\selectfont {检测结果}}
+\end{spacing}
+
+\lantxh
+\begin{tctabularx}{tabularx={m{2.7cm}<{\centering}m{2.7cm}<{\centering}m{2.7cm}<{\centering}m{6cm}<{\centering}}}
+&&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 主要有益菌属} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 本次检测值} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 参考范围} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 功能}
+\end{tctabularx}
+
+\vspace*{-0.8mm}
+\noindent\begin{tabular}{|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{6cm}|}
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 阿克曼氏菌属 \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering  未检出   \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering ≥ 0.01 \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering 促进脂肪代谢，预防肥胖 \vskip7pt} \\
+\hline
+\end{tabular}\\
+
+\hfill {结果说明：\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}} \ 检测值相比参考人群偏低}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{11pt}{11pt}\selectfont {结果分析}}
+
+\noindent\fontsize{8.5pt}{11pt}\selectfont {您本次检测结果显示，您肠道内的阿克曼氏菌属含量
+低于检测下限，未检出。阿克曼氏菌作为肠道有益菌，当其含量较低时，易发生免疫紊乱或胃肠道疾病。\\
+}
+
+\vspace*{3mm}
+\noindent{\fontsize{11pt}{11pt}\selectfont {健康建议}}
+
+\noindent\fontsize{8.5pt}{11pt}\selectfont {结合您本次检测结果，建议您平衡膳食，日常生活中可适当增加酸奶的摄入量；按时作息，根据自身情况进行适当运动；尽量避免广谱抗生素的使用，以防破坏肠道内微生态平衡，让致病菌有机可乘。 \\
+}
+\end{spacing}
+
+\clearpage
+
+\vspace*{2cm}
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+\fontsize{9pt}{11pt}\selectfont
+
+\begin{Bacteriabox}{\bf {柔嫩梭菌属（\emph {Faecalibacterium spp.}）}}
+\begin{spacing}{1.5}
+\fontsize{8.5pt}{11pt}\selectfont\noindent {柔嫩梭菌是健康人肠道中含量较高的常驻有益菌，是肠道内主要产生丁酸的菌株（丁酸是一种对人体非常有益的物质，它能够调节人体免疫系统、抑制炎症、调节肠道激素分泌、调节人体的代谢平衡等）。当肠道内柔嫩梭菌含量较高时：\\
+1）能产生丁酸，保护肠道黏膜，帮助维持人体代谢平衡；\\
+2）调节免疫，抑制肠道炎症的发生。}
+\end{spacing}
+\end{Bacteriabox}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{11pt}{11pt}\selectfont {检测结果}}
+\end{spacing}
+
+\lantxh
+\begin{tctabularx}{tabularx={m{2.7cm}<{\centering}m{2.7cm}<{\centering}m{2.7cm}<{\centering}m{6cm}<{\centering}}}
+&&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 主要有益菌属} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 本次检测值} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 参考范围} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 功能}
+\end{tctabularx}
+
+\vspace*{-0.8mm}
+\noindent\begin{tabular}{|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{6cm}|}
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 柔嫩梭菌属 \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering  204.63   \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering ≥ 29.11 \vskip7pt} &
+\parbox[c]{\hsize}{\vskip7pt\centering 产丁酸，抑制肠道炎症 \vskip7pt} \\
+\hline
+\end{tabular}\\
+
+\hfill {结果说明：\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}} \ 检测值相比参考人群偏低}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{11pt}{11pt}\selectfont {结果分析}}
+
+\noindent\fontsize{8.5pt}{11pt}\selectfont {您本次检测结果显示，您肠道内的柔嫩梭菌属含量
+正常。
+}
+
+\vspace*{3mm}
+\noindent{\fontsize{11pt}{11pt}\selectfont {健康建议}}
+
+\noindent\fontsize{8.5pt}{11pt}\selectfont {结合您本次检测结果，建议您平衡膳食，日常生活中可适当增加酸奶的摄入量；按时作息，根据自身情况进行适当运动；尽量避免广谱抗生素的使用，以防破坏肠道内微生态平衡，让致病菌有机可乘。 \\
+}
+\end{spacing}
+
+\clearpage
+
+
+\end{document}

@@ -1,0 +1,96 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\NewEnviron{RCtable}[1]
+  {%
+    \begin{tcolorbox}[#1]\BODY\end{tcolorbox}%
+  }
+
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+\noindent
+{\fontsize{9pt}{11pt}\selectfont\bf 致病菌检测结果}
+\begin{tctabularx}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.55cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测项目} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 健康状态提示} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{gray0}\bf 检测结果评价}
+\end{tctabularx}
+
+\vspace*{-4.25mm}
+\fontsize{8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{m{4.8cm}m{5.2cm}<{\centering}m{0cm}@{}m{4.61cm}<{\centering}}
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 缓慢爱格士氏菌\\可能导致菌血症、椎间盘炎、脑膜炎等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 含量未超标{}} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 胶胨罗斯氏菌\\可能导致败血症、脑膜炎、肺炎、菌血症等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 含量未超标{}} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 副流感嗜血杆菌\\可导致脑膜炎、咽炎、心内膜炎、肺炎、败血症等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 含量未超标{}} }\end{center} \end{minipage} \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt {\lantxh 咽峡炎链球菌\\属于人体正常菌群一部分，但也可能造成肝脓肿、脑脓肿、菌血症等} \vskip7pt} & \parbox[c]{\hsize}{\vskip7pt\centerline{\raisebox{-1.5ex}{\includegraphics[width=5cm,height=0.55cm]{bar.pdf}}}\vskip7pt}  &
+\hspace*{-4.83cm}\raisebox{-0.45ex}{\includegraphics{smile.pdf}}
+ & \begin{minipage}{4.60cm}\begin{center}{{\lantxh 含量未超标{}} }\end{center} \end{minipage} \\
+\hline
+\multicolumn{3}{l}{}\\
+\multicolumn{3}{l}{\includegraphics[scale=1]{greencircle.pdf} {\fontsize{9.3pt}{11pt}\selectfont \bf 绿色表示健康}   \includegraphics[scale=1]{orangecircle.pdf}  {\fontsize{9.3pt}{11pt}\selectfont \bf 橙色表示需要关注}  \includegraphics[scale=1]{redcircle.pdf} {\fontsize{9.3pt}{11pt}\selectfont \bf 红色表示有风险}}
+\end{longtable}
+
+%\vspace*{8mm}
+\vspace*{6mm}
+\begin{spacing}{1.25}
+\fontsize{9.3pt}{11pt}\selectfont
+\begin{LRaside}[.8]{结果分析}
+\noindent
+\includegraphics[width=\linewidth]{result_fenbu.pdf}
+\asidebreak %
+1、您肠道内的有害菌含量处于正常范围，但是，在您免疫力低下时，可能会引起感染、腹泻、肠炎、便秘等。有害菌数量过高还可能影响您的心情和食欲，扰乱内分泌，降低机体免疫力，增加疾病风险。同时您肠道内的有益菌含量较低，抑制有害菌增殖的能力较低，请您改善饮食结构、规律作息，可适当补充益生菌，并持续监测肠道健康。\\
+2、您的肠道内
+检测出含量较低的致病菌：缓慢爱格士氏菌、胶胨罗斯氏菌等，尽管这些致病菌含量未超标，当身体免疫力较强时可能不会出现不适感。但请注意，当您的免疫力较弱时，可能引起腹泻、腹痛、感染等病症。建议您持续监测肠道健康，一旦检测出较高含量的致病菌，建议咨询专科医生，酌情做进一步检查。
+\end{LRaside}
+\end{spacing}
+
+\end{document}

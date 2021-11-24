@@ -1,0 +1,183 @@
+%% encoding: UTF-8
+%% 首先读取模板的配置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置版面控制%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 12pt, notitlepage, oneside , twoside ]{article}
+\usepackage[colorlinks, linkcolor=red, anchorcolor=blue, citecolor=green, bookmarks]{hyperref}
+\hypersetup{xetex}
+% 设置版面，纸张空距
+\usepackage[papersize={200mm,255mm},headheight=2cm,top=2.37cm,headsep=0cm,bottom=2cm,footskip=.2cm,
+left=0cm,right=2.06cm
+]{geometry}
+\usepackage{marvosym}
+\usepackage{makecell,multirow}
+\usepackage{wrapfig}
+\usepackage{setspace}
+
+% 添加首行缩进，两个字符
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置字体%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[no-math]{fontspec} %提供字体选择命令
+\usepackage{xunicode,xltxtra}
+\usepackage[CJKchecksingle, CJKnumber]{xeCJK}         % 用于字体
+\usepackage{CJK}
+\setCJKfamilyfont{kai}[BoldFont=Adobe Heiti Std]{Adobe Kaiti Std}
+\setCJKfamilyfont{song}[BoldFont=Adobe Heiti Std]{Adobe Song Std}
+\setCJKfamilyfont{hei}[BoldFont=Adobe Heiti Std]{Adobe Heiti Std}
+\setCJKmainfont[BoldFont={FZLanTingHei-DB-GBK}]{FZLanTingHei-L-GBK}
+\setmainfont{FZLanTingHei-L-GBK}  % 设置中文/粗体/斜体/主要字体
+\punctstyle{hangmobanjiao}        % 设置行末半角
+\newfontfamily\times{Times New Roman}
+\newCJKfontfamily\kaishu{Adobe Kaiti Std}
+\setCJKfamilyfont{zhyh}{Microsoft YaHei}
+\newcommand*{\heiti}{\CJKfamily{zhyh}}
+\setCJKfamilyfont{zhltxh}{FZLanTingHei-L-GBK}
+\newcommand*{\lantxh}{\CJKfamily{zhltxh}}
+\newfontfamily\arial{Arial}
+\newcommand{\barial}{\bf\arial}
+%\setmainfont[Mapping=tex-text]{Times New Roman}         % 设置衬线英文字体
+\setsansfont[Mapping=tex-text]{FZLanTingHei-L-GBK}         % 设置无衬线英文字体
+%\setmonofont{Courier New}                % 设置等款英文字体
+\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14.01pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{11pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.04pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9.03pt}{15pt}\selectfont}
+\newcommand{\liuhao}{\fontsize{8.53pt}{\baselineskip}\selectfont}
+\newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\newcommand{\rnum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
+
+\usepackage{textgreek}
+\usepackage{pdflscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置图像%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[usenames,dvipsnames,svgnames,table,cmyk]{xcolor}
+\usepackage{graphicx}          % 用于图像编号
+\graphicspath{{_drugRisk/}{_logo/}{_phenoDegree/}{disease_pic/}{drug_pic/}{pheno_pic/}{_barcode/}{PDF/}{cores/}}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{animate}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{wallpaper}%%%%%%%%%%%%%%%%背景%%%%%%%%%%%%%%%%%%
+\usepackage{color}
+\definecolor{gray2}{cmyk}{0.00,0.00,0.00,0.70}
+\definecolor{blackdesc}{cmyk}{0, 0, 0, 1}	%黑色字体
+\definecolor{titleblue}{cmyk}{1, 0.3, 0, 0}	%标题蓝色，线条
+\definecolor{titledarkgreen}{cmyk}{0.8, 0, 0.65, 0}	%标题深绿，线条
+\definecolor{titlegrassgreen}{cmyk}{0.5, 0, 1, 0}	%标题草绿，线条
+\definecolor{tablegreen}{cmyk}{0.9, 0, 0.9, 0}  %table head color
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%mdframed%%%%%%%%%%%%%%%%%%%%
+\usepackage[framemethod=tikz]{mdframed}
+\usetikzlibrary{patterns}
+\mdfdefinestyle{titlesty}{%
+linecolor=platinum,
+middlelinewidth=1.5pt,
+frametitlerule=false,%
+apptotikzsetting={\tikzset{
+    mdfbackground/.append style ={
+    top color=white,
+    bottom color=white
+    },
+    mdfframetitlebackground/.append style={
+    shade,
+    top color=white ,
+    bottom color=white
+    }
+}
+},
+frametitlerulewidth=0pt,
+innertopmargin=\topskip,
+topline=false,
+leftline=false,
+rightline=false,
+bottomline=false,
+frametitlealignment=\raggedright,
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%%%%%%%%%%%%%页码修改[RO]居右[CO]居中[LO]居左%%%%%%%%%%%
+
+%\cfoot{}
+%\fancyfoot[LO,RE]{}
+%\fancyhead[LO,LE]{\raisebox{-1.5ex}{\includegraphics{logo}}}
+
+\usepackage{paralist}
+\usepackage{float,longtable,hhline}
+
+\definecolor{topcolor}{cmyk}{0.28,0,1,0}
+
+\definecolor{black100}{cmyk}{0.00,0.00,0.00,1.00}
+\definecolor{black70}{cmyk}{0.00,0.00,0.00,0.70}
+
+
+\begin{document}
+
+\hspace*{15mm}\includegraphics[scale=0.3]{logo2.pdf}
+
+\vspace*{15.5mm}
+
+\noindent\colorbox{topcolor}{
+\hspace*{35mm}
+\parbox{0.75\hsize}{
+\vspace*{1.8mm}
+\renewcommand{\CJKglue}{\hskip 3pt}
+\color{white}\fontsize{20pt}{\baselineskip}\selectfont { 常道康\textsuperscript{\xiaowuhao{TM}}-肠道健康保护力检测介绍}
+\vspace*{1.8mm}
+}
+} \\
+
+\vspace*{4mm}
+
+\hspace*{16mm}
+\begin{minipage}[b]{.84\hsize}
+\vspace*{6mm}
+\color{black70}{\fontsize{15pt}{17pt}\selectfont 致：~~[% name %]~~[% IF SEX == 'F' -%]女士[% ELSIF SEX == 'M' -%]先生[% END -%] \\\\}
+{\fontsize{11pt}{13pt}\selectfont 样本编码：[% barcode %] \qquad 送检机构：[% source %] \\}
+
+\vspace*{2mm}
+
+\begin{spacing}{1.5}
+\setlength{\parindent}{2em}\color{black70}\fontsize{9.3pt}{12pt}\selectfont {
+{\fontsize{11pt}{13pt}\selectfont 您好！}
+
+感谢您选择常道康{\textsuperscript{\qihao{TM}}}-肠道健康保护力检测服务，我们将为您提供权威的基因检测报告及科学的健康干预方案。
+
+
+人类肠道菌群就好比一个热带雨林生态系统，肠道菌群组成越丰富多样的人，肠道微生态越稳定，其健康状况也越好。而肠道微生态易一旦被破坏，就会危害人体健康，分娩及喂养方式、生活方式、年龄与饮食、抗生素、外伤等外界因素都可能破坏肠道微生态，引起各种疾病，例如幼年时期容易出现营养吸收差、抵抗力低等；中少年时期容易出现腹胀、腹痛、腹泻、便秘、过敏、哮喘、肥胖、焦虑、糖尿病等健康问题；老年时期更易出现肿瘤、心血管疾病等慢性疾病。
+
+
+常道康{\textsuperscript{\qihao{TM}}}-肠道健康保护力检测通过采用NGS高通量基因测序技术，检测人体肠道菌群种类与含量，解密“第二基因组”，分析与评估您的健康状况，及时发现可能的疾病风险，并为您定制个性化的调理方案，促进健康。
+
+
+最后，再次感谢您对我们的信任以及对我们工作的大力支持！
+
+
+}
+\vspace*{4mm}
+
+\hfill\fontsize{11pt}{13pt}\selectfont 人和未来生物科技（长沙）有限公司
+
+
+\hfill\includegraphics[scale=0.6]{erweima.pdf}
+
+
+\hfill\fontsize{11pt}{13pt}\selectfont 扫码关注“常道康”
+
+
+\end{spacing}
+
+\end{minipage}
+
+\end{document}

@@ -1,0 +1,504 @@
+\input format.tex
+\usepackage{mdframed}
+\usepackage{lipsum}
+
+% all 4 borders
+\newmdenv[linecolor=black70]{allfour}
+% just top and bottom
+\newmdenv[leftline=false,rightline=false]{topbot}
+% just left and bottom
+\newmdenv[topline=false,rightline=false]{leftbot}
+
+\begin{document}
+
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{17pt}\selectfont
+\color{gray2}
+
+\vspace*{3mm}
+\begin{center}
+\fontsize{16pt}{\baselineskip}\selectfont\color{black70}\bf {一、肠道菌群基因检测结果}
+\end{center}
+
+\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {肠道菌群总体状况}}
+
+\vspace*{3mm}
+\noindent
+\begin{minipage}[b]{.32\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\begin{tctabularx}{tabularx={p{4.6cm}}}
+\parbox[c]{.9\hsize}{\centering\vskip4pt{\color{white}\bf 菌群多样性：
+[% IF gaikuang.desc.duoyangxing.per100 <= 5 -%]
+脆弱 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+[% ELSIF gaikuang.desc.duoyangxing.per100 <= 15 -%]
+单一 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+[% ELSIF gaikuang.desc.duoyangxing.per100 <= 30 -%]
+较低 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+[% ELSE -%]
+健康
+[% END -%]} \vskip4pt}
+\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\
+\\\\\\\\
+\parbox[c]{\hsize}{
+\hspace*{1cm}{
+\begin{picture}(1, 1)
+\begin{tikzpicture}[bar interval width=0.8, bar width=0.70cm]
+	\begin{scope}
+	\clip[] (0cm, 0cm) rectangle (1.5cm, 5.7cm);
+	\draw[fill=solomon0, solomon0] (0cm, 0 * 5.7cm) rectangle (1.5cm, 0.05 * 5.7cm) node {};
+	\draw[fill=solomon1, solomon1] (0cm, 0.05 * 5.7cm) rectangle (1.5cm, 0.15cm * 5.7cm) node {};
+	\draw[fill=solomon2, solomon2] (0cm, 0.15 * 5.7cm) rectangle (1.5cm, 0.3 * 5.7cm) node {};
+	\draw[fill=solomon3, solomon3] (0cm, 0.3 * 5.7cm) rectangle (1.5cm, 1 * 5.7cm) node {};
+	\end{scope}
+	\draw (-0.35cm, 0cm) node[left, anchor = west, yshift=0mm] {\bahao\color{gray2} {0}};
+	\draw (0.4cm, 0.025 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {脆弱}};
+	\draw (-0.35cm, 0.05 * 5.7cm) node[left, anchor = west, yshift=0mm] {\bahao\color{gray2} {5}};
+	\draw (0.4cm, 0.1 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {单一}};
+	\draw (-0.35cm, 0.15 * 5.7cm) node[left, anchor = west, xshift=-1.5mm, yshift=0mm] {\bahao\color{gray2} {15}};
+	\draw (0.4cm, 0.225 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {较低}};
+	\draw (-0.35cm, 0.3 * 5.7cm) node[left, anchor = west, xshift=-1.5mm, yshift=0mm] {\bahao\color{gray2} {30}};
+	\draw (0.4cm, 0.65 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {稳定}};
+\end{tikzpicture}
+\put(-2.5, 0){\raisebox{[% gaikuang.desc.duoyangxing.markindex %] pt}{
+[% IF gaikuang.desc.duoyangxing.per100 <= 5 -%]
+\includegraphics[scale=2]{drop-l1.pdf}
+[% ELSIF gaikuang.desc.duoyangxing.per100 <= 15 -%]
+\includegraphics[scale=2]{drop-l2.pdf}
+[% ELSIF gaikuang.desc.duoyangxing.per100 <= 30 -%]
+\includegraphics[scale=2]{drop-l3.pdf}
+[% ELSE -%]
+\includegraphics[scale=2]{drop-l4.pdf}
+[% END -%]
+}}
+[% IF gaikuang.desc.duoyangxing.per100 < 10 -%]
+\put(13.5, 3.5){\raisebox{[% gaikuang.desc.duoyangxing.markindex %] pt}{\qihao\color{gray2} {[% gaikuang.desc.duoyangxing.per100 %]}}}
+[% ELSE -%]
+\put(11.5, 3.5){\raisebox{[% gaikuang.desc.duoyangxing.markindex %] pt}{\qihao\color{gray2} {[% gaikuang.desc.duoyangxing.per100 %]}}}
+[% END -%]
+\end{picture}}
+}
+\end{tctabularx}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[b]{.32\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\begin{tctabularx}{tabularx={p{4.6cm}}}
+\parbox[c]{\hsize}{\centering\vskip4pt{\color{white}\bf 有益菌：
+[% IF gaikuang.desc.youyijun.per100 <= 5 -%]
+缺乏 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+[% ELSIF gaikuang.desc.youyijun.per100 <= 20 -%]
+偏少 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+[% ELSE -%]
+健康
+[% END -%]} \vskip4pt}
+\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\
+\\\\\\\\
+\parbox[c]{\hsize}{
+\hspace*{1cm}{
+\begin{picture}(1, 1)
+\begin{tikzpicture}[bar interval width=0.8, bar width=0.70cm]
+	\begin{scope}
+	\clip[] (0cm, 0cm) rectangle (1.5cm, 5.7cm);
+	\draw[fill=solomon0, solomon0] (0cm, 0 * 5.7cm) rectangle (1.5cm, 0.05 * 5.7cm) node {};
+	\draw[fill=solomon1, solomon1] (0cm, 0.05 * 5.7cm) rectangle (1.5cm, 0.2cm * 5.7cm) node {};
+	\draw[fill=solomon3, solomon3] (0cm, 0.2 * 5.7cm) rectangle (1.5cm, 1 * 5.7cm) node {};
+	\end{scope}
+	\draw (-0.35cm, 0cm) node[left, anchor = west, yshift=0mm] {\bahao\color{gray2} {0}};
+	\draw (0.4cm, 0.025 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {缺乏}};
+	\draw (-0.35cm, 0.05 * 5.7cm) node[left, anchor = west, yshift=0mm] {\bahao\color{gray2} {5}};
+	\draw (0.4cm, 0.125 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {偏少}};
+	\draw (-0.35cm, 0.2 * 5.7cm) node[left, anchor = west, xshift=-1.5mm, yshift=0mm] {\bahao\color{gray2} {20}};
+	\draw (0.4cm, 0.6 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {健康}};
+\end{tikzpicture}
+\put(-2.5, 0){\raisebox{[% gaikuang.desc.youyijun.markindex %] pt}{
+[% IF gaikuang.desc.youyijun.per100 <= 5 -%]
+\includegraphics[scale=2]{drop-l1.pdf}
+[% ELSIF gaikuang.desc.youyijun.per100 <= 20 -%]
+\includegraphics[scale=2]{drop-l2.pdf}
+[% ELSE -%]
+\includegraphics[scale=2]{drop-l4.pdf}
+[% END -%]
+}}
+[% IF gaikuang.desc.youyijun.per100 < 10 -%]
+\put(13.5, 3.5){\raisebox{[% gaikuang.desc.youyijun.markindex %] pt}{\qihao\color{gray2} {[% gaikuang.desc.youyijun.per100 %]}}}
+[% ELSE -%]
+\put(11.5, 3.5){\raisebox{[% gaikuang.desc.youyijun.markindex %] pt}{\qihao\color{gray2} {[% gaikuang.desc.youyijun.per100 %]}}}
+[% END -%]
+\end{picture}}
+}
+\end{tctabularx}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[b][6cm]{.32\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\begin{tctabularx}{tabularx={p{4.6cm}}}
+\parbox[c]{\hsize}{\centering\vskip4pt{\color{white}\bf 有害菌：
+[% IF gaikuang.desc.youhaijun.per100 <= 80 -%]
+健康
+[% ELSIF gaikuang.desc.youhaijun.per100 <= 95 -%]
+偏高 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+[% ELSE -%]
+高 \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+[% END -%]} \vskip4pt}
+\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\
+\\\\\\\\
+\parbox[c]{\hsize}{
+\hspace*{1cm}{
+\begin{picture}(1, 1)
+\begin{tikzpicture}[bar interval width=0.8, bar width=0.70cm]
+	\begin{scope}
+	\clip[] (0cm, 0cm) rectangle (1.5cm, 5.7cm);
+	\draw[fill=solomon3, solomon3] (0cm, 0 * 5.7cm) rectangle (1.5cm, 0.8 * 5.7cm) node {};
+	\draw[fill=solomon1, solomon1] (0cm, 0.8 * 5.7cm) rectangle (1.5cm, 0.95cm * 5.7cm) node {};
+	\draw[fill=solomon0, solomon0] (0cm, 0.95 * 5.7cm) rectangle (1.5cm, 1 * 5.7cm) node {};
+	\end{scope}
+	\draw (-0.35cm, 0cm) node[left, anchor = west, yshift=0mm] {\bahao\color{gray2} {0}};
+	%\draw (1.45cm, 0cm ) node[left, anchor = west, yshift=0mm] {\includegraphics[scale=2]{drop-l1.pdf}};
+	\draw (0.4cm, 0.4 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {健康}};
+	\draw (-0.35cm, 0.8 * 5.7cm) node[left, anchor = west, xshift=-1.5mm, yshift=0mm] {\bahao\color{gray2} {80}};
+	\draw (0.4cm, 0.875 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {偏高}};
+	\draw (-0.35cm, 0.95 * 5.7cm) node[left, anchor = west, xshift=-1.5mm, yshift=0mm] {\bahao\color{gray2} {95}};
+	\draw (0.5cm, 0.975 * 5.7cm ) node[left, anchor = west, yshift=0mm] {\qihao\color{white}\bf {高}};
+\end{tikzpicture}
+\put(-2.5, 0){\raisebox{[% gaikuang.desc.youhaijun.markindex %] pt}{
+[% IF gaikuang.desc.youhaijun.per100 <= 80 -%]
+\includegraphics[scale=2]{drop-l4.pdf}
+[% ELSIF gaikuang.desc.youhaijun.per100 <= 95 -%]
+\includegraphics[scale=2]{drop-l2.pdf}
+[% ELSE -%]
+\includegraphics[scale=2]{drop-l1.pdf}
+[% END -%]
+}}
+[% IF gaikuang.desc.youhaijun.per100 < 10 -%]
+\put(13.5, 3.5){\raisebox{[% gaikuang.desc.youhaijun.markindex %] pt}{\qihao\color{gray2} {[% gaikuang.desc.youhaijun.per100 %]}}}
+[% ELSE -%]
+\put(11.5, 3.5){\raisebox{[% gaikuang.desc.youhaijun.markindex %] pt}{\qihao\color{gray2} {[% gaikuang.desc.youhaijun.per100 %]}}}
+[% END -%]
+\end{picture}}
+}
+\end{tctabularx}
+\end{minipage}
+
+\vspace*{-0.5mm}
+\hspace*{13cm}
+\raisebox{-0.4ex}{\includegraphics{drop_mark.pdf}}
+\fontsize{8.5pt}{11pt}\selectfont {本次检测结果}
+
+%\vspace*{1mm}
+%\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {本次检测异常结果}}
+
+\vspace*{1.5mm}
+\lantxh
+\begin{tctabularxnew}{tabularx={m{4.84cm}<{\centering}m{4.84cm}<{\centering}m{4.84cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 胖菌} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 瘦菌} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 致病菌}
+\end{tctabularxnew}
+
+\vspace*{-3.5mm}
+\begin{spacing}{1.5}
+\noindent\begin{tabular}{p{4.84cm}p{4.84cm}p{4.84cm}}
+\hspace*{-2mm}\parbox[c]{1.08\hsize}{
+\begin{allfour}
+\fontsize{9pt}{11pt}\selectfont\color{black70}\centering {
+
+[% IF changdaojunqun.pangjun.badN == 0 -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+未检出异常 \raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+
+[% ELSIF changdaojunqun.pangjun.badN == 1 -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+[% FOREACH item = changdaojunqun.pangjun.baditem -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}\\
+[% END -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+
+[% ELSIF changdaojunqun.pangjun.badN == 2 -%]
+\vspace*{2.88mm}
+[% FOREACH item = changdaojunqun.pangjun.baditem -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}\\
+[% END -%]
+\vspace*{2.88mm}
+
+[% ELSIF changdaojunqun.pangjun.badN == 3 -%]
+[% FOREACH item = changdaojunqun.pangjun.baditem -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}\\
+[% END -%]
+
+[% ELSIF changdaojunqun.pangjun.badN == 4 -%]
+[% FOREACH item = changdaojunqun.pangjun.baditem -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+\ifthenelse{\isodd{[% item.badindex %]}}{\\}
+{[% IF item.badindex != 4 -%]
+{、}
+[% END -%]
+}
+[% END -%]
+
+[% ELSIF changdaojunqun.pangjun.badN <= 6 -%]
+[% FOREACH item = changdaojunqun.pangjun.baditem -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+[% IF item.badindex != changdaojunqun.pangjun.badN -%]
+\ifthenelse{\isodd{[% item.badindex %]}}{、}{\\}
+[% END -%]
+[% END -%]
+
+[% ELSE -%]
+[% FOREACH item = changdaojunqun.pangjun.baditem -%]
+[% IF item.badindex <= 6 -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+[% IF item.badindex != 6 -%]
+\ifthenelse{\isodd{[% item.badindex %]}}{、}{\\}
+[% END -%]
+[% END -%]
+[% END -%]
+
+[% END -%]
+}
+\end{allfour}
+} &
+\hspace*{-1.5mm}\parbox[c]{1.08\hsize}{
+\begin{allfour}
+\fontsize{9pt}{11pt}\selectfont\color{black70}\centering {
+
+[% IF changdaojunqun.shoujun.badN == 0 -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+未检出异常 \raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+
+[% ELSIF changdaojunqun.shoujun.badN == 1 -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+[% FOREACH item = changdaojunqun.shoujun.baditem -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}\\
+[% END -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+
+[% ELSIF changdaojunqun.shoujun.badN == 2 -%]
+\vspace*{2.88mm}
+[% FOREACH item = changdaojunqun.shoujun.baditem -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}\\
+[% END -%]
+\vspace*{2.88mm}
+
+[% ELSIF changdaojunqun.shoujun.badN == 3 -%]
+[% FOREACH item = changdaojunqun.shoujun.baditem -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}\\
+[% END -%]
+
+[% ELSIF changdaojunqun.shoujun.badN == 4 -%]
+[% FOREACH item = changdaojunqun.shoujun.baditem -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+\ifthenelse{\isodd{[% item.badindex %]}}{\\}
+{[% IF item.badindex != 4 -%]
+{、}
+[% END -%]
+}
+[% END -%]
+
+[% ELSIF changdaojunqun.shoujun.badN <= 6 -%]
+[% FOREACH item = changdaojunqun.shoujun.baditem -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+[% IF item.badindex != changdaojunqun.shoujun.badN -%]
+\ifthenelse{\isodd{[% item.badindex %]}}{、}{\\}
+[% END -%]
+[% END -%]
+
+[% ELSE -%]
+[% FOREACH item = changdaojunqun.shoujun.baditem -%]
+[% IF item.badindex <= 6 -%]
+[% item.name %] \raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+[% IF item.badindex != 6 -%]
+\ifthenelse{\isodd{[% item.badindex %]}}{、}{\\}
+[% END -%]
+[% END -%]
+[% END -%]
+
+[% END -%]
+}
+\end{allfour}
+} &
+\hspace*{-1mm}\parbox[c]{1.08\hsize}{
+\begin{allfour}
+\fontsize{9pt}{11pt}\selectfont\color{black70}\centering {
+
+[% IF changdaojunqun.pathogen.num == 0 -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+未检出异常 \raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+
+[% ELSIF changdaojunqun.pathogen.num == 1 -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+[% FOREACH item = changdaojunqun.pathogen.item -%]
+[% item.name %]
+[% IF item.risk == "有害" -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}\\
+[% ELSE -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+[% END -%]
+[% END -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}\\
+
+[% ELSIF changdaojunqun.pathogen.num == 2 -%]
+\vspace*{2.88mm}
+[% FOREACH item = changdaojunqun.pathogen.item -%]
+[% item.name %]
+[% IF item.risk == "有害" -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+[% ELSE -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}
+[% END -%]
+\\
+[% END -%]
+\vspace*{2.88mm}
+
+[% ELSIF changdaojunqun.pathogen.num == 3 -%]
+[% FOREACH item = changdaojunqun.pathogen.item -%]
+[% item.name %]
+[% IF item.risk == "有害" -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+[% ELSE -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}
+[% END -%]
+\\
+[% END -%]
+
+[% ELSIF changdaojunqun.pathogen.num == 4 -%]
+[% FOREACH item = changdaojunqun.pathogen.item -%]
+[% item.name %]
+[% IF item.risk == "有害" -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+[% ELSE -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}
+[% END -%]
+\ifthenelse{\isodd{[% item.badindex %]}}{\\}
+{[% IF item.badindex != 4 -%]
+{、}
+[% END -%]
+}
+[% END -%]
+
+[% ELSIF changdaojunqun.pathogen.num <= 6 -%]
+[% FOREACH item = changdaojunqun.pathogen.item -%]
+[% item.name %]
+[% IF item.risk == "有害" -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+[% ELSE -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}
+[% END -%]
+[% IF item.badindex != changdaojunqun.pathogen.num -%]
+\ifthenelse{\isodd{[% item.badindex %]}}{、}{\\}
+[% END -%]
+[% END -%]
+
+[% ELSE -%]
+[% FOREACH item = changdaojunqun.pathogen.item -%]
+[% IF item.badindex <= 6 -%]
+[% item.name %]
+[% IF item.risk == "有害" -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+[% ELSE -%]
+\raisebox{-0.3ex}{\includegraphics[scale=1]{blank_arrow.pdf}}
+[% END -%]
+[% IF item.badindex != 6 -%]
+\ifthenelse{\isodd{[% item.badindex %]}}{、}{\\}
+[% END -%]
+[% END -%]
+[% END -%]
+
+[% END -%]
+}
+\end{allfour}
+}
+\end{tabular}
+\end{spacing}
+
+\vspace*{-3mm}
+\begin{spacing}{1.5}
+\noindent\fontsize{8.5pt}{11pt}\selectfont {注：上表仅列出本次检测异常菌属。\raisebox{-0.3ex}{\includegraphics{black_up.pdf}}表示与参考人群比含量偏高/高；
+\raisebox{-0.3ex}{\includegraphics{black_down.pdf}}表示与参考人群比含量偏低/低；致病菌仅列菌名表示检出但含量未超标。}
+\end{spacing}
+
+\vspace*{3mm}
+\noindent{\fontsize{11pt}{11pt}\selectfont\color{black70}\bf {结果分析}}
+
+\vspace*{0.5mm}
+\begin{spacing}{1.5}
+\noindent\color{black70}\fontsize{9pt}{12pt}\selectfont {{\raisebox{1pt}{\color{black70}$\bullet$}}\, 本次检测提示菌群多样性
+[% IF gaikuang.desc.duoyangxing.per100 <= 5 -%]
+低、
+[% ELSIF gaikuang.desc.duoyangxing.per100 <= 15 -%]
+较低、
+[% ELSIF gaikuang.desc.duoyangxing.per100 <= 30 -%]
+偏低、
+[% ELSE -%]
+正常、
+[% END -%]
+有益菌
+[% IF gaikuang.desc.youyijun.per100 <= 5 -%]
+低、
+[% ELSIF gaikuang.desc.youyijun.per100 <= 20 -%]
+偏低、
+[% ELSE -%]
+正常、
+[% END -%]
+有害菌
+[% IF gaikuang.desc.youhaijun.per100 <= 80 -%]
+正常，
+[% ELSIF gaikuang.desc.youhaijun.per100 <= 95 -%]
+偏高，
+[% ELSE -%]
+高，
+[% END -%]
+[% IF gaikuang.desc.duoyangxing.per100 > 30 and gaikuang.desc.youyijun.per100 > 20 and gaikuang.desc.youhaijun.per100 < 80 -%]
+肠道菌群各项综合指标正常，整体状况良好。建议您保持良好的饮食生活习惯，规律作息，维持肠道菌群的稳态平衡。
+[% ELSE -%]
+[% IF gaikuang.desc.duoyangxing.per100 <= 5 -%]
+极易出现肠道菌群失衡，
+[% ELSIF gaikuang.desc.duoyangxing.per100 <= 15 -%]
+易出现肠道菌群失衡，
+[% ELSIF gaikuang.desc.duoyangxing.per100 <= 30 -%]
+可能会出现肠道菌群轻度失衡，
+[% END -%]
+[% IF gaikuang.desc.youyijun.per100 <= 20 and gaikuang.desc.youhaijun.per100 >= 80 -%]
+有益菌及有害菌含量指标异常，
+[% ELSIF gaikuang.desc.youyijun.per100 <= 20 -%]
+有益菌含量指标异常，
+[% ELSIF gaikuang.desc.youhaijun.per100 >= 80 -%]
+有害菌含量指标异常，
+[% END -%]
+可能导致肠道环境变差，减重难度增大。建议先调理肠道菌群，恢复肠道微生态平衡，健康的肠道菌群状态有助于减重。
+[% END -%]
+}\\
+\noindent\color{black70}\fontsize{9pt}{12pt}\selectfont {{\raisebox{1pt}{\color{black70}$\bullet$}}\,
+[% IF changdaojunqun.pangjun.badN == 0 and changdaojunqun.shoujun.badN == 0 -%]
+本次检测未发现肠道菌群中胖菌及瘦菌相关菌属异常，胖菌/瘦菌通常与肠道健康、肥胖等健康问题相关。
+[% ELSE -%]
+[% IF changdaojunqun.pangjun.badN != 0 -%]
+[% changdaojunqun.pangjun.bad %]等胖菌指标偏高，
+[% END -%]
+[% IF changdaojunqun.shoujun.badN != 0 -%]
+[% changdaojunqun.shoujun.bad %]等瘦菌指标偏低，
+[% END -%]
+长期胖菌/瘦菌结果异常，可引起肥胖等健康问题，不利于控制体重。
+[% END -%]
+}\\
+\noindent\color{black70}\fontsize{9pt}{12pt}\selectfont {{\raisebox{1pt}{\color{black70}$\bullet$}}\,
+[% IF changdaojunqun.pathogen.num == 0 -%]
+本次未检测出致病菌。这是个好消息。
+[% ELSIF changdaojunqun.pathogen.badN == 0 -%]
+检测出[% changdaojunqun.pathogen.num %]种致病菌，含量均未超标，但在您免疫力低下时仍可能会损害您的肠道健康。
+[% ELSE -%]
+检测出[% changdaojunqun.pathogen.num %]种致病菌，其中[% changdaojunqun.pathogen.bad %]含量高于参考人群，需要关注，建议您定期监测，预防致病菌的潜在危害。
+[% END -%]
+}
+\end{spacing}
+\end{document}
+

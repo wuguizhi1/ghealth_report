@@ -1,0 +1,135 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage[nodisplayskipstretch]{setspace}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+\color{black70}
+\noindent\fontsize{16pt}{18pt}\selectfont{\color{topcolor} 检测结果}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{10pt}{11pt}\selectfont\bf {1、主要有益菌检测结果}}
+\end{spacing}
+
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+\fontsize{9pt}{11pt}\selectfont
+
+\smallskip
+%{
+\lantxh
+\begin{tctabularx}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.55cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 主要有益菌属} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 本次检测值} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 参考范围}
+\end{tctabularx}
+
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+\begin{longtable}{|m{4.8cm}<{\centering}|m{5.2cm}<{\centering}|m{4.53cm}<{\centering}|}
+[% FOREACH item = changdaojunqun.fenbu.item -%]
+\hline
+\parbox[c]{\hsize}{\vskip7pt [% item.name %] \vskip7pt} & [% IF item.value == 0 -%] 未检出 [% ELSE -%] [% item.value %] [% END -%] 
+[% IF item.value < item.Val30 -%]
+{\includegraphics[scale=1]{redarrow_down.pdf}}
+[% END -%]
+& [% item.threshold %] \\
+[% END -%]
+\hline
+\end{longtable}
+
+\vspace*{-2.5mm}
+\noindent {结果说明：\includegraphics[scale=1]{redarrow_down.pdf} \ 检测值相比参考人群偏低}
+
+\vspace*{3mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{10pt}{11pt}\selectfont\bf {2、结果分析}}
+
+\vspace*{2mm}
+{\indent\fontsize{9pt}{10pt}\selectfont 
+[% IF changdaojunqun.fenbu.badN == 0 -%]
+恭喜您！您本次检测的4种主要有益菌的含量均处于正常范围内或优于正常范围，其中乳杆菌和双歧杆菌是调节肠道微生态平衡、抵御有害菌、促进营养物质吸收的益生菌，
+对维持免疫调节力等都有重要作用；阿克曼氏菌是能够帮助控制体重的“瘦菌”，能促进脂肪代谢，消耗多余能量，维持代谢平衡；柔嫩梭菌是健康人肠道中含量比较高的细
+菌，能产生大量对人体非常有益的丁酸，还能够调节人体免疫系统、抑制炎症、调节肠道激素分泌以及人体的代谢平衡。
+[% ELSIF changdaojunqun.fenbu.badN < 4 -%]
+您本次检测的4种主要有益菌中[% changdaojunqun.fenbu.bad %]含量相比参考人群偏低。[% changdaojunqun.fenbu.badSource %]
+[% ELSE -%]
+您本次检测的4种主要有益菌含量相比参考人群均偏低。[% changdaojunqun.fenbu.badSource %]
+[% END -%]
+[% IF changdaojunqun.fenbu.badEffect != '-' -%]
+这些菌属含量偏低，有可能导致[% changdaojunqun.fenbu.badEffect %]，
+[% END -%]
+[% IF changdaojunqun.fenbu.badDisease != '-' -%]
+甚至增加[% changdaojunqun.fenbu.badDisease %]的风险。
+[% END -%]
+\\\\
+\indent 需要注意的是，肠道菌群处于动态平衡，单一菌种数量的短期改变并非致病的直接原因，有益菌的长期异常，整体肠道菌群失衡，才可能引起疾病的发生。}
+\end{spacing}
+
+\vspace*{5mm}
+
+\noindent\colorbox{topcolor}{
+\parbox{0.6\hsize}{
+\color{white}\fontsize{9pt}{\baselineskip}\selectfont { 以上为您本次检测结果，如有任何疑问，请咨询专业医生！}
+}
+}
+
+\vspace*{.5mm}
+
+\noindent\colorbox{topcolor}{
+\parbox{0.6\hsize}{
+\color{white}\fontsize{9pt}{\baselineskip}\selectfont { 再次感谢您的信任和支持！}
+}
+}
+
+\vspace*{3mm}
+
+\hfill\fontsize{9pt}{11pt}\selectfont 人和未来生物科技（长沙）有限公司
+
+\vspace*{-2mm}
+
+\hfill\includegraphics[scale=0.6]{erweima.pdf}
+
+
+\hfill\fontsize{9pt}{11pt}\selectfont 扫码关注“常道康”
+
+\end{document}

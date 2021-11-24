@@ -1,0 +1,412 @@
+\input format.tex
+
+\begin{document}
+
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{17pt}\selectfont
+\color{gray2}
+
+\vspace*{0mm}
+
+\begin{center}
+{\bf\sanhao 检测结果}
+\end{center}
+
+\medskip
+\noindent
+{\liuhao 质地：~\includegraphics[scale=0.6]{[% fenbianzhuangtai.pic %]}  ~~颜色：~\includegraphics[scale=0.7]{[% fenbianzhuangtai.colorpic %]}}
+%{\liuhao 质地：无\hspace*{2cm} 颜色：无}
+\hfill {\liuhao |~~颜色指示: \tikz\draw[green2,fill=green2](0,0) circle[radius=3.5pt]; 绿色为正常 \tikz\draw[yellow,fill=yellow](0,0) circle[radius=3.5pt]; 橙色为需要关注 \tikz\draw[red,fill=red](0,0) circle[radius=3.5pt]; 红色为有风险}
+
+\medskip
+\noindent
+\begin{minipage}[b]{.24\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\medskip
+\begin{tctabularx}{tabularx={p{3.33cm}}}
+\parbox[c]{\hsize}{\vskip4pt{\color{black70} [% xiaohuahexishou.name %]\par \barial{[% xiaohuahexishou.ename %]}}\vskip4pt}\\\\[-5pt]
+\begin{minipage}[t][1.6cm][t]{3.33cm}
+\color{black70}
+[% IF xiaohuahexishou.explain.AbsorbbadN >= 4 -%]
+[% FOREACH item = xiaohuahexishou.baditems.items.item -%]
+[% IF item.index <= 4 -%]
+{\qihao [% item.name %] [% IF item.level == "l1" OR item.level == "l2" -%] \triangleb [% ELSIF item.level == "l4" OR item.level == "l5" -%] \trianglea [% END -%]}\\
+[% END -%]
+[% END -%]
+[% ELSE -%]
+[% IF xiaohuahexishou.explain.AbsorbbadN > 0 -%]
+[% FOREACH item = xiaohuahexishou.baditems.items.item -%]
+{\qihao [% item.name %] [% IF item.level == "l1" OR item.level == "l2" -%] \triangleb [% ELSIF item.level == "l4" OR item.level == "l5" -%] \trianglea [% END -%]}\\
+[% END -%]
+[% END -%]
+[% IF xiaohuahexishou.explain.AbsorbbadN <= 3 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF xiaohuahexishou.explain.AbsorbbadN <= 2 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF xiaohuahexishou.explain.AbsorbbadN <= 1 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF xiaohuahexishou.explain.AbsorbbadN <= 0 -%]
+{\qihao ~}\\
+[% END -%]
+[% END -%]
+\end{minipage}
+\\[-5pt]
+\centerline{\includegraphics[width=2.15cm]{[% xiaohuahexishou.pic %]}}\\[-5pt]
+\hspace*{0cm}\begin{minipage}[t][1.2cm][t]{3cm}{
+%\includegraphics{diandian.pdf}
+\tikz\draw[topcolor,fill=topcolor](0,0) circle[radius=1pt];
+\color{gray2}\qihao
+[% IF xiaohuahexishou.explain.AbsorbbadN == 0 -%]
+您的消化吸收水平均正常。
+[% ELSE -%]
+%您的[% xiaohuahexishou.explain.Absorbbad %]指标异常。
+您的消化吸收检测出[% xiaohuahexishou.explain.AbsorbbadN %]项异常指标。
+[% END -%]
+[% IF batch >= 2 -%]
+\\
+\tikz\draw[topcolor,fill=topcolor](0,0) circle[radius=1pt];
+相比上次检测，您消化吸收检出异常指标数[% IF batchlast.xiaohuahexishou.explain.AbsorbbadN > xiaohuahexishou.explain.AbsorbbadN -%]减少[% ELSIF batchlast.xiaohuahexishou.explain.AbsorbbadN == xiaohuahexishou.explain.AbsorbbadN -%]保持不变[% ELSE -%]增加[% END -%]
+。
+[% END -%]
+}\end{minipage}\\
+\centerline{\color{gray2}\rule{3cm}{0.5pt}}\\[-5pt]
+\bahao
+\noindent\begin{tabular}{@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}}
+[% IF batch == 1 -%]\includegraphics[width=.45cm]{[% xiaohuahexishou.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch == 2 -%]\tikz\draw[[% batchlast.xiaohuahexishou.absorption.piccolor %],fill=[% batchlast.xiaohuahexishou.absorption.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% xiaohuahexishou.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch == 3 -%]\tikz\draw[[% batch1.xiaohuahexishou.absorption.piccolor %],fill=[% batch1.xiaohuahexishou.absorption.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batchlast.xiaohuahexishou.absorption.piccolor %],fill=[% batchlast.xiaohuahexishou.absorption.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% xiaohuahexishou.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch >= 4 -%]\tikz\draw[[% batch1.xiaohuahexishou.absorption.piccolor %],fill=[% batch1.xiaohuahexishou.absorption.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batch2.xiaohuahexishou.absorption.piccolor %],fill=[% batch2.xiaohuahexishou.absorption.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batchlast.xiaohuahexishou.absorption.piccolor %],fill=[% batchlast.xiaohuahexishou.absorption.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% xiaohuahexishou.curpic %]} [% END -%]
+\\
+[% IF batch == 1 -%]
+\color{gray2}当次 & \color{gray2} & \color{gray2} & \color{gray2}
+[% ELSIF batch == 2 -%]
+\color{gray2}第一次 & \color{gray2}当次 & \color{gray2} & \color{gray2}
+[% ELSIF batch == 3 -%]
+\color{gray2}第一次 & \color{gray2}第二次 & \color{gray2}当次 & \color{gray2}
+[% ELSIF batch == 4 -%]
+\color{gray2}第一次& \color{gray2}第二次 & \color{gray2}第三次 & \color{gray2}当次
+[% END -%]
+\\
+\end{tabular}
+\end{tctabularx}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[b]{.24\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\medskip
+\begin{tctabularx}{tabularx={p{3.33cm}}}
+\parbox[c]{\hsize}{\vskip4pt{\color{black70} [% yanzhenghemianyi.name %]\par \barial{[% yanzhenghemianyi.ename %]}}\vskip4pt}\\\\[-5pt]
+\begin{minipage}[t][1.6cm][t]{3.33cm}
+\color{black70}
+[% IF yanzhenghemianyi.giimmune.explain.badN >= 4 -%]
+[% FOREACH item = yanzhenghemianyi.giimmune.baditems.items.item -%]
+[% IF item.index <= 4 -%]
+{\qihao [% item.name %] [% IF item.level == "l1" OR item.level == "l2" -%] \triangleb [% ELSIF item.level == "l4" OR item.level == "l5" -%] \trianglea [% END -%]}\\
+[% END -%]
+[% END -%]
+[% ELSE -%]
+[% IF yanzhenghemianyi.giimmune.explain.badN > 0 -%]
+[% FOREACH item = yanzhenghemianyi.giimmune.baditems.items.item -%]
+{\qihao [% item.name %] [% IF item.level == "l1" OR item.level == "l2" -%] \triangleb [% ELSIF item.level == "l4" OR item.level == "l5" -%] \trianglea [% END -%]}\\
+[% END -%]
+[% END -%]
+[% IF yanzhenghemianyi.giimmune.explain.badN <= 3 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF yanzhenghemianyi.giimmune.explain.badN <= 2 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF yanzhenghemianyi.giimmune.explain.badN <= 1 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF yanzhenghemianyi.giimmune.explain.badN <= 0 -%]
+{\qihao ~}\\
+[% END -%]
+[% END -%]
+\end{minipage}
+\\[-5pt]
+\centerline{\includegraphics[width=2.15cm]{[% yanzhenghemianyi.pic %]}}\\[-5pt]
+\hspace*{0cm}\begin{minipage}[t][1.2cm][t]{3.3cm}{
+\tikz\draw[topcolor,fill=topcolor](0,0) circle[radius=1pt];
+\color{gray2}\qihao
+[% IF yanzhenghemianyi.giimmune.explain.badN == 0 -%]
+您的机体免疫能力正常。
+[% ELSE -%]
+您的[% yanzhenghemianyi.giimmune.explain.bad %]指标异常。
+[% END -%]
+[% IF batch >= 2 -%]
+\\
+\tikz\draw[topcolor,fill=topcolor](0,0) circle[radius=1pt];
+相比上次检测，您炎症和免疫检出异常指标数[% IF batchlast.yanzhenghemianyi.giimmune.explain.badN > yanzhenghemianyi.giimmune.explain.badN -%]减少[% ELSIF batchlast.yanzhenghemianyi.giimmune.explain.badN == yanzhenghemianyi.giimmune.explain.badN -%]保持不变[% ELSE -%]增加[% END -%]
+。
+[% END -%]
+}\end{minipage}\\
+\centerline{\color{gray2}\rule{3cm}{0.5pt}}\\[-5pt]
+\bahao
+\noindent\begin{tabular}{@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}}
+[% IF batch == 1 -%]\includegraphics[width=.45cm]{[% yanzhenghemianyi.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch == 2 -%]\tikz\draw[[% batchlast.yanzhenghemianyi.piccolor %],fill=[% batchlast.yanzhenghemianyi.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% yanzhenghemianyi.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch == 3 -%]\tikz\draw[[% batch1.yanzhenghemianyi.piccolor %],fill=[% batch1.yanzhenghemianyi.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batchlast.yanzhenghemianyi.piccolor %],fill=[% batchlast.yanzhenghemianyi.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% yanzhenghemianyi.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch >= 4 -%]\tikz\draw[[% batch1.yanzhenghemianyi.piccolor %],fill=[% batch1.yanzhenghemianyi.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batch2.yanzhenghemianyi.piccolor %],fill=[% batch2.yanzhenghemianyi.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batchlast.yanzhenghemianyi.piccolor %],fill=[% batchlast.yanzhenghemianyi.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% yanzhenghemianyi.curpic %]} [% END -%]
+\\
+[% IF batch == 1 -%]
+\color{gray2}当次 & \color{gray2} & \color{gray2} & \color{gray2}
+[% ELSIF batch == 2 -%]
+\color{gray2}第一次 & \color{gray2}当次 & \color{gray2} & \color{gray2}
+[% ELSIF batch == 3 -%]
+\color{gray2}第一次 & \color{gray2}第二次 & \color{gray2}当次 & \color{gray2}
+[% ELSIF batch == 4 -%]
+\color{gray2}第一次& \color{gray2}第二次 & \color{gray2}第三次 & \color{gray2}当次
+[% END -%]
+\\
+\end{tabular}
+\end{tctabularx}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[b]{.24\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\medskip
+\begin{tctabularx}{tabularx={p{3.33cm}}}
+\parbox[c]{\hsize}{\vskip4pt{\color{black70} [% changdaojunqun.pathogens.name %]\par \barial{[% changdaojunqun.pathogens.ename %]}}\vskip4pt}\\\\[-5pt]
+\begin{minipage}[t][1.6cm][t]{3.33cm}
+\color{black70}
+[% IF changdaojunqun.pathogens.num >= 4 -%]
+[% FOREACH item = changdaojunqun.pathogens.baditems.items.item -%]
+[% IF item.index <= 4 -%]
+{\qihao [% item.name %] [% IF item.level == "l1" OR item.level == "l2" -%] \triangleb [% ELSIF item.level == "l4" OR item.level == "l5" -%] \trianglea [% END -%]}\\
+[% END -%]
+[% END -%]
+[% ELSE -%]
+[% IF changdaojunqun.pathogens.num > 0 -%]
+[% FOREACH item = changdaojunqun.pathogens.baditems.items.item -%]
+{\qihao [% item.name %] [% IF item.level == "l1" OR item.level == "l2" -%] \triangleb [% ELSIF item.level == "l4" OR item.level == "l5" -%] \trianglea [% END -%]}\\
+[% END -%]
+[% END -%]
+[% IF changdaojunqun.pathogens.num <= 3 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF changdaojunqun.pathogens.num <= 2 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF changdaojunqun.pathogens.num <= 1 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF changdaojunqun.pathogens.num <= 0 -%]
+{\qihao ~}\\
+[% END -%]
+[% END -%]
+\end{minipage}
+\\[-5pt]
+\centerline{\includegraphics[width=2.15cm]{[% changdaojunqun.pathogens.pic %]}}\\[-5pt]
+\hspace*{0cm}\begin{minipage}[t][1.2cm][t]{3.3cm}{
+\tikz\draw[topcolor,fill=topcolor](0,0) circle[radius=1pt];
+\color{gray2}\qihao
+[% IF changdaojunqun.pathogens.badN > 0 -%]
+您的肠道中检测出[% changdaojunqun.pathogens.num %]种致病菌，其中[% changdaojunqun.pathogens.badN %]种含量超标。
+[% ELSE -%]
+[% IF changdaojunqun.pathogens.num == 0 -%]
+您的肠道中未检测出致病菌。
+[% ELSE -%]
+您的肠道中检测出[% changdaojunqun.pathogens.num %]种致病菌，含量未超标。
+[% END -%]
+[% END -%]
+[% IF batch >= 2 -%]
+\\
+\tikz\draw[topcolor,fill=topcolor](0,0) circle[radius=1pt];
+相比上次检测，您肠道致病菌超标数目[% IF batchlast.changdaojunqun.pathogens.badN > changdaojunqun.pathogens.badN -%]减少[% ELSIF batchlast.changdaojunqun.pathogens.badN == changdaojunqun.pathogens.badN -%]保持不变[% ELSE -%]增加[% END -%]
+。
+[% END -%]
+}\end{minipage}\\
+\centerline{\color{gray2}\rule{3cm}{0.5pt}}\\[-5pt]
+\bahao
+\noindent\begin{tabular}{@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}}
+[% IF batch == 1 -%]\includegraphics[width=.45cm]{[% changdaojunqun.pathogens.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch == 2 -%]\tikz\draw[[% batchlast.changdaojunqun.pathogens.piccolor %],fill=[% batchlast.changdaojunqun.pathogens.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% changdaojunqun.pathogens.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch == 3 -%]\tikz\draw[[% batch1.changdaojunqun.pathogens.piccolor %],fill=[% batch1.changdaojunqun.pathogens.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batchlast.changdaojunqun.pathogens.piccolor %],fill=[% batchlast.changdaojunqun.pathogens.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% changdaojunqun.pathogens.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch >= 4 -%]\tikz\draw[[% batch1.changdaojunqun.pathogens.piccolor %],fill=[% batch1.changdaojunqun.pathogens.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batch2.changdaojunqun.pathogens.piccolor %],fill=[% batch2.changdaojunqun.pathogens.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batchlast.changdaojunqun.pathogens.piccolor %],fill=[% batchlast.changdaojunqun.pathogens.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% changdaojunqun.pathogens.curpic %]} [% END -%]
+\\
+[% IF batch == 1 -%]
+\color{gray2}当次 & \color{gray2} & \color{gray2} & \color{gray2}
+[% ELSIF batch == 2 -%]
+\color{gray2}第一次 & \color{gray2}当次 & \color{gray2} & \color{gray2}
+[% ELSIF batch == 3 -%]
+\color{gray2}第一次 & \color{gray2}第二次 & \color{gray2}当次 & \color{gray2}
+[% ELSIF batch == 4 -%]
+\color{gray2}第一次& \color{gray2}第二次 & \color{gray2}第三次 & \color{gray2}当次
+[% END -%]
+\\
+\end{tabular}
+\end{tctabularx}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[b]{.24\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\medskip
+\begin{tctabularx}{tabularx={p{3.33cm}}}
+\parbox[c]{\hsize}{\vskip4pt{\color{black70} [% xiaohuahexishou.metabolism.name %]\par \barial{[% xiaohuahexishou.metabolism.ename %]}}\vskip4pt}\\\\[-5pt]
+\begin{minipage}[t][1.6cm][t]{3.33cm}
+\color{black70}
+[% IF xiaohuahexishou.metabolism.explain.badN >= 4 -%]
+[% FOREACH item = xiaohuahexishou.metabolism.baditems.items.item -%]
+[% IF item.index <= 4 -%]
+{\qihao [% item.name %] [% IF item.level == "l1" OR item.level == "l2" -%] \triangleb [% ELSIF item.level == "l4" OR item.level == "l5" -%] \trianglea [% END -%]}\\
+[% END -%]
+[% END -%]
+[% ELSE -%]
+[% IF xiaohuahexishou.metabolism.explain.badN > 0 -%]
+[% FOREACH item = xiaohuahexishou.metabolism.baditems.items.item -%]
+{\qihao [% item.name %] [% IF item.level == "l1" OR item.level == "l2" -%] \triangleb [% ELSIF item.level == "l4" OR item.level == "l5" -%] \trianglea [% END -%]}\\
+[% END -%]
+[% END -%]
+[% IF xiaohuahexishou.metabolism.explain.badN <= 3 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF xiaohuahexishou.metabolism.explain.badN <= 2 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF xiaohuahexishou.metabolism.explain.badN <= 1 -%]
+{\qihao ~}\\
+[% END -%]
+[% IF xiaohuahexishou.metabolism.explain.badN <= 0 -%]
+{\qihao ~}\\
+[% END -%]
+[% END -%]
+\end{minipage}
+\\[-5pt]
+\centerline{\includegraphics[width=2.15cm]{[% xiaohuahexishou.metabolism.pic %]}}\\[-5pt]
+\hspace*{0cm}\begin{minipage}[t][1.2cm][t]{3.3cm}{
+\tikz\draw[topcolor,fill=topcolor](0,0) circle[radius=1pt];
+\color{gray2}\qihao
+[% IF xiaohuahexishou.metabolism.explain.badN == 0 -%]
+您的代谢能力良好。
+[% ELSE -%]
+%您的[% xiaohuahexishou.metabolism.explain.bad %]指标异常。
+您的重要小分子代谢检测出[% xiaohuahexishou.metabolism.explain.badN %]项异常指标。
+[% END -%]
+[% IF batch >= 2 -%]
+\\
+\tikz\draw[topcolor,fill=topcolor](0,0) circle[radius=1pt];
+相比上次检测，您重要小分子代谢异常指标数[% IF batchlast.xiaohuahexishou.metabolism.explain.badN > xiaohuahexishou.metabolism.explain.badN -%]减少[% ELSIF batchlast.xiaohuahexishou.metabolism.explain.badN == xiaohuahexishou.metabolism.explain.badN -%]保持不变[% ELSE -%]增加[% END -%]
+。
+[% END -%]
+}\end{minipage}\\
+\centerline{\color{gray2}\rule{3cm}{0.5pt}}\\[-5pt]
+\bahao
+\noindent\begin{tabular}{@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}m{0.83cm}<{\centering}@{}}
+[% IF batch == 1 -%]\includegraphics[width=.45cm]{[% xiaohuahexishou.metabolism.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch == 2 -%]\tikz\draw[[% batchlast.xiaohuahexishou.metabolism.piccolor %],fill=[% batchlast.xiaohuahexishou.metabolism.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% xiaohuahexishou.metabolism.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt]; & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch == 3 -%]\tikz\draw[[% batch1.xiaohuahexishou.metabolism.piccolor %],fill=[% batch1.xiaohuahexishou.metabolism.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batchlast.xiaohuahexishou.metabolism.piccolor %],fill=[% batchlast.xiaohuahexishou.metabolism.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% xiaohuahexishou.metabolism.curpic %]} & \tikz\draw[gray,fill=gray](0,0) circle[radius=4.5pt];[% END -%]
+[% IF batch >= 4 -%]\tikz\draw[[% batch1.xiaohuahexishou.metabolism.piccolor %],fill=[% batch1.xiaohuahexishou.metabolism.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batch2.xiaohuahexishou.metabolism.piccolor %],fill=[% batch2.xiaohuahexishou.metabolism.piccolor %]](0,0) circle[radius=4.5pt]; & \tikz\draw[[% batchlast.xiaohuahexishou.metabolism.piccolor %],fill=[% batchlast.xiaohuahexishou.metabolism.piccolor %]](0,0) circle[radius=4.5pt]; & \includegraphics[width=.45cm]{[% xiaohuahexishou.metabolism.curpic %]} [% END -%]
+\\
+[% IF batch == 1 -%]
+\color{gray2}当次 & \color{gray2} & \color{gray2} & \color{gray2}
+[% ELSIF batch == 2 -%]
+\color{gray2}第一次 & \color{gray2}当次 & \color{gray2} & \color{gray2}
+[% ELSIF batch == 3 -%]
+\color{gray2}第一次 & \color{gray2}第二次 & \color{gray2}当次 & \color{gray2}
+[% ELSIF batch == 4 -%]
+\color{gray2}第一次& \color{gray2}第二次 & \color{gray2}第三次 & \color{gray2}当次
+[% END -%]
+\\
+\end{tabular}
+\end{tctabularx}
+\end{minipage}
+
+\vspace*{-4mm}
+%\medskip
+\noindent
+\begin{minipage}[t][8cm][t]{.35\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\medskip
+\begin{tctabularx}{tabularx={p{5.06cm}}}
+\parbox[c]{\hsize}{\vskip4pt{\color{black70} 菌群多样性\par \barial{DIVERSITY ASSOCIATION}}\vskip4pt}\\
+\parbox[c]{\hsize}{\vskip4pt{\tikz\draw[topcolor,fill=topcolor](0,0) circle[radius=1pt];\color{gray2}\qihao 您的菌群多样性[% IF changdaojunqun.gaikuang.divlevel == 'l1' or changdaojunqun.gaikuang.divlevel == 'l2' -%]仅[% END -%]高于[% changdaojunqun.gaikuang.diversity %]{\%}的参考人群}\\[% IF batch >= 2 -%]\tikz\draw[topcolor,fill=topcolor](0,0) circle[radius=1pt];\color{gray2}\qihao 相比上次检测，您的菌群多样性[% comparelast.changdaojunqun.gaikuang.duoyangxing %]。[% END -%]}
+\parbox[c]{\hsize}{
+\begin{center}
+\begin{picture}(1, 1)
+\put(-70, -165){\includegraphics[width=4.70cm]{DIVERSITY-ASSOCIATION.pdf}}
+\put(3, -146){\raisebox{[% changdaojunqun.gaikuang.diversity %]pt}{\includegraphics[scale=0.85]{[% changdaojunqun.gaikuang.divpic %]}}}
+\end{picture}
+\end{center}
+}
+\\\\\\\\\\\\\\[-7pt]
+\\\\\\\\\\\\\\
+\\\\\\\\
+\end{tctabularx}
+\end{minipage}
+\hfill
+\begin{minipage}[t][8cm][t]{.637\textwidth}
+\fontsize{9.3pt}{10pt}\selectfont
+\medskip
+\begin{tctabularx}{tabularx={p{9.59cm}}}
+\parbox[c]{\hsize}{\vskip4pt{\color{black70} 相对丰度\par \barial{RELATIVE ABUNDANCE}}\vskip4pt}\\\\
+%\begin{center}
+
+\hspace*{0.2cm}
+{
+\begin{tikzpicture}[bar interval width=0.8, bar width=0.70cm]
+	\draw[black]
+		(-3cm, 0.0cm) node[left, anchor = west] {\color{black70} {正常人的结果}}
+		(-3cm, 1.0cm) node[left, anchor = west] {\color{black70} {您的结果}}
+		;
+	\begin{scope}
+	\clip[] (0cm, -0.30cm) rectangle (5cm, 0.30cm);
+[% FOREACH item = abundance.item -%]
+	\draw[fill=solomon[% item.index %], solomon[% item.index %]] ([% item.start.control %]cm * 5, -0.30cm) rectangle ([% item.end.control %]cm * 5, 0.30cm) node {};
+[% END -%]
+%	\draw[fill=green, green] (0cm, -0.30cm) rectangle (1cm, 0.30cm) node {};%[xshift = -0.966091954022989cm,yshift=-4.5mm];
+%	\draw[fill=red, red] (1cm, -0.30cm) rectangle (4cm, 0.30cm) node {};%[xshift = -1.08390804597701cm,yshift=-4.5mm];
+%	\draw[fill=blue, blue] (4cm, -0.30cm) rectangle (5cm, 0.30cm) node {};%[xshift = -0.45cm,yshift=-4.5mm];
+	\end{scope}
+	\begin{scope}
+	\clip[] (0cm, 0.70cm) rectangle (5cm, 1.30cm);
+[% FOREACH item = abundance.item -%]
+	\draw[fill=solomon[% item.index %], solomon[% item.index %]] ([% item.start.sample %]cm * 5, 0.70cm) rectangle ([% item.end.sample %]cm * 5, 1.30cm) node {};
+[% END -%]
+%	\draw[fill=green,green] (0cm, 0.70cm) rectangle (1.30cm, 1.30cm) node {};%[xshift = -0.966091954022989cm,yshift=-4.5mm];
+%	\draw[fill=red,red] (1.30cm, 0.70cm) rectangle (3.5cm, 1.30cm) node {};%[xshift = -1.08390804597701cm,yshift=-4.5mm];
+%	\draw[fill=blue, blue] (3.5cm, 0.70cm) rectangle (5cm, 1.30cm) node {};%[xshift = -0.30cm,yshift=-4.5mm];
+	\end{scope}
+
+[% FOREACH item = abundance.item -%]
+	\draw[fill=solomon[% item.index %], solomon[% item.index %]](-2.8cm, -2.20cm - 0.40cm * [% item.index %]) rectangle (-2cm, -2.0cm - 0.40cm * [% item.index %]);
+	\draw (-2cm, -2.20cm - 0.40cm * [% item.index %]) node[left, anchor = west, yshift=1.2mm] {\wudianwu\color{gray2} {[% item.ename %]~~[% item.name %]}};
+[% END -%]
+	\draw[fill=gray2, gray2](-3.00cm, -1.80cm) node[left, anchor = west, yshift=1.2mm] {\wudianwu\color{black} {细菌门水平分类}};
+
+	\draw (1.5cm, -3.3cm) node[right, anchor = west, yshift=1.2mm] {\xiaosihao\color{gray2} {您的菌群相对丰度与}};
+	[% IF abundance.pearson_cor >= 0.92 -%]
+	\draw (1.5cm, -3.9cm) node[right, anchor = west, yshift=1.2mm] {\xiaosihao\color{gray2} {参考人群趋势一致}};
+	[% ELSIF abundance.pearson_cor >= 0.8 -%]
+	\draw (1.5cm, -3.9cm) node[right, anchor = west, yshift=1.2mm] {\xiaosihao\color{gray2} {参考人群趋势相近}};
+	[% ELSE -%]
+	\draw (1.5cm, -3.9cm) node[right, anchor = west, yshift=1.2mm] {\xiaosihao\color{gray2} {参考人群趋势差异较大}};
+	[% END -%]
+%	\draw[fill=blue, blue](-2.8cm, -5.00cm + 0.40cm * 0) rectangle (-2cm, -4.8cm + 0.40cm * 0); \draw (-2cm, -5.00cm + 0.40cm * 0) node[left, anchor = west, yshift=1.2mm] {\wudianwu {xxx 所罗门}};
+%	\draw[fill=blue, blue](-2.8cm, -5.00cm + 0.40cm * 1) rectangle (-2cm, -4.8cm + 0.40cm * 1); \draw (-2cm, -5.00cm + 0.40cm * 1) node[left, anchor = west, yshift=1.2mm] {\wudianwu {xxx 所罗门}};
+%	\draw[fill=blue, blue](-2.8cm, -5.00cm + 0.40cm * 2) rectangle (-2cm, -4.8cm + 0.40cm * 2); \draw (-2cm, -5.00cm + 0.40cm * 2) node[left, anchor = west, yshift=1.2mm] {\wudianwu {xxx 所罗门}};
+%	\draw[fill=blue, blue](-2.8cm, -5.00cm + 0.40cm * 3) rectangle (-2cm, -4.8cm + 0.40cm * 3); \draw (-2cm, -5.00cm + 0.40cm * 3) node[left, anchor = west, yshift=1.2mm] {\wudianwu {xxx 所罗门}};
+%	\draw[fill=blue, blue](-2.8cm, -5.00cm + 0.40cm * 4) rectangle (-2cm, -4.8cm + 0.40cm * 4); \draw (-2cm, -5.00cm + 0.40cm * 4) node[left, anchor = west, yshift=1.2mm] {\wudianwu {xxx 所罗门}};
+%	\draw[fill=blue, blue](-2.8cm, -5.00cm + 0.40cm * 5) rectangle (-2cm, -4.8cm + 0.40cm * 5); \draw (-2cm, -5.00cm + 0.40cm * 5) node[left, anchor = west, yshift=1.2mm] {\wudianwu {xxx 所罗门}};
+%	\draw[fill=blue, blue](-2.8cm, -5.00cm + 0.40cm * 6) rectangle (-2cm, -4.8cm + 0.40cm * 6); \draw (-2cm, -5.00cm + 0.40cm * 6) node[left, anchor = west, yshift=1.2mm] {\wudianwu {xxx 所罗门}};
+
+%	\draw[fill=black, black](-2.0cm, -5.00cm + 0.40cm * 7) node[left, anchor = west, yshift=1.2mm] {\wudianwu\color{black} {xxx 所罗门}};
+
+
+\end{tikzpicture}
+}
+
+%\end{center}
+\end{tctabularx}
+\end{minipage}
+
+\vfill
+
+\end{document}
+

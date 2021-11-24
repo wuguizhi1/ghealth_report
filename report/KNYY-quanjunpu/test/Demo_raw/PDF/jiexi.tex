@@ -1,0 +1,196 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcommand{\tabularxcolumn}[1]{>\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\begin{document}
+
+\vspace*{4mm}
+%% 各章节
+\setlength{\arrayrulewidth}{.2pt}
+\fontsize{8.8pt}{11pt}\selectfont
+\color{black100}
+
+\begin{center}
+\noindent{\fontsize{25pt}{11pt}\selectfont {检测结果}}
+\end{center}
+
+\vspace*{8mm}
+
+\noindent{\fontsize{15pt}{11pt}\selectfont{ 一、肠道菌群概况}}
+
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{5cm}<{\centering}|m{3cm}<{\centering}|m{3cm}<{\centering}|m{3cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering\bf {检测内容} \vskip7pt} &  \bf{检测结果} &  \bf{检测值} & \bf{参考范围}\\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 肠道菌群多样性(diversity) \vskip7pt} &
+正常 &
+3.20
+& ≥ 2.54\\
+\hline 
+\parbox[c]{\hsize}{\vskip7pt\centering 有益菌(Benificial bacteria) \vskip7pt} &
+正常 &
+175.10
+& ≥ 39.81\\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 有害菌(Harmful bacteria) \vskip7pt} &
+正常 &
+0.39
+& ≤ 144.04\\
+\hline
+
+\end{longtable}
+
+\vspace*{-1mm}
+
+\begin{spacing}{1.25}
+\noindent\fontsize{9pt}{11pt}\selectfont {您的肠道菌群组成较为丰富，菌群失调风险较低。您肠道内的有益菌与有害菌的含量均处于正常范围。二者处于动态平衡的状态，共同维持肠道生态系统的稳定。但是，在您免疫力低下时，有害菌可能会引起感染、腹泻、肠炎、便秘等。有害菌数量过高还可能影响您的心情和食欲，扰乱内分泌，降低机体免疫力，增加疾病风险。良好的饮食及生活习惯有助于提高有益菌的含量，抑制有害菌的增殖，建议您规律作息，注意饮食健康。}
+
+\end{spacing}
+
+\vspace*{6mm}
+\noindent{\fontsize{15pt}{11pt}\selectfont{ 二、肠道菌群相对丰度}}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{longtable}{|m{5cm}<{\centering}|m{3cm}<{\centering}|m{3cm}<{\centering}|m{3cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering\bf {检测内容} \vskip7pt} &  \bf{检测结果} &  \bf{检测值} & \bf{参考范围}\\
+%\hline
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 拟杆菌门(Bacteroidetes) \vskip7pt} &
+正常 &
+45.79
+& ≤ 63.44\\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 厚壁菌门(Firmicutes) \vskip7pt} &
+正常 &
+37.18
+& ≤ 58.43\\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 变形菌门(Proteobacteria) \vskip7pt} &
+正常 &
+10.79
+& ≤ 13.45\\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 蓝藻门(Cyanobacteria) \vskip7pt} &
+异常 &
+3.10
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+& ≤ 0.60\\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 迷踪菌门(Elusimicrobia) \vskip7pt} &
+异常 &
+0.17
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_up.pdf}}
+& ≤ 0.00\\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 柔膜菌门(Tenericutes) \vskip7pt} &
+正常 &
+0.01
+& ≤ 0.57\\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 放线菌门(Actinobacteria) \vskip7pt} &
+正常 &
+0.01
+& ≤ 5.58\\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 厚壁菌门/拟杆菌门(FBR) \vskip7pt} &
+正常 &
+0.81
+& ≤ 4.93\\
+\hline
+\end{longtable}
+
+\vspace*{-2mm}
+
+\begin{spacing}{1.25}
+\noindent\fontsize{9pt}{11pt}\selectfont {人体肠道中超过95{\%}的菌群归属于以下四个菌门，拟杆菌门、厚壁菌门、变形菌门和放线菌门。根据研究表明，厚壁菌门/拟杆菌门（FBR）比值与肥胖风险正相关。您的肠道菌群相对丰度与参考人群趋势一致，说明您的肠道菌群组成结构及稳定性良好，有利于肠道及人体健康。您的肠道菌群不易受到外界不良因素的干扰，但请避免不良作息、刺激性食物、药物滥用等，这样有助于保持良好的肠道菌群相对丰度，维持肠道微生态健康。}
+
+\end{spacing}
+
+\vspace*{1cm}
+
+\noindent{\fontsize{15pt}{11pt}\selectfont\bf{ 肠型分析}}
+
+\vspace*{4mm}
+
+\begin{center}
+\noindent\centering\includegraphics[scale=1]{enterotype_3.pdf}\\
+\vspace*{10mm}
+\noindent\fontsize{15pt}{11pt}\selectfont {经检测，您的肠型为\RNum{2}型，普氏菌型} \\
+\end{center}
+\vspace*{8mm}
+\noindent\fontsize{10pt}{10pt}\selectfont {根据人体肠道菌的构成以及优势菌主要分为三种肠型，少数个体肠道菌肠型无法分类。 \\} 
+\\
+\vspace*{2mm}
+\hspace*{-1mm}\parbox{\hsize}{
+\noindent\fontsize{9pt}{10pt}\selectfont\color{gray2} {肠型\RNum{1} \\}
+\vspace*{-2mm}
+\begin{spacing}{1.5}
+\noindent\fontsize{9pt}{10pt}\selectfont\color{gray2} {肠道菌群以拟杆菌属为优势菌。拟杆菌属含有合成抗坏血酸（维生素C）、核黄素（B2）、泛酸（B5）和H的菌属，合成生物素（B7）的酶较多；拟杆菌属擅长于分解碳水化合物，所以这种肠型的人相对不易发胖。 \\}
+\end{spacing}
+}
+\\
+\vspace*{2mm}
+\hspace*{-1mm}\parbox{\hsize}{
+\noindent\fontsize{9pt}{10pt}\selectfont {肠型\RNum{2} \\}
+\vspace*{-2mm}
+\begin{spacing}{1.5}
+\noindent\fontsize{9pt}{10pt}\selectfont {肠道菌群以普氏菌属（Prevotella）为优势菌。普氏菌属含有合成硫胺素和叶酸（B9）的菌类，合成硫胺素（维生素B1）的酶较多；普氏菌属的部分菌善于分解肠道黏蛋白。 \\}
+\end{spacing} 
+}
+\\
+\vspace*{2mm}
+\hspace*{-1mm}\parbox{\hsize}{
+\noindent\fontsize{9pt}{10pt}\selectfont\color{gray2} {肠型\RNum{3} \\}
+\vspace*{-2mm}
+\begin{spacing}{1.5}
+\noindent\fontsize{9pt}{10pt}\selectfont\color{gray2} {肠道菌群以瘤胃球菌属（Ruminococcus）为优势菌。瘤胃球菌属不仅对黏液中的蛋白很有兴趣，也喜欢简单的糖分。某些瘤胃球菌属有助于肠道粘膜细胞吸收糖分，使体重增加。 \\}
+\end{spacing}
+}
+\\
+
+\vspace*{1cm}
+%\fontsize{10pt}{13pt}\selectfont
+%\noindent\begin{tabular}{p{7cm}p{7cm}}
+%\parbox[c]{\hsize}{\vskip5pt 检测者： \vskip5pt} & 审核者： \\
+%\parbox[c]{\hsize}{\vskip5pt 检测日期：2019-12-31 \vskip5pt} & 报告日期： 2019-12-31\\
+%\end{tabular}
+\begin{longtable}{m{2cm}m{3.5cm}m{3cm}m{2cm}m{3.5cm}}
+检测员：&\includegraphics[height=0.9cm,width=3cm]{jianceyuan.png}&&审核员:：&\includegraphics[height=0.9cm,width=3cm]{shenheyuan.png}\\
+检测日期：&2019-12-31&&报告日期：& 2019-12-31\\
+\end{longtable}
+
+\end{document}
+

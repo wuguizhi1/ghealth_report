@@ -1,0 +1,117 @@
+<opt>
+  <CN>
+    <bacteria>
+      <desc>乳杆菌属|Lactobacillus|Genus;</desc>
+      <descfull></descfull>
+    </bacteria>
+    <etitle>Lactobacillus</etitle>
+    <order>1</order>
+    <pubmed>
+      <desc></desc>
+    </pubmed>
+    <section1>
+      <name>菌群分布</name>
+      <order>1</order>
+    </section1>
+    <suggestion>
+      <healthy>
+        <l1>
+          <actiondesc>益生元（0\textasciitilde 12）：低聚半乳糖；低聚果糖；儿童合生元
+
+益生元（13+）：菊粉；低聚果糖；低聚半乳糖；低聚木糖；聚葡萄糖
+
+益生菌：含嗜酸乳杆菌LA-5的乳酸杆菌活菌制剂或者含乳酸杆菌的酸奶
+
+食物：全麦；糙米；山药；红薯；芦笋
+
+产品：未来优态UA：2：1：后：3+：2：益生菌固体饮料为活菌制剂，建议用37℃以下温水冲调并及时服用，以免有益菌失活而影响干预效果</actiondesc>
+          <actionrule>补充益生元和益生菌</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>免疫调节力下降；肠道环境差；抵抗病原菌能力降低</effectdesc>
+          <mechanism>不利于抑制肠道炎症及调节肠道环境</mechanism>
+          <mechanismfull>乳酸杆菌低可能导致消化不良、免疫力降低；长期偏低还可引起便秘等病症。</mechanismfull>
+          <note>1、建议适量增加全麦、红薯等食物，有利于肠道乳酸杆菌的增殖，提高肠道保护力。
+
+（13+）2、建议您适量补充菊粉、低聚果糖、低聚木糖等益生元，促进肠道内乳酸杆菌的增殖，有利于产生乳酸，调节肠道环境，增强肠道屏障功能，促进肠道健康。
+
+（0\textasciitilde 12）2、建议您适量补充低聚半乳糖、低聚果糖、儿童合生元等益生元，能帮助肠道内乳酸杆菌的增殖，有利于增强免疫力，合成维生素和氨基酸，增强肠道屏障功能，促进肠道健康。
+
+3、建议适量补充含嗜酸乳杆菌LA-5的乳酸杆菌活菌制剂或者含乳杆菌的酸奶等，以增加肠道内乳酸杆菌的含量，抑制有害菌的异常增殖，调节肠道菌群平衡。</note>
+        </l1>
+        <l2>
+          <actiondesc>益生元（0\textasciitilde 12）：低聚半乳糖；低聚果糖；儿童合生元
+
+益生元（13+）：菊粉；低聚果糖；低聚半乳糖；低聚木糖；聚葡萄糖
+
+益生菌：含嗜酸乳杆菌LA-5的乳酸杆菌活菌制剂或者含乳酸杆菌的酸奶
+
+食物：全麦；糙米；山药；红薯；芦笋
+
+产品：未来优态UA：2：1：后：3+：2：益生菌固体饮料为活菌制剂，建议用37℃以下温水冲调并及时服用，以免有益菌失活而影响干预效果</actiondesc>
+          <actionrule>补充益生元和益生菌</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>免疫调节力下降；肠道环境差；抵抗病原菌能力降低</effectdesc>
+          <mechanism>不利于抑制肠道炎症及调节肠道环境</mechanism>
+          <mechanismfull>乳酸杆菌偏低可能导致消化不良、免疫力降低；长期偏低还可引起便秘等病症。</mechanismfull>
+          <note>1、建议适量增加全麦、红薯等食物，有利于肠道乳酸杆菌的增殖，提高肠道保护力。
+
+（13+）2、建议您适量补充菊粉、低聚果糖、低聚木糖等益生元，促进肠道内乳酸杆菌的增殖，有利于产生乳酸，调节肠道环境，增强肠道屏障功能，促进肠道健康。
+
+（0\textasciitilde 12）2、建议您适量补充低聚半乳糖、低聚果糖、儿童合生元等益生元，能帮助肠道内乳酸杆菌的增殖，有利于增强免疫力，合成维生素和氨基酸，增强肠道屏障功能，促进肠道健康。
+
+3、建议适量补充含嗜酸乳杆菌LA-5的乳酸杆菌活菌制剂或者含乳酸杆菌的酸奶等，以增加肠道内乳酸杆菌的含量，抑制有害菌的异常增殖，调节肠道菌群平衡。</note>
+        </l2>
+        <l3>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc></effectdesc>
+          <mechanism>抑制肠道炎症及调节肠道环境</mechanism>
+          <mechanismfull>抑制肠道炎症及调节肠道环境</mechanismfull>
+          <note>结合您本次检测结果，建议您平衡膳食，日常生活中可适当增加酸奶的摄入量；按时作息，根据自身情况进行适当运动；尽量避免广谱抗生素的使用，以防破坏肠道内微生态平衡，让致病菌有机可乘。</note>
+        </l3>
+        <l4>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>抑制肠道炎症；调节肠道环境</effectdesc>
+          <mechanism>有利于抑制肠道炎症及调节肠道环境</mechanism>
+          <mechanismfull>有利于抑制肠道炎症及调节肠道环境</mechanismfull>
+          <note>结合您本次检测结果，建议您平衡膳食，日常生活中可适当增加酸奶的摄入量；按时作息，根据自身情况进行适当运动；尽量避免广谱抗生素的使用，以防破坏肠道内微生态平衡，让致病菌有机可乘。</note>
+        </l4>
+        <l5>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>抑制肠道炎症；调节肠道环境</effectdesc>
+          <mechanism>有利于抑制肠道炎症及调节肠道环境</mechanism>
+          <mechanismfull>有利于抑制肠道炎症及调节肠道环境</mechanismfull>
+          <note>结合您本次检测结果，建议您平衡膳食，日常生活中可适当增加酸奶的摄入量；按时作息，根据自身情况进行适当运动；尽量避免广谱抗生素的使用，以防破坏肠道内微生态平衡，让致病菌有机可乘。</note>
+        </l5>
+      </healthy>
+    </suggestion>
+    <summary>
+      <desc>抑制有害菌的生长，增强人体免疫力</desc>
+      <descfull>乳酸杆菌通过产生乳酸，从而发酵制作酸奶和奶酪等食物，让食物既美味又营养。此外，近年来的研究发现，乳酸杆菌跟身体健康也密切相关。当肠道内乳酸杆菌含量较高时：
+
+1）产生乳酸，合成氨基酸和维生素等，调节肠道微环境，抑制致病菌生长；
+
+2）增强免疫力，抑制肠道炎症的发生，阻止致病菌入侵肠道；
+
+3）延缓衰老，促进肠道蠕动，促进营养物质吸收，有利于肠道健康。
+
+研究发现乳酸杆菌偏低与腹泻、过敏性皮炎、肠易激综合征等健康问题有关</descfull>
+      <source>乳酸杆菌是调节肠道微生态平衡的重要细菌，其含量降低可能会导致肠道环境变差，不利于消化；免疫力降低，抵抗致病菌能力降低，易感染疾病。</source>
+    </summary>
+    <title>乳酸杆菌属（Lactobacillus spp.）</title>
+  </CN>
+  <categoey>distribution</categoey>
+  <id>changdaokang_danxiangxi_tjbchangdaobaohuli_tjsjcruganjunshu</id>
+  <oriid>tjsjcruganjunshu</oriid>
+  <orititle>乳酸杆菌属（Lactobacillus spp.）</orititle>
+</opt>

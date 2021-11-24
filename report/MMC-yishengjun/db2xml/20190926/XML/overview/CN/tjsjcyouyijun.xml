@@ -1,0 +1,91 @@
+<opt>
+  <CN>
+    <bacteria>
+      <desc></desc>
+      <descfull></descfull>
+    </bacteria>
+    <etitle>Benificial bacteria</etitle>
+    <order>1</order>
+    <pubmed>
+      <desc></desc>
+    </pubmed>
+    <section1>
+      <name>菌群概况</name>
+      <order>1</order>
+    </section1>
+    <suggestion>
+      <healthy>
+        <l1>
+          <actiondesc></actiondesc>
+          <actionrule>您需要通过饮食、补充微生态制剂、运动等方式来改善肠道菌群情况。</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>undefined</effectdesc>
+          <mechanism>屎里有毒</mechanism>
+          <mechanismfull>简而言之就是，您的“屎”里有毒。
+
+您的身体可能已经处于较为不健康的状态了，建议您及时就医做进一步检查，及时缓解原发健康问题后，再通过膳食途径进一步提升肠道有益菌含量。</mechanismfull>
+          <note></note>
+        </l1>
+        <l2>
+          <actiondesc></actiondesc>
+          <actionrule>您需要通过饮食、补充微生态制剂、运动等方式来改善肠道菌群情况。</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>undefined</effectdesc>
+          <mechanism>屎里有雷</mechanism>
+          <mechanismfull>简而言之就是，您的“屎”里有健康地雷。
+
+您的身体健康负荷有点高哦！为避免健康地雷被引爆后造成的健康问题，请务必关注您的健康，进行呵护肠道微生态环境，扫除健康地雷。</mechanismfull>
+          <note></note>
+        </l2>
+        <l3>
+          <actiondesc></actiondesc>
+          <actionrule>您可以通过补充益生元、益生菌等进一步改善肠道菌群情况。</actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc>undefined</effectdesc>
+          <mechanism>屎里无奇</mechanism>
+          <mechanismfull>简而言之就是，您的“屎”平平无奇与其他普罗大众的粑粑差别不大。
+
+您的健康状态是国人平均状态，有着进阶优秀的潜力，但生活放纵一点也有着埋下健康地雷的可能，所以记得坚持养生哟！</mechanismfull>
+          <note></note>
+        </l3>
+        <l4>
+          <actiondesc></actiondesc>
+          <actionrule>肠道保护力优秀，请您继续保持。</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>undefined</effectdesc>
+          <mechanism>屎里藏金</mechanism>
+          <mechanismfull>简而言之就是，您的健康状态堪称优秀到“屎”里肯定藏着真金。
+
+您一定是养生达人，才能将健康状态拔升到如此优秀的高度。继续保持，甚至能出养生畅销书，下一个养生大王就是您了！</mechanismfull>
+          <note></note>
+        </l4>
+        <l5>
+          <actiondesc></actiondesc>
+          <actionrule>肠道保护力特别棒，请您继续保持。</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>undefined</effectdesc>
+          <mechanism>屎可救人</mechanism>
+          <mechanismfull>简而言之，您健康得像唐僧肉一样，连粑粑也能让人延年益寿。
+
+您知道吗，有很多疾病患者都等着您这样亿里挑一的人给他们捐献健康的粪便去做移植，所以请一定要爱护好自己。</mechanismfull>
+          <note></note>
+        </l5>
+      </healthy>
+    </suggestion>
+    <summary>
+      <desc>产生有益物质，抑制病原菌的生长，帮助预防疾病</desc>
+      <descfull>肠道健康保护力评估总分是通过综合评估您肠道内的多种有益菌的含量而得出的一个总的评估指标。有益菌是人类的好朋友，是肠道健康的守护神，能够产生维生素、短链脂肪酸等许多对人体有益的物质，还能抑制有害菌的生长，减少疾病的发生。因此，肠道内有益菌的含量越高，肠道健康保护力评估总分分值也就越高，说明您的肠道健康保护力越强，这将有利于肠道微生态平衡、增强免疫力、促进营养吸收等，从而保证人体健康。</descfull>
+      <source>肠道菌群伴影响人体对营养物质的消化吸收、机体免疫力等，肠道菌群失调可引发便秘、腹泻、腹胀、腹痛、消化不良、食欲不振等病症。肠道健康是人体健康的重要指征，通过检测肠道有益菌的含量，可直观反映肠道菌群对肠道健康的保护能力，可以知晓人体肠道健康状况，为健康保驾护航。</source>
+    </summary>
+    <title>有益菌</title>
+  </CN>
+  <categoey>overview</categoey>
+  <id>changdaokang_miaomiaoce_youyijun_tjsjcyouyijun</id>
+  <oriid>tjsjcyouyijun</oriid>
+  <orititle>有益菌</orititle>
+</opt>

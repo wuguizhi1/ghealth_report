@@ -1,0 +1,107 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+\newcommand{\mytoprule}{\specialrule{0.1em}{0em}{0em}}
+\newcommand{\mybottomrule}{\specialrule{0.1em}{0em}{0em}} 
+
+\usepackage[nodisplayskipstretch]{setspace}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+\NewEnviron{RCtable}[1]
+  {%
+    \begin{tcolorbox}[#1]\BODY\end{tcolorbox}%
+  }
+
+\usepackage{colortbl}
+
+\begin{document}
+
+\vspace*{14mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+\begin{tctabularx}{tabularx={m{15.4cm}<{\centering}}}
+\\[-6pt]
+\cellcolor{topcolor}\raisebox{2.614pt}{\color{black70}\fontsize{11pt}{11pt}\selectfont\bf 主要有益菌检测结果}
+\end{tctabularx}
+
+\sepline
+
+\noindent
+\fontsize{8.8pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\begin{tabular}{p{9.5cm}p{5.5cm}}
+[% FOREACH item = changdaojunqun.fenbu.page1 -%]
+\parbox[l]{\hsize}{
+\vspace*{5mm}
+{
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+\fontsize{10pt}{11pt}\selectfont\bf {[% item.name %]}
+}} & \\
+\hspace*{1.5mm}
+\begin{minipage}[t]{.6\textwidth}{
+\vspace*{2mm}
+\noindent
+\begin{spacing}{1.5}
+\fontsize{8pt}{11pt}\selectfont {[% item.descfull %]}
+\end{spacing}
+\vspace{3pt}
+}
+\end{minipage}
+ & 
+\hspace*{8mm}
+\begin{minipage}[t]{.3\textwidth}{
+\vspace*{2mm}
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont\bf 健康状态提示 \vspace{3pt}\\}
+[% IF item.risk == "有益" OR item.risk == "正常" -%]
+{\includegraphics[scale=1.0]{laughwithgreen.pdf} \vspace*{10mm}} \\
+[% ELSIF item.level == "l1" OR item.level == "l5" -%]
+{\includegraphics[scale=1.0]{crywithred.pdf} \vspace*{10mm}} \\
+[% ELSE -%]
+{\includegraphics[scale=1.0]{crywithorange.pdf} \vspace*{10mm}} \\
+[% END -%]
+\tikz\draw[topcolor,fill=topcolor](0,0) rectangle(0.1,0.25);
+{\fontsize{9pt}{11pt}\selectfont{\bf 菌属检测指数 \quad [% item.per100 %]}（[% IF item.level == 'l1' -%]低[% ELSIF item.level == 'l2' -%]偏低[% ELSIF item.level == 'l3' -%]正常[% ELSIF item.level == 'l4' -%]偏高[% ELSE -%]高[% END -%]） \vspace{3pt}\\}
+{\fontsize{8pt}{11pt}\selectfont ~~~~[% item.riskdesc %]}
+}
+\end{minipage} \\
+\mytoprule
+[% END -%]
+\end{tabular}
+
+\vspace*{3mm}
+\noindent
+~~~~\tikz\draw[green2,fill=green2](0,0) circle[radius=4pt]; \bf 绿色表示健康 \tikz\draw[orange2,fill=orange2](0,0) circle[radius=4pt]; \bf 橙色表示需要关注 \tikz\draw[red2,fill=red2](0,0) circle[radius=4pt]; \bf 红色表示为有风险
+
+\end{document}

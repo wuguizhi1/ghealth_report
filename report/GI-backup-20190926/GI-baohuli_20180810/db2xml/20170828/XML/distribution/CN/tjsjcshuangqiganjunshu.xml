@@ -1,0 +1,93 @@
+<opt>
+  <CN>
+    <bacteria>
+      <desc>双歧杆菌属|Bifidobacterium|Genus;</desc>
+      <descfull></descfull>
+    </bacteria>
+    <etitle>Bifidobacterium</etitle>
+    <order>2</order>
+    <pubmed>
+      <desc></desc>
+    </pubmed>
+    <section1>
+      <name>菌群分布</name>
+      <order>1</order>
+    </section1>
+    <suggestion>
+      <healthy>
+        <l1>
+          <actiondesc>益生元（0\textasciitilde 12）：0.8g {/} 100mL的低聚半乳糖；0.2g {/} 100mL的低聚果糖；儿童合生元
+
+益生元（13+）：菊粉；低聚木糖；阿拉伯木聚糖；低聚半乳糖
+
+益生菌：双歧杆菌活菌制剂
+
+食物：香蕉；小麦；洋葱；玉米；黄豆</actiondesc>
+          <actionrule>补充益生元和益生菌</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>肠道环境差；免疫调节力下降</effectdesc>
+          <mechanism>不利于调节免疫及肠道环境</mechanism>
+          <mechanismfull>不利于调节免疫及肠道环境</mechanismfull>
+          <note></note>
+        </l1>
+        <l2>
+          <actiondesc>益生元（0\textasciitilde 12）：0.8g {/} 100mL的低聚半乳糖；0.2g {/} 100mL的低聚果糖；儿童合生元
+
+益生元（13+）：菊粉；低聚木糖；阿拉伯木聚糖；低聚半乳糖
+
+益生菌：含BB-12的酸奶
+
+食物：香蕉；小麦；洋葱；玉米；黄豆</actiondesc>
+          <actionrule>补充益生元和益生菌</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>肠道环境差；免疫调节力下降</effectdesc>
+          <mechanism>不利于调节免疫及肠道环境</mechanism>
+          <mechanismfull>不利于调节免疫及肠道环境</mechanismfull>
+          <note></note>
+        </l2>
+        <l3>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc></effectdesc>
+          <mechanism>调节免疫及肠道环境</mechanism>
+          <mechanismfull>调节免疫及肠道环境</mechanismfull>
+          <note></note>
+        </l3>
+        <l4>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>调节免疫；肠道环境</effectdesc>
+          <mechanism>有利于调节免疫及肠道环境</mechanism>
+          <mechanismfull>有利于调节免疫及肠道环境</mechanismfull>
+          <note></note>
+        </l4>
+        <l5>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>调节免疫；肠道环境</effectdesc>
+          <mechanism>有利于调节免疫及肠道环境</mechanism>
+          <mechanismfull>有利于调节免疫及肠道环境</mechanismfull>
+          <note></note>
+        </l5>
+      </healthy>
+    </suggestion>
+    <summary>
+      <desc>有益菌，降解人体不能消化的多糖，产乳酸，调节免疫及肠道环境</desc>
+      <descfull>双歧杆菌是乳酸杆菌的好朋友，作用不比乳酸杆菌小：它既是肠道内的“清道夫”，也是调节肠道生态平衡的重要细菌。肠道内双歧杆菌含量较高时，表明肠道较为健康：它不仅能帮助增强肠道屏障，调节肠道环境；还能调节肠道免疫功能，有效抑制有害菌的胡作非为。此外，双歧杆菌还能够促进营养物质吸收，保持健康的身体状态。当肠道内双歧杆菌含量较低时，肠道可能进入不健康状态：肠道环境差、免疫调节能力低。这时需要补充双歧杆菌制剂或者益生元，增加双歧杆菌含量，优化肠道菌群组成。</descfull>
+      <source>双歧杆菌作为肠道内的“清道夫”，能调节肠道微生态平衡、增强肠道屏障功能、抑制有害菌增殖。</source>
+    </summary>
+    <title>双歧杆菌属（Bifidobacterium）</title>
+  </CN>
+  <categoey>distribution</categoey>
+  <id>changdaokang_danxiangxi_changdaobaohuli_tjsjcshuangqiganjunshu</id>
+  <oriid>tjsjcshuangqiganjunshu</oriid>
+  <orititle>双歧杆菌属（Bifidobacterium）</orititle>
+</opt>

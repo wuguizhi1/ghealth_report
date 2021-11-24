@@ -1,0 +1,59 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\begin{document}
+
+\vspace*{5mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+\centerline{\bf\sanhao 健康建议}
+
+\vspace*{2mm}
+
+\begin{LRaside}[.25]{膳食方案}
+{\bf *综合您肠道菌群检测结果，为您定制以下膳食方案：}\\
+{\indent [% fangan.food.desc %]}\\
+\vspace*{1mm}
+{\qihao *以上膳食方案仅供参考，您的实际饮食还需结合自身具体情况。}
+\asidebreak %
+\noindent
+\includegraphics[width=\linewidth]{shanshifangan.pdf}
+
+\end{LRaside}
+
+
+\begin{LRaside}[.65]{营养调节方案}
+\noindent
+\includegraphics[width=\linewidth]{tiaojiefangan.pdf}
+
+\asidebreak %
+{\bf *综合您肠道菌群、营养功能检测结果，为您定制以下营养调节方案：}\\
+[% FOREACH item = fangan.regulate.desc.item -%]
+{\bf [% item.name %]}\\{\indent [% item.desc %]}\\
+[% END -%]
+[% IF yingyanggongneng.desc.FumeiQBad == 1 -%]
+{\bf 补充辅酶Q}\\{\indent 帮助您增强抗氧化能力。}\\
+[% END -%]
+[% IF yingyanggongneng.desc.VitaminBadN > 0 and yingyanggongneng.desc.VitaminBadN <=2 -%]
+{\bf 补充多种VB片}\\{\indent 适量补充[% yingyanggongneng.desc.VitaminBad %]，促进碳水化合物、蛋白质、脂类的正常代谢。}\\
+[% ELSIF yingyanggongneng.desc.VitaminBadN > 2 -%]
+{\bf 补充多种VB片}\\{\indent 均衡多种维生素营养，促进碳水化合物、蛋白质、脂类的正常代谢。}\\
+[% END -%]
+\end{LRaside}
+
+\begin{LRaside}[.25]{运动方案}
+{\bf *适量运动可以帮助改善肠道菌群}\\
+建议您：\\
+{\indent [% fangan.sport.desc %]}
+\asidebreak %
+\noindent
+\includegraphics[width=\linewidth]{yundongfangan.pdf}
+
+\end{LRaside}
+
+\end{document}

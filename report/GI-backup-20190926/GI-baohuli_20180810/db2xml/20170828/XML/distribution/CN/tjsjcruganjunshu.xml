@@ -1,0 +1,93 @@
+<opt>
+  <CN>
+    <bacteria>
+      <desc>乳杆菌属|Lactobacillus|Genus;</desc>
+      <descfull></descfull>
+    </bacteria>
+    <etitle>Lactobacillus</etitle>
+    <order>1</order>
+    <pubmed>
+      <desc></desc>
+    </pubmed>
+    <section1>
+      <name>菌群分布</name>
+      <order>1</order>
+    </section1>
+    <suggestion>
+      <healthy>
+        <l1>
+          <actiondesc>益生元（0\textasciitilde 12）：0.8g {/} 100mL的低聚半乳糖；0.2g {/} 100mL的低聚果糖；儿童合生元
+
+益生元（13+）：菊粉；低聚果糖；低聚半乳糖
+
+益生菌：乳酸杆菌活菌制剂
+
+食物：全麦；糙米；山药；红薯；芦笋</actiondesc>
+          <actionrule>补充益生元和益生菌</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>免疫调节力下降；肠道环境差；抵抗病原菌能力降低</effectdesc>
+          <mechanism>不利于抑制肠道炎症及调节肠道环境</mechanism>
+          <mechanismfull>不利于抑制肠道炎症及调节肠道环境</mechanismfull>
+          <note></note>
+        </l1>
+        <l2>
+          <actiondesc>益生元（0\textasciitilde 12）：0.8g {/} 100mL的低聚半乳糖；0.2g {/} 100mL的低聚果糖；儿童合生元
+
+益生元（13+）：菊粉；低聚果糖；低聚半乳糖
+
+益生菌：含保加利亚乳杆菌的酸奶；含干酪乳杆菌的活菌饮料
+
+食物：全麦；糙米；山药；红薯；芦笋</actiondesc>
+          <actionrule>补充益生元和益生菌</actionrule>
+          <aiddisease></aiddisease>
+          <effect>有害</effect>
+          <effectdesc>免疫调节力下降；肠道环境差；抵抗病原菌能力降低</effectdesc>
+          <mechanism>不利于抑制肠道炎症及调节肠道环境</mechanism>
+          <mechanismfull>不利于抑制肠道炎症及调节肠道环境</mechanismfull>
+          <note></note>
+        </l2>
+        <l3>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>正常</effect>
+          <effectdesc></effectdesc>
+          <mechanism>抑制肠道炎症及调节肠道环境</mechanism>
+          <mechanismfull>抑制肠道炎症及调节肠道环境</mechanismfull>
+          <note></note>
+        </l3>
+        <l4>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>抑制肠道炎症；调节肠道环境</effectdesc>
+          <mechanism>有利于抑制肠道炎症及调节肠道环境</mechanism>
+          <mechanismfull>有利于抑制肠道炎症及调节肠道环境</mechanismfull>
+          <note></note>
+        </l4>
+        <l5>
+          <actiondesc></actiondesc>
+          <actionrule></actionrule>
+          <aiddisease></aiddisease>
+          <effect>有益</effect>
+          <effectdesc>抑制肠道炎症；调节肠道环境</effectdesc>
+          <mechanism>有利于抑制肠道炎症及调节肠道环境</mechanism>
+          <mechanismfull>有利于抑制肠道炎症及调节肠道环境</mechanismfull>
+          <note></note>
+        </l5>
+      </healthy>
+    </suggestion>
+    <summary>
+      <desc>肠道益生菌，能够生成乳酸，抑制有害菌及炎症，调节肠道环境</desc>
+      <descfull>乳酸杆菌，又叫乳酸菌，大家一定不陌生。很早以前，它就被人用来发酵生产酸奶和奶酪等食物，让食物既美味又营养。可不能小瞧了乳酸杆菌，增强免疫力、抵抗病菌、延缓衰老、促进营养吸收等都有它的功劳。当肠道内乳酸杆菌含量较高时，产生乳酸，调节肠道微环境，阻止致病菌侵入肠道；调节免疫，抑制肠道炎症的发生；促进营养物质吸收，从而有利于肠道健康。当肠道内乳酸杆菌含量较低时，肠道环境差，易发生肠道炎症、肠道问题甚至可能影响全身。这时记得适量补充酸奶或乳酸杆菌制剂哦，也可以搭配服用能促进乳酸杆菌生长的益生元。</descfull>
+      <source>乳酸杆菌作为最知名的益生菌，是调节肠道环境的重要细菌，同时增强免疫力、抵抗病原菌、促进营养吸收等都有它的功劳。</source>
+    </summary>
+    <title>乳酸杆菌属（Lactobacillus）</title>
+  </CN>
+  <categoey>distribution</categoey>
+  <id>changdaokang_danxiangxi_changdaobaohuli_tjsjcruganjunshu</id>
+  <oriid>tjsjcruganjunshu</oriid>
+  <orititle>乳酸杆菌属（Lactobacillus）</orititle>
+</opt>

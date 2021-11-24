@@ -1,0 +1,148 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+
+\usepackage{environ}
+\usepackage{colortbl,array,booktabs}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage[nodisplayskipstretch]{setspace}
+
+\colorlet{TablaBordeSuperior}{topcolor}
+\colorlet{TablaBordeInferior}{topcolor}
+\colorlet{TablaCentroSuperior}{blue!1}
+\colorlet{TablaCentroInferior}{blue!20}
+\colorlet{FuenteCabeceraTabla}{white}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\tcbset{rtab/.style={
+freelance,
+frame code={
+ \path[top color=topcolor,bottom color=topcolor]
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north west) --
+   ([yshift=-#1*(\baselineskip+2pt)]interior.north east) {[sharp corners]--
+    ([yshift=3pt]interior.north east) --
+    ([yshift=3pt]interior.north west)} -- cycle;
+
+  },
+interior code={},
+ }
+}
+
+\newcommand\fuentecabecera[1]{\textcolor{black}{\textbf{#1}}}
+
+
+\begin{document}
+
+\vspace*{2mm}
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{11pt}\selectfont
+\color{gray2}
+
+\noindent\fontsize{16pt}{18pt}\selectfont{\color{topcolor} 健康管理建议}
+
+\vspace*{1mm}
+\begin{spacing}{1.5}
+\indent{\fontsize{10pt}{11pt}\selectfont {综合您本次肠道有益菌检测，您肠道健康保护力总得分为[% gaikuang.desc.youyijun.per100 %]分，
+[% IF gaikuang.desc.youyijun.risk == '有害' -%]
+不利于肠道及人体健康，
+[% IF changdaojunqun.fenbu.badN == 4 -%]
+4种有益菌属的检测指数均偏低，需注意。
+[% ELSIF changdaojunqun.fenbu.badN > 0 -%]
+其中，[% changdaojunqun.fenbu.biotics_bad %]检测指数偏低，需注意。
+[% END -%]
+[% ELSIF gaikuang.desc.youyijun.risk == '正常' -%]
+处于正常范围，
+[% IF changdaojunqun.fenbu.badN == 4 -%]
+4种有益菌属的检测指数均偏低，需注意。
+[% ELSIF changdaojunqun.fenbu.badN > 0 -%]
+但其中[% changdaojunqun.fenbu.biotics_bad %]检测指数偏低，可重点调理。
+[% END -%]
+[% ELSE -%]
+有利于肠道及人体健康，
+[% IF changdaojunqun.fenbu.badN == 4 -%]
+4种有益菌属的检测指数均偏低，需注意。
+[% ELSIF changdaojunqun.fenbu.badN > 0 -%]
+但其中[% changdaojunqun.fenbu.biotics_bad %]检测指数偏低，可适当改善。
+[% END -%]
+[% END -%]
+建议您：}}
+
+\vspace*{2mm}
+\fontsize{9pt}{11pt}\selectfont
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+
+\noindent\fcolorbox{topcolor}{topcolor}{
+\parbox[c][7cm]{.18\hsize}{
+\centering {\color{white}\bf [% fangan.food.name %]}
+}
+}
+\hspace*{.2mm}
+\fcolorbox{black70}{white}{
+\parbox[c][7cm]{.76\hsize}{
+\vspace*{3mm}
+[% fangan.food.head %] \\
+[% FOREACH item = fangan.food.desc.item -%]
+{\color{topcolor}\barial [% item.num %]} \ {\bf [% item.name %]} \ [% item.desc %]\\
+[% END -%]
+}
+}
+
+\vspace*{2mm}
+\noindent\fcolorbox{topcolor}{topcolor}{
+\parbox[c][3.5cm]{.18\hsize}{
+\centering {\color{white}\bf [% fangan.regulate.name %]}
+}
+}
+\hspace*{.2mm}
+\fcolorbox{black70}{white}{
+\parbox[c][3.5cm]{.76\hsize}{
+\vspace*{3mm}
+[% IF age <= 18 -%]
+肠道康，更健康！补充适量的益生菌、益生元，助力健康成长。\\
+[% ELSE -%]
+肠命百岁方可长命百岁！补充适量的益生菌、益生元，助力肠道健康。\\
+[% END -%]
+[% IF changdaojunqun.fenbu.prebiotics_sup == '-' and changdaojunqun.fenbu.probiotics_sup == '-' -%]
+[% FOREACH item = fangan.regulate.desc.item -%]
+{\color{topcolor}\barial [% item.num %]} \ [% item.desc %]\\
+[% END -%]
+[% ELSE -%]
+{\color{topcolor}\barial 1} \ 您可选择补充[% changdaojunqun.fenbu.prebiotics_sup %]等益生元，能帮助[% changdaojunqun.fenbu.biotics_bad %]在肠道内增殖，增加有益物质的产生，有利于增强肠道屏障功能，促进肠道健康。
+[% IF changdaojunqun.fenbu.probiotics_sup != '-' -%]
+\\
+{\color{topcolor}\barial 2} \ 您可选择补充[% changdaojunqun.fenbu.probiotics_sup %]等益生菌产品，以增加您肠道内有益菌的含量，并能抑制有害菌的异常增殖。\\
+[% END -%]
+[% END -%]
+}
+}
+
+\vspace*{2mm}
+\noindent\fcolorbox{topcolor}{topcolor}{
+\parbox[c][4.5cm]{.18\hsize}{
+\centering {\color{white}\bf [% fangan.others.name %]}
+}
+}
+\hspace*{.2mm}
+\fcolorbox{black70}{white}{
+\parbox[c][4.5cm]{.76\hsize}{
+\vspace*{3mm}
+[% fangan.others.head %] \\
+[% FOREACH item = fangan.others.desc.item -%]
+{\color{topcolor}\barial [% item.num %]} \ [% item.desc %]\\
+[% END -%]
+}
+}
+
+\end{spacing}
+
+\vspace*{2mm}
+{\indent\fontsize{10pt}{11pt}\selectfont\bf 建议您进行更全面的肠道菌群检测并持续监测，获取更具有针对性的膳食方案、微生态制剂推荐及运动指导等健康管理建议，为您的肠道健康保驾护航。}
+
+\end{document}

@@ -1,0 +1,78 @@
+\input format.tex
+
+%\usepackage{arydshln}
+
+\begin{document}
+
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{9.3pt}{17pt}\selectfont
+\color{gray2}
+
+\vspace*{1mm}
+\begin{center}
+{\bf\sanhao 前~~言}
+\end{center}
+
+\bigskip
+
+微生物群体几乎存在于这个世界中每一个生态群落之中，并扮演着不可或缺的角色。在人体的每个角落，都存
+在着大量复杂的微生物菌落，与人体的健康息息相关。据美国著名微生物学家Thomas Luckey的估计，人体内的细
+菌的数量大约是人体细胞的10倍，即人体细胞大约为40万亿个，而细菌数量约为400万亿个。
+
+在人体肠道内寄生着的这些微生物，可以帮助人体获得某些必要的微量元素，可能对人体造成感染、引发
+炎症、影响蛋白和脂类的消化吸收、体重、抵御感染的能力、改变自体免疫疾病的患病风险，还能控制人体对癌症
+等各类疾病治疗药物的反应。当菌群的分布和丰度处于一个优化的平衡状态的时候（菌群平衡），这些菌群可以帮
+助维持人体健康，维持营养均衡。而一旦这些菌群失衡，则人体健康风险会大大增加。
+
+近年来，随着质谱检测技术、测序技术和信息技术的快速发展，利用新一代测序技术(Next Generation
+Sequencing)方式研究宏基因组，能快速准确的得到大量生物数据和丰富的微生物研究信息，成为研究微生物多样
+性和环境样品的重要的手段。如人体微生物组计划(HMP, HumanMicrobiome Project，
+http://www.hmpdacc.org/)，全球微生物组计划等(EMP， Earth Microbiome Project：http://www.earthmicrobiome.org/)
+
+我们通过质谱分析基因测序以及体外培养的方式，利用粪便样品，研究人体肠道内的代谢产物分布和菌群分
+布，结合有益菌群及有害菌群的比例，进一步通过体外培养验证分析个人肠道的健康情况，结合最新的科学研究结
+果提出改善建议，从而调整肠道菌群多样性，提高你的健康状况及生活质量。
+
+
+\fontsize{9.3pt}{9pt}\selectfont
+[% IF cnt == 7 -%]
+\begin{longtable}{p{1.8cm}@{~}c@{~}p{1.8cm}@{~}c@{~}p{1.8cm}@{~}c@{~}p{1.8cm}@{~}c@{~}p{1.8cm}@{~}c@{~}p{1.8cm}@{~}c@{~}p{1.8cm}}
+[% ELSIF cnt == 4 -%]
+\begin{longtable}{p{3.45cm}@{~}c@{~}p{3.45cm}@{~}c@{~}p{3.45cm}@{~}c@{~}p{3.45cm}}
+[% END -%]
+\rowcolor{gray0}
+\multicolumn{[% coloum %]}{l}{}\\
+\rowcolor{gray0}
+\multicolumn{[% coloum %]}{l}{在这本报告里，我们将您的检测结果分为[% cnt %]个部分:} \\
+\rowcolor{gray0}
+\multicolumn{[% coloum %]}{l}{}\\
+\rowcolor{gray0}
+\multicolumn{[% coloum %]}{l}{}\\
+\rowcolor{gray0}
+[% FOREACH sec = section -%]
+[% sec.name %]
+[% IF sec.num == cnt -%]
+[% ELSE -%]
+&&
+[% END -%]
+[% END -%]\\
+\rowcolor{gray0}
+[% IF cnt == 7 -%]
+& \tikz\draw[overlay,densely dashed](0,0)--(0,0.6);&&\tikz\draw[overlay,densely dashed](0,0)--(0,0.6);&&\tikz\draw[overlay,densely dashed](0,0)--(0,0.6);&&\tikz\draw[overlay,densely dashed](0,0)--(0,0.6);&&\tikz\draw[overlay,densely dashed](0,0)--(0,0.6);&&\tikz\draw[overlay,densely dashed](0,0)--(0,0.6);&\\
+[% ELSIF cnt == 4 -%]
+& \tikz\draw[overlay,densely dashed](0,0)--(0,0.6);&&\tikz\draw[overlay,densely dashed](0,0)--(0,0.6);&&\tikz\draw[overlay,densely dashed](0,0)--(0,0.6);&\\
+[% END -%]
+\rowcolor{gray0}
+\multicolumn{[% coloum %]}{l}{$~$}\\
+\end{longtable}
+
+\fontsize{9.3pt}{17pt}\selectfont
+\noindent
+您的结果我们会以科学而直观的方式呈现给您\\
+一般来说，在本报告书中， \tikz\draw[green2,fill=green2](0,0) circle[radius=4pt]; 绿色代表为健康 \tikz\draw[yellow,fill=yellow](0,0) circle[radius=4pt]; 黄色表示需要关注 \tikz\draw[red,fill=red](0,0) circle[radius=4pt]; 而红色表示为有风险。\\
+
+\noindent
+每一部分的结果和解读将会在您的报告中为您逐一解读。
+
+\end{document}

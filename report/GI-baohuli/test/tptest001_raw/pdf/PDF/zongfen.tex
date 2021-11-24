@@ -1,0 +1,106 @@
+\input format.tex
+
+\usepackage{graphicx}
+\graphicspath{{cores/}}
+\usepackage{setspace}
+\usepackage{colortbl,array,booktabs}
+
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+\vspace*{6mm}
+
+\noindent\fcolorbox{topcolor}{topcolor}{
+\parbox[c][1cm]{\textwidth}{
+\begin{center}
+\fontsize{18pt}{\baselineskip}\selectfont\color{white}{\bf {肠道菌群基因检测结果}}
+\end{center}
+}
+}
+
+
+%% 各章节
+\setlength{\arrayrulewidth}{1pt}
+\fontsize{8pt}{11pt}\selectfont
+\color{black70}
+
+\vspace*{3mm}
+
+
+\fontsize{11pt}{13pt}\selectfont
+\noindent\begin{tabular}{p{6cm}p{3cm}p{5cm}}
+\parbox[c]{\hsize}{\vskip7pt 姓名：Demo \vskip7pt} & 年龄：55 &
+性别：男
+\\
+\parbox[c]{\hsize}{\vskip7pt 样本编码：tptest001 \vskip7pt} & \multicolumn{2}{l}{送检机构：美亚健康管理中心}\\
+\end{tabular}
+
+\begin{LRaside2}{\bf 您本次肠道菌群基因检测总评分如下}
+\begin{center}
+\setlength{\unitlength}{1cm}
+\begin{picture}(20,2.6)(0,-0.8)
+\put(6.66307692307692,0.55){\includegraphics[scale=1]{straw_l3.pdf}}
+\put(0.5,-0.2){\includegraphics[scale=1]{baohulibar03.pdf}}
+\end{picture}
+\indent\fontsize{9pt}{11pt}\selectfont\bf {综合您本次有益菌检测结果，您肠道菌群基因检测总评分为
+{\fontsize{13pt}{14pt}\selectfont\color{level3} 45分}，正常
+}
+\includegraphics[scale=1]{underline.pdf}
+\end{center}
+{\par\fontsize{9pt}{11pt}\selectfont\bf {您可以通过补充益生元、益生菌等进一步改善肠道菌群情况。肠道菌群基因检测评分越高，说明您的肠道越健康；反之，肠道菌群基因检测评分越低，则说明您的肠道微生态环境越值得关注。}}
+\end{LRaside2}
+
+\vspace*{-2mm}
+\hspace*{12.5cm}
+\raisebox{-0.4ex}{\includegraphics{drop_l3.pdf}}
+\fontsize{9pt}{11pt}\selectfont {本次检测结果}
+
+\vspace*{5mm}
+\begin{spacing}{1.5}
+\noindent{\fontsize{9pt}{11pt}\selectfont\bf {主要有益菌检测结果}}
+\end{spacing}
+\arrayrulecolor{gray2}
+\setlength{\arrayrulewidth}{.5pt}
+
+\smallskip
+%{
+\lantxh
+\begin{tctabularx}{tabularx={m{4.8cm}<{\centering}m{5.2cm}<{\centering}m{4.55cm}<{\centering}}}
+&&
+\\[-6pt]
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 主要有益菌属} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 本次检测值} &
+\cellcolor{topcolor} \raisebox{2.614pt}{\color{white}\bf 参考范围}
+\end{tctabularx}
+
+\vspace*{-4.25mm}
+\fontsize{8.8pt}{11pt}\selectfont
+\begin{longtable}{|m{4.8cm}<{\centering}|m{5.2cm}<{\centering}|m{4.53cm}<{\centering}|}
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 乳酸杆菌属 \vskip7pt} & 
+0.01
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+& ≥ 0.04 \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 双歧杆菌属 \vskip7pt} & 
+5.8
+& ≥ 0.21 \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 阿克曼氏菌属 \vskip7pt} & 
+未检出
+\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}}
+& ≥ 0.01 \\
+\hline
+\parbox[c]{\hsize}{\vskip7pt\centering 柔嫩梭菌属 \vskip7pt} & 
+204.63
+& ≥ 27.24 \\
+\hline
+\end{longtable}
+
+\vspace*{-2.5mm}
+\noindent {结果说明：\raisebox{-0.3ex}{\includegraphics[scale=1]{redarrow_down.pdf}} \ 检测值相比参考人群偏低}
+
+
+\end{document}
+
